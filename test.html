@@ -28,16 +28,10 @@
 
     omnivore.csv('testcsv.csv')
     .on('ready', function(layer) {
-        // An example of customizing marker styles based on an attribute.
-        // In this case, the data, a CSV file, has a column called 'state'
-        // with values referring to states. Your data might have different
-        // values, so adjust to fit.
         this.eachLayer(function(marker) {
-                marker.setIcon(L.mapbox.marker.icon({}));
-            
-            // Bind a popup to each icon based on the same properties
-            marker.bindPopup(marker.toGeoJSON().properties.IMG + ', ' +
-                marker.toGeoJSON().properties.TITOLO);
+            marker.setIcon(L.marker.icon({}));
+            marker.bindPopup(marker.toGeoJSON().properties.BENE_CULTURALE + ', ' +
+            marker.toGeoJSON().properties.LOCALIZZAZIONE);
         });
     })
     .addTo(map);
