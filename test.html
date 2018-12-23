@@ -30,10 +30,7 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        var marchi = new L.GeoJSON.AJAX("testcult.geojson", {
-  onEachFeature: function (feature, layer) {
-    layer.bindPopup('<h1>'+feature.properties.f1+'</h1><p>name: '+feature.properties.f2+'</p>');
-  });
+        var marchi = new L.GeoJSON.AJAX("testcult.geojson");
         
         var markerscluster = L.markerClusterGroup();
         markers.addLayer(marchi);
