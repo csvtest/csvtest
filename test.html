@@ -27,23 +27,8 @@
         }).addTo(map);
             
         L.marker([43.843528, 13.017442]).addTo(map);
-    function eachLayer(layer) {
-    var feature = layer.toGeoJSON();
-    if (feature.properties && feature.properties.BENE_CULTURALE) {
-        layer.bindPopup(marker.toGeoJSON().properties.BENE_CULTURALE + ', ' +
-            marker.toGeoJSON().properties.LOCALIZZAZIONE);
-    }
-    }
-    var points = omnivore.csv('pippo.csv', {delimiter:';'})
-    .on('ready', function() {
-        var markers = L.markerClusterGroup({
-            showCoverageOnHover: false,
-            maxClusterRadius: 50
-        });
-        markers.addLayer(points);
-        map.addLayer(markers);
-        points.eachLayer(eachLayer);
-    });  
+            
+        omnivore.csv('pippo.csv').addTo(map);
 
             
         </script>
