@@ -6,8 +6,8 @@
             <style id="jsbin-css">#map { height: 400px; border:solid;}</style>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-            <!-- csv2geojson DEVO STUDIARMELO -->
-            <script src="https://npmcdn.com/csv2geojson@latest/csv2geojson.js"></script>
+            <!--ajax leaflet DEVO STUDIARMELO -->
+            <script src="https://raw.github.com/calvinmetcalf/leaflet-ajax/master/dist/leaflet.ajax.min.js"></script>
 
     </head>
     <body>
@@ -26,12 +26,8 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        var marchi = csv2geojson.csv2geojson('pippo.csv', {
-        latfield: 'LAT',
-        lonfield: 'LON',
-        delimiter: ';'
-        });
-          
-         L.geoJSON(marchi).addTo(map);
+        var marchi = new L.GeoJSON.AJAX("testcult.geojson");       
+        marchi.addTo(map);
+            
     </script>
 </html>
