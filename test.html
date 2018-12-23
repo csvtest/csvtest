@@ -32,9 +32,8 @@
             marker.toGeoJSON().properties.LOCALIZZAZIONE);
     }
     }
-    var points = omnivore.csv('testcsv.csv')
-    }).on('ready', function() {
-        map.fitBounds(points.getBounds());
+    var points = omnivore.csv('testcsv.csv', {delimiter:'|'})
+    .on('ready', function() {
         var markers = L.markerClusterGroup({
             showCoverageOnHover: false,
             maxClusterRadius: 50
@@ -42,7 +41,8 @@
         markers.addLayer(points);
         map.addLayer(markers);
         points.eachLayer(eachLayer);
-    });
+    });  
+
             
         </script>
 </html>
