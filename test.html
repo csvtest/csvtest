@@ -26,7 +26,7 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        var marchi = csv2geojson.csv2geojson(csvString, {
+        var marchi = csv2geojson.csv2geojson('pippo.csv', {
         latfield: 'LAT',
         lonfield: 'LON',
         delimiter: ';'
