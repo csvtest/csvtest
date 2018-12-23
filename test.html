@@ -33,7 +33,7 @@
         var marchi = new L.GeoJSON.AJAX("testcult.geojson");
         
         var markerscluster = L.markerClusterGroup();
-        markers.addLayer(marchi);
+        markerscluster.addLayer(marchi);
         map.addLayer(markers);
             
     </script>
