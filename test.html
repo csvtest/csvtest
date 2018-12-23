@@ -27,7 +27,7 @@
         }).addTo(map);
     function eachLayer(layer) {
     var feature = layer.toGeoJSON();
-    if (feature.properties && feature.properties.data.title) {
+    if (feature.properties && feature.properties.BENE_CULTURALE) {
         layer.bindPopup(marker.toGeoJSON().properties.BENE_CULTURALE + ', ' +
             marker.toGeoJSON().properties.LOCALIZZAZIONE);
     }
