@@ -24,3 +24,6 @@ http://inumeridibolognametropolitana.it/studi-e-ricerche/elezioni-politiche-4-ma
 
 https://geoconverter.hsr.ch/
 --> GEO CONVERTER (shv -- csv)
+
+http://inumeridibolognametropolitana.it/basi-territoriali-del-comune-di-bologna
+--> SPIEGAZIONE BASI TERRITORIALI DI BOLOGNA
