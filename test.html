@@ -6,8 +6,8 @@
             <style id="jsbin-css">#map { height: 400px; border:solid;}</style>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-            <!--ajax leaflet DEVO STUDIARMELO -->
-            <script src="leaflet.ajax.min.js"></script>
+            <!--shapefile-->
+            <script src="https://unpkg.com/shpjs@latest/dist/shp.js"> </script>
         
 </head> 
 
@@ -17,7 +17,6 @@
        
     </body> 
         <!--Script mappa-->
-        <script type="text/javascript" src="geojson_folder/ZonaBologna.js"></script>
         <script id="jsbin-javascript">
         var map = L.map('map', {
                     maxZoom: 22,
@@ -29,7 +28,9 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         
-        zoneBo = L.geoJson(zone).addTo(map);
+        var zone_shpfile = new L.Shapefile("geojson_folder/03.00.34_zone.zip ", {onEachFeature: function (feature, layer)});
+
+        zone_shpfile.addTo(map);
             
     </script>
 </html>
