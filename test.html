@@ -11,7 +11,7 @@
     </head>
     <body>
         <div id='map'></div>
-       
+       <a href='#' id='export'>PORCODIOOOOOO</a>
     </body> 
 
         <!--shapefile leaflet DEVO STUDIARMELO -->
@@ -33,9 +33,16 @@
 
         zone.addTo(map);
         
-        var selected //evidenzia una provincia quando viene selezionata
-        zone.eachLayer(function (layer) {
-			layer.bindPopup(layer.feature.properties.NOMEZONA); //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
-		});
+        document.getElementById('export').onclick = function(e) {
+            // Extract GeoJson from featureGroup
+            var data = zone.toGeoJSON();
+
+            // Stringify the GeoJson
+            var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
+
+            // Create export
+            document.getElementById('export').setAttribute('href', 'data:' + convertedData);
+            document.getElementById('export').setAttribute('download','data.geojson');
+        }
     </script>
 </html>
