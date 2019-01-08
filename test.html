@@ -17,7 +17,6 @@
        
     </body> 
         <!--Script mappa-->
-        <script type="text/javascript" src="geojson_folder/ZonaBologna.js"></script>
         <script id="jsbin-javascript">
         var map = L.map('map', {
                     maxZoom: 22,
@@ -28,8 +27,9 @@
         var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
-
-        zone = L.geoJson(ZonaBologna).addTo(map);
+        
+       var zone = $.ajax("geojson_folder/ZoneBologna.js")     
+       L.geoJson(zone).addTo(map);
             
     </script>
 </html>
