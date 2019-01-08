@@ -33,12 +33,5 @@
 
         zone.addTo(map);
         
-       function onEachFeature(feature, layer) {
-    // Do all your popups and other binding in here
-    // does this feature have a property named popupContent?
-    if (feature.properties && feature.properties.popupContent) {
-        layer.bindPopup(feature.properties.popupContent);
-    }
-}
     </script>
 </html>
