@@ -1,6 +1,11 @@
 # Descrizione
+Questa serie di dataset incorpora i dati riguardanti i redditi per area statistica dei contribuenti bolognesi nel corso degli anni che vanno dal 2009 al 2016.
+
+Le informazioni si riferiscono all'area statistica, al numero contribuenti, al reddito imponibile ai fini IRPEF e al reddito imponibile ai fini dell'addizionale IRPEF.
+
 # Analisi della qualità informativa
 ## 
+
 # Analisi giuridica
 ## Privacy
 ### Checklist giuridica
@@ -43,17 +48,64 @@
 I dati potrebbero rientrare nella categoria di *personal data* in quanto non rappresentano un rischio di de-anonimizzazione di per sé, ma potrebbero farlo se incrociati con altri dati. In particolare:
 * se l'*Area statistica* include un territorio particolarmente limitato, e
 * se il *Numero contribuenti* è particolarmente ridotto,
-vi è il rischio che, facendo la media statistica del reddito per contribuente in quella determinata area, sia più semplice identificare quei contribuenti abitanti in quella determinata zona e con quel determinato reddito. Un esempio, in questo senso, è rappresentato da **_Via del Genio_**. I seguenti dati sono presi dal dataset del 2009:
+vi è il rischio che, facendo la media statistica del reddito per contribuente in quella determinata area, sia più semplice identificare quei contribuenti abitanti in quella determinata zona e con quel determinato reddito. Un esempio, in questo senso, è rappresentato da **_Via del Genio_**. I seguenti dati sono presi dal dataset del 2016:
 
 | Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
 | --------- | --------- | --------- |
-| Via del Genio | 14 | 579333 |
+| Via del Genio | 12 | 833317 |
+
+#### De-identificazione
+Metodi di de-identificazione quali il **_Data Masking_** e la **_Data Reduction_** potrebbero venire applicati ai valori appartenenti al *Numero contribuenti* in questa maniera:
+
+| Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
+| --------- | --------- | --------- |
+| Via del Genio | *2 | 833317 |
+
+oppure
+
+| Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
+| --------- | --------- | --------- |
+| Via del Genio | < 100 | 833317 |
 
 ## Licenze
 L'URL che descrive il diritto di riutilizzo del dataset è [http://dati.comune.bologna.it/node/5]. La licenza applicata al dataset è **CC0 1.0**, per cui il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*.
+
 ## Finalità
 La finalità del dataset è quella di reccogliere dati statistici che si riferiscono ai redditi (imponibili ai fini di calcolare l'imposta sul reddito delle persone fisiche) dei contribuenti bolognesi, dichiarati nell'anno di imposta, per ogni area statistica.
 
 # Analisi etica
+## Considerazioni generali
+<VALE>
+<ALE>
+## Data Cleansing
+<VALE>
+<ALE>
+[mettere dataset puliti???]
+
 # Analisi tecnica
-# Analisi della sostenibilità di aggiornamento nel tempo
+## Formati
+I dataset sono disponibili solo in formato CSV.
+## Metadati
+I dataset sono descritti dai seguenti metadati human-readable:
+1. File
+2. Anno versione
+3. versione
+4. Formato
+5. Data rilascio
+6. Argomento
+7. Tag
+8. Responsabile
+9. Fonte
+10. Licenza
+Non sembrano essere corredati da metadati machine-readable.
+## URI
+Gli URI dei dataset presentano almeno due aspetti problematici:
+1. la *semantica* poco chiara;
+
+![Semantica](uri1.png "Semantica")
+
+2. l'inconsistenza del pattern.
+
+![Inconsistenza](uri2.png "Inconsistenza")
+
+## Provenance
