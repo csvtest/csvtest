@@ -5,7 +5,7 @@ http://dati.comune.bologna.it/node/3323
 --> ELEZIONI POLITICHE SENATO 2018 
 
 http://dati.comune.bologna.it/node/244
---> REDDITO 2017 PER AREA STATISTICA
+--> REDDITI 2009-2016 PER AREA STATISTICA
 
 http://dati.comune.bologna.it/node/161
 --> AREE STATISTICHE COMUNE DI BOLOGNA
