@@ -6,8 +6,8 @@
             <style id="jsbin-css">#map { height: 400px; border:solid;}</style>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-            <!--shapefile-->
-            <script src="https://unpkg.com/shpjs@latest/dist/shp.js"> </script>
+            <!--ajax leaflet DEVO STUDIARMELO -->
+            <script src="leaflet.ajax.min.js"></script>
         
 </head> 
 
@@ -28,7 +28,7 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         
-        var zone = new L.GeoJSON.AJAX("geojson_folder/AreaBologna.geojson");
+        var zone = new L.GeoJSON.AJAX("geojson_folder/areasta.geojson");
 
         zone.addTo(map);
             
