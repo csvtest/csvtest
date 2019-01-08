@@ -38,6 +38,15 @@
 | | i dati rientrano nella lista dell’allegato A del d.lgs. 33/2013? | ? |
 | | se sì, come sono stati trattati dal responsabile della trasparenza nel sito “Amministrazione trasparente”? | - |
 | | in che forma si possono creare sinergie tra il portale “Amministrazione trasparente” e il portal open data per minimizzare le inconsistenze e favorire la trasparenza del dato aperto? | - | 
+### Misure di de-identificazione
+#### Revisione preliminare
+I dati potrebbero rientrare nella categoria di *personal data* in quanto non rappresentano un rischio di de-anonimizzazione di per sé, ma potrebbero farlo se incrociati con altri dati. In particolare:
+* se l'*Area statistica* include un territorio particolarmente limitato, e
+* se il *Numero contribuenti* è particolarmente ridotto,
+vi è il rischio che, facendo la media statistica del reddito per contribuente in quella determinata area, sia più semplice identificare quei contribuenti abitanti in quella determinata zona e con quel determinato reddito. Un esempio, in questo senso, è rappresentato da **_Via del Genio_**. I seguenti dati sono presi dal dataset del 2009:
+| Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
+| --------- | --------- | --------- |
+| Via del Genio | 14 | 579333 |
 ## Licenze
 L'URL che descrive il diritto di riutilizzo del dataset è [http://dati.comune.bologna.it/node/5]. La licenza applicata al dataset è **CC0 1.0**, per cui il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*.
 ## Finalità
