@@ -35,7 +35,7 @@
         
         var selected //evidenzia una provincia quando viene selezionata
         zone.eachLayer(function (layer) {
-			layer.bindPopup(layer.feature.properties.name); //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
+			layer.bindPopup(layer.feature.properties.NOMEZONA); //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
 		});
     </script>
 </html>
