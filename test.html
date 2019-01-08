@@ -32,6 +32,13 @@
         var zone = new L.Shapefile("geojson_folder/03.00.34_zone.zip")
 
         zone.addTo(map);
-            
+        
+       function onEachFeature(feature, layer) {
+    // Do all your popups and other binding in here
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}
     </script>
 </html>
