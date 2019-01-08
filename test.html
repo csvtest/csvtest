@@ -28,16 +28,9 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         
-       var zone = $.ajax({
-            type: "POST",
-            url: 'geojson_folder/ZonaBologna.json',
-            dataType: 'json',
-            success: function (response) {
-                geojsonLayer = L.geoJson(response).addTo(map);
-                map.fitBounds(geojsonLayer.getBounds());
-            }
-        });  
-       L.geoJson(zone).addTo(map);
+        $.getJSON("geojson_folder/ZonaBologna.geojson",function(ZoneData){
+          L.geoJson( ZoneData ).addTo(map);
+        }); 
             
     </script>
 </html>
