@@ -33,5 +33,33 @@
 
         zone.addTo(map);
         
+            map.on('draw:created', function (e) {
+    var type = e.layerType,
+        layer = e.layer;
+
+    if (type === 'polygon') {
+        // structure the geojson object
+        var geojson = {};
+        geojson['type'] = 'Feature';
+        geojson['geometry'] = {};
+        geojson['geometry']['type'] = "Polygon";
+
+        // export the coordinates from the layer
+        coordinates = [];
+        latlngs = layer.getLatLngs();
+        for (var i = 0; i < latlngs.length; i++) {
+            coordinates.push([latlngs[i].lng, latlngs[i].lat])
+        }
+
+        // push the coordinates to the json geometry
+        geojson['geometry']['coordinates'] = [coordinates];
+
+        // Finally, show the poly as a geojson object in the console
+        console.log(JSON.stringify(geojson));
+
+    }
+
+    drawnItems.addLayer(layer);
+});
     </script>
 </html>
