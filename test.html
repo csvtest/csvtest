@@ -11,12 +11,10 @@
     </head>
     <body>
         <div id='map'></div>
-       <a href='#' id='export'>PORCODIOOOOOO</a>
     </body> 
 
-        <!--shapefile leaflet DEVO STUDIARMELO -->
-            <script src="js/leaflet.shpfile.js"></script>
-            <script src="js/shp.js"></script>
+            <!--ajax leaflet DEVO STUDIARMELO -->
+            <script src="leaflet.ajax.min.js"></script>
         <!--Script mappa-->
         <script id="jsbin-javascript">
         var map = L.map('map', {
@@ -29,20 +27,10 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         
-        var zone = new L.Shapefile("geojson_folder/03.00.34_zone.zip")
+        var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.json");
 
         zone.addTo(map);
         
-        document.getElementById('export').onclick = function(e) {
-            // Extract GeoJson from featureGroup
-            var data = zone.toGeoJSON();
-
-            // Stringify the GeoJson
-            var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
-
-            // Create export
-            document.getElementById('export').setAttribute('href', 'data:' + convertedData);
-            document.getElementById('export').setAttribute('download','data.geojson');
-        }
+       
     </script>
 </html>
