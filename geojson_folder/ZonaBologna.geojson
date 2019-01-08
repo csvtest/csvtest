@@ -1,4 +1,5 @@
 {
+var zone = {
   "type": "FeatureCollection",
   "features": [
     {
@@ -43512,4 +43513,5 @@
       }
     }
   ]
+}
 }
