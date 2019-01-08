@@ -37,26 +37,5 @@
         zone.eachLayer(function (layer) {
 			layer.bindPopup(layer.feature.properties.name); //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
 		});
-		zone.on('click', function (e) {
-			if (map.getZoom() < 13) {
-				if (selected) {
-					selected.setStyle({
-						fillColor: "#a6a6a6",
-						color: "grey",
-						fillOpacity: 0.8
-					}) //ripristina l'elemento all'origine quando si seleziona un nuovo elemento
-				}
-				//determina una nuovo elemento selezionato
-				selected = e.layer
-				map.fitBounds(e.layer.getBounds())
-				//porta il selezionato in primo piano
-				selected.bringToFront()
-				//assegna un nuovo aspetto all'elemento selezionato
-				selected.setStyle({
-					'color': 'red',
-					'fillColor': '#d27979',
-				})
-			}
-		}).addTo(map)
     </script>
 </html>
