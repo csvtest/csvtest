@@ -27,7 +27,7 @@
                     maxZoom: 22,
                     minZoom: 12
                 });
-                map.setView([44.4930, 11.3355], 12);
+                map.setView([44.4920, 11.3355], 12);
         
         var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -37,6 +37,8 @@
 
         zone.addTo(map);
         map.fitBounds(zone.getBounds());
+	var limiti = map.getBounds();
+	map.setMaxBounds(limiti);
         zone.eachLayer(function (layer) {
 			layer.bindPopup(layer.feature.properties.NOMEZONA); //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
 		});
