@@ -8,15 +8,15 @@ I dataset sono stati selezionati all'interno di http://dati.comune.bologna.it, s
 
 # Analisi della qualità informativa
 
-Non esistono linee guida interne per la compilazione dei dataset in una maniera univoca. Alcuni CSV utilizzano la virgola come separatore; altri il punto e virgola; altri ancora la tabulazione.
+Non esistono linee guida interne per l'uniformità dei dataset. Alcuni CSV utilizzano la virgola come **separatore**; altri il punto e virgola; altri ancora la tabulazione.
 
-Non esistono vocabolari interni di nomi. Un altro problema ha riguardato la nomenclatura delle intestazioni, che risulta sempre diversa anche all'interno della stessa serie di dataset (ad esempio: *N_contribuenti* ; *N. Contribuenti* ; ...) e dei nomi di aree geografiche (vie, zone, quartieri) che non hanno una forma codificata e che vengono etichettate secondo modalità differenti (ad esempio: *Sant'Orsola* ; *S.Orsola*; *Sant Orsola* ; ...)
+**Non esistono vocabolari interni di nomi.** Un altro problema ha riguardato la nomenclatura delle intestazioni, che risulta sempre diversa anche all'interno della stessa serie di dataset (ad esempio: *N_contribuenti* ; *N. Contribuenti* ; ...) e dei nomi di aree geografiche (vie, zone, quartieri) che non hanno una forma codificata e che vengono etichettate secondo modalità differenti (ad esempio: *Sant'Orsola* ; *S.Orsola*; *Sant Orsola* ; ...)
 
-All'interno del testo le parole accentate sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica; altre volte viene impropriamente utilizzato l'apostrofo.
+All'interno del testo le **parole accentate** sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica; altre volte viene impropriamente utilizzato l'apostrofo.
 
-Sono presenti numerosi errori di battitura e troncature per quanto riguarda le stringhe di testo ( "Ospedale Magg" per Ospedale Maggiore ; "Triumrato" per Triumvirato etc )
+Sono presenti numerosi **errori di battitura** e troncature per quanto riguarda le stringhe di testo ( "Ospedale Magg" per Ospedale Maggiore ; "Triumrato" per Triumvirato etc )
 
-Nel sito non è presente una descrizione dettagliata del dataset di cui è disponibile il download, né una traduzione in inglese della sua breve introduzione.
+Nel sito **non è presente una descrizione dettagliata** del dataset di cui è disponibile il download, né una traduzione in inglese della sua breve introduzione.
 
 
 # Analisi giuridica
