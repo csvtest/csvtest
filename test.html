@@ -25,7 +25,8 @@
         <script id="jsbin-javascript">
         var map = L.map('map', {
                     maxZoom: 22,
-                    minZoom: 12
+                    minZoom: 12,
+		    maxBoundsViscosity: 1.0
                 });
                 map.setView([44.4915, 11.3355], 12);
         
@@ -38,9 +39,7 @@
         zone.addTo(map);
 	var limiti = map.getBounds();
 	map.setMaxBounds(limiti);
-        zone.eachLayer(function (layer) {
-			layer.bindPopup(layer.feature.properties.NOMEZONA); //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
-		});
+        zone.onEachFeature: function (feature, layer) {layer.bindPopup(feature.properties.NOMEZONA)}
        
     </script>
 </html>
