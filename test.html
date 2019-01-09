@@ -16,6 +16,8 @@
         		<div id='map'></div>
 		</div>
 		<div class="media-body col-md-6">
+			<div class="information">
+			</div>
 		</div>
 	</div>
     </body> 
@@ -39,19 +41,26 @@
 	var limiti = map.getBounds();
 	map.setMaxBounds(limiti);
 		
-	    $.ajax({
-		dataType: "json",
-		url: "geojson_folder/ZoneBologna.geojson",
-		success: function(data) {
-				L.geoJson(data, {
-					onEachFeature: onEachFeature
-				}).addTo(map);
-		}
-	     }).error(function() {});
+    function Bomba(e) {
+    $('.information').html('CAZZO SI!');
+    });
+		
+    $.ajax({
+	dataType: "json",
+	url: "geojson_folder/ZoneBologna.geojson",
+	success: function(data) {
+			L.geoJson(data, {
+				onEachFeature: onEachFeature
+			}).addTo(map);
+	}
+     }).error(function() {});
 
 
-			function onEachFeature(feature, layer) {
-				layer.bindPopup(feature.properties.NOMEZONA);
-			}	
+    function onEachFeature(feature, layer) {
+		layer.bindPopup(feature.properties.NOMEZONA);
+	    	layer.on({click: Bomba});
+    };
+	
+	
     </script>
 </html>
