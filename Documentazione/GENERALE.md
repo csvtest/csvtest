@@ -79,10 +79,12 @@ di domande, per ciascun aspetto, a cui rispondere con Sì o No.
 
 ## Data cleansing
 
-In generale abbiamo cercato di seguire le *best practices* legate ai file CSV nel corso della pulizia del dataset:
-1. Abbiamo reso le intestazioni delle colonne subito comprensibili e uniformi. Abbiamo qindi semplificato i loro nomi ed eliminato i caratteri speciali.
-2. Abbiamo uniformato i nomi all'interno dei file.
-3. Abbiamo copiato le versioni pulite dei dataset in formato CSV codificato in UTF-8.
+In generale abbiamo cercato di seguire le *best practices* legate ai file CSV :
+1. Abbiamo reso le intestazioni delle colonne semplici, comprensibili e uniformi. 
+2. Abbiamo eliminato i caratteri speciali, togliendo anche eventuali accenti e apostrofi
+3. Abbiamo utilizzato la maiuscola nella prima lettera della prima parola
+4. Abbiamo uniformato i nomi all'interno dei file, eliminando le forme diverse dei nomi e gli errori di battitura 
+5. Abbiamo copiato le versioni pulite dei dataset in formato CSV codificato in UTF-8.
 
 # Analisi tecnica
 
