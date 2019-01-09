@@ -14,7 +14,10 @@ Non esistono vocabolari interni di nomi. Un altro problema ha riguardato la nome
 
 All'interno del testo le parole accentate sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica; altre volte viene impropriamente utilizzato l'apostrofo.
 
+Sono presenti numerosi errori di battitura e troncature per quanto riguarda le stringhe di testo ( "Ospedale Magg" per Ospedale Maggiore ; "Triumrato" per Triumvirato etc )
+
 Nel sito non è presente una descrizione dettagliata del dataset di cui è disponibile il download, né una traduzione in inglese della sua breve introduzione.
+
 
 # Analisi giuridica
 
