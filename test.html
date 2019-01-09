@@ -36,7 +36,9 @@
         }).addTo(map);
         
         // var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
-	
+	var limiti = map.getBounds();
+	map.setMaxBounds(limiti);
+		
 	    $.ajax({
 		dataType: "json",
 		url: "geojson_folder/ZoneBologna.geojson",
@@ -51,7 +53,5 @@
 			function onEachFeature(feature, layer) {
 				layer.bindPopup(feature.properties.NOMEZONA);
 			}	
-	var limiti = map.getBounds();
-	map.setMaxBounds(limiti);
     </script>
 </html>
