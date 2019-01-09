@@ -109,7 +109,7 @@ Le operazioni sono state le seguenti:
 2. *Modifica delle stringhe d'intestazione*. In particolare:
 
 - sono state uniformate le stringhe in modo tale da essere identiche nei due dataset politici (caratteri uppercase e lowercase);
-- modificato i nomi dei partiti per farli corrispondere al nome vigente ufficiale del partito (precedentemente erano sigle o denominati in modo errato).
+- modificato i nomi dei partiti per farli corrispondere al nome vigente del partito (precedentemente erano sigle o denominati in modo errato).
 
 # Analisi tecnica
 
