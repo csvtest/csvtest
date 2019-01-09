@@ -33,9 +33,9 @@
                 });
                 map.setView([44.4915, 11.3355], 12);
         
-        //var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        //    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        //}).addTo(map);
+        var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
         
         // var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
 	var limiti = map.getBounds();
