@@ -132,4 +132,5 @@ Gli URI dei dataset presentano almeno due aspetti problematici:
 
 ## Provenance
 La fonte dei dataset è indicata con una semplice stringa di testo (*Dichiarazione dei redditi delle persone fisiche*). Anche la responsabilità è indicata con una stringa di testo (*Ufficio Intermedio Entrate / Area Programmazione Controlli e Statistica*), corredata da un link alla pagina dell'ufficio competente (http://www.comune.bologna.it/comune/organigramma/17:1083/899/). 
+
 Non ci sono metadati di provenance.
