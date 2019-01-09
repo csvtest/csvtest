@@ -34,15 +34,24 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         
-        var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
+        // var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
+	
+	    $.ajax({
+		dataType: "json",
+		url: "geojson_folder/ZoneBologna.geojson",
+		success: function(data) {
+				L.geoJson(data, {
+					onEachFeature: onEachFeature
+				}).addTo(map);
+		}
+	     }).error(function() {});
 
+
+			function onEachFeature(feature, layer) {
+				layer.bindPopup(feature.properties.NOMEZONA);
+			}	
         zone.addTo(map);
 	var limiti = map.getBounds();
 	map.setMaxBounds(limiti);
-	zone.eachLayer(function (layer) {
-    layer.bindPopup("booooh");
-});
-        
-       
     </script>
 </html>
