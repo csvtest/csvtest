@@ -30,7 +30,7 @@
         var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
 
         zone.addTo(map);
-            
+        map.fitBounds(zone.getBounds());
         zone.eachLayer(function (layer) {
 			layer.bindPopup(layer.feature.properties.NOMEZONA); //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
 		});
