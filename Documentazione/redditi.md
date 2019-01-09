@@ -3,8 +3,10 @@ Questa serie di dataset incorpora i dati riguardanti i redditi per area statisti
 
 Le informazioni si riferiscono all'area statistica, al numero contribuenti, al reddito imponibile ai fini IRPEF e al reddito imponibile ai fini dell'addizionale IRPEF.
 
+[A COSA CI SERVE???]
+
 # Analisi della qualità informativa
-## 
+[ASPETTA DOC ALTRUI]
 
 # Analisi giuridica
 ## Privacy
@@ -43,6 +45,9 @@ Le informazioni si riferiscono all'area statistica, al numero contribuenti, al r
 | | i dati rientrano nella lista dell’allegato A del d.lgs. 33/2013? | ? |
 | | se sì, come sono stati trattati dal responsabile della trasparenza nel sito “Amministrazione trasparente”? | - |
 | | in che forma si possono creare sinergie tra il portale “Amministrazione trasparente” e il portal open data per minimizzare le inconsistenze e favorire la trasparenza del dato aperto? | - | 
+
+[COMPLETARE RISPOSTE]
+
 ### Misure di de-identificazione
 #### Revisione preliminare
 I dati potrebbero rientrare nella categoria di *personal data* in quanto non rappresentano un rischio di de-anonimizzazione di per sé, ma potrebbero farlo se incrociati con altri dati. In particolare:
@@ -55,7 +60,7 @@ vi è il rischio che, facendo la media statistica del reddito per contribuente i
 | Via del Genio | 12 | 833317 |
 
 #### De-identificazione
-Metodi di de-identificazione quali il **_Data Masking_** e la **_Data Reduction_** potrebbero venire applicati ai valori appartenenti al *Numero contribuenti* in questa maniera:
+E' possibile applicare metodi di de-identificazione - come il **_Data Masking_** e la **_Data Reduction_** - ai valori, che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, appartenenti alla colonna *Numero contribuenti*:
 
 | Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
 | --------- | --------- | --------- |
@@ -68,44 +73,59 @@ oppure
 | Via del Genio | < 100 | 833317 |
 
 ## Licenze
+
+![CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](cc0.jpg "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication")
+
 L'URL che descrive il diritto di riutilizzo del dataset è [http://dati.comune.bologna.it/node/5]. La licenza applicata al dataset è **CC0 1.0**, per cui il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*.
 
 ## Finalità
 La finalità del dataset è quella di reccogliere dati statistici che si riferiscono ai redditi (imponibili ai fini di calcolare l'imposta sul reddito delle persone fisiche) dei contribuenti bolognesi, dichiarati nell'anno di imposta, per ogni area statistica.
 
-# Analisi etica
+[NOSTRA FINALITA' (PERCHE' LO ABBIAMO USATO?)]
+
+# Analisi etica 
 ## Considerazioni generali
-<VALE>
-<ALE>
+(VALE)
+(ALE)
+
 ## Data Cleansing
-<VALE>
-<ALE>
-[mettere dataset puliti???]
+(VALE)
+(ALE)
+[METTERE DATASET PULITI]
 
 # Analisi tecnica
+
 ## Formati
 I dataset sono disponibili solo in formato CSV.
 ## Metadati
 I dataset sono descritti dai seguenti metadati human-readable:
-1. File
-2. Anno versione
-3. versione
-4. Formato
-5. Data rilascio
-6. Argomento
-7. Tag
-8. Responsabile
-9. Fonte
-10. Licenza
+1. **File**: il nome del dataset.
+2. **Anno versione**: l'anno al quale la relativa versione si riferisce.
+3. **versione**: numero di versione.
+4. **Formato**: formato dei dati.
+5. **Data rilascio**: data del rilascio del dataset.
+6. **Argomento**: keyword che descrive il contenuto dei dataset.
+7. **Tag**: keyword che descrive ulteriormente il contenuto dei dataset.
+8. **Responsabile**: 
+9. **Fonte**: indicazione di autorità e/o provenienza.
+10. **Licenza**: tipo di licenza del dataset.
+
 Non sembrano essere corredati da metadati machine-readable.
+
 ## URI
 Gli URI dei dataset presentano almeno due aspetti problematici:
-1. la *semantica* poco chiara;
+1. la *semantica* non perfettamente chiara:
 
-![Semantica](uri1.png "Semantica")
+`2009: http://dati.comune.bologna.it/download/file/fid/1136`
 
-2. l'inconsistenza del pattern.
+2. l'inconsistenza del pattern:
 
-![Inconsistenza](uri2.png "Inconsistenza")
+```
+2010: http://dati.comune.bologna.it/download/file/fid/1137
+2011: http://dati.comune.bologna.it/download/file/fid/1135
+2012: http://dati.comune.bologna.it/download/file/fid/1878
+```
 
 ## Provenance
+La fonte dei dataset è indicata con una semplice stringa di testo (*Dichiarazione dei redditi delle persone fisiche*). Anche la responsabilità è indicata con una stringa di testo (*Ufficio Intermedio Entrate / Area Programmazione Controlli e Statistica*), corredata da un link alla pagina dell'ufficio competente (http://www.comune.bologna.it/comune/organigramma/17:1083/899/). 
+Non ci sono metadati di provenance.
