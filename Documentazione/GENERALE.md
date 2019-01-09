@@ -1,6 +1,6 @@
 # Descrizione
 
-I dataset sono stati selezionati all'interno del sito http://dati.comune.bologna.it, sito web del Comune di Bologna per la trasparenza e accessibilità secondo i principi dell'open government.
+I dataset sono stati selezionati all'interno di http://dati.comune.bologna.it, sito web del Comune di Bologna per la trasparenza e accessibilità secondo i principi dell'Open Government.
 
 * [**Redditi 2009-2016 per area statistica**](http://dati.comune.bologna.it/node/244)
 * [**Elezioni politiche Camera 2018**](http://dati.comune.bologna.it/node/3328)
