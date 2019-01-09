@@ -38,7 +38,7 @@
         // var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
 	
 	    $.ajax({
-		dataType: "geojson",
+		dataType: "json",
 		url: "geojson_folder/ZoneBologna.geojson",
 		success: function(data) {
 				L.geoJson(data, {
