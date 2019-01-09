@@ -60,17 +60,17 @@ vi è il rischio che, facendo la media statistica del reddito per contribuente i
 | Via del Genio | 12 | 833317 |
 
 #### De-identificazione
-E' possibile applicare metodi di de-identificazione - come il **_Data Masking_** e la **_Data Reduction_** - ai valori, che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, appartenenti alla colonna *Numero contribuenti*:
+E' possibile applicare metodi di de-identificazione - come il **_Data Masking_** e la **_Data Reduction_** - ai valori che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, come il *Numero contribuenti*. Per quanto riguarda i valori potenzialmente sensibili, come il *Reddito imponibile ai fini irpef*, è possibile anonimizzare i valori precisi convertendoli in valori arrotondati secondo la distribuzione in *scaglioni IRPEF*:
 
 | Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
 | --------- | --------- | --------- |
-| Via del Genio | *2 | 833317 |
+| Via del Genio | *2 | tra 55001 e 75000 |
 
 oppure
 
 | Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
 | --------- | --------- | --------- |
-| Via del Genio | < 100 | 833317 |
+| Via del Genio | < 100 | tra 55001 e 75000 |
 
 ## Licenze
 
@@ -93,9 +93,18 @@ La finalità del dataset è quella di reccogliere dati statistici che si riferis
 (ALE)
 
 ## Data Cleansing
-(VALE)
-(ALE)
-[METTERE DATASET PULITI]
+
+La pulizia è stata effettuata per lo più con il programma **_Comma Chameleon_**, CSV editor che permette di aggiungere, eliminare e modificare file csv prodotto da ODI (Open Data Institute).
+
+Le operazioni di pulizia effettuate comprendono:
+
+1. *Eliminazione di colonne*; in particolare l'eliminazione delle colonne che non sono servite agli scopi del nostro lavoro.
+
+2. *Modifica delle stringhe d'intestazione*; in particolare l'uniformazione le stringhe in modo tale da essere identiche in tutti i dataset della serie (uppercase e lowercase, trattini, ecc...)
+
+3. *Eliminazione righe*; in particolare:
+- eliminazione delle righe che non sono servite agli scopi del nostro lavoro (ad esempio: *Non residenti nell'anno di imposta*; *Senza fissa dimora*)
+- eliminazione delle righe che compaiono più volte.
 
 # Analisi tecnica
 
