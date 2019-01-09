@@ -1,25 +1,40 @@
 # Descrizione
 
-I dataset sono stati selezionati all'interno di http://dati.comune.bologna.it, sito web del Comune di Bologna per la trasparenza e accessibilità secondo i principi dell'Open Government.
+I dataset sono stati selezionati all'interno del sito http://dati.comune.bologna.it, sito web del Comune di Bologna per la trasparenza e accessibilità secondo i principi dell'open government.
 
 * [**Redditi 2009-2016 per area statistica**](http://dati.comune.bologna.it/node/244)
 * [**Elezioni politiche Camera 2018**](http://dati.comune.bologna.it/node/3328)
 * 
 
+
 # Analisi della qualità informativa
 
-Non esistono linee guida interne per l'uniformità dei dataset. Alcuni CSV utilizzano la virgola come **separatore**; altri il punto e virgola; altri ancora la tabulazione.
+## Requisiti 
 
-**Non esistono vocabolari interni di nomi.** Un altro problema ha riguardato la nomenclatura delle intestazioni, che risulta sempre diversa anche all'interno della stessa serie di dataset (ad esempio: *N_contribuenti* ; *N. Contribuenti* ; ...) e dei nomi di aree geografiche (vie, zone, quartieri) che non hanno una forma codificata e che vengono etichettate secondo modalità differenti (ad esempio: *Sant'Orsola* ; *S.Orsola*; *Sant Orsola* ; ...)
+I requisiti che abbiamo stabilito per controllare il livello di qualità di un dataset è:
+* il livello 5 sulla scala 5-Star Linked Data;
+* l'accuratezza (semantica e sintattica);
+* la coerenza;
+* la completezza;
+* l'attualità
 
-All'interno del testo le **parole accentate** sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica; altre volte viene impropriamente utilizzato l'apostrofo.
+### Accuratezza (Semantica e sintattica)
+L'accuratezza è la misura secondo la quale un dataset rappresenta correttamente le caratteristiche di un oggetto, una situazione o un evento del mondo reale.
 
-Sono presenti numerosi **errori di battitura** e troncature per quanto riguarda le stringhe di testo ( "Ospedale Magg" per Ospedale Maggiore ; "Triumrato" per Triumvirato etc )
+Non esistono linee guida interne per la compilazione dei dataset in una maniera univoca. Alcuni CSV utilizzano la virgola come separatore; altri il punto e virgola; altri ancora la tabulazione.
 
-Sono presenti alcune **colonne e righe che compaiono più volte** con lo stesso contenuto
+Non esistono vocabolari interni di nomi. Un altro problema ha riguardato la nomenclatura delle intestazioni, che risulta sempre diversa anche all'interno della stessa serie di dataset (ad esempio: *N_contribuenti* ; *N. Contribuenti* ; ...) e dei nomi di aree geografiche (vie, zone, quartieri) che non hanno una forma codificata e che vengono etichettate secondo modalità differenti (ad esempio: *Sant'Orsola* ; *S.Orsola*; *Sant Orsola* ; ...)
 
-Nel sito **non è presente una descrizione dettagliata** del dataset di cui è disponibile il download, né una traduzione in inglese della sua breve introduzione.
+All'interno del testo le parole accentate sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica; altre volte viene impropriamente utilizzato l'apostrofo.
 
+### Coerenza
+La coerenza è la misura secondo la quale un dataset non contiene contraddizioni che ne renderebbero difficile o impossibile l'utilizzo.
+
+### Completezza
+La completezza è la misura secondo la quale un dataset include quei dati che sono necessari al supporto della finalità per cui è stato creato.
+
+### Attualità
+[BOH PORCOIDDIO]
 
 # Analisi giuridica
 
@@ -68,33 +83,74 @@ di domande, per ciascun aspetto, a cui rispondere con Sì o No.
 | | in che forma si possono creare sinergie tra il portale “Amministrazione trasparente” e il portal open data per minimizzare le inconsistenze e favorire la trasparenza del dato aperto? | | 
 
 ### Misure di de-identificazione
-
+Gli standard di de-identificazione per i dati contenuti in un dataset sono i seguenti:
+- gli identificatori non necessari vanno eliminati;
+- 
 #### Revisione preliminare
 
 #### De-identificazione
 
 ## Licenze
 
+L'informazione sul tipo di licenza è metadato indispensabile per determinare come poter riutilizzare il dataset. Essa deve essere **sempre** specificata, mettendola in evidenza in forma *human-* e *machine-readable*, indicando: 
+* nome;
+* versione;
+* riferimento al testo della licenza.
+
+I dataset pubblicati su OpenData Bologna rispettano queste condizioni. 
+
+[CC0 blablabla]
+
+Il dichiarante “*apertamente, pienamente, permanentemente, irrevocabilmente e incondizionatamente rinuncia, abbandona e cede ogni proprio diritto d’autore e connesso, ogni relativa pretesa, rivendicazione, causa e azione, sia al momento nota o ignota (includendo espressamente le pretese presenti come quelle future) relativa all’opera*”. 
+
+[CC-BY-SA blablabla]
+
+Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo, consentono di condividere, adattare e creare anche per finalità commerciali nel rispetto però di due vincoli: 
+- attribuire la paternità del dataset; 
+- distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale. 
+
+[NOSTRO DATASET MASHATO]
+
+Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisca libertà di riutilizzo, che sia internazionalmente riconosciuta e che consenta di attribuire la paternità dei dataset (attribuire la fonte). Pertanto, si suggerisce l’adozione generalizzata della licenza CC-BY nella sua versione 4.0. Si raccomanda inoltre di gestire l’attribuzione della fonte indicando il nome dell’organizzazione unitamente all’URL della pagina Web dove si trovano i dataset/contenuti da licenziare.
+
 ## Finalità
+
 
 # Analisi etica
 
+# Analisi tecnica
+
 ## Data cleansing
 
-In generale abbiamo cercato di seguire le *best practices* legate ai file CSV :
-1. Abbiamo reso le intestazioni delle colonne semplici, comprensibili e uniformi
-2. Abbiamo eliminato i caratteri speciali, togliendo anche eventuali accenti e apostrofi
-3. Abbiamo utilizzato la maiuscola nella prima lettera della prima parola
-4. Abbiamo uniformato i nomi all'interno dei file, eliminando le forme diverse dei nomi e gli errori di battitura 
-5. Abbiamo copiato le versioni pulite dei dataset in formato CSV codificato in UTF-8
-6. Abbiamo eliminato colonne o righe non utili ai fini del progetto, e quelle che si ripetevano più di una volta 
-
-# Analisi tecnica
+In generale abbiamo cercato di seguire le *best practices* legate ai file CSV nel corso della pulizia del dataset:
+1. Abbiamo reso le intestazioni delle colonne subito comprensibili e uniformi. Abbiamo qindi semplificato i loro nomi ed eliminato i caratteri speciali.
+2. Abbiamo uniformato i nomi all'interno dei file.
+3. Abbiamo copiato le versioni pulite dei dataset in formato CSV codificato in UTF-8.
 
 ## Formati
 
+La pubblicazione di dataset in open Data richiede che i dati siano resi disponibili in formati aperti, non proprietari e neutri rispetto agli applicativi necessari per la fruizione dei dati stessi.
+
+Tutti i dataset sono pubblicati in formato **CSV**.
+
 ## Metadati
+
+La metadatazione ricopre un ruolo essenziale laddove i dati sono esposti a utenti terzi e a software. I metadati, infatti, consentono una maggiore comprensione e rappresentano la chiave attraverso cui abilitare più agevolmente la ricerca, la scoperta, l’accesso e quindi il riuso dei dati stessi. La classificazione qualitativa dei metadati si fonda su due fattori principali: legame tra dato-metadati e livello di dettaglio.
+
+L'obiettivo è raggiungere il **livello 4** di metadatazione, per cui:
+* legame dato-metadato è forte: i dati incorporano i metadati che li descrivono;
+* il livello di dettaglio è tale per cui i metadati forniscono informazioni relative al dataset e al singolo dato, con il massimo grado di dettaglio.
 
 ## URI
 
+E' assolutamente necessario garantire che gli URI siano **persistenti** e **dereferenziabili**.
+
+Essi dovrebbero seguire il seguente modello di pattern:
+
+`http://{dominio}/{tipo-risorsa}/{concetto}/{riferimento}`
+
+Ai dataset andrebbero assegnati nomi autoesplicativi e descrizioni testuali dettagliate. 
+
 ## Provenance
+
+La *Provenance* 

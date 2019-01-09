@@ -96,6 +96,8 @@ La visualizzazione è disponibile presso la [pagina dedicata](http://dati.comune
 
 # Analisi etica
 
+# Analisi tecnica
+
 ## Data cleansing
 
 La pulizia è stata effettuata per lo più con il programma **_Comma Chameleon_**, CSV editor che permette di aggiungere, eliminare e modificare file csv prodotto da ODI (Open Data Institute).
@@ -109,9 +111,7 @@ Le operazioni sono state le seguenti:
 2. *Modifica delle stringhe d'intestazione*. In particolare:
 
 - sono state uniformate le stringhe in modo tale da essere identiche nei due dataset politici (caratteri uppercase e lowercase);
-- modificato i nomi dei partiti per farli corrispondere al nome vigente del partito (precedentemente erano sigle o denominati in modo errato).
-
-# Analisi tecnica
+- modificato i nomi dei partiti per farli corrispondere al nome vigente ufficiale del partito (precedentemente erano sigle o denominati in modo errato).
 
 ## Formati
 
