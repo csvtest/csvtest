@@ -16,6 +16,8 @@ All'interno del testo le **parole accentate** sono codificate secondo modalità 
 
 Sono presenti numerosi **errori di battitura** e troncature per quanto riguarda le stringhe di testo ( "Ospedale Magg" per Ospedale Maggiore ; "Triumrato" per Triumvirato etc )
 
+Sono presenti alcune **colonne e righe che compaiono più volte** con lo stesso contenuto
+
 Nel sito **non è presente una descrizione dettagliata** del dataset di cui è disponibile il download, né una traduzione in inglese della sua breve introduzione.
 
 
