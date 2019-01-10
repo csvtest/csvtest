@@ -60,8 +60,20 @@
     function onEachFeature(feature, layer) {
 		layer.bindPopup(feature.properties.Nome_zona);
 	    	layer.on('click', function (e) {
-			$('.information').html('');
-			$('.information').html(feature.properties.Codice_zona);
+			$.ajax({
+				dataType: "json",
+				url: "geojson_folder/csvjson.json",
+				success: function(dati) {
+					dati.forEach(function (arrayItem) {
+						if (arrayItem["Nome_zona"] == feature.properties.Nome_zona){	
+							$('.information').html('');
+							$('.information').html(arrayItem["Codice_zona"]);
+						}
+					})
+			}
+     }).error(function() {});
+			//$('.information').html('');
+			//$('.information').html(feature.properties.Codice_zona);
 			});
     };
 	
