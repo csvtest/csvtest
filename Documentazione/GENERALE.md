@@ -10,16 +10,38 @@
 | 5 | Analisi sostenibilità | Modello, curation |
 | 6 | Visualizzazione | - |
 
+_______________________________________________________________
+
 # Scenario applicativo
+
+[ROBA ...]
+
+_______________________________________________________________
 
 # Dataset
 
 I dataset sono stati selezionati all'interno del sito http://dati.comune.bologna.it, sito web del Comune di Bologna per la trasparenza e accessibilità secondo i principi dell'open government.
 
-* [**Redditi 2009-2016 per area statistica**](http://dati.comune.bologna.it/node/244)
-* [**Elezioni politiche Camera 2018**](http://dati.comune.bologna.it/node/3328)
-* 
+I dataset che abbiamo utilizzato sono:
 
+| URI dataset | Nome | URI pagina | Formato |
+| --- | ---- | ---------- | ------- |
+| http://dati.comune.bologna.it/download/file/fid/4267 | Risultati politiche 2018 - Bologna liste Camera (Collegio 6) | http://dati.comune.bologna.it/node/3328 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4269 | Risultati politiche 2018 - Bologna liste Camera (Collegio 7) | http://dati.comune.bologna.it/node/3328 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4265 | Risultati politiche 2018 - Bologna liste Senato | http://dati.comune.bologna.it/node/3323 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/1136 | Redditi 2009 per area statistica | http://dati.comune.bologna.it/node/244 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/1137 | Redditi 2010 per area statistica | http://dati.comune.bologna.it/node/244 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/1135 | Redditi 2011 per area statistica | http://dati.comune.bologna.it/node/244 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/1878 | Redditi 2012 per area statistica | http://dati.comune.bologna.it/node/244 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/2436 | Redditi 2013 per area statistica | http://dati.comune.bologna.it/node/244 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/3422 | Redditi 2014 per area statistica | http://dati.comune.bologna.it/node/244 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4304 | Redditi 2015 per area statistica | http://dati.comune.bologna.it/node/244 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4615 | Redditi 2016 per area statistica | http://dati.comune.bologna.it/node/244 | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4493 | Aree Statistiche del territorio comunale |http://dati.comune.bologna.it/node/161 | SHP |
+| http://dati.comune.bologna.it/download/file/fid/4494 | Aree statistiche Bologna per quartiere | http://dati.comune.bologna.it/node/161 | CSV |
+|  | FAMIGLIE O POPOLAZIONE ???? |  | CSV |
+
+_______________________________________________________________
 
 # Analisi della qualità informativa
 
@@ -27,13 +49,19 @@ I dataset sono stati selezionati all'interno del sito http://dati.comune.bologna
 
 I requisiti che abbiamo stabilito per controllare il livello di qualità di un dataset è:
 * il livello 5 sulla scala 5-Star Linked Data;
-* l'accuratezza (semantica e sintattica);
-* la coerenza;
-* la completezza;
-* l'attualità
+* l'**accuratezza** (semantica e sintattica): la misura secondo la quale un dataset rappresenta correttamente le caratteristiche di un oggetto, una situazione o un evento del mondo reale;
+* la **coerenza**: la coerenza è la misura secondo la quale un dataset non contiene contraddizioni che ne renderebbero difficile o impossibile l'utilizzo;
+* la **completezza**: La completezza è la misura secondo la quale un dataset include quei dati che sono necessari al supporto della finalità per cui è stato creato;
+* l'**attualità**.
+
+| ID | Descrizione | Gravità Problema | Tipologia Problema | Soluzione |
+| Acc_1 |
+|
+|
+|
+|
 
 ### Accuratezza (Semantica e sintattica)
-L'accuratezza è la misura secondo la quale un dataset rappresenta correttamente le caratteristiche di un oggetto, una situazione o un evento del mondo reale.
 
 Non esistono linee guida interne per la compilazione dei dataset in una maniera univoca. Alcuni CSV utilizzano la virgola come separatore; altri il punto e virgola; altri ancora la tabulazione.
 
@@ -44,16 +72,13 @@ All'interno del testo le parole accentate sono codificate secondo modalità diff
 Una buona pratica, infine, prevede che ai dataset vadano assegnati nomi autoesplicativi e descrizioni testuali dettagliate. 
 
 ### Coerenza
-La coerenza è la misura secondo la quale un dataset non contiene contraddizioni che ne renderebbero difficile o impossibile l'utilizzo.
+
 
 ### Completezza
-La completezza è la misura secondo la quale un dataset include quei dati che sono necessari al supporto della finalità per cui è stato creato.
+
 
 ### Attualità
 [BOH PORCOIDDIO]
-
-## Lista di problemi
-
 
 ## Data cleansing
 
@@ -63,6 +88,8 @@ In generale abbiamo cercato di seguire le *best practices* legate ai file CSV ne
 3. Abbiamo copiato le versioni pulite dei dataset in formato CSV codificato in UTF-8.
 
 [CONTINUARE ...]
+
+_______________________________________________________________
 
 # Analisi giuridica
 
@@ -159,9 +186,7 @@ Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisc
 [... ...]
 [NOSTRA FINALITA']
 
-# Analisi etica
-
-[CACCIATE STO DATASET ETICO BITCHESSSS]
+_______________________________________________________________
 
 # Analisi tecnica
 
@@ -197,3 +222,13 @@ Per quanto riguarda il nostro dataset mashato, abbiamo deciso di mantenere l'inf
 ## Provenance
 
 La *Provenance* 
+
+_______________________________________________________________
+
+# Analisi della sostenibilità
+
+
+
+_______________________________________________________________
+
+# Visualizzazione
