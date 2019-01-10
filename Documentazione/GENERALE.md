@@ -30,9 +30,9 @@ I dataset che abbiamo utilizzato sono:
 
 | Dataset | Nome | Pagina | Formato |
 | --- | ---- | ---------- | ------- |
-| http://dati.comune.bologna.it/download/file/fid/4267 | 26.01.06_risultati_politiche_2018_bologna_liste_camera_collegio6 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4269 | 26.01.08_risultati_politiche_2018_bologna_liste_camera_collegio7 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4265 | 26.01.04_risultati_politiche_2018_bologna_liste_senato | [Risultati politiche 2018 - Bologna Senato](http://dati.comune.bologna.it/node/3323) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4267 | 26.01.06_risultati_politiche_<br>2018_bologna_liste_camera_collegio6 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4269 | 26.01.08_risultati_politiche_<br>2018_bologna_liste_camera_collegio7 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4265 | 26.01.04_risultati_politiche_<br>2018_bologna_liste_senato | [Risultati politiche 2018 - Bologna Senato](http://dati.comune.bologna.it/node/3323) | CSV |
 | http://dati.comune.bologna.it/download/file/fid/1136 | redditi_2009_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
 | http://dati.comune.bologna.it/download/file/fid/1137 | redditi_2010_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
 | http://dati.comune.bologna.it/download/file/fid/1135 | redditi_2011_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
