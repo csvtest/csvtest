@@ -30,19 +30,19 @@ I dataset che abbiamo utilizzato sono:
 
 | Dataset | Nome | Pagina | Formato |
 | --- | ---- | ---------- | ------- |
-| http://dati.comune.bologna.it/download/file/fid/4267 | Risultati politiche 2018 - Bologna liste Camera (Collegio 6) | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4269 | Risultati politiche 2018 - Bologna liste Camera (Collegio 7) | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4265 | Risultati politiche 2018 - Bologna liste Senato | [Risultati politiche 2018 - Bologna Senato](http://dati.comune.bologna.it/node/3323) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/1136 | Redditi 2009 per area statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/1137 | Redditi 2010 per area statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/1135 | Redditi 2011 per area statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/1878 | Redditi 2012 per area statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/2436 | Redditi 2013 per area statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/3422 | Redditi 2014 per area statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4304 | Redditi 2015 per area statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4615 | Redditi 2016 per area statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4493 | Aree Statistiche del territorio comunale | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) | SHP |
-| http://dati.comune.bologna.it/download/file/fid/4494 | Aree statistiche Bologna per quartiere | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4267 | 26.01.06_risultati_politiche_2018_bologna_liste_camera_collegio6 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4269 | 26.01.08_risultati_politiche_2018_bologna_liste_camera_collegio7 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4265 | 26.01.04_risultati_politiche_2018_bologna_liste_senato | [Risultati politiche 2018 - Bologna Senato](http://dati.comune.bologna.it/node/3323) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/1136 | redditi_2009_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/1137 | redditi_2010_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/1135 | redditi_2011_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/1878 | redditi2012_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/2436 | redditi2013_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/3422 | redditi2014_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4304 | redditi2015_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4615 | redditi2016_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
+| http://dati.comune.bologna.it/download/file/fid/4493 | Aree 03.00.02_aree_statistiche_bologna | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) | SHP - DB - PRJ - QPJ - SHX |
+| http://dati.comune.bologna.it/download/file/fid/4494 | Aree 03.00.03_areestat_quartiere | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) | CSV |
 |  | FAMIGLIE O POPOLAZIONE ???? |  | CSV |
 
 [DATASET PULITI?]
