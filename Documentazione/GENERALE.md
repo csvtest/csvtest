@@ -1,3 +1,19 @@
+# Introduzione (Task 0)
+
+# Scenario applicativo
+
+| Task | Descrizione | Cosa abbiamo fatto |
+| ---- | ---- | ---- |
+| 0 | Configurazione scenario |
+| 1 | Dataset | Selezione | 
+| 2 | Analisi qualità | Requisiti, lista di problemi, pulizia |
+| 3 | Analisi etico-giuridica | Privacy, licenze, finalità |
+| 4 | Analisi tecnica | Formati, metadati, URI, provenance |
+| 5 | Analisi sostenibilità | Modello, curation |
+| 6 | Visualizzazione | - |
+
+
+
 # Descrizione
 
 I dataset sono stati selezionati all'interno del sito http://dati.comune.bologna.it, sito web del Comune di Bologna per la trasparenza e accessibilità secondo i principi dell'open government.
@@ -27,6 +43,8 @@ Non esistono vocabolari interni di nomi. Un altro problema ha riguardato la nome
 
 All'interno del testo le parole accentate sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica; altre volte viene impropriamente utilizzato l'apostrofo.
 
+Una buona pratica, infine, prevede che ai dataset vadano assegnati nomi autoesplicativi e descrizioni testuali dettagliate. 
+
 ### Coerenza
 La coerenza è la misura secondo la quale un dataset non contiene contraddizioni che ne renderebbero difficile o impossibile l'utilizzo.
 
@@ -35,6 +53,18 @@ La completezza è la misura secondo la quale un dataset include quei dati che so
 
 ### Attualità
 [BOH PORCOIDDIO]
+
+## Lista di problemi
+
+
+## Data cleansing
+
+In generale abbiamo cercato di seguire le *best practices* legate ai file CSV nel corso della pulizia del dataset:
+1. Abbiamo reso le intestazioni delle colonne subito comprensibili e uniformi. Abbiamo qindi semplificato i loro nomi ed eliminato i caratteri speciali.
+2. Abbiamo uniformato i nomi all'interno dei file.
+3. Abbiamo copiato le versioni pulite dei dataset in formato CSV codificato in UTF-8.
+
+[CONTINUARE ...]
 
 # Analisi giuridica
 
@@ -82,13 +112,25 @@ di domande, per ciascun aspetto, a cui rispondere con Sì o No.
 | | se sì, come sono stati trattati dal responsabile della trasparenza nel sito “Amministrazione trasparente”? | |
 | | in che forma si possono creare sinergie tra il portale “Amministrazione trasparente” e il portal open data per minimizzare le inconsistenze e favorire la trasparenza del dato aperto? | | 
 
+[CONTINUARE ...]
+
 ### Misure di de-identificazione
-Gli standard di de-identificazione per i dati contenuti in un dataset sono i seguenti:
-- gli identificatori non necessari vanno eliminati;
-- 
+
 #### Revisione preliminare
+Verifichiamo qualora dati specifici possano rientrare nella categoria di *personal data* o no. I dati che si confermano essere *non-personal data* possono essere usati liberamente, cioè senza restrizioni legali.
+
+I *personal data* sono dati che possono identificare una persona vivente e che includono informazioni facilmente integrabili con altre informazioni per perfezionare il processo di re-identificazione.
+
+Gli standard di de-identificazione per i dati contenuti in un dataset sono i seguenti:
+- gli identificatori non assolutamente necessari vanno eliminati;
+- i valori degli attributi non necessari vanno eliminati; quelli che indicano situazioni fortemente personali necessitano di forti misure di de-identificazione ;
 
 #### De-identificazione
+Prendiamo provvedimenti affinché gli individui non siano identificabili tramite l'osservazione dei dati o il loro incrocio. Abbiamo scelto una serie di metodi da applicare:
+- soppressione
+- aggregazione, arrotondamento, riarrangiamento
+- riduzione
+- mascheramento, noise
 
 ## Licenze
 
@@ -115,41 +157,44 @@ Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisc
 
 ## Finalità
 
+[FINALITA' DI OGNI DATASET]
+[... ...]
+[NOSTRA FINALITA']
 
 # Analisi etica
 
+[CACCIATE STO DATASET ETICO BITCHESSSS]
+
 # Analisi tecnica
-
-## Data cleansing
-
-In generale abbiamo cercato di seguire le *best practices* legate ai file CSV nel corso della pulizia del dataset:
-1. Abbiamo reso le intestazioni delle colonne subito comprensibili e uniformi. Abbiamo qindi semplificato i loro nomi ed eliminato i caratteri speciali.
-2. Abbiamo uniformato i nomi all'interno dei file.
-3. Abbiamo copiato le versioni pulite dei dataset in formato CSV codificato in UTF-8.
 
 ## Formati
 
-La pubblicazione di dataset in open Data richiede che i dati siano resi disponibili in formati aperti, non proprietari e neutri rispetto agli applicativi necessari per la fruizione dei dati stessi.
+La pubblicazione di dataset in open Data richiede che i dati siano resi disponibili in formati aperti, non proprietari, standardizzati e neutri rispetto agli applicativi necessari per la fruizione dei dati stessi.
 
-Tutti i dataset sono pubblicati in formato **CSV**.
+Tutti i dataset sono pubblicati in formato **CSV**. 
 
 ## Metadati
 
 La metadatazione ricopre un ruolo essenziale laddove i dati sono esposti a utenti terzi e a software. I metadati, infatti, consentono una maggiore comprensione e rappresentano la chiave attraverso cui abilitare più agevolmente la ricerca, la scoperta, l’accesso e quindi il riuso dei dati stessi. La classificazione qualitativa dei metadati si fonda su due fattori principali: legame tra dato-metadati e livello di dettaglio.
 
-L'obiettivo è raggiungere il **livello 4** di metadatazione, per cui:
-* legame dato-metadato è forte: i dati incorporano i metadati che li descrivono;
-* il livello di dettaglio è tale per cui i metadati forniscono informazioni relative al dataset e al singolo dato, con il massimo grado di dettaglio.
+Il nostro obiettivo è raggiungere il **livello 4** di metadatazione, per cui:
+* il legame dato-metadato sia forte: i dati incorporano i metadati che li descrivono;
+* il livello di dettaglio sia massimo: i metadati forniscono informazioni relative al dataset e al singolo dato.
 
 ## URI
 
-E' assolutamente necessario garantire che gli URI siano **persistenti** e **dereferenziabili**.
-
-Essi dovrebbero seguire il seguente modello di pattern:
+E' assolutamente necessario garantire che gli URI siano **persistenti**, **dereferenziabili** e **non ambigui**. Dovrebbero essere supportati da un'infrastruttura affidabile.
+Dovrebbero seguire il seguente modello di pattern:
 
 `http://{dominio}/{tipo-risorsa}/{concetto}/{riferimento}`
 
-Ai dataset andrebbero assegnati nomi autoesplicativi e descrizioni testuali dettagliate. 
+Vanno evitati:
+- i numeri di versione: l'URI dovrebbe rimanere stabile tra i successivi cicli iterativi di cambiamento e/o update che seguono la creazione di un dataset;
+- le stringhe di query: non possono essere persistenti poiché si affidano a particolari implementazioni;
+- le estensioni di file: esse possono, in alternativa, essere associate ai metadati della distribuzione del dataset;
+- l'*auto-increment*: meccanismo semplice e conveniente per generare sequenze, si rivela essere potenzialmente problematico nel momento in cui non è possibile assicurare la continuità della sequenza a seguito di un update del dataset.
+
+Per quanto riguarda il nostro dataset mashato, abbiamo deciso di mantenere l'informazione sull'*ownership*, ovvero il nome dell'organizzazione o progetto che ha coniato l'URI (il nostro progetto). Siamo consapevoli del rischio che rappresenta tale decisione, considerando quanto spesso organizzazioni e progetti cambino nome nel corso del tempo. 
 
 ## Provenance
 

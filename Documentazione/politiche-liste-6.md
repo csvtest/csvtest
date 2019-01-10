@@ -8,7 +8,20 @@ In particolare, abbiamo utilizzato i risultati riguardanti le liste raccolti all
 
 # Analisi della qualità informativa
 
-[NON SO COSA SCRIVERE PORCODDIO]
+## Data cleansing
+
+La pulizia è stata effettuata per lo più con il programma **_Comma Chameleon_**, CSV editor che permette di aggiungere, eliminare e modificare file csv prodotto da ODI (Open Data Institute).
+
+Le operazioni sono state le seguenti:
+1. *Eliminazione di colonne*. In particolare sono state eliminate:
+
+- le colonne che non servivano agli scopi del nostro lavoro;
+- le colonne che comparivano più di una volta, con gli stessi valori, nello stesso dataset.
+
+2. *Modifica delle stringhe d'intestazione*. In particolare:
+
+- sono state uniformate le stringhe in modo tale da essere identiche nei due dataset politici (caratteri uppercase e lowercase);
+- modificato i nomi dei partiti per farli corrispondere al nome vigente ufficiale del partito (precedentemente erano sigle o denominati in modo errato).
 
 # Analisi giuridica
 
@@ -97,21 +110,6 @@ La visualizzazione è disponibile presso la [pagina dedicata](http://dati.comune
 # Analisi etica
 
 # Analisi tecnica
-
-## Data cleansing
-
-La pulizia è stata effettuata per lo più con il programma **_Comma Chameleon_**, CSV editor che permette di aggiungere, eliminare e modificare file csv prodotto da ODI (Open Data Institute).
-
-Le operazioni sono state le seguenti:
-1. *Eliminazione di colonne*. In particolare sono state eliminate:
-
-- le colonne che non servivano agli scopi del nostro lavoro;
-- le colonne che comparivano più di una volta, con gli stessi valori, nello stesso dataset.
-
-2. *Modifica delle stringhe d'intestazione*. In particolare:
-
-- sono state uniformate le stringhe in modo tale da essere identiche nei due dataset politici (caratteri uppercase e lowercase);
-- modificato i nomi dei partiti per farli corrispondere al nome vigente ufficiale del partito (precedentemente erano sigle o denominati in modo errato).
 
 ## Formati
 

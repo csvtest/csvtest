@@ -8,6 +8,20 @@ Le informazioni si riferiscono all'area statistica, al numero contribuenti, al r
 # Analisi della qualità informativa
 [ASPETTA DOC ALTRUI]
 
+## Data Cleansing
+
+La pulizia è stata effettuata per lo più con il programma **_Comma Chameleon_**, CSV editor che permette di aggiungere, eliminare e modificare file csv prodotto da ODI (Open Data Institute).
+
+Le operazioni di pulizia effettuate comprendono:
+
+1. *Eliminazione di colonne*; in particolare l'eliminazione delle colonne che non sono servite agli scopi del nostro lavoro.
+
+2. *Modifica delle stringhe d'intestazione*; in particolare l'uniformazione le stringhe in modo tale da essere identiche in tutti i dataset della serie (uppercase e lowercase, trattini, ecc...)
+
+3. *Eliminazione righe*; in particolare:
+- eliminazione delle righe che non sono servite agli scopi del nostro lavoro (ad esempio: *Non residenti nell'anno di imposta*; *Senza fissa dimora*)
+- eliminazione delle righe che compaiono più volte.
+
 # Analisi giuridica
 ## Privacy
 ### Checklist giuridica
@@ -94,20 +108,6 @@ La finalità del dataset è quella di reccogliere dati statistici che si riferis
 
 # Analisi tecnica
 
-## Data Cleansing
-
-La pulizia è stata effettuata per lo più con il programma **_Comma Chameleon_**, CSV editor che permette di aggiungere, eliminare e modificare file csv prodotto da ODI (Open Data Institute).
-
-Le operazioni di pulizia effettuate comprendono:
-
-1. *Eliminazione di colonne*; in particolare l'eliminazione delle colonne che non sono servite agli scopi del nostro lavoro.
-
-2. *Modifica delle stringhe d'intestazione*; in particolare l'uniformazione le stringhe in modo tale da essere identiche in tutti i dataset della serie (uppercase e lowercase, trattini, ecc...)
-
-3. *Eliminazione righe*; in particolare:
-- eliminazione delle righe che non sono servite agli scopi del nostro lavoro (ad esempio: *Non residenti nell'anno di imposta*; *Senza fissa dimora*)
-- eliminazione delle righe che compaiono più volte.
-
 ## Formati
 I dataset sono disponibili solo in formato CSV.
 ## Metadati
@@ -131,7 +131,7 @@ Gli URI dei dataset presentano almeno due aspetti problematici:
 
 `2009: http://dati.comune.bologna.it/download/file/fid/1136`
 
-2. l'inconsistenza del *pattern*:
+2. l'inconsistenza del *pattern*, dovuta probabilmente all'impiego da parte dell'organizzazione di un meccanismo di *auto-increment*:
 
 ```
 2010: http://dati.comune.bologna.it/download/file/fid/1137
