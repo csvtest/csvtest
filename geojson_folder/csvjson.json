@@ -1,0 +1,92 @@
+[
+  {
+    "Nome_zona": "Irnerio",
+    "Codice_zona": 8,
+    "Nome_quartiere": "Santo Stefano"
+  },
+  {
+    "Nome_zona": "Galvani",
+    "Codice_zona": 7,
+    "Nome_quartiere": "Santo Stefano"
+  },
+  {
+    "Nome_zona": "Marconi",
+    "Codice_zona": 11,
+    "Nome_quartiere": "Porto - Saragozza"
+  },
+  {
+    "Nome_zona": "Malpighi",
+    "Codice_zona": 10,
+    "Nome_quartiere": "Porto - Saragozza"
+  },
+  {
+    "Nome_zona": "Corticella",
+    "Codice_zona": 5,
+    "Nome_quartiere": "Navile"
+  },
+  {
+    "Nome_zona": "Bolognina",
+    "Codice_zona": 2,
+    "Nome_quartiere": "Navile"
+  },
+  {
+    "Nome_zona": "Lame",
+    "Codice_zona": 9,
+    "Nome_quartiere": "Navile"
+  },
+  {
+    "Nome_zona": "Barca",
+    "Codice_zona": 1,
+    "Nome_quartiere": "Borgo Panigale - Reno"
+  },
+  {
+    "Nome_zona": "Santa Viola",
+    "Codice_zona": 17,
+    "Nome_quartiere": "Borgo Panigale - Reno"
+  },
+  {
+    "Nome_zona": "Saffi",
+    "Codice_zona": 14,
+    "Nome_quartiere": "Porto - Saragozza"
+  },
+  {
+    "Nome_zona": "Costa Saragozza",
+    "Codice_zona": 6,
+    "Nome_quartiere": "Porto - Saragozza"
+  },
+  {
+    "Nome_zona": "Colli",
+    "Codice_zona": 4,
+    "Nome_quartiere": "Santo Stefano"
+  },
+  {
+    "Nome_zona": "San Vitale",
+    "Codice_zona": 18,
+    "Nome_quartiere": "San Donato - San Vitale"
+  },
+  {
+    "Nome_zona": "Murri",
+    "Codice_zona": 13,
+    "Nome_quartiere": "Santo Stefano"
+  },
+  {
+    "Nome_zona": "San Donato",
+    "Codice_zona": 15,
+    "Nome_quartiere": "San Donato - San Vitale"
+  },
+  {
+    "Nome_zona": "Mazzini",
+    "Codice_zona": 12,
+    "Nome_quartiere": "Savena"
+  },
+  {
+    "Nome_zona": "San Ruffillo",
+    "Codice_zona": 16,
+    "Nome_quartiere": "Savena"
+  },
+  {
+    "Nome_zona": "Borgo Panigale",
+    "Codice_zona": 3,
+    "Nome_quartiere": "Borgo Panigale - Reno"
+  }
+]
