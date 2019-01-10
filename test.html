@@ -41,9 +41,9 @@
 	var limiti = map.getBounds();
 	map.setMaxBounds(limiti);
 		
-    function Bomba(e) {
+    function Bomba(cod) {
     $('.information').html('');
-    $('.information').html(e.feature.properties.Codice_zona);
+    $('.information').html(cod);
     };
 		
     $.ajax({
@@ -59,7 +59,7 @@
 
     function onEachFeature(feature, layer) {
 		layer.bindPopup(feature.properties.Nome_zona);
-	    	layer.on({click: Bomba});
+	    	layer.on({click: Bomba(feature.properties.Codice_zona)});
     };
 	
 	
