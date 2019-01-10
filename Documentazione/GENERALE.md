@@ -1,8 +1,6 @@
 # Introduzione (Task 0)
 
-# Scenario applicativo
-
-| Task | Descrizione | Cosa abbiamo fatto |
+| Task | Titolo | Descrizione |
 | ---- | ---- | ---- |
 | 0 | Scenario | Spiegazione progetto |
 | 1 | Dataset | Selezione | 
@@ -11,6 +9,8 @@
 | 4 | Analisi tecnica | Formati, metadati, URI, provenance |
 | 5 | Analisi sostenibilità | Modello, curation |
 | 6 | Visualizzazione | - |
+
+# Scenario applicativo
 
 # Dataset
 
