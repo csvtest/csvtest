@@ -41,10 +41,10 @@
 	var limiti = map.getBounds();
 	map.setMaxBounds(limiti);
 		
-    function Bomba(cod) {
-    $('.information').html('');
-    $('.information').html(cod);
-    };
+    //function Bomba(cod) {
+    //$('.information').html('');
+    //$('.information').html(cod);
+    //};
 		
     $.ajax({
 	dataType: "json",
@@ -59,7 +59,10 @@
 
     function onEachFeature(feature, layer) {
 		layer.bindPopup(feature.properties.Nome_zona);
-	    	layer.on({click: Bomba(feature.properties.Codice_zona)});
+	    	layer.on('click', function (e) {
+			$('.information').html('');
+			$('.information').html(feature.properties.Codice_zona);
+			};
     };
 	
 	
