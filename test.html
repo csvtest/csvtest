@@ -43,12 +43,12 @@
 		
     function Bomba(e) {
     $('.information').html('');
-    $('.information').html('CAZZO SI!');
+    $('.information').html(e.feature.properties.Codice_zona);
     };
 		
     $.ajax({
 	dataType: "json",
-	url: "geojson_folder/geojsonfinale.geojson",
+	url: "geojson_folder/ZoneBologna.geojson",
 	success: function(data) {
 			L.geoJson(data, {
 				onEachFeature: onEachFeature
@@ -58,7 +58,7 @@
 
 
     function onEachFeature(feature, layer) {
-		layer.bindPopup(feature.properties.NOMEZONA);
+		layer.bindPopup(feature.properties.Nome_zona);
 	    	layer.on({click: Bomba});
     };
 	
