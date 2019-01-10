@@ -67,7 +67,7 @@
 					dati.forEach(function (arrayItem) {
 						if (arrayItem["Nome_zona"] == feature.properties.Nome_zona){	
 							$('.information').html('');
-							$('.information').html(arrayItem["Codice_zona"]);
+							$('.information').html(arrayItem["Codice_zona"] + "<br />" + arrayItem["Nome_quartiere"]);
 						}
 					})
 			}
