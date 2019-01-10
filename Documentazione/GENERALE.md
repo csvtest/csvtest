@@ -4,7 +4,7 @@
 
 | Task | Descrizione | Cosa abbiamo fatto |
 | ---- | ---- | ---- |
-| 0 | Configurazione scenario |
+| 0 | Scenario | Spiegazione progetto |
 | 1 | Dataset | Selezione | 
 | 2 | Analisi qualità | Requisiti, lista di problemi, pulizia |
 | 3 | Analisi etico-giuridica | Privacy, licenze, finalità |
@@ -12,9 +12,7 @@
 | 5 | Analisi sostenibilità | Modello, curation |
 | 6 | Visualizzazione | - |
 
-
-
-# Descrizione
+# Dataset
 
 I dataset sono stati selezionati all'interno del sito http://dati.comune.bologna.it, sito web del Comune di Bologna per la trasparenza e accessibilità secondo i principi dell'open government.
 
