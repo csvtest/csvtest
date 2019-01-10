@@ -41,11 +41,6 @@
 	var limiti = map.getBounds();
 	map.setMaxBounds(limiti);
 		
-    //function Bomba(cod) {
-    //$('.information').html('');
-    //$('.information').html(cod);
-    //};
-		
     $.ajax({
 	dataType: "json",
 	url: "geojson_folder/ZoneBologna.geojson",
@@ -71,10 +66,8 @@
 						}
 					})
 			}
-     }).error(function() {});
-			//$('.information').html('');
-			//$('.information').html(feature.properties.Codice_zona);
-			});
+     		}).error(function() {});
+	});
     };
 	
 	
