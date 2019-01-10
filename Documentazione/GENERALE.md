@@ -1,5 +1,7 @@
 # Introduzione (Task 0)
 
+[CONTINUARE ...]
+
 | Task | Titolo | Descrizione |
 | ---- | ---- | ---- |
 | 0 | Scenario | Spiegazione progetto |
@@ -10,23 +12,25 @@
 | 5 | Analisi sostenibilità | Modello, curation |
 | 6 | Visualizzazione | - |
 
+[CONTINUARE ...]
+
 _______________________________________________________________
 
-# Scenario applicativo
+# Task 0: Scenario applicativo
 
 [ROBA ...]
 
 _______________________________________________________________
 
-# Dataset
+# Task 1: Dataset
 
-I dataset sono stati selezionati all'interno del sito http://dati.comune.bologna.it, sito web del Comune di Bologna per la trasparenza e accessibilità secondo i principi dell'open government.
+Abbiamo selezionato dataset singoli e serie di dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it), sito di Bologna dedicato alla trasparenza e accessibilità dei dati aperti, secondo i principi dell'Open Government.
 
 I dataset che abbiamo utilizzato sono:
 
 | URI dataset | Nome | URI pagina | Formato |
 | --- | ---- | ---------- | ------- |
-| http://dati.comune.bologna.it/download/file/fid/4267 | Risultati politiche 2018 - Bologna liste Camera (Collegio 6) | http://dati.comune.bologna.it/node/3328 | CSV |
+| http://dati.comune.bologna.it/<br>download/file/fid/4267 | Risultati politiche 2018 - Bologna liste Camera (Collegio 6) | http://dati.comune.bologna.it/node/3328 | CSV |
 | http://dati.comune.bologna.it/download/file/fid/4269 | Risultati politiche 2018 - Bologna liste Camera (Collegio 7) | http://dati.comune.bologna.it/node/3328 | CSV |
 | http://dati.comune.bologna.it/download/file/fid/4265 | Risultati politiche 2018 - Bologna liste Senato | http://dati.comune.bologna.it/node/3323 | CSV |
 | http://dati.comune.bologna.it/download/file/fid/1136 | Redditi 2009 per area statistica | http://dati.comune.bologna.it/node/244 | CSV |
@@ -41,6 +45,9 @@ I dataset che abbiamo utilizzato sono:
 | http://dati.comune.bologna.it/download/file/fid/4494 | Aree statistiche Bologna per quartiere | http://dati.comune.bologna.it/node/161 | CSV |
 |  | FAMIGLIE O POPOLAZIONE ???? |  | CSV |
 
+[DATASET PULITI?]
+
+[NOSTRO DATASET?]
 _______________________________________________________________
 
 # Analisi della qualità informativa
@@ -50,9 +57,9 @@ _______________________________________________________________
 I requisiti che abbiamo stabilito per controllare il livello di qualità di un dataset è:
 * il livello 5 sulla scala 5-Star Linked Data;
 * l'**accuratezza** (semantica e sintattica): la misura secondo la quale un dataset rappresenta correttamente le caratteristiche di un oggetto, una situazione o un evento del mondo reale;
-* la **coerenza**: la coerenza è la misura secondo la quale un dataset non contiene contraddizioni che ne renderebbero difficile o impossibile l'utilizzo;
-* la **completezza**: La completezza è la misura secondo la quale un dataset include quei dati che sono necessari al supporto della finalità per cui è stato creato;
-* l'**attualità**.
+* la **completezza**: la misura secondo la quale un dataset include quei dati che sono necessari al supporto della finalità per cui è stato creato;
+
+[RIVEDERE ...]
 
 | ID | Descrizione | Gravità Problema | Tipologia Problema | Soluzione |
 | Acc_1 |
@@ -61,7 +68,7 @@ I requisiti che abbiamo stabilito per controllare il livello di qualità di un d
 |
 |
 
-### Accuratezza (Semantica e sintattica)
+[FINIRE -]
 
 Non esistono linee guida interne per la compilazione dei dataset in una maniera univoca. Alcuni CSV utilizzano la virgola come separatore; altri il punto e virgola; altri ancora la tabulazione.
 
@@ -69,26 +76,37 @@ Non esistono vocabolari interni di nomi. Un altro problema ha riguardato la nome
 
 All'interno del testo le parole accentate sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica; altre volte viene impropriamente utilizzato l'apostrofo.
 
-Una buona pratica, infine, prevede che ai dataset vadano assegnati nomi autoesplicativi e descrizioni testuali dettagliate. 
+Una buona pratica, infine, prevede che ai dataset vadano assegnati nomi autoesplicativi e descrizioni testuali dettagliate.
 
-### Coerenza
+[CONTINUARE ...]
 
+### Accuratezza
+
+Abbiamo individuato due livelli di accuratezza:
+
+- accuratezza sintattica;
+- accuratezza semantica.
+
+Una misura di accuratezza è data dalla ratio tra gli attributi dei dati con valori accurati e il numero dei dati per i quali è richiesta accuratezza. 
 
 ### Completezza
 
+Abbiamo individuato diversi livelli di completezza:
 
-### Attualità
-[BOH PORCOIDDIO]
+- completezza di schema, calcolata in termini di percentuale di valori nulli per concetti e proprietà rispetto al numero totale di valori attesi;
+- completezza del record, calcolata in termini di numero di dati associati a un valore non nullo rispetto al numero di dati per cui può essere misurata la completezza;
+- completezza di popolazione, calcolata in termini di percentuale di valori nulli rispetto a una popolazione di riferimento.
 
 ## Data cleansing
 
 In generale abbiamo cercato di seguire le *best practices* legate ai file CSV nel corso della pulizia del dataset:
-1. Abbiamo reso le intestazioni delle colonne subito comprensibili e uniformi. Abbiamo qindi semplificato i loro nomi ed eliminato i caratteri speciali.
+1. Abbiamo reso le intestazioni delle colonne subito comprensibili e uniformi; abbiamo quindi semplificato i loro nomi ed eliminato i caratteri speciali.
 2. Abbiamo uniformato i nomi all'interno dei file.
-3. Abbiamo copiato le versioni pulite dei dataset in formato CSV codificato in UTF-8.
+3. Abbiamo copiato le versioni pulite dei dataset in formato CSV e codificate in UTF-8.
 
 [CONTINUARE ...]
 
+[NOSTRO DATASET ... metadati di qualità?]
 _______________________________________________________________
 
 # Analisi giuridica
@@ -99,7 +117,7 @@ _______________________________________________________________
 
 L'analisi giuridica è necessaria per garantire sostenibilità nel tempo del processo di produzione e pubblicazione dei dati e creare un servizio equilibrato nel rispetto della funzione pubblica e dei diritti dei singoli individui. L’analisi giuridica delle fonti mira quindi a valutare questi delicati equilibri, evidenziando limitazioni d’uso, finalità di competenza, determinazione dei diritti e dei termini di licenza.
 
-Per attuarla abbiamo utilizzato una *check list* di riferimento per valutare tutti gli aspetti giuridici del ciclo di vita dei dataset. La check list è formata da una serie
+Per attuarla, abbiamo utilizzato una *check list* di riferimento per valutare tutti gli aspetti giuridici del ciclo di vita dei dataset. La check list è formata da una serie
 di domande, per ciascun aspetto, a cui rispondere con Sì o No.
 
 | **Privacy** | Domande | Sì/No |
@@ -150,12 +168,16 @@ Gli standard di de-identificazione per i dati contenuti in un dataset sono i seg
 - gli identificatori non assolutamente necessari vanno eliminati;
 - i valori degli attributi non necessari vanno eliminati; quelli che indicano situazioni fortemente personali necessitano di forti misure di de-identificazione ;
 
+[CONTINUARE ...]
+
 #### De-identificazione
 Prendiamo provvedimenti affinché gli individui non siano identificabili tramite l'osservazione dei dati o il loro incrocio. Abbiamo scelto una serie di metodi da applicare:
 - soppressione
 - aggregazione, arrotondamento, riarrangiamento
 - riduzione
 - mascheramento, noise
+
+[CONTINUARE ...]
 
 ## Licenze
 
@@ -180,6 +202,8 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 
 Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisca libertà di riutilizzo, che sia internazionalmente riconosciuta e che consenta di attribuire la paternità dei dataset (attribuire la fonte). Pertanto, si suggerisce l’adozione generalizzata della licenza CC-BY nella sua versione 4.0. Si raccomanda inoltre di gestire l’attribuzione della fonte indicando il nome dell’organizzazione unitamente all’URL della pagina Web dove si trovano i dataset/contenuti da licenziare.
 
+[NOSTRA LICENZA]
+
 ## Finalità
 
 [FINALITA' DI OGNI DATASET]
@@ -196,6 +220,8 @@ La pubblicazione di dataset in open Data richiede che i dati siano resi disponib
 
 Tutti i dataset sono pubblicati in formato **CSV**. 
 
+[NOSTRI FORMATI]
+
 ## Metadati
 
 La metadatazione ricopre un ruolo essenziale laddove i dati sono esposti a utenti terzi e a software. I metadati, infatti, consentono una maggiore comprensione e rappresentano la chiave attraverso cui abilitare più agevolmente la ricerca, la scoperta, l’accesso e quindi il riuso dei dati stessi. La classificazione qualitativa dei metadati si fonda su due fattori principali: legame tra dato-metadati e livello di dettaglio.
@@ -203,6 +229,8 @@ La metadatazione ricopre un ruolo essenziale laddove i dati sono esposti a utent
 Il nostro obiettivo è raggiungere il **livello 4** di metadatazione, per cui:
 * il legame dato-metadato sia forte: i dati incorporano i metadati che li descrivono;
 * il livello di dettaglio sia massimo: i metadati forniscono informazioni relative al dataset e al singolo dato.
+
+[METADATAZIONE CICCIONA PATATONA]
 
 ## URI
 
@@ -219,16 +247,21 @@ Vanno evitati:
 
 Per quanto riguarda il nostro dataset mashato, abbiamo deciso di mantenere l'informazione sull'*ownership*, ovvero il nome dell'organizzazione o progetto che ha coniato l'URI (il nostro progetto). Siamo consapevoli del rischio che rappresenta tale decisione, considerando quanto spesso organizzazioni e progetti cambino nome nel corso del tempo. 
 
+[CONTINUARE ...]
+
 ## Provenance
 
 La *Provenance* 
 
+[CONTINUARE ...]
 _______________________________________________________________
 
 # Analisi della sostenibilità
 
-
+[CONTINUARE ...]
 
 _______________________________________________________________
 
 # Visualizzazione
+
+[CONTINUARE ...]
