@@ -60,6 +60,16 @@
 										if (arrayItem["Nome_zona"] == feature.properties.Nome_zona){	
 											$('.information').html('');
 											$('.information').html(arrayItem["Zona"]);
+											var listRedditi = [];
+											listRedditi.push(arrayItem["Reddito pro-capite 2009"]);
+											listRedditi.push(arrayItem["Reddito pro-capite 2010"]);
+											listRedditi.push(arrayItem["Reddito pro-capite 2011"]);
+											listRedditi.push(arrayItem["Reddito pro-capite 2011"]);
+											listRedditi.push(arrayItem["Reddito pro-capite 2012"]);
+											listRedditi.push(arrayItem["Reddito pro-capite 2013"]);
+											listRedditi.push(arrayItem["Reddito pro-capite 2014"]);
+											listRedditi.push(arrayItem["Reddito pro-capite 2015"]);
+											listRedditi.push(arrayItem["Reddito pro-capite 2016"]);
 											new Chart(document.getElementById("myChart"),
 												{"type":"bar",
 												"data":{"labels":["2009","2010","2011","2012","2013","2014","2015","2016"],
@@ -70,21 +80,14 @@
 													"backgroundColor":"rgba(255, 99, 132, 0.2)"},
 
 													{"label":"Line Dataset",
-													 "data":[arrayItem["Reddito pro-capite 2009"],
-														 arrayItem["Reddito pro-capite 2010"],
-														 arrayItem["Reddito pro-capite 2011"],
-														 arrayItem["Reddito pro-capite 2012"],
-														 arrayItem["Reddito pro-capite 2013"],
-														 arrayItem["Reddito pro-capite 2014"],
-														 arrayItem["Reddito pro-capite 2015"],
-														 arrayItem["Reddito pro-capite 2016"]
-														],
+													 "data": listRedditi,
 													 "type":"line",
 													 "fill":false,
 													 "borderColor":"rgb(54, 162, 235)"}]},
 												  "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}});
 										}
 									})
+									
 							}
 						}).error(function() {});
 					});
