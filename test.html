@@ -74,27 +74,23 @@
 	});
     };
 var ctx = document.getElementById('ChartReddito').getContext('2d');
-var ChartReddito = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    datasets: [{
-          label: 'Bar Dataset',
-          data: [10, 20, 30, 40]
-        }, {
-          label: 'Line Dataset',
-          data: [50, 50, 50, 50],
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
 
-          // Changes this dataset to become a line
-          type: 'line'
-        }],
-    labels: ['January', 'February', 'March', 'April']
-  },
-  options: {
-        scales: {
-            yAxes: [{
-                stacked: true
-            }]}
-  }
+    // The data for our dataset
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            label: "My First dataset",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
 });
 	
     </script>
