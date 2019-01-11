@@ -30,23 +30,23 @@ Abbiamo selezionato dataset singoli e serie di dataset pubblicati su [OpenData B
 
 I dataset che abbiamo utilizzato sono:
 
-| Dataset ID | URI | Nome | Pagina | Formato |
-| ---------- | --- | ---- | ------ | ------- |
-| http://dati.comune.bologna.it/download/file/fid/4267 | 26.01.06_risultati_politiche_<br>2018_bologna_liste_camera_collegio6 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4269 | 26.01.08_risultati_politiche_<br>2018_bologna_liste_camera_collegio7 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4265 | 26.01.04_risultati_politiche_<br>2018_bologna_liste_senato | [Risultati politiche 2018 - Bologna Senato](http://dati.comune.bologna.it/node/3323) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/1136 | redditi_2009_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/1137 | redditi_2010_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/1135 | redditi_2011_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/1878 | redditi2012_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/2436 | redditi2013_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/3422 | redditi2014_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4304 | redditi2015_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4615 | redditi2016_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4493 | Aree 03.00.02_aree_statistiche_bologna | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) | SHP <br> DB <br> PRJ <br> QPJ <br> SHX |
-| http://dati.comune.bologna.it/download/file/fid/4494 | Aree 03.00.03_areestat_quartiere | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) | CSV |
-| http://dati.comune.bologna.it/download/file/fid/4490 | 38.00.03_segnalazioni_czrm2017_area_statistica | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) | SHP <br> DB <br> PRJ <br> QPJ <br> SHX |
-| http://dati.comune.bologna.it/download/file/fid/4492 | 38.00.05_segnalazioni_czrm2017_tot_tipologia | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) | CSV |
+| Dataset ID | URI | Nome | Pagina |
+| ---------- | --- | ---- | ------ |
+| http://dati.comune.bologna.it/download/file/fid/4267 | 26.01.06_risultati_politiche_<br>2018_bologna_liste_camera_collegio6 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) |
+| http://dati.comune.bologna.it/download/file/fid/4269 | 26.01.08_risultati_politiche_<br>2018_bologna_liste_camera_collegio7 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | 
+| http://dati.comune.bologna.it/download/file/fid/4265 | 26.01.04_risultati_politiche_<br>2018_bologna_liste_senato | [Risultati politiche 2018 - Bologna Senato](http://dati.comune.bologna.it/node/3323) | 
+| http://dati.comune.bologna.it/download/file/fid/1136 | redditi_2009_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | 
+| http://dati.comune.bologna.it/download/file/fid/1137 | redditi_2010_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| http://dati.comune.bologna.it/download/file/fid/1135 | redditi_2011_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| http://dati.comune.bologna.it/download/file/fid/1878 | redditi2012_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| http://dati.comune.bologna.it/download/file/fid/2436 | redditi2013_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| http://dati.comune.bologna.it/download/file/fid/3422 | redditi2014_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| http://dati.comune.bologna.it/download/file/fid/4304 | redditi2015_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| http://dati.comune.bologna.it/download/file/fid/4615 | redditi2016_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| http://dati.comune.bologna.it/download/file/fid/4493 | Aree 03.00.02_aree_statistiche_bologna | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
+| http://dati.comune.bologna.it/download/file/fid/4494 | Aree 03.00.03_areestat_quartiere | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
+| http://dati.comune.bologna.it/download/file/fid/4490 | 38.00.03_segnalazioni_czrm2017_area_statistica | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
+| http://dati.comune.bologna.it/download/file/fid/4492 | 38.00.05_segnalazioni_czrm2017_tot_tipologia | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
 
 ## Dataset Puliti
 I dataset che abbiamo utilizzato, ma ripuliti:
@@ -125,7 +125,7 @@ In generale abbiamo cercato di seguire le *best practices* legate ai file CSV ne
 
 [... ...]
 
-### DATASET REDDITI
+### DATASET REDDITI, ...
 
 La pulizia è stata effettuata per lo più con il programma [**_Comma Chameleon_**](http://comma-chameleon.io/) o [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor che permette di aggiungere, eliminare e modificare righe, colonne e dati.
 
@@ -201,7 +201,6 @@ di domande, per ciascun aspetto, a cui rispondere con Sì o No.
 
 ### Misure di de-identificazione
 
-#### Revisione preliminare
 Verifichiamo qualora dati specifici possano rientrare nella categoria di *personal data* o no. I dati che si confermano essere *non-personal data* possono essere usati liberamente, cioè senza restrizioni legali.
 
 I *personal data* sono dati che possono identificare una persona vivente e che includono informazioni facilmente integrabili con altre informazioni per perfezionare il processo di re-identificazione.
@@ -210,7 +209,26 @@ Gli standard di de-identificazione per i dati contenuti in un dataset sono i seg
 - gli identificatori non assolutamente necessari vanno eliminati;
 - i valori degli attributi non necessari vanno eliminati; quelli che indicano situazioni fortemente personali necessitano di forti misure di de-identificazione.
 
-##### [DATASET REDDITI]
+Prendiamo provvedimenti affinché gli individui non siano identificabili tramite l'osservazione dei dati o il loro incrocio. Abbiamo scelto una serie di metodi da applicare:
+- soppressione
+- aggregazione, arrotondamento, riarrangiamento
+- riduzione
+- mascheramento, noise
+
+#### [DATASET REDDITI]
+
+##### Revisione preliminare
+I dati potrebbero rientrare nella categoria di *personal data* in quanto non rappresentano un rischio di de-anonimizzazione di per sé, ma potrebbero farlo se incrociati con altri dati. In particolare:
+* se l'*Area statistica* include un territorio particolarmente limitato, e
+* se il *Numero contribuenti* è particolarmente ridotto,
+vi è il rischio che, facendo la media statistica del reddito per contribuente in quella determinata area, sia più semplice identificare quei contribuenti abitanti in quella determinata zona e con quel determinato reddito. Un esempio, in questo senso, è rappresentato da **_Via del Genio_**. I seguenti dati sono presi dal dataset del 2016:
+
+| Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
+| --------- | --------- | --------- |
+| Via del Genio | 12 | 833317 |
+
+##### De-identificazione
+
 E' possibile applicare metodi di de-identificazione - come il **_Data Masking_** e la **_Data Reduction_** - ai valori che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, come il *Numero contribuenti*. Per quanto riguarda i valori potenzialmente sensibili, come il *Reddito imponibile ai fini irpef*, è possibile anonimizzare i valori precisi convertendoli in valori arrotondati secondo la distribuzione in *scaglioni IRPEF*:
 
 | Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
@@ -224,13 +242,6 @@ oppure
 | Via del Genio | < 100 | tra 55001 e 75000 |
 
 [CONTINUARE ...]
-
-#### De-identificazione
-Prendiamo provvedimenti affinché gli individui non siano identificabili tramite l'osservazione dei dati o il loro incrocio. Abbiamo scelto una serie di metodi da applicare:
-- soppressione
-- aggregazione, arrotondamento, riarrangiamento
-- riduzione
-- mascheramento, noise
 
 [CONTINUARE ...]
 
@@ -258,8 +269,6 @@ In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinunc
 ### [DATASET CITIZEN MANAGEMENT ...]
 
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
-
-
 
 Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo consentono di condividere, adattare e creare un dtaset, anche per finalità commerciali, nel rispetto però di due vincoli: 
 - attribuire la paternità del dataset, fornire un link alla licenza e indicare le modifiche; 
@@ -291,50 +300,59 @@ La pubblicazione di dataset in open Data richiede che i dati siano resi disponib
 
 Tutti i dataset che abbiamo utilizzato sono pubblicati in formato **CSV**. [*Aree statistiche*] e [*Segnalazioni* ...] sono corredati da un insieme di file in formato **SHP** (uno standard per dati vettoriali spaziali), con file aggiuntivi con estensioni **.sph**, **.dbf**, **.shx** da sui dipendono interpretazione ed utilizzo.
 
-[? ..]
+| Dataset | Formato |
+| ------- | ------- |
+| D1 | CSV |
+| D2 | CSV |
+| D3 | CSV |
+| D4 | CSV |
+| D5 | SHP <br> DB <br> PRJ <br> QPJ <br> SHX |
+| D6 | CSV |
+| D7 | SHP <br> DB <br> PRJ <br> QPJ <br> SHX |
+| D8 | CSV |
 
 ### Distribuzioni
 Il nostro dataset lo abbiamo pubblicato in [X ?] distribuzioni:
 
 #### RDF
 
-| **Titolo** |  |
-| **Descrizione** |  |
-| **Tipo** |  |
-| **Licenza** |  |
-| **Data di pubblicazione** |  |
-| **Data di ultima modifica** |  |
-| **Download** |  |
+- **Titolo** : 
+- **Descrizione** : 
+- **Tipo** : 
+- **Licenza** : 
+- **Data di pubblicazione** : 
+- **Data di ultima modifica** : 
+- **Download** : 
 
 #### CSV
 
-| **Titolo** |  |
-| **Descrizione** |  |
-| **Tipo** |  |
-| **Licenza** |  |
-| **Data di pubblicazione** |  |
-| **Data di ultima modifica** |  |
-| **Download** |  |
+- **Titolo** : 
+- **Descrizione** : 
+- **Tipo** : 
+- **Licenza** : 
+- **Data di pubblicazione** : 
+- **Data di ultima modifica** : 
+- **Download** : 
 
 #### JSON
 
-| **Titolo** |  |
-| **Descrizione** |  |
-| **Tipo** |  |
-| **Licenza** |  |
-| **Data di pubblicazione** |  |
-| **Data di ultima modifica** |  |
-| **Download** |  |
+- **Titolo** : 
+- **Descrizione** : 
+- **Tipo** : 
+- **Licenza** : 
+- **Data di pubblicazione** : 
+- **Data di ultima modifica** : 
+- **Download** : 
 
 #### XML
 
-| **Titolo** |  |
-| **Descrizione** |  |
-| **Tipo** |  |
-| **Licenza** |  |
-| **Data di pubblicazione** |  |
-| **Data di ultima modifica** |  |
-| **Download** |  |
+- **Titolo** : 
+- **Descrizione** : 
+- **Tipo** : 
+- **Licenza** : 
+- **Data di pubblicazione** : 
+- **Data di ultima modifica** : 
+- **Download** : 
 
 ## Metadati
 
@@ -343,6 +361,24 @@ La metadatazione ricopre un ruolo essenziale laddove i dati sono esposti a utent
 Il nostro obiettivo è raggiungere il **livello 4** di metadatazione, per cui:
 * il legame dato-metadato sia forte: i dati incorporano i metadati che li descrivono;
 * il livello di dettaglio sia massimo: i metadati forniscono informazioni relative al dataset e al singolo dato.
+
+### Metadatazione dei dataset
+
+I dataset sono descritti dai seguenti metadati human-readable:
+1. **File**: il nome del dataset.
+2. **Anno versione**: l'anno al quale la relativa versione si riferisce.
+3. **versione**: numero di versione.
+4. **Formato**: formato dei dati.
+5. **Data rilascio**: data del rilascio del dataset.
+6. **Argomento**: keyword che descrive il contenuto dei dataset.
+7. **Tag**: keyword che descrive ulteriormente il contenuto dei dataset.
+8. **Responsabile**: 
+9. **Fonte**: indicazione di autorità e/o provenienza.
+10. **Licenza**: tipo di licenza del dataset.
+
+Non sembrano essere corredati da metadati machine-readable.
+
+### Metadatazione del mashup
 
 [METADATAZIONE CICCIONA PATATONA]
 
@@ -361,7 +397,45 @@ Vanno evitati:
 
 Per quanto riguarda il nostro dataset mashato, abbiamo deciso di mantenere l'informazione sull'*ownership*, ovvero il nome dell'organizzazione o progetto che ha coniato l'URI (il nostro progetto). Siamo consapevoli del rischio che rappresenta tale decisione, considerando quanto spesso organizzazioni e progetti cambino nome nel corso del tempo; tuttavia confidiamo nel fatto che il nostro progetto mantenga inalterato il proprio nome nel lungo periodo.
 
-[CONTINUARE ...]
+### URI dei dataset
+
+Gli URI dei dataset presentano almeno due aspetti problematici:
+
+1. la **_semantica_** non perfettamente chiara:
+
+`2009: http://dati.comune.bologna.it/download/file/fid/1136`
+
+2. l'**_inconsistenza del pattern_**, dovuta probabilmente all'impiego da parte dell'organizzazione di un meccanismo di *auto-increment*:
+
+```
+2010: http://dati.comune.bologna.it/download/file/fid/1137
+2011: http://dati.comune.bologna.it/download/file/fid/1135
+2012: http://dati.comune.bologna.it/download/file/fid/1878
+```
+
+In via ipotetica, presentiamo un possibile perfezionaento degli URI dei dataset di riferimento:
+
+| URI originali | URI perfezionati |
+| ------------- | ---------------- |
+| http://dati.comune.bologna.it/download/file/fid/4267 |  |
+| http://dati.comune.bologna.it/download/file/fid/4269 |  |
+| http://dati.comune.bologna.it/download/file/fid/4265 |  |
+| http://dati.comune.bologna.it/download/file/fid/1136 |  |
+| http://dati.comune.bologna.it/download/file/fid/1137 |  |
+| http://dati.comune.bologna.it/download/file/fid/1135 |  |
+| http://dati.comune.bologna.it/download/file/fid/1878 |  |
+| http://dati.comune.bologna.it/download/file/fid/2436 |  |
+| http://dati.comune.bologna.it/download/file/fid/3422 |  |
+| http://dati.comune.bologna.it/download/file/fid/4304 |  |
+| http://dati.comune.bologna.it/download/file/fid/4615 |  |
+| http://dati.comune.bologna.it/download/file/fid/4493 |  |
+| http://dati.comune.bologna.it/download/file/fid/4494 |  |
+| http://dati.comune.bologna.it/download/file/fid/4490 |  |
+| http://dati.comune.bologna.it/download/file/fid/4492 |  |
+
+### URI del mashup
+
+[BLABLABLA ...]
 
 ## Provenance
 
