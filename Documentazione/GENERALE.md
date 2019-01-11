@@ -273,9 +273,7 @@ In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinunc
 
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
-| Creative Commons | Attribuzione |
-| ---------------- | ----------------- |
-|![](cc_icon_white_x2.png) | ![](attribuition_icon_white_x2.png)
+![](cc_icon_white_x2.png) ![](attribuition_icon_white_x2.png)
 
 Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo consentono di condividere, adattare e creare un dtaset, anche per finalità commerciali, nel rispetto però di due vincoli: 
 - attribuire la paternità del dataset, fornire un link alla licenza e indicare le modifiche; 
