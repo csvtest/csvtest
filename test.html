@@ -25,18 +25,18 @@
 					<canvas id="myChart" width="400" height="400"></canvas>
 					<script id="scriptreddito">
 						new Chart(document.getElementById("myChart"),{
-							"type":"bar",
-							"data":{"labels":["January","February","March","April"],
-								"datasets":[{
-									"label":"Bar Dataset",
-									"data":[10,20,30,40],
-									"scales": {yAxes: [{"stacked": true }]},
-									"borderColor":rgb(255, 99, 132),
-									"backgroundColor":rgba(255, 99, 132, 0.2)},
-									    {"label":"Line Dataset",
-									     "data":[],
-									     "type":"line","fill":false,
-									     "borderColor":rgb(54, 162, 235)}]},
+							type:"bar",
+							data:{"labels":["January","February","March","April"],
+								datasets:[{
+									label:"Bar Dataset",
+									data:[10,20,30,40],
+									scales: {yAxes: [{"stacked": true }]},
+									borderColor:rgb(255, 99, 132),
+									backgroundColor:rgba(255, 99, 132, 0.2)},
+									    {label:"Line Dataset",
+									     data:[],
+									     type:"line","fill":false,
+									     borderColor:rgb(54, 162, 235)}]},
 							"options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}});
 					</script>
 				</div>
