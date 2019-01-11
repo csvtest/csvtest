@@ -26,10 +26,12 @@ _______________________________________________________________
 
 Abbiamo selezionato dataset singoli e serie di dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it), sito di Bologna dedicato alla trasparenza e accessibilità dei dati aperti, secondo i principi dell'Open Government.
 
+## Dataset usati
+
 I dataset che abbiamo utilizzato sono:
 
-| Dataset | Nome | Pagina | Formato |
-| --- | ---- | ---------- | ------- |
+| Dataset ID | URI | Nome | Pagina | Formato |
+| ---------- | --- | ---- | ------ | ------- |
 | http://dati.comune.bologna.it/download/file/fid/4267 | 26.01.06_risultati_politiche_<br>2018_bologna_liste_camera_collegio6 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
 | http://dati.comune.bologna.it/download/file/fid/4269 | 26.01.08_risultati_politiche_<br>2018_bologna_liste_camera_collegio7 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | CSV |
 | http://dati.comune.bologna.it/download/file/fid/4265 | 26.01.04_risultati_politiche_<br>2018_bologna_liste_senato | [Risultati politiche 2018 - Bologna Senato](http://dati.comune.bologna.it/node/3323) | CSV |
@@ -46,11 +48,24 @@ I dataset che abbiamo utilizzato sono:
 | http://dati.comune.bologna.it/download/file/fid/4490 | 38.00.03_segnalazioni_czrm2017_area_statistica | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) | SHP <br> DB <br> PRJ <br> QPJ <br> SHX |
 | http://dati.comune.bologna.it/download/file/fid/4492 | 38.00.05_segnalazioni_czrm2017_tot_tipologia | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) | CSV |
 
-[DATASET PULITI?]
+## Dataset Puliti
+I dataset che abbiamo utilizzato, ma ripuliti:
 
-[DATASET INTERMEDI?]
+| Dataset ID | URI (pulito) | URI (originale) |
+| ---------- | ------------ | --------------- |
+|  |  |  |
 
-[NOSTRO DATASET?]
+## Dataset Intermedi
+I dataset che abbiamo generato nel corso del progetto integrando i dati selezionati all' interno dei dataset ripuliti:
+
+| Dataset ID | Dataset 1 | Dataset 2 |
+| ---------- | --------- | --------- |
+|  |  |  |
+
+## Mashup
+Il nostro dataset finale, risultante dall'integrazione dei dati contenuti all'interno dei dataset intermedi:
+
+[INDECISIONE SU COME RENDERLO: SEMPLICE URI o PRESENTAZIONE COMPLETA?]
 _______________________________________________________________
 
 # Analisi della qualità informativa
@@ -65,11 +80,12 @@ I requisiti che abbiamo stabilito per controllare il livello di qualità di un d
 [RIVEDERE ...]
 
 | ID | Descrizione | Gravità Problema | Tipologia Problema | Soluzione |
-| Acc_1 |
-|
-|
-|
-|
+| -- | ----------- | ---------------- | ------------------ | --------- |
+| Acc_1 |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
 
 [FINIRE -]
 
