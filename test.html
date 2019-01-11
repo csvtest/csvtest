@@ -76,18 +76,31 @@
 												"data":{"labels":["2009","2010","2011","2012","2013","2014","2015","2016"],
 												"datasets":[
 													{"label":"Bar Dataset",
-													"data":[{x:'2009', y:19000}, {x:'2009', y:28000}, {x:'2009', y:37000},
-													       {x:'2009', y:46000}, {x:'2009', y:55000}],
+													"data":[{
+														label: 'Low',
+														data: [31000],
+														backgroundColor: '#EBCCD1',
+													      },
+													      {
+														label: 'Moderate',
+														data: [43000],
+														backgroundColor: '#FAEBCC',
+													      },
+													      {
+														label: 'High',
+														data: [55000],
+														backgroundColor: '#D6E9C6',
+													      }],
 													 
-													"borderColor":"rgb(255, 99, 132)",
-													"backgroundColor":"rgba(255, 99, 132, 0.2)"},
+													//"borderColor":"rgb(255, 99, 132)",
+													//"backgroundColor":"rgba(255, 99, 132, 0.2)"},
 
 													{"label":"Line Dataset",
 													 "data": listRedditi,
 													 "type":"line",
 													 "fill":false,
 													 "borderColor":"rgb(54, 162, 235)"}]},
-												  "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":false}, "stacked": true}]}}});
+												  	"options":{"scales":{"xAxes": [{ "stacked": true }],"yAxes":[{"ticks":{"beginAtZero":false}, "stacked": true}]}}});
 										}
 									})
 									
