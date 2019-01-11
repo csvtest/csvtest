@@ -20,31 +20,7 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="information">
-					<div><canvas id="ChartReddito"></canvas></div>
-					<script>
-					var ChartReddito = new Chart(ctx, {
-					  type: 'bar',
-					  data: {
-					    datasets: [{
-						  label: 'Bar Dataset',
-						  data: [10, 20, 30, 40]
-						}, {
-						  label: 'Line Dataset',
-						  data: [50, 50, 50, 50],
-
-						  // Changes this dataset to become a line
-						  type: 'line'
-						}],
-					    labels: ['January', 'February', 'March', 'April']
-					  },
-					  options: {
-						scales: {
-						    yAxes: [{
-							stacked: true
-						    }]}
-					  }
-					});
-					</script>
+					<canvas id="ChartReddito"></canvas>
 				</div>
 			</div>
 		</div>
@@ -97,6 +73,7 @@
      		}).error(function() {});
 	});
     };
+var ctx = document.getElementById('ChartReddito).getContext('2d');
 var ChartReddito = new Chart(ctx, {
   type: 'bar',
   data: {
