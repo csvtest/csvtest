@@ -31,65 +31,101 @@
 						    maxBoundsViscosity: 10000.0
 						});
 						map.setView([44.4915, 11.3355], 12);
-					var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-					    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-					}).addTo(map);
-					// var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
-					var limiti = map.getBounds();
-					map.setMaxBounds(limiti);
-						
-				    $.ajax({
-					dataType: "json",
-					url: "geojson_folder/ZoneBologna.geojson",
-					success: function(data) {
+						var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+						    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+						}).addTo(map);
+						// var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
+						var limiti = map.getBounds();
+						map.setMaxBounds(limiti);
+
+						$.ajax({
+						    dataType: "json",
+						    url: "geojson_folder/ZoneBologna.geojson",
+						    success: function(data) {
 							L.geoJson(data, {
-								onEachFeature: onEachFeature
+							    onEachFeature: onEachFeature
 							}).addTo(map);
-					}
-				     }).error(function() {});
-				    function onEachFeature(feature, layer) {
-						layer.bindPopup(feature.properties.Nome_zona);
-						layer.on('click', function (e) {
-							$.ajax({
-								dataType: "json",
-								url: "geojson_folder/Reddito_2009-2016_per_zone.json",
-								success: function(dati) {
-									dati.forEach(function (arrayItem) {
-										if (arrayItem["Zona"] == feature.properties.Nome_zona){	
-											$('.information').html('');
-											$('.information').html(arrayItem["Zona"]);
-											var listRedditi = [];
-											listRedditi.push(arrayItem["Reddito pro-capite 2009"]);
-											listRedditi.push(arrayItem["Reddito pro-capite 2010"]);
-											listRedditi.push(arrayItem["Reddito pro-capite 2011"]);
-											listRedditi.push(arrayItem["Reddito pro-capite 2012"]);
-											listRedditi.push(arrayItem["Reddito pro-capite 2013"]);
-											listRedditi.push(arrayItem["Reddito pro-capite 2014"]);
-											listRedditi.push(arrayItem["Reddito pro-capite 2015"]);
-											listRedditi.push(arrayItem["Reddito pro-capite 2016"]);
-											$('#redditiChart').remove();
-  											$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-											new Chart(document.getElementById("redditiChart"),
-												{"type":"bar",
-												"data":{"labels":["2009","2010","2011","2012","2013","2014","2015","2016"],
-												"datasets":[
-													{"label":"Bar Dataset",
-													"data":[10,20,30,40],
-													"borderColor":"rgb(255, 99, 132)",
-													"backgroundColor":"rgba(255, 99, 132, 0.2)"},
-													{"label":"Line Dataset",
-													 "data": listRedditi,
-													 "type":"line",
-													 "fill":false,
-													 "borderColor":"rgb(54, 162, 235)"}]},
-												  "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}});
-										}
-									})
-									
-							}
+						    }
 						}).error(function() {});
-					});
-				    };
+
+						function onEachFeature(feature, layer) {
+						    layer.bindPopup(feature.properties.Nome_zona);
+						    layer.on('click', function(e) {
+							$.ajax({
+							    dataType: "json",
+							    url: "geojson_folder/Reddito_2009-2016_per_zone.json",
+							    success: function(dati) {
+								dati.forEach(function(arrayItem) {
+								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
+									$('.information').html('');
+									$('.information').html(arrayItem["Zona"]);
+									var listRedditi = [];
+									listRedditi.push(arrayItem["Reddito pro-capite 2009"]);
+									listRedditi.push(arrayItem["Reddito pro-capite 2010"]);
+									listRedditi.push(arrayItem["Reddito pro-capite 2011"]);
+									listRedditi.push(arrayItem["Reddito pro-capite 2012"]);
+									listRedditi.push(arrayItem["Reddito pro-capite 2013"]);
+									listRedditi.push(arrayItem["Reddito pro-capite 2014"]);
+									listRedditi.push(arrayItem["Reddito pro-capite 2015"]);
+									listRedditi.push(arrayItem["Reddito pro-capite 2016"]);
+									$('#redditiChart').remove();
+									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
+									new Chart(document.getElementById("redditiChart"), {
+									    "type": "bar",
+									    "data": {
+										"labels": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+										"datasets": [
+										    {
+											"label": "Bar Dataset",
+											type: 'bar',
+											data: {
+											    labels: ['Risk Level'],
+											    datasets: [
+											    {
+												label: 'Low',
+												data: [67.8],
+												backgroundColor: '#D6E9C6',
+											    },
+											    {
+												label: 'Moderate',
+												data: [20.7],
+												backgroundColor: '#FAEBCC',
+											    },
+											    {
+												label: 'High',
+												data: [11.4],
+												backgroundColor: '#EBCCD1'
+											    }
+											    ]
+											}
+
+										    },
+										    {
+											"label": "Line Dataset",
+											"data": listRedditi,
+											"type": "line",
+											"fill": false,
+											"borderColor": "rgb(54, 162, 235)"
+										    }
+										]
+									    },
+									    "options": {
+										"scales": {
+										    "yAxes": [{
+											"ticks": {
+											    "beginAtZero": true
+											}
+										    }]
+										}
+									    }
+									});
+								    }
+								})
+
+							    }
+							}).error(function() {});
+						    });
+						};
 					</script>
 				</div>
 			</div>
