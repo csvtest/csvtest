@@ -30,23 +30,23 @@ Abbiamo selezionato dataset singoli e serie di dataset pubblicati su [OpenData B
 
 I dataset che abbiamo utilizzato sono:
 
-| Dataset ID | URI | Nome | Pagina |
-| ---------- | --- | ---- | ------ |
-| http://dati.comune.bologna.it/download/file/fid/4267 | 26.01.06_risultati_politiche_<br>2018_bologna_liste_camera_collegio6 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) |
-| http://dati.comune.bologna.it/download/file/fid/4269 | 26.01.08_risultati_politiche_<br>2018_bologna_liste_camera_collegio7 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | 
-| http://dati.comune.bologna.it/download/file/fid/4265 | 26.01.04_risultati_politiche_<br>2018_bologna_liste_senato | [Risultati politiche 2018 - Bologna Senato](http://dati.comune.bologna.it/node/3323) | 
-| http://dati.comune.bologna.it/download/file/fid/1136 | redditi_2009_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | 
-| http://dati.comune.bologna.it/download/file/fid/1137 | redditi_2010_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| http://dati.comune.bologna.it/download/file/fid/1135 | redditi_2011_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| http://dati.comune.bologna.it/download/file/fid/1878 | redditi2012_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| http://dati.comune.bologna.it/download/file/fid/2436 | redditi2013_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| http://dati.comune.bologna.it/download/file/fid/3422 | redditi2014_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| http://dati.comune.bologna.it/download/file/fid/4304 | redditi2015_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| http://dati.comune.bologna.it/download/file/fid/4615 | redditi2016_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| http://dati.comune.bologna.it/download/file/fid/4493 | Aree 03.00.02_aree_statistiche_bologna | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
-| http://dati.comune.bologna.it/download/file/fid/4494 | Aree 03.00.03_areestat_quartiere | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
-| http://dati.comune.bologna.it/download/file/fid/4490 | 38.00.03_segnalazioni_czrm2017_area_statistica | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
-| http://dati.comune.bologna.it/download/file/fid/4492 | 38.00.05_segnalazioni_czrm2017_tot_tipologia | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
+| ID | URI | Nome | Pagina |
+| -- | --- | ---- | ------ |
+| 1.0 | http://dati.comune.bologna.it/download/file/fid/4267 | 26.01 06_risultati_politiche_2018_bologna_liste_camera_collegio6 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) |
+| 1.1 | http://dati.comune.bologna.it/download/file/fid/4269 | 26.01.08_risultati_politiche_<br>2018_bologna_liste_camera_collegio7 | [Risultati politiche 2018 - Bologna Camera](http://dati.comune.bologna.it/node/3328) | 
+| 2.0 | http://dati.comune.bologna.it/download/file/fid/4265 | 26.01.04_risultati_politiche_<br>2018_bologna_liste_senato | [Risultati politiche 2018 - Bologna Senato](http://dati.comune.bologna.it/node/3323) | 
+| 3.0 | http://dati.comune.bologna.it/download/file/fid/1136 | redditi_2009_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | 
+| 3.1  | http://dati.comune.bologna.it/download/file/fid/1137 | redditi_2010_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.0 | http://dati.comune.bologna.it/download/file/fid/1135 | redditi_2011_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.0 | http://dati.comune.bologna.it/download/file/fid/1878 | redditi2012_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.0 | http://dati.comune.bologna.it/download/file/fid/2436 | redditi2013_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.0 | http://dati.comune.bologna.it/download/file/fid/3422 | redditi2014_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.0 | http://dati.comune.bologna.it/download/file/fid/4304 | redditi2015_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.0 | http://dati.comune.bologna.it/download/file/fid/4615 | redditi2016_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 4.0 | http://dati.comune.bologna.it/download/file/fid/4493 | Aree 03.00.02_aree_statistiche_bologna | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
+| 4.1 | http://dati.comune.bologna.it/download/file/fid/4494 | Aree 03.00.03_areestat_quartiere | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
+| 5.0 | http://dati.comune.bologna.it/download/file/fid/4490 | 38.00.03_segnalazioni_czrm2017_area_statistica | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
+| 5.1 | http://dati.comune.bologna.it/download/file/fid/4492 | 38.00.05_segnalazioni_czrm2017_tot_tipologia | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
 
 ## Dataset Puliti
 I dataset che abbiamo utilizzato, ma ripuliti:
@@ -260,7 +260,7 @@ I dataset pubblicati su OpenData Bologna rispettano queste condizioni.
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
 | Creative Commons | Attribuzione Zero |
-| ---------------- | ----------------- |
+| :----------------: | :-----------------: |
 |![](cc.png) | ![](zero.png)
 
 Sulla pagina di ogni dataset è presente un [link](http://dati.comune.bologna.it/node/5) che porta ad una pagina del sito che descrive il diritto di riutilizzo dei dataset licenziati in questo modo. 
@@ -274,7 +274,7 @@ In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinunc
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 | Creative Commons | Attribuzione |
-| ---------------- | ----------------- |
+| :----------------: | :-----------------: |
 |![](cc.png) | ![](by.png)
 
 Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo consentono di condividere, adattare e creare un dtaset, anche per finalità commerciali, nel rispetto però di due vincoli: 
@@ -294,18 +294,26 @@ La finalità della serie è quella di esporre in Open Data il numero e il reddit
 
 Il dataset è stato prodotto ed elaborato dall’Area Programmazione Controlli e Statistica del Comune di Bologna.
 
+Il dataset è stato scelto al fine di esaminare l’andamento medio del reddito pro-capite dei contribuenti bolognesi, in una determinata zona della città, nell’arco temporale 2009-2016.
+
 ### [DATASET POLITICHE CAMERA & SENATO]
 La finalità del dataset è quella di esporre in Open Data i risultati degli scrutini alle elezioni politiche del 4 marzo 2018, per l’elezione al Senato della Repubblica e alla Camera dei Deputati.
 
 I file sono estratti dal data entry dall’Ufficio Servizi Elettorali del Comune di Bologna.
 
+Il dataset è stato scelto al fine di conoscere la percentuale di voto di una determinata lista alle elezioni politiche del 4 marzo 2018, per l’elezione al Senato della Repubblica e alla Camera dei Deputati, in una determinata zona della città.
+
 ### [DATASET SEGNALAZIONI]
 La finalità del dataset è quella di esporre in Open Data le segnalazioni registrate attraverso il Citizen Relationship Management: strumento di contatto diretto tra amministrazione e cittadini che segnalano problemi all’interno del comprensorio Bolognese. Tali segnalazioni di situazioni di disagio sono inoltre mappate e geolocalizzate all’interno una determinata area cittadina.
+
+Il dataset è stato scelto al fine di comprendere la natura e la quantità di problemi legati al degrado ambientale, urbano e al disagio sociale, in una determinata zona della città, registrati attraverso il Citizen Relationship Management. 
 
 ### [DATASET IMMIGRAZIONE]
 La finalità del dataset è quella di esporre in Open Data la popolazione immigrata nelle zone e quartieri di Bologna, per provenienza e sesso, dal 1986 al 2017.
 
 Il dataset è stato prodotto ed elaborato dall’Area Programmazione Controlli e Statistica del Comune di Bologna.
+
+Il dataset è stato scelto al fine di esaminare l’andamento medio di un fenomeno quale l’immigrazione da paesi esteri, in una determinata zona della città, nell’arco temporale 2009-2016.
 
 [... ...]
 
@@ -442,21 +450,21 @@ In via ipotetica, presentiamo un possibile perfezionaento degli URI dei dataset 
 
 | URI originali | URI perfezionati |
 | ------------- | ---------------- |
-| http://dati.comune.bologna.it/download/file/fid/4267 |  |
-| http://dati.comune.bologna.it/download/file/fid/4269 |  |
-| http://dati.comune.bologna.it/download/file/fid/4265 |  |
-| http://dati.comune.bologna.it/download/file/fid/1136 |  |
-| http://dati.comune.bologna.it/download/file/fid/1137 |  |
-| http://dati.comune.bologna.it/download/file/fid/1135 |  |
-| http://dati.comune.bologna.it/download/file/fid/1878 |  |
-| http://dati.comune.bologna.it/download/file/fid/2436 |  |
-| http://dati.comune.bologna.it/download/file/fid/3422 |  |
-| http://dati.comune.bologna.it/download/file/fid/4304 |  |
-| http://dati.comune.bologna.it/download/file/fid/4615 |  |
-| http://dati.comune.bologna.it/download/file/fid/4493 |  |
-| http://dati.comune.bologna.it/download/file/fid/4494 |  |
-| http://dati.comune.bologna.it/download/file/fid/4490 |  |
-| http://dati.comune.bologna.it/download/file/fid/4492 |  |
+| http://dati.comune.bologna.it/download/file/fid/4267 | http://dati.comune.bologna.it/**dataset/risultati-politiche-2018/liste-camere-collegio-6** |
+| http://dati.comune.bologna.it/download/file/fid/4269 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/4265 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/1136 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/1137 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/1135 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/1878 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/2436 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/3422 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/4304 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/4615 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/4493 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/4494 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/4490 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/4492 | http://dati.comune.bologna.it/ |
 
 ### URI del mashup
 
