@@ -76,7 +76,9 @@
 												"data":{"labels":["2009","2010","2011","2012","2013","2014","2015","2016"],
 												"datasets":[
 													{"label":"Bar Dataset",
-													"data":[10,20,30,40],
+													"data":[{x:'2009', y:19000}, {x:'2009', y:28000}, {x:'2009', y:37000},
+													       {x:'2009', y:46000}, {x:'2009', y:55000}],
+													 
 													"borderColor":"rgb(255, 99, 132)",
 													"backgroundColor":"rgba(255, 99, 132, 0.2)"},
 
@@ -85,7 +87,7 @@
 													 "type":"line",
 													 "fill":false,
 													 "borderColor":"rgb(54, 162, 235)"}]},
-												  "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}});
+												  "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":false}, "stacked": true}]}}});
 										}
 									})
 									
