@@ -54,12 +54,12 @@
 						layer.on('click', function (e) {
 							$.ajax({
 								dataType: "json",
-								url: "geojson_folder/csvjson.json",
+								url: "geojson_folder/Reddito_2009-2016_per_zone.json",
 								success: function(dati) {
 									dati.forEach(function (arrayItem) {
 										if (arrayItem["Nome_zona"] == feature.properties.Nome_zona){	
 											$('.information').html('');
-											$('.information').html(arrayItem["Codice_zona"] + "<br />" + arrayItem["Nome_quartiere"]);
+											$('.information').html(arrayItem["Zona"]);
 											new Chart(document.getElementById("myChart"),
 												{"type":"bar",
 												"data":{"labels":["2009","2010","2011","2012","2013","2014","2015","2016"],
@@ -70,7 +70,15 @@
 													"backgroundColor":"rgba(255, 99, 132, 0.2)"},
 
 													{"label":"Line Dataset",
-													 "data":[50,50,50,50],
+													 "data":[arrayItem["Reddito pro-capite 2009"],
+														 arrayItem["Reddito pro-capite 2010"],
+														 arrayItem["Reddito pro-capite 2011"],
+														 arrayItem["Reddito pro-capite 2012"],
+														 arrayItem["Reddito pro-capite 2013"],
+														 arrayItem["Reddito pro-capite 2014"],
+														 arrayItem["Reddito pro-capite 2015"],
+														 arrayItem["Reddito pro-capite 2016"]
+														],
 													 "type":"line",
 													 "fill":false,
 													 "borderColor":"rgb(54, 162, 235)"}]},
