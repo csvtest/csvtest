@@ -78,10 +78,27 @@
      		}).error(function() {});
 	});
     };
-var ChartReddito = new Chart(ctx, {
+var ChartReddito = = new Chart(ctx, {
   type: 'bar',
-  data: data,
-  options: options
+  data: {
+    datasets: [{
+          label: 'Bar Dataset',
+          data: [10, 20, 30, 40]
+        }, {
+          label: 'Line Dataset',
+          data: [50, 50, 50, 50],
+
+          // Changes this dataset to become a line
+          type: 'line'
+        }],
+    labels: ['January', 'February', 'March', 'April']
+  },
+  options: {
+        scales: {
+            yAxes: [{
+                stacked: true
+            }]}
+  }
 });
 	
     </script>
