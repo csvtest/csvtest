@@ -57,7 +57,7 @@
 								url: "geojson_folder/Reddito_2009-2016_per_zone.json",
 								success: function(dati) {
 									dati.forEach(function (arrayItem) {
-										if (arrayItem["Nome_zona"] == feature.properties.Nome_zona){	
+										if (arrayItem["Zona"] == feature.properties.Nome_zona){	
 											$('.information').html('');
 											$('.information').html(arrayItem["Zona"]);
 											var listRedditi = [];
