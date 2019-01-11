@@ -261,7 +261,7 @@ La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://crea
 
 | Creative Commons | Attribuzione Zero |
 | ---------------- | ----------------- |
-|![](cc_icon_white_x2.png) | ![](cc_icon_white_x2.png)
+|![](cc.png) | ![](zero.png)
 
 Sulla pagina di ogni dataset è presente un [link](http://dati.comune.bologna.it/node/5) che porta ad una pagina del sito che descrive il diritto di riutilizzo dei dataset licenziati in questo modo. 
 
@@ -273,7 +273,9 @@ In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinunc
 
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
-![](cc_icon_white_x2.png) ![](attribuition_icon_white_x2.png)
+| Creative Commons | Attribuzione |
+| ---------------- | ----------------- |
+|![](cc.png) | ![](by.png)
 
 Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo consentono di condividere, adattare e creare un dtaset, anche per finalità commerciali, nel rispetto però di due vincoli: 
 - attribuire la paternità del dataset, fornire un link alla licenza e indicare le modifiche; 
