@@ -79,16 +79,6 @@ I requisiti che abbiamo stabilito per controllare il livello di qualità di un d
 
 [RIVEDERE ...]
 
-| ID | Descrizione | Gravità Problema | Tipologia Problema | Soluzione |
-| -- | ----------- | ---------------- | ------------------ | --------- |
-| Acc_1 |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-
-[FINIRE -]
-
 Non esistono linee guida interne per la compilazione dei dataset in una maniera univoca. Alcuni CSV utilizzano la virgola come separatore; altri il punto e virgola; altri ancora la tabulazione.
 
 Non esistono vocabolari interni di nomi. Un altro problema ha riguardato la nomenclatura delle intestazioni, che risulta sempre diversa anche all'interno della stessa serie di dataset (ad esempio: *N_contribuenti* ; *N. Contribuenti* ; ...) e dei nomi di aree geografiche (vie, zone, quartieri) che non hanno una forma codificata e che vengono etichettate secondo modalità differenti (ad esempio: *Sant'Orsola* ; *S.Orsola*; *Sant Orsola* ; ...)
@@ -123,9 +113,19 @@ In generale abbiamo cercato di seguire le *best practices* legate ai file CSV ne
 2. Abbiamo uniformato i nomi all'interno dei file.
 3. Abbiamo copiato le versioni pulite dei dataset in formato CSV e codificate in UTF-8.
 
+| ID | Descrizione | Gravità Problema | Tipologia Problema | Soluzione |
+| -- | ----------- | ---------------- | ------------------ | --------- |
+| Acc_1 |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+
+[FINIRE -]
+
 [... ...]
 
-### DATASET REDDITI, ...
+### [DATASET REDDITI, ...]
 
 La pulizia è stata effettuata per lo più con il programma [**_Comma Chameleon_**](http://comma-chameleon.io/) o [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor che permette di aggiungere, eliminare e modificare righe, colonne e dati.
 
@@ -146,7 +146,7 @@ Le operazioni di pulizia effettuate comprendono:
 - eliminazione delle righe che non sono servite agli scopi del nostro lavoro (ad esempio: *Non residenti nell'anno di imposta*; *Senza fissa dimora*);
 - eliminazione delle righe che compaiono più volte.
 
-[CONTINUARE ...
+[CONTINUARE ...]
 
 [NOSTRO DATASET ... metadati di qualità?]
 _______________________________________________________________
@@ -247,7 +247,8 @@ oppure
 
 ## Licenze
 
-L'informazione sul tipo di licenza è metadato indispensabile per determinare come poter riutilizzare il dataset. Essa deve essere **sempre** specificata, mettendola in evidenza in forma *human-* e *machine-readable*, indicando: 
+L'informazione sul tipo di licenza è metadato indispensabile per determinare come poter riutilizzare il dataset. Essa deve essere **sempre** specificata, mettendola in evidenza in forma *human-* e *machine-readable*, indicando:
+
 * nome;
 * versione;
 * riferimento al testo della licenza.
@@ -258,7 +259,9 @@ I dataset pubblicati su OpenData Bologna rispettano queste condizioni.
 
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
-![CC0 1.0 Universal (CC0 1.0) Donazione al Pubblico Dominio](cc0.jpg "CC0 1.0 Universal (CC0 1.0) Donazione al Pubblico Dominio")
+| Creative Commons | Attribuzione Zero |
+| ---------------- | ----------------- |
+|![](cc_icon_white_x2.png) | ![](cc_icon_white_x2.png)
 
 Sulla pagina di ogni dataset è presente un [link](http://dati.comune.bologna.it/node/5) che porta ad una pagina del sito che descrive il diritto di riutilizzo dei dataset licenziati in questo modo. 
 
@@ -270,11 +273,15 @@ In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinunc
 
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
+| Creative Commons | Attribuzione |
+| ---------------- | ----------------- |
+|![](cc_icon_white_x2.png) | ![](attribuition_icon_white_x2.png)
+
 Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo consentono di condividere, adattare e creare un dtaset, anche per finalità commerciali, nel rispetto però di due vincoli: 
 - attribuire la paternità del dataset, fornire un link alla licenza e indicare le modifiche; 
 - distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
 
-[NOSTRO DATASET MASHATO]
+### [NOSTRO DATASET MASHATO]
 
 Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisca libertà di riutilizzo, che sia internazionalmente riconosciuta e che consenta di attribuire la paternità dei dataset (attribuire la fonte). Pertanto, si suggerisce l’adozione generalizzata della licenza CC-BY nella sua versione 4.0. Si raccomanda inoltre di gestire l’attribuzione della fonte indicando il nome dell’organizzazione unitamente all’URL della pagina Web dove si trovano i dataset/contenuti da licenziare.
 
@@ -282,8 +289,26 @@ Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisc
 
 ## Finalità
 
-[FINALITA' DI OGNI DATASET]
+### [DATASET REDDITI]
+La finalità della serie è quella di esporre in Open Data il numero e il reddito dei contribuenti bolognesi ai fini Irpef, dichiarati dal 2009 al 2016, per area statistica.
+
+Il dataset è stato prodotto ed elaborato dall’Area Programmazione Controlli e Statistica del Comune di Bologna.
+
+### [DATASET POLITICHE CAMERA & SENATO]
+La finalità del dataset è quella di esporre in Open Data i risultati degli scrutini alle elezioni politiche del 4 marzo 2018, per l’elezione al Senato della Repubblica e alla Camera dei Deputati.
+
+I file sono estratti dal data entry dall’Ufficio Servizi Elettorali del Comune di Bologna.
+
+### [DATASET SEGNALAZIONI]
+La finalità del dataset è quella di esporre in Open Data le segnalazioni registrate attraverso il Citizen Relationship Management: strumento di contatto diretto tra amministrazione e cittadini che segnalano problemi all’interno del comprensorio Bolognese. Tali segnalazioni di situazioni di disagio sono inoltre mappate e geolocalizzate all’interno una determinata area cittadina.
+
+### [DATASET IMMIGRAZIONE]
+La finalità del dataset è quella di esporre in Open Data la popolazione immigrata nelle zone e quartieri di Bologna, per provenienza e sesso, dal 1986 al 2017.
+
+Il dataset è stato prodotto ed elaborato dall’Area Programmazione Controlli e Statistica del Comune di Bologna.
+
 [... ...]
+
 [NOSTRA FINALITA']
 
 _______________________________________________________________
