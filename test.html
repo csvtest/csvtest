@@ -24,21 +24,62 @@
 				<div>
 					<canvas id="myChart" width="400" height="400"></canvas>
 					<script id="scriptreddito">
-						new Chart(document.getElementById("myChart"),
-							{"type":"bar",
-							"data":{"labels":["January","February","March","April"],
-							"datasets":[
-								{"label":"Bar Dataset",
-								"data":[10,20,30,40],
-								"borderColor":"rgb(255, 99, 132)",
-								"backgroundColor":"rgba(255, 99, 132, 0.2)"},
-								
-							  	{"label":"Line Dataset",
-								 "data":[50,50,50,50],
-								 "type":"line",
-								 "fill":false,
-								 "borderColor":"rgb(54, 162, 235)"}]},
-							  "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}});
+						var map = L.map('map', {
+						    maxZoom: 18,
+						    minZoom: 12,
+						    maxBoundsViscosity: 10000.0
+						});
+						map.setView([44.4915, 11.3355], 12);
+
+					var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+					}).addTo(map);
+
+					// var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
+					var limiti = map.getBounds();
+					map.setMaxBounds(limiti);
+
+				    $.ajax({
+					dataType: "json",
+					url: "geojson_folder/ZoneBologna.geojson",
+					success: function(data) {
+							L.geoJson(data, {
+								onEachFeature: onEachFeature
+							}).addTo(map);
+					}
+				     }).error(function() {});
+				    function onEachFeature(feature, layer) {
+						layer.bindPopup(feature.properties.Nome_zona);
+						layer.on('click', function (e) {
+							$.ajax({
+								dataType: "json",
+								url: "geojson_folder/csvjson.json",
+								success: function(dati) {
+									dati.forEach(function (arrayItem) {
+										if (arrayItem["Nome_zona"] == feature.properties.Nome_zona){	
+											$('.information').html('');
+											$('.information').html(arrayItem["Codice_zona"] + "<br />" + arrayItem["Nome_quartiere"]);
+										}
+									})
+							}
+						}).error(function() {});
+					});
+				    };
+					new Chart(document.getElementById("myChart"),
+						{"type":"bar",
+						"data":{"labels":["January","February","March","April"],
+						"datasets":[
+							{"label":"Bar Dataset",
+							"data":[10,20,30,40],
+							"borderColor":"rgb(255, 99, 132)",
+							"backgroundColor":"rgba(255, 99, 132, 0.2)"},
+
+							{"label":"Line Dataset",
+							 "data":[50,50,50,50],
+							 "type":"line",
+							 "fill":false,
+							 "borderColor":"rgb(54, 162, 235)"}]},
+						  "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}});
 					</script>
 				</div>
 			</div>
@@ -50,46 +91,6 @@
             <script src="leaflet.ajax.min.js"></script>
         <!--Script mappa-->
         <script id="jsbin-javascript">
-        var map = L.map('map', {
-                    maxZoom: 18,
-                    minZoom: 12,
-		    maxBoundsViscosity: 10000.0
-                });
-                map.setView([44.4915, 11.3355], 12);
-        
-        var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-        
-        // var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
-	var limiti = map.getBounds();
-	map.setMaxBounds(limiti);
-		
-    $.ajax({
-	dataType: "json",
-	url: "geojson_folder/ZoneBologna.geojson",
-	success: function(data) {
-			L.geoJson(data, {
-				onEachFeature: onEachFeature
-			}).addTo(map);
-	}
-     }).error(function() {});
-    function onEachFeature(feature, layer) {
-		layer.bindPopup(feature.properties.Nome_zona);
-	    	layer.on('click', function (e) {
-			$.ajax({
-				dataType: "json",
-				url: "geojson_folder/csvjson.json",
-				success: function(dati) {
-					dati.forEach(function (arrayItem) {
-						if (arrayItem["Nome_zona"] == feature.properties.Nome_zona){	
-							$('.information').html('');
-							$('.information').html(arrayItem["Codice_zona"] + "<br />" + arrayItem["Nome_quartiere"]);
-						}
-					})
-			}
-     		}).error(function() {});
-	});
-    };
+   
     </script>
 </html>
