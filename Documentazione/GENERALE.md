@@ -255,11 +255,15 @@ Il dichiarante “*apertamente, pienamente, permanentemente, irrevocabilmente e 
 
 In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore, nella misura consentita dalla legge: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*: non vi è alcuna garanzia sul dataset stesso, e ogni responsabilità per qualsivoglia utilizzo del dataset nella misura consentita dalla legge è declinata.
 
-### [CC-BY-SA blablabla]
+### [DATASET CITIZEN MANAGEMENT ...]
 
-Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo, consentono di condividere, adattare e creare anche per finalità commerciali nel rispetto però di due vincoli: 
-- attribuire la paternità del dataset; 
-- distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale. 
+La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
+
+
+
+Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo consentono di condividere, adattare e creare un dtaset, anche per finalità commerciali, nel rispetto però di due vincoli: 
+- attribuire la paternità del dataset, fornire un link alla licenza e indicare le modifiche; 
+- distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
 
 [NOSTRO DATASET MASHATO]
 
@@ -279,11 +283,58 @@ _______________________________________________________________
 
 ## Formati
 
-La pubblicazione di dataset in open Data richiede che i dati siano resi disponibili in formati aperti, non proprietari, standardizzati e neutri rispetto agli applicativi necessari per la fruizione dei dati stessi.
+La pubblicazione di dataset in open Data richiede che i dati siano resi disponibili in formati che siano:
+* aperti
+* non proprietari
+* standardizzati
+* neutri rispetto agli applicativi necessari per la fruizione dei dati stessi.
 
-Tutti i dataset sono pubblicati in formato **CSV**. 
+Tutti i dataset che abbiamo utilizzato sono pubblicati in formato **CSV**. [*Aree statistiche*] e [*Segnalazioni* ...] sono corredati da un insieme di file in formato **SHP** (uno standard per dati vettoriali spaziali), con file aggiuntivi con estensioni **.sph**, **.dbf**, **.shx** da sui dipendono interpretazione ed utilizzo.
 
-[NOSTRI FORMATI]
+[? ..]
+
+### Distribuzioni
+Il nostro dataset lo abbiamo pubblicato in [X ?] distribuzioni:
+
+#### RDF
+
+| **Titolo** |  |
+| **Descrizione** |  |
+| **Tipo** |  |
+| **Licenza** |  |
+| **Data di pubblicazione** |  |
+| **Data di ultima modifica** |  |
+| **Download** |  |
+
+#### CSV
+
+| **Titolo** |  |
+| **Descrizione** |  |
+| **Tipo** |  |
+| **Licenza** |  |
+| **Data di pubblicazione** |  |
+| **Data di ultima modifica** |  |
+| **Download** |  |
+
+#### JSON
+
+| **Titolo** |  |
+| **Descrizione** |  |
+| **Tipo** |  |
+| **Licenza** |  |
+| **Data di pubblicazione** |  |
+| **Data di ultima modifica** |  |
+| **Download** |  |
+
+#### XML
+
+| **Titolo** |  |
+| **Descrizione** |  |
+| **Tipo** |  |
+| **Licenza** |  |
+| **Data di pubblicazione** |  |
+| **Data di ultima modifica** |  |
+| **Download** |  |
 
 ## Metadati
 
