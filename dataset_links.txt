@@ -1,6 +1,9 @@
 http://dati.comune.bologna.it/node/3328
 --> ELEZIONI POLITICHE CAMERA 2018
 
+http://dati.comune.bologna.it/node/3379
+--> SERIE STORICA IMMIGRATI PER ZONA IN UNICO CSV AL 2017
+
 http://dati.comune.bologna.it/node/3323
 --> ELEZIONI POLITICHE SENATO 2018 
 
