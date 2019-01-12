@@ -110,25 +110,17 @@
 										    }]
 										}
 									    };
-									 var grafobase =  document.getElementById('redditiChart').getContext('2d');
+									var grafoposizione =  document.getElementById('redditiChart').getContext('2d');
 									
-    									new Chart(grafobase, {type: 'line',data: datizona,options: opzionigenerali});
+    									var grafobase new Chart(grafoposizione, {type: 'line',data: datizona,options: opzionigenerali});
 									$("#generale").on("click", function() {
-									$('#redditiChart').remove();
-									$('#redditiButton').remove();
-									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
-									var grafobase =  document.getElementById('redditiChart').getContext('2d');
-									new Chart(grafobase, {type: 'line',data: datizona,options: opzionigenerali});
+									 grafoposizione.options = opzionigenerali;
+									 grafoposizione.update();
 									});
 									$("#dettaglio").on("click", function() {
-									$('#redditiChart').remove();
-									$('#redditiButton').remove();
-									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
-									var grafobase =  document.getElementById('redditiChart').getContext('2d');
-									new Chart(grafobase, {type: 'line',data: datizona});
-									})
+									 grafoposizione.options = {};
+									 grafoposizione.update();
+									});
 								    }
 								})
 							    }
