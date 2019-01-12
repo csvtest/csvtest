@@ -114,12 +114,12 @@
 									
     									var grafobase = new Chart(grafoposizione, {type: 'line',data: datizona,options: opzionigenerali});
 									$("#generale").on("click", function() {
-									 grafoposizione.options = opzionigenerali;
-									 grafoposizione.update();
+									 grafobase.options = opzionigenerali;
+									 grafobase.update();
 									});
 									$("#dettaglio").on("click", function() {
-									 grafoposizione.options = {};
-									 grafoposizione.update();
+									 grafobase.options = {};
+									 grafobase.update();
 									});
 								    }
 								})
