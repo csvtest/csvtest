@@ -30,3 +30,6 @@ https://geoconverter.hsr.ch/
 
 http://inumeridibolognametropolitana.it/basi-territoriali-del-comune-di-bologna
 --> SPIEGAZIONE BASI TERRITORIALI DI BOLOGNA
+
+http://dati.comune.bologna.it/node/1029
+--> dataset conversione AREE_ST - ZONE - QUARTIERI
