@@ -120,7 +120,7 @@
 									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
 									var grafobase =  document.getElementById('redditiChart').getContext('2d');
 									new Chart(grafobase, {type: 'line',data: datizona,options: opzionigenerali});
-									}
+									});
 									$("#dettaglio").on("click", function() {
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
@@ -128,7 +128,7 @@
 									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
 									var grafobase =  document.getElementById('redditiChart').getContext('2d');
 									new Chart(grafobase, {type: 'line',data: datizona});
-									}
+									})
 								    }
 								})
 							    }
