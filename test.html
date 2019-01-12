@@ -118,14 +118,16 @@
 										var grafobase =  document.getElementById('redditiChart').getContext('2d');
 										new Chart(grafobase, {type: 'line',data: dati});
 									}
-									$("#generale").on("click", function() {
+									grafogenerale(datizona, opzionigenerali);
+									    
+									$("#generale").live('click', function() {
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
 									grafogenerale(datizona, opzionigenerali)
 									});
-									$("#dettaglio").on("click", function() {
+									$("#dettaglio").live('click', function() {
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
