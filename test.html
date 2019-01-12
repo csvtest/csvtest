@@ -76,7 +76,7 @@
 									listIndex.push(arrayItem["Reddito pro-capite 2013"]);
 									listIndex.push(arrayItem["Reddito pro-capite 2014"]);
 									listIndex.push(arrayItem["Reddito pro-capite 2015"]);
-									listIndex.push((arrayItem["Reddito pro-capite 2016"] * 1.092));
+									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2016"] * 1.092));
 									$('#redditiChart').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									new Chart(document.getElementById("redditiChart"), {
@@ -104,7 +104,7 @@
 										"scales": {
 										    "yAxes": [{
 											"ticks": {
-											    "stepValue,": 1000,
+											    "stepValue": 1000,
 											    "beginAtZero": false
 											}
 										    }]
