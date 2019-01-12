@@ -78,7 +78,7 @@
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-									$('#chartContainer').append('<div id="redditiButton"><button id="btn1">Generale</button><button id="btn2">Dettaglio</button></div>');
+									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
 									var datizona = {
 										"labels": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
 										"datasets": [
@@ -111,7 +111,24 @@
 										}
 									    };
 									 var grafobase =  document.getElementById('redditiChart').getContext('2d');
+									
     									new Chart(grafobase, {type: 'line',data: datizona,options: opzionigenerali});
+									$("#generale").on("click", function() {
+									$('#redditiChart').remove();
+									$('#redditiButton').remove();
+									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
+									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
+									var grafobase =  document.getElementById('redditiChart').getContext('2d');
+									new Chart(grafobase, {type: 'line',data: datizona,options: opzionigenerali});
+									}
+									$("#dettaglio").on("click", function() {
+									$('#redditiChart').remove();
+									$('#redditiButton').remove();
+									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
+									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
+									var grafobase =  document.getElementById('redditiChart').getContext('2d');
+									new Chart(grafobase, {type: 'line',data: datizona});
+									}
 								    }
 								})
 							    }
