@@ -70,7 +70,7 @@
 									listRedditi.push(arrayItem["Reddito pro-capite 2016"]);
 									var listIndex = [];
 									listIndex.push(arrayItem["Reddito pro-capite 2009"]);
-									listRedditi.push((arrayItem["Reddito pro-capite 2016"] * 1.092));
+									listIndex.push((arrayItem["Reddito pro-capite 2016"] * 1.092));
 									$('#redditiChart').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									new Chart(document.getElementById("redditiChart"), {
