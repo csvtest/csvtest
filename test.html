@@ -79,7 +79,32 @@
 									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.087));
 									$('#redditiChart').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-									new Chart(document.getElementById("redditiChart"), {
+									var opt = [];
+									if (arrayItem["Reddito pro-capite 2009"] < 30000):
+										opt = {"scales": {
+												    "yAxes": [{
+													"ticks": {
+													    "beginAtZero": false,
+													    "stepSize": 10000,
+													    "min": 0,
+													    "max": 30000
+													}
+												    }]
+												}
+											    };
+									else:
+										opt = {"scales": {
+												    "yAxes": [{
+													"ticks": {
+													    "beginAtZero": false,
+													    "stepSize": 10000,
+													    "min": 30000,
+													    "max": 60000
+													}
+												    }]
+												}
+											    };
+									 new Chart(document.getElementById("redditiChart"), {
 									    "type": "line",
 									    "data": {
 										"labels": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
@@ -100,18 +125,7 @@
 										    }
 										]
 									    },
-									    "options": {
-										"scales": {
-										    "yAxes": [{
-											"ticks": {
-											    "beginAtZero": false,
-											    "stepSize": 10000,
-											    "min": 19000,
-											    "max": 56000
-											}
-										    }]
-										}
-									    }
+									    "options": opt
 									});
 								    }
 								})
