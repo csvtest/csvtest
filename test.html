@@ -68,6 +68,9 @@
 									listRedditi.push(arrayItem["Reddito pro-capite 2014"]);
 									listRedditi.push(arrayItem["Reddito pro-capite 2015"]);
 									listRedditi.push(arrayItem["Reddito pro-capite 2016"]);
+									var listIndex = [];
+									listIndex.push(arrayItem["Reddito pro-capite 2009"]);
+									listRedditi.push((arrayItem["Reddito pro-capite 2016"] * 1.092));
 									$('#redditiChart').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									new Chart(document.getElementById("redditiChart"), {
@@ -76,7 +79,7 @@
 										"labels": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
 										"datasets": [
 										   {	"label": "Index FOI",
-											"data": [19000, 23000, 19000, 23000, 19000, 23000, 19000, 23000],
+											"data": listIndex,
 											"type": "line",
 											"fill": false,
 											"borderColor": "rgb(255, 0, 0)"
