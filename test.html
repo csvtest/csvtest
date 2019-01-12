@@ -25,6 +25,7 @@
 				<div id="chartContainer">
 					<canvas id="redditiChart" width="400" height="400"></canvas>
 					<script>
+						$(document).ready(function(){
 						var map = L.map('map', {
 						    maxZoom: 18,
 						    minZoom: 12,
@@ -120,19 +121,18 @@
 									}
 									grafogenerale(datizona, opzionigenerali);
 									    
-									$("#generale").on('click', '.ajax', function() {
+									$("#generale").on('click', function() {
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
 									grafogenerale(datizona, opzionigenerali)
 									});
-									$("#dettaglio").on('click', '.ajax', function() {
+									$("#dettaglio").on('click', function() {
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
-									var optioni2 = {};
 									grafodettaglio(datizona)
 									})
 								    }
@@ -141,6 +141,7 @@
 							}).error(function() {});
 						    });
 						};
+						}
 					
 					</script>
 				</div>
