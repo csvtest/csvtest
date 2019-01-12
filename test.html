@@ -76,7 +76,9 @@
 									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.083));
 									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.087));
 									$('#redditiChart').remove();
+									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
+									$('#chartContainer').append('<div id="redditiButton" class="radio"><label><input type="radio" name="optradio" checked>Generale</label></div><div class="radio"><label><input type="radio" name="optradio">Dettaglio</label></div>');
 									new Chart(document.getElementById("redditiChart"), {
 									    "type": "line",
 									    "data": {
