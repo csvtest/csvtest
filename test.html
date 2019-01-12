@@ -120,14 +120,14 @@
 									}
 									grafogenerale(datizona, opzionigenerali);
 									    
-									$("#generale").on('click', '.option', function() {
+									$("#generale").on('click', '.ajax', function() {
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									$('#chartContainer').append('<div id="redditiButton"><button id="generale">Generale</button><button id="dettaglio">Dettaglio</button></div>');
 									grafogenerale(datizona, opzionigenerali)
 									});
-									$("#dettaglio").on('click', '.option', function() {
+									$("#dettaglio").on('click', '.ajax', function() {
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
