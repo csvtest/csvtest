@@ -111,7 +111,7 @@
 										}
 									    };
 									 var grafobase = document.querySelector('#redditiChart').getContext('2d');
-    									new Chart(grafobase).Line(datizona, opzionigenerali);
+    									new Chart(grafobase, {type: 'Line',data: datizona,options: opzionigenerali});
 								    }
 								})
 							    }
