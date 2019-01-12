@@ -78,7 +78,7 @@
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-									$('#chartContainer').append('<div id="redditiButton" class="radio"><label><input type="radio" name="optradio" checked>Generale</label></div><div class="radio"><label><input type="radio" name="optradio">Dettaglio</label></div>');
+									$('#chartContainer').append('<button id="btn1">Generale</button><button id="btn2">Dettaglio</button>'');
 									new Chart(document.getElementById("redditiChart"), {
 									    "type": "line",
 									    "data": {
