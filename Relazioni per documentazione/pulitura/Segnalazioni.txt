@@ -1,0 +1,44 @@
+DATASET SEGNALAZIONI: 
+
+I due dataset di input (raw): '38.00.03_segnalazioni_czrm2017_area_statistica.shp' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'
+
+Con Data Curator abbiamo eliminato fatto una prima pulizia del dataset '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv':
+-- abbiamo eliminato tutti i dati relativi a 'Category' in perchè inutili alle nostre finalità. NB: Qui ci sono degli errori, alle volte per errore è stata incollata direttamente la segnalazione testuale fatta dal cittadino senza alcuna forma di anonimizzazione, ad esempio:
+    (1)- "all'altezza di via della Barca civico 22/12 Ã¨ posto il segnale di divieto di sosta e di fermata. Il punto Ã¨ molto nevralgico perchÃ© prima di un incrocio stradale. Via della Barca da diversi anni a questa parte Ã¨ un'arteria con grosse criticitÃ  di traffico specialmente nelle ore di punta e tale rimarrÃ  se non si vuole attuare un nuovo piano regolatore semplicemente modificando le direzioni nelle vie laterali. Ad oggi nelle ore di punta per i mezzi di soccorso Ã¨ impossibile transitare e per le strade laterali Ã¨ difficile e pericoloso accedere. Con questa segnalazione si vuole chiedere di intervenire immediatamente almeno nel sanzionare le autovetture che quotidianamente stazionano fisse nella suddetta zona. Sperando che le prime multe possono dissuadere ulteriori successivi parcheggi impropri. Certo di un vostro immediato impegno porgo distinti saluti."
+    (2) - "teme per la sicurezza in quanto crede siano stati abbattuti dei muri portanti.Non sono esposti dati di chi ristruttura"
+    (3) - "FIORAVANTI E ALBANI." ## Abbiamo interpretato che siano 2 vie che si incrociano 
+    (4) - "per il periodo di apertura della scuola NELLA SOLA FASCIA ORARIA 15-17 dal LUNEDÃ¬ AL VENERDÃ¬" ## MA CHE EEEE'
+    (5) - "su una parte di area condominiale di propietÃ ' della coperativa Dozza sostano per molte ore al giorno fino a notte inoltrata gruppi di ragazzi che schiamazzano in modo esagerato producendo rumori che determinano una grava situazione di disturbo."
+    (6) - "via stradali guelfi ## QUESTO NON E' CHIARO"
+    (7) - "avendo il marito che si muove solo con il deambulatore non riesce piÃ¹ a portarlo a fare una passeggiata in quanto  sono obbligati a girare in mezzo alla strada rischiando di  essere investiti dalle macchine"
+    (8) - " ?>" ## MA CHE E'
+    (9) - " quelle giÃ  in essere adiacenti alla scuola media Farini sono mal posizionate (ordine invertito per cui non si riesce a legare le bici)"
+   Eliminando l'intera colonna contenente questi dati, abbiamo eliminato anche questi dati errati e sensibili.
+   
+-- abbiamo rinominato le intestazioni: 'Ticketid,Category,Subcategory_1,Subcategory_2,Subcategory_3' in 'Ticketid, Category, Subcategory, Description'
+
+Poi abbiamo lavorato su '38.00.03_segnalazioni_czrm2017_area_statistica': Questo è un file di estensio shp, quindi lo abbiamo convertito in formato geojson con l'algoritmo shp2geojson(input_path, output_path) in (##IL FILE CHE CONTIENE LO SCRIPT LO SALVERA' FABIO) e successivamente in formato csv con un tool online (http://convertcsv.com/geojson-to-csv.htm). L'output è il file 'Segnalazioni2017AreaStatPub.csv'.
+
+Innanzitutto abbiamo notato che il dataset riporta l'indirizzo preciso di dove una segnalazione è stata fatta (riportandone anche le coordinate x,y), in questo modo si può sapere l'esatto punto di Bologna dove vi è una problematica espressa in una segnalazione. 
+
+Il problema si pone sopratutto se la segnalazione riguarda un'altra persona: ad esempio in '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv' abbiamo trovato la segnalazione di avvistamento di una prostituta in relazione ad un preciso indirizzo (c'è anche il civico). Un altro esempio è quello di (4): si capisce che i ragazzini stanno li ogni giorno, qualcuno potrebbe facilmente rintracciarli, SONO MINORENNIIIIIIII.
+
+La soluzione al problema è di non considerare gli indirizzi delle segnalazioni, fornendo unicamente il dato dell'area della segnalazione. 
+Quindi abbiamo creato un dataset intermedio derivato da 'Segnalazioni2017AreaStatPub.csv' che contiene unicamente i dati relativi a 'Ticketid' e 'Tipo Area'. Il file raw presenta però in 'Tipo Area' diverse diciture prima del nome dell'area ('Area Statistica:' e 'Percorso di Ascolto |'). Ecco, le abbiamo levate e abbiamo lasciato solo il nome della zona ( ## perchè non servivano a niente ihihihihih) con l'algoritmo 'pulitore_data_geo(data_geo)' in 'Segnalazioni_2017.py'.
+L'output è un file intermedio 'Segnalazioni_file_per_merge.csv'. 
+
+A questo punto abbiamo ripreso il dataset '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv':
+  - Abbiamo selezionato solo le categorie di segnalazioni che ci interessano: Degrado urbano-sociale-ambientale e Microciminalità. La scelta delle categorie da mantenere è stata fatta da noi considerando gli elementi nel dataset: la maggior parte delle segnalazioni riguardano queste 4 categorie, intotre ci sembravano le più calzanti per le nostre finalità.
+    Questo processo di pulitura è stato realizzato tramite l'algoritmo 'pulire_segnalazioni(data_segnalazioni)'.
+ 
+ Poi abbiamo fatto il merge tra 'Segnalazioni_file_per_merge.csv' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv': in questo modo abbiamo convertito tutti i Ticketid nelle loro corrispondenti aree statistiche (con l'algoritmo 'incrociatore_segnalazioni(data_segnalazioni, data_geo)').
+ 
+ Con l'algoritmo 'counter_segnalazioni(segnalazioni_zone, segnalazioni_zone2)' abbiamo raggruppato ancora le segnalazioni per zone, eliminando ogni doppione, ma conteggiando quante volte quella determinata segnalazione è stata fatta in una determinata zona. 
+ 
+ 
+ A questo punto 
+
+
+
+
+
