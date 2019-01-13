@@ -162,7 +162,7 @@ L'analisi giuridica è necessaria per garantire sostenibilità nel tempo del pro
 Per attuarla, abbiamo utilizzato una *check list* di riferimento per valutare tutti gli aspetti giuridici del ciclo di vita dei dataset. La check list è formata da una serie
 di domande, per ciascun aspetto, a cui rispondere con *Sì o No*.
 
-| **Privacy** | Domande | D.Elezioni |  D.Redditi | D.Segnalazioni |
+| **Privacy** | Domande | D.Elezioni |  D.Redditi | D.Segnalazioni | D.Aree Statistiche |
 | ----------- | --------| ------|--------|-------|
 | | sono i dati liberi da ogni informazione                    personale che possa identificare in modo                       diretto l’individuo?| |
 | | sono i dati liberi da ogni informazione indiretta che      possa identificare l’individuo? In caso negativo, queste       informazioni sono autorizzate per legge?| |
