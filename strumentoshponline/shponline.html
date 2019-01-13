@@ -13,11 +13,9 @@
         <div id='map'></div>
        <a href='#' id='export'>Esporta GEOJSON</a>
     </body> 
-
-        <!--shapefile leaflet DEVO STUDIARMELO -->
-            <script src="js/leaflet.shpfile.js"></script>
-            <script src="js/shp.js"></script>
-            <script src="js/Path.Drag.js"></script>
+            <script src="leaflet.shpfile.js"></script>
+            <script src="shp.js"></script>
+            <script src="Path.Drag.js"></script>
         <!--Script mappa-->
         <script id="jsbin-javascript">
         var map = L.map('map', {
@@ -35,13 +33,13 @@
         zone.addTo(map);
         
         document.getElementById('export').onclick = function(e) {
-            // Extract GeoJson from featureGroup
+            // estrai geojson
             var data = zone.toGeoJSON();
 
-            // Stringify the GeoJson
+            // Stringify GeoJson
             var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
 
-            // Create export
+            // Crea il pacchetto dati da esportare
             document.getElementById('export').setAttribute('href', 'data:' + convertedData);
             document.getElementById('export').setAttribute('download','data.geojson');
         }
