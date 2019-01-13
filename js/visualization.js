@@ -105,6 +105,7 @@ $(document).ready(function(){
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									grafodettaglio(datizona)
 									})
+									$('#collREDDITI').collapse(grafogenerale(datizona, opzionigenerali))
 								    }
 								})
 							    }
