@@ -106,6 +106,7 @@
 											    "beginAtZero": false,
 											    "stepSize": 10000,
 											    "min": 18000,
+											    "maintainAspectRatio": false,
 											    "max": 58000
 											}
 										    }]
@@ -117,7 +118,7 @@
 									}
 									function grafodettaglio(dati) {
 										var grafobase =  document.getElementById('redditiChart').getContext('2d');
-										new Chart(grafobase, {type: 'line',data: dati});
+										new Chart(grafobase, {type: 'line',data: dati, options: {"maintainAspectRatio": false}});
 									}
 									grafogenerale(datizona, opzionigenerali);
 									    
