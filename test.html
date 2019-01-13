@@ -45,7 +45,8 @@
 							L.geoJson(data, {
 							    onEachFeature: onEachFeature
 							}).addTo(map);
-							map.setMaxBounds(data)   
+							var limiti = data.getBounds();  
+							map.setMaxBounds(limiti)   
 						    }
 						}).error(function() {});
 						function onEachFeature(feature, layer) {
