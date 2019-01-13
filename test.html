@@ -42,13 +42,15 @@
 						    dataType: "json",
 						    url: "geojson_folder/ZoneBologna.geojson",
 						    success: function(data) {
-							L.geoJson(data, {
+							var layerzone= L.geoJson(data, {
 							    onEachFeature: onEachFeature
 							}).addTo(map);
-							var limiti = data.getBounds();  
-							map.setMaxBounds(limiti)   
 						    }
 						}).error(function() {});
+							
+						var limiti = layerzone.getBounds();  
+						map.setMaxBounds(limiti) ;
+							
 						function onEachFeature(feature, layer) {
 						    layer.bindPopup(feature.properties.Nome_zona);
 						    layer.on('click', function(e) {
