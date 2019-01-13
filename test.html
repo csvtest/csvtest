@@ -44,7 +44,8 @@
 						    success: function(data) {
 							var layerzone= L.geoJson(data, {
 							    onEachFeature: onEachFeature
-							}).addTo(map);
+							});
+							layerzone.addTo(map);
 						    }
 						}).error(function() {});
 							
