@@ -9,13 +9,13 @@ def process_data(source_csv_file_path):
         data = [dict(x) for x in reader]
     return data
 
-def leva_colonna_inutile(data):
+def elimina_colonna(data):
     for dictionary in data:
         if "Reddito imponibile ai fini dell'addizionale irpef" in dictionary:
             del dictionary["Reddito imponibile ai fini dell'addizionale irpef"]
     return data
 
-def eusebio(data1, data2, data3, data4, data5, data6, data7, data8):
+def merge_dataset_redditi_per_area(data1, data2, data3, data4, data5, data6, data7, data8):
     list_new_dicts = []
     for elem in lista_aree_statistiche:
         new_dict = dict()
@@ -69,5 +69,5 @@ def eusebio(data1, data2, data3, data4, data5, data6, data7, data8):
 
     return list_new_dicts
 
-print(eusebio(leva_colonna_inutile(process_data('redditi_2009_per_area_statistica.csv')), leva_colonna_inutile(process_data('redditi_2010_per_area_statistica.csv')), leva_colonna_inutile(process_data('redditi_2011_per_area_statistica.csv')), leva_colonna_inutile(process_data('redditi_2012_per_area_statistica.csv')), leva_colonna_inutile(process_data('redditi_2013_per_area_statistica.csv')), leva_colonna_inutile(process_data('redditi_2014_per_area_statistica.csv')), leva_colonna_inutile(process_data('redditi_2015_per_area_statistica.csv')), process_data(leva_colonna_inutile('redditi_2016_per_area_statistica.csv'))))
+print(merge_dataset_redditi_per_area(leva_colonna_inutile(process_data('redditi_2009_per_area_statistica.csv')), leva_colonna_inutile(process_data('redditi_2010_per_area_statistica.csv')), elimina_colonna(process_data('redditi_2011_per_area_statistica.csv')), elimina_colonna(process_data('redditi_2012_per_area_statistica.csv')), elimina_colonna(process_data('redditi_2013_per_area_statistica.csv')), elimina_colonna(process_data('redditi_2014_per_area_statistica.csv')), elimina_colonna(process_data('redditi_2015_per_area_statistica.csv')), elimina_colonna(leva_colonna_inutile('redditi_2016_per_area_statistica.csv'))))
 
