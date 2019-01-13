@@ -73,6 +73,7 @@ $(document).ready(function(){
 										]
 									    };
 									var opzionigenerali = {
+										"maintainAspectRatio": false,
 										"scales": {
 										    "yAxes": [{
 											"ticks": {
@@ -90,7 +91,7 @@ $(document).ready(function(){
 									}
 									function grafodettaglio(dati) {
 										var grafobase =  document.getElementById('redditiChart').getContext('2d');
-										new Chart(grafobase, {type: 'line',data: dati});
+										new Chart(grafobase, {type: 'line',data: dati, options: {"maintainAspectRatio": false});
 									}
 									grafogenerale(datizona, opzionigenerali);
 									    
