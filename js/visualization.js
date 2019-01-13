@@ -80,6 +80,10 @@ $(document).ready(function(){
 										]
 									    };
 									var opzionigenerali = {
+										"callbacks": {
+												label: function(tooltipItems, data) {
+												    return "$" + tooltipItems.yLabel.toString();
+												},
 										"scales": {
 										    "yAxes": [{
 											"ticks": {
