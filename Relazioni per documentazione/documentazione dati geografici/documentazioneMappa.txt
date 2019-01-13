@@ -2,39 +2,40 @@ Mappa zona di bolonga
 
 divisione zone:
 	- le zone sono i 18 vecchi quartieri di bologna accorpati nel 1985 negli attuali 9 quartieri (https://it.wikipedia.org/wiki/Quartieri_di_Bologna)
-	- più specifica della divisione in quartieri
+	- piÃ¹ specifica della divisione in quartieri
 	- meno specifica della divisione in aree statistiche
 	- un buon compromesso
+	NB! I quartieri sono composti da zone che sono composte da aree statistiche, dunque Ã¨ possibile relazionare queste 3 suddivisioni del territorio bolognese 
 
 dataset disponibili:
 	- shapefile aree statistiche(http://dati.comune.bologna.it/node/160) + csv aree statistiche per zona (http://dati.comune.bologna.it/node/1030)
 	- shapefile zone(dati.comune.bologna.it/node/1184)
 
 problema:
-	- formato multifile (5-6 files, veder zip per lista ;) )
+	- formato multifile: 
 	- formato proprietario ma open (https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)
 
 geojson:
 	- formato open
 	- descritto attraverso il formato JSON (dunque nativamente supportato da javascript)
 
-necessità del nostro dataset:
+necessitÃ  del nostro dataset:
 	- dataset "Zona-Centrico"
-	- possibilità di avere una tabella di conversione tra "quartiere" "zona" e "area statistica"
-	- in alcuni dataset (es. dati elettorali) le zone vengono espresse solamente tramite un numero (da 1 a 18), dunque abbiamo necessità di collegare il numero alla zona (non è specificato!)
+	- possibilitÃ  di avere una tabella di conversione tra "quartiere" "zona" e "area statistica"
+	- in alcuni dataset (es. dati elettorali) le zone vengono espresse solamente tramite un numero (da 1 a 18), dunque abbiamo necessitÃ  di collegare il numero alla zona (non Ã¨ specificato!)
 
 PULIZIA e CREAZIONE
 	STEP 1
 		- da shapefile delle zone a geojson tramite script python "shp2geojson" (http://dati.comune.bologna.it/node/1184)
 		- Lo shapefile delle zone ha come riferimento alle coordinate (crs: coordinate reference system) UTMA ED50 (sistema coordinate LOCALE emilia romagna ==> VEDI  https://epsg.io/5658)
-			- Ciò porta ad un BUG di conversione in GEOJSON (che usa il crs: WGS84 FOMRMATO GLOBALE)
-			- 
-			- Inoltre, qualora si volesse lavorare con il file shapefile originario si nota una grave imprecisione delle coordinate (offset)
+		- CiÃ² porta ad un BUG di conversione in GEOJSON (che usa il crs: WGS84 FOMRMATO GLOBALE)
+		- 
+		- Inoltre, qualora si volesse lavorare con il file shapefile originario si nota una grave imprecisione delle coordinate (offset)
 	STEP 2
 		- LAVORARE sullo shapefile delle aree statistiche (http://dati.comune.bologna.it/node/161) :
 		- CRS: ED50 UTM Zone 32N (sistema coordinate EUROPEO ==> VEDI  https://epsg.io/23032)
-			- Si può convertire in geojson in modo diretto tramite "shp2geojson" (è un formato locale ma indubbiamente più diffuso!)
-			- Precisione maggiore nel descrivere le aree!
+		- Si puÃ² convertire in geojson in modo diretto tramite "shp2geojson" (Ã¨ un formato locale ma indubbiamente piÃ¹ diffuso!)
+		- Precisione maggiore nel descrivere le aree!
 		- merge delle aree statistiche per creare le zone tramite il programma QGIS (opensource) seguendo le informazioni contenute nel csv aree statistiche per zona (http://dati.comune.bologna.it/node/1030) ;)
 	STEP 3
 
