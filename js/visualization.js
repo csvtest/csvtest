@@ -105,11 +105,6 @@ $(document).ready(function(){
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									grafodettaglio(datizona)
 									})
-									$("#redditiPUL").on('click', function() {
-										$('#redditiChart').remove();
-										$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-										grafogenerale(datizona, opzionigenerali)
-									});
 								    }
 								})
 							    }
