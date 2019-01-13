@@ -56,7 +56,7 @@ $(document).ready(function(){
 									var datizona = {
 										"labels": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
 										"datasets": [
-						 				{	"label": "Rivalutazione monetaria del reddito medio 2009 in base all'indice FOI",
+						 				{	"label": ["Rivalutazione monetaria", "del reddito medio 2009", "in base all'indice FOI"],
 											"data": listIndex,
 											"type": "line",
 											"fill": false,
@@ -64,11 +64,18 @@ $(document).ready(function(){
 										    	"spanGaps": true,
 										    },
 										    {
-											"label": "Reddito Medio",
+											"label": "Reddito Medio Zona",
 											"data": listRedditi,
 											"type": "line",
 											"fill": false,
 											"borderColor": "rgb(54, 162, 235)",
+										    },
+										    {
+											"label": "Reddito Medio Bologna",
+											"data": [28641, 28594, 28500, 28431, 28708, 28968, 29386, 30173],
+											"type": "line",
+											"fill": true,
+											"borderColor": "rgb(169,169,169)",
 										    }
 										]
 									    };
