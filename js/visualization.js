@@ -30,7 +30,7 @@ $(document).ready(function(){
 								dati.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
 									$('.information').html('');
-									$('.information').html(arrayItem["Zona"]);
+									$('.information').html('<span class="badge badge-primary">'+arrayItem["Zona"])+'</span>';
 									var listRedditi = [];
 									listRedditi.push(arrayItem["Reddito pro-capite 2009"]);
 									listRedditi.push(arrayItem["Reddito pro-capite 2010"]);
