@@ -34,9 +34,6 @@ A questo punto abbiamo ripreso il dataset '38.00.05_segnalazioni_czrm2017_tot_ti
  Poi abbiamo fatto il merge tra 'Segnalazioni_file_per_merge.csv' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv': in questo modo abbiamo convertito tutti i Ticketid nelle loro corrispondenti aree statistiche (con l'algoritmo 'incrociatore_segnalazioni(data_segnalazioni, data_geo)').
  
  Con l'algoritmo 'counter_segnalazioni(segnalazioni_zone, segnalazioni_zone2)' abbiamo raggruppato ancora le segnalazioni per zone, eliminando ogni doppione, ma conteggiando quante volte quella determinata segnalazione è stata fatta in una determinata zona. 
- 
- 
- A questo punto 
 
 
 
