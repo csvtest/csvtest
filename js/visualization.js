@@ -56,7 +56,7 @@ $(document).ready(function(){
 									var datizona = {
 										"labels": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
 										"datasets": [
-						 				{	"label": ["Rivalutazione monetaria", "del reddito medio 2009", "in base all'indice FOI"],
+						 				{	"label": {["Rivalutazione monetaria"], ["del reddito medio 2009"], ["in base all'indice FOI"]},
 											"data": listIndex,
 											"type": "line",
 											"fill": false,
@@ -82,8 +82,9 @@ $(document).ready(function(){
 									var opzionigenerali = {
 										"callbacks": {
 												label: function(tooltipItems, data) {
-												    return "$" + tooltipItems.yLabel.toString();
-												},
+												    return  tooltipItems.yLabel.toString() + '€';
+												}
+										},
 										"scales": {
 										    "yAxes": [{
 											"ticks": {
