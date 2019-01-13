@@ -31,12 +31,15 @@ PULIZIA e CREAZIONE
 		- Ciò porta ad un BUG di conversione in GEOJSON (che usa il crs: WGS84 FOMRMATO GLOBALE)
 		- 
 		- Inoltre, qualora si volesse lavorare con il file shapefile originario si nota una grave imprecisione delle coordinate (offset)
+		
 	STEP 2
 		- LAVORARE sullo shapefile delle aree statistiche (http://dati.comune.bologna.it/node/161) :
 		- CRS: ED50 UTM Zone 32N (sistema coordinate EUROPEO ==> VEDI  https://epsg.io/23032)
 		- Si può convertire in geojson in modo diretto tramite "shp2geojson" (è un formato locale ma indubbiamente più diffuso!)
 		- Precisione maggiore nel descrivere le aree!
 		- merge delle aree statistiche per creare le zone tramite il programma QGIS (opensource) seguendo le informazioni contenute nel csv aree statistiche per zona (http://dati.comune.bologna.it/node/1030) ;)
+	
 	STEP 3
+		
 
 
