@@ -160,9 +160,9 @@ _______________________________________________________________
 L'analisi giuridica è necessaria per garantire sostenibilità nel tempo del processo di produzione e pubblicazione dei dati e creare un servizio equilibrato nel rispetto della funzione pubblica e dei diritti dei singoli individui. L’analisi giuridica delle fonti mira quindi a valutare questi delicati equilibri, evidenziando limitazioni d’uso, finalità di competenza, determinazione dei diritti e dei termini di licenza.
 
 Per attuarla, abbiamo utilizzato una *check list* di riferimento per valutare tutti gli aspetti giuridici del ciclo di vita dei dataset. La check list è formata da una serie
-di domande, per ciascun aspetto, a cui rispondere con Sì o No.
+di domande, per ciascun aspetto, a cui rispondere con *Sì o No*.
 
-| **Privacy** | Domande | Sì/No |  Sì/No | Sì/No |
+| **Privacy** | Domande | D.Elezioni |  D.Redditi | D.Segnalazioni |
 | ----------- | --------| ------|--------|-------|
 | | sono i dati liberi da ogni informazione                    personale che possa identificare in modo                       diretto l’individuo?| |
 | | sono i dati liberi da ogni informazione indiretta che      possa identificare l’individuo? In caso negativo, queste       informazioni sono autorizzate per legge?| |
