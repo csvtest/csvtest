@@ -52,7 +52,7 @@ $(document).ready(function(){
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-									$('#pulsante').append('<div class="row"><div class="col-lg-6" id="redditiButton"><button class="btn btn-primary" id="generale">Generale</button><button class="btn btn-primary" id="dettaglio">Dettaglio</button></div><div class="col-lg-6"><a href="https://rivaluta.istat.it/">Fonte Dati FOI: Istat</a></div>');
+									$('#pulsante').append('<div class="row"><div class="col-lg-6" id="redditiButton"><button class="btn btn-primary" id="generale">Generale</button><button class="btn btn-primary" id="dettaglio">Dettaglio</button></div><div class="text-right col-lg-6"><a href="https://rivaluta.istat.it/">Fonte Dati FOI: Istat</a></div>');
 									var datizona = {
 										"labels": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
 										"datasets": [
@@ -80,22 +80,22 @@ $(document).ready(function(){
 										]
 									    };
 									var opzionigenerali = {
-										"tooltips": {
-											enabled: true,
-											mode: 'single',
-											callbacks: {
-											    label: function(tooltipItems, data) { 
-												return tooltipItems.yLabel + ' €';
-											    }
-											}
-										    },
 										"scales": {
 										    "yAxes": [{
 											"ticks": {
 											    "beginAtZero": false,
 											    "stepSize": 10000,
 											    "min": 18000,
-											    "max": 58000
+											    "max": 58000,
+											    "tooltips": {
+												enabled: true,
+												mode: 'single',
+												callbacks: {
+												    label: function(tooltipItems, data) { 
+													return tooltipItems.yLabel + ' €';
+												    }
+												}
+											    },
 											}
 										    }]
 										}
