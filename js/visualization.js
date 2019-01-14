@@ -85,7 +85,7 @@ $(document).ready(function(){
 												"mode": 'single',
 												"callbacks": {
 												    "label": function(tooltipItems, data) {
-													return data.datasets[tooltipItems.datasetIndex].label + tooltipItems.yLabel + ' €';
+													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.yLabel + ' €';
 												    }
 												}
 											    },
@@ -95,7 +95,10 @@ $(document).ready(function(){
 											    "beginAtZero": false,
 											    "stepSize": 10000,
 											    "min": 18000,
-											    "max": 58000
+											    "max": 58000,
+											    "callback": function(value, index, values) {
+													return value + ' €';
+												}
 											}
 										    }]
 										}
