@@ -52,7 +52,7 @@ $(document).ready(function(){
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-									$('#pulsante').append('<div class="row" id="redditiButton"><div class="btn-group btn-group-toggle" data-toggle="buttons"><label class="btn btn-primary active"><input type="radio" id="generale" name="chart" autocomplete="off" checked> Generale</label><label class="btn btn-primary"><input type="radio" id="dettaglio" name="chart" autocomplete="off"> Dettaglio</label></div><div class="text-right col-lg-6"><a href="https://rivaluta.istat.it/">Fonte Dati FOI: Istat</a></div>');
+									$('#pulsante').append('<div class="row" id="redditiButton"><div class="btn-group btn-group-toggle" data-toggle="buttons"><label class="btn btn-primary active"><input type="radio" id="generale" value="generale" name="chart" autocomplete="off" checked> Generale</label><label class="btn btn-primary"><input type="radio" id="dettaglio" value="dettaglio" name="chart" autocomplete="off"> Dettaglio</label></div><div class="text-right col-lg-6"><a href="https://rivaluta.istat.it/">Fonte Dati FOI: Istat</a></div>');
 									var datizona = {
 										"labels": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
 										"datasets": [
