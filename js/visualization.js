@@ -132,7 +132,7 @@ $(document).ready(function(){
 									
 									grafo(datizona, opzionigenerali);
 									    
-									$("#generale).on('click', function() {
+									$("#generale").on('click', function() {
 									$('#redditiChart').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									grafo(datizona, opzionigenerali)
