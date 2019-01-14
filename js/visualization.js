@@ -133,16 +133,18 @@ $(document).ready(function(){
 									grafo(datizona, opzionigenerali);
 									
 									$('input[type=radio][name=chart]').change(function() {
-									    if (this.value == 'generale') {
-										$('#redditiChart').remove();
-										$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-										grafo(datizona, opzionigenerali)
-									    }
-									    else if (this.value == 'dettaglio') {
-										$('#redditiChart').remove();
-										$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-										grafo(datizona, opzionidettaglio)
-									    }
+									switch($(this).val()){
+										case 'generale' :
+										    $('#redditiChart').remove();
+										    $('#chartContainer').append('<canvas id="redditiChart"><canvas>');
+										    grafo(datizona, opzionigenerali);
+										    break
+										case 'dettaglio' :
+										    $('#redditiChart').remove();
+										    $('#chartContainer').append('<canvas id="redditiChart"><canvas>');
+										    grafo(datizona, opzionidettaglio)
+										    break
+									    }            
 									});  						    
 		
 								    }
