@@ -103,25 +103,44 @@ $(document).ready(function(){
 										    }]
 										}
 									    };
-									function grafogenerale(dati, opzioni) {
+									var opzionidettaglio = {
+										"tooltips": {
+												"enabled": true,
+												"mode": 'single',
+												"callbacks": {
+												    "label": function(tooltipItems, data) {
+													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.yLabel + ' €';
+												    }
+												}
+											    },
+										"scales": {
+										    "yAxes": [{
+											"ticks": {
+											    "beginAtZero": false,
+											    "callback": function(value, index, values) {
+													return value + ' €';
+												}
+											}
+										    }]
+										}
+									    };
+										
+									function grafo(dati, opzioni) {
 										var grafobase =  document.getElementById('redditiChart').getContext('2d');
 										new Chart(grafobase, {type: 'line',data: dati, options: opzioni});
-									}
-									function grafodettaglio(dati) {
-										var grafobase =  document.getElementById('redditiChart').getContext('2d');
-										new Chart(grafobase, {type: 'line',data: dati});
-									}
+									};
+									
 									grafogenerale(datizona, opzionigenerali);
 									    
 									$("#generale").on('click', function() {
 									$('#redditiChart').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-									grafogenerale(datizona, opzionigenerali)
+									grafo(datizona, opzionigenerali)
 									});
 									$("#dettaglio").on('click', function() {
 									$('#redditiChart').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-									grafodettaglio(datizona)
+									grafo(datizona, opzionidettaglio)
 									})
 								    }
 								})
