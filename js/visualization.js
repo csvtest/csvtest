@@ -130,7 +130,7 @@ $(document).ready(function(){
 										new Chart(grafobase, {type: 'line',data: dati, options: opzioni});
 									};
 									
-									grafogenerale(datizona, opzionigenerali);
+									grafo(datizona, opzionigenerali);
 									    
 									$("#generale").on('click', function() {
 									$('#redditiChart').remove();
