@@ -85,7 +85,7 @@ $(document).ready(function(){
 												"mode": 'single',
 												"callbacks": {
 												    "label": function(tooltipItems, data) {
-													return data.datasets[tooltipItem.datasetIndex].label + tooltipItems.yLabel + ' €';
+													return data.datasets[tooltipItems.datasetIndex].label + tooltipItems.yLabel + ' €';
 												    }
 												}
 											    },
