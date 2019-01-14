@@ -132,12 +132,12 @@ $(document).ready(function(){
 									
 									grafo(datizona, opzionigenerali);
 									    
-									$("#generale").on('click', function() {
+									$("#generale").is(':checked', function() {
 									$('#redditiChart').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									grafo(datizona, opzionigenerali)
 									});
-									$("#dettaglio").on('click', function() {
+									$("#dettaglio").is(':checked', function() {
 									$('#redditiChart').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									grafo(datizona, opzionidettaglio)
