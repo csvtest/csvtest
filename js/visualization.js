@@ -88,10 +88,10 @@ $(document).ready(function(){
 											    "min": 18000,
 											    "max": 58000,
 											    "tooltips": {
-												enabled: true,
-												mode: 'single',
-												callbacks: {
-												    label: function(tooltipItems, data) { 
+												"enabled": true,
+												"mode": 'single',
+												"callbacks": {
+												    "label": function(tooltipItems, data) { 
 													return tooltipItems.yLabel + ' €';
 												    }
 												}
