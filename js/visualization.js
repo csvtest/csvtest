@@ -191,7 +191,7 @@ $(document).ready(function(){
 									    .size([diameter, diameter])
 									    .padding(1.5);
 
-									var svg = d3.select("body")
+									var svg = d3.select("#grafoSegn")
 									    .append("svg")
 									    .attr("width", diameter)
 									    .attr("height", diameter)
