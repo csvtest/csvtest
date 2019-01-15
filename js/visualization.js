@@ -159,8 +159,9 @@ $(document).ready(function(){
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) { 
 									    Object.keys(arrayItem).forEach(function(k, v){
-										    console.log(k, v)
-									    }
+										    console.log(k)
+										    
+									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
 									    var grafocategorie =  document.getElementById('CategorieChart').getContext('2d');
 									    var myPieChart = new Chart(grafocategorie,{type: 'pie',data: data,options: options});
 									    var data = {
@@ -175,6 +176,7 @@ $(document).ready(function(){
 											'Degrado ambientale'
 										    ]
 										};
+									    }//fineIF
 									    }
 									})
 								    }
