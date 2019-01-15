@@ -178,6 +178,7 @@ In generale, nel corso della pulizia dei vari dataset, abbiamo:
 3. copiato le versioni pulite dei dataset, in formato CSV e con codifica UTF-8.
 
 #### DATASET REDDITI
+
 ##### Revisione preliminare
 Si tratta di una serie di 8 dataset che riportano i redditi per area statistica dal 2009 al 2016.
 
@@ -207,6 +208,7 @@ Esempi, in questo senso, sono rappresentati da:
 | Lungo Reno | 6 | 102878 |
 
 Incrociando poi tali dati con dati satellitari reperibili dall'utente medio semplicemente utilizzando Google Maps, possiamo notare la presenza di un'unica casa in tale area. Tramite il dataset è quindi possibile risalire ai redditi dei residenti di una determinata abitazione! 
+
 
 ##### Pulitura, De-identificazione e Merge
 
