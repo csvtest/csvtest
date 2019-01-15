@@ -159,20 +159,7 @@ $(document).ready(function(){
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) { 
 									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-									    var grafocategorie =  document.getElementById('CategorieChart').getContext('2d');
-									    var myPieChart = new Chart(grafocategorie,{type: 'pie',data: data});
-									    var data = {
-										    "datasets": [{
-											"data": [10, 20, 30]
-										    }],
-
-										    // These labels appear in the legend and in the tooltips when hovering different arcs
-										    "labels": [
-											'Microcriminalità',
-											'Degrado sociale',
-											'Degrado ambientale'
-										    ]
-										};
+									   new Chart(document.getElementById('CategorieChart'),{"type":"doughnut","data":{"labels":["Red","Blue","Yellow"],"datasets":[{"label":"My First Dataset","data":[300,50,100],"backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]}});
 									    }
 									})
 								    }
