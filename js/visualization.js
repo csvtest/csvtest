@@ -177,7 +177,7 @@ $(document).ready(function(){
 									    .data(bubble(nodes).descendants())
 									    .enter()
 									    .filter(function(d){
-									    return  !d.children
+									    return  !d.Segnalazioni
 									    })
 									    .append("g")
 									    .attr("class", "node")
