@@ -101,7 +101,7 @@ _______________________________________________________________
 L'analisi giuridica è necessaria per garantire sostenibilità nel tempo del processo di produzione e pubblicazione dei dati e creare un servizio equilibrato nel rispetto della funzione pubblica e dei diritti dei singoli individui. L’analisi giuridica delle fonti mira quindi a valutare questi delicati equilibri, evidenziando limitazioni d’uso, finalità di competenza, determinazione dei diritti e dei termini di licenza.
 
 Per attuarla, abbiamo utilizzato una *check list* di riferimento per valutare tutti gli aspetti giuridici del ciclo di vita dei dataset. La check list è formata da una serie
-di domande, per ciascun aspetto, a cui rispondere con Sì o No.
+di domande, per ciascun aspetto, a cui rispondere con Sì, No o Non Verificabile (?).
 
 | **Privacy** | Domande | D.Elezioni |  D.Redditi | D.Segnalazioni | D.Aree Statistiche |
 | ----------- | --------| ------|--------|-------|---------|
@@ -139,23 +139,38 @@ di domande, per ciascun aspetto, a cui rispondere con Sì o No.
 | | in che forma si possono creare sinergie tra il portale “Amministrazione trasparente” e il portal open data per minimizzare le inconsistenze e favorire la trasparenza del dato aperto? |/ |/|/|/| 
 
 ### Misure di de-identificazione e pulitura
-Verifichiamo qualora dati specifici possano rientrare nella categoria di *personal data* o no. I dati che si confermano essere *non-personal data* possono essere usati liberamente, cioè senza restrizioni legali.
 
-I *personal data* sono dati che possono identificare una persona vivente e che includono informazioni facilmente integrabili con altre informazioni per perfezionare il processo di re-identificazione.
+## Misure di de-identificazione
+
+Nell'elaborazione della check-list abbiamo preso coscienza di criticità all'interno di alcuni dataset riguardanti la presenza di possibili personal data. I dati che si confermano essere *non-personal data* possono essere infatti usati liberamente, cioè senza restrizioni legali, ma qualora dati specifici possano rientrare nella categoria di *personal data*, o se incrociati con altri dati reperibili sul web possano portare all'identificazione dell'individuo e/o dei suoi personal data, si incorrerebbe in grosse problematiche legali.
+
+L'Articolo 4 del Regolamento Europeo Generale sulla Protezione dei Dati (EU RGPD) definisce il concetto di *personal data*: per dato personale si intende:
+*"qualsiasi informazione riguardante una persona fisica identificata o identificabile («interessato»); si considera identificabile la persona fisica che può essere identificata, direttamente o indirettamente, con particolare riferimento a un identificativo come il nome, un numero di identificazione, dati relativi all'ubicazione, un identificativo online o a uno o più elementi caratteristici della sua identità fisica, fisiologica, genetica, psichica, economica, culturale o sociale" [...] 
+"Per stabilire l'identificabilità di una persona è opportuno considerare tutti i mezzi, come l'individuazione, di cui il titolare del trattamento o un terzo può ragionevolmente avvalersi per identificare detta persona fisica direttamente o indirettamente. Per accertare la ragionevole probabilità di utilizzo dei mezzi per identificare la persona fisica, si dovrebbe prendere in considerazione l'insieme dei fattori obiettivi, tra cui i costi e il tempo necessario per l'identificazione, tenendo conto sia delle tecnologie disponibili al momento del trattamento, sia degli sviluppi tecnologici."*
+
+Alla luce di ciò, ci è sembrato opportuno procedere con metodologie di de-identificazione per i dataset riguardanti i redditi, e il dataset riguardante le segnalazioni, in quanto in essi sono presenti dati personali resi disponibili in Open Data.
 
 Gli standard di de-identificazione per i dati contenuti in un dataset sono i seguenti:
 - gli identificatori non assolutamente necessari vanno eliminati;
 - i valori degli attributi non necessari vanno eliminati; quelli che indicano situazioni fortemente personali necessitano di forti misure di de-identificazione.
 
-Abbiamo preso provvedimenti affinché gli individui non fossero identificabili tramite l'osservazione dei dati o il loro incrocio.
+Abbiamo così preso provvedimenti affinché gli individui non fossero più identificabili tramite l'osservazione dei dati o il loro incrocio.
 
-La pulizia è stata effettuata per lo più con il programma [**_Comma Chameleon_**](http://comma-chameleon.io/) o [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor che permette di aggiungere, eliminare e modificare righe, colonne e dati.
+## Pulitura
 
-Non esistono linee guida interne per la compilazione dei dataset in una maniera univoca. Alcuni CSV utilizzano la virgola come separatore; altri il punto e virgola; altri ancora la tabulazione.
+La pulizia è stata effettuata con il programma [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor sviluppato dall'Open Data Institute, che permette di aggiungere, eliminare e modificare righe, colonne e dati e il linguaggio di programmazione Python.
 
-Non esistono vocabolari interni di nomi. Un altro problema ha riguardato la nomenclatura delle intestazioni, che risulta sempre diversa anche all'interno della stessa serie di dataset (ad esempio: *N_contribuenti* ; *N. Contribuenti* ; ...) e dei nomi di aree geografiche (vie, zone, quartieri) che non hanno una forma codificata e che vengono etichettate secondo modalità differenti (ad esempio: *Sant'Orsola* ; *S.Orsola*; *Sant Orsola* ; ...)
+Oltre alla problematica riguardante i dati personali, abbiamo riscontrato altre criticità riguardanti la pulizia del dataset:
 
-All'interno del testo le parole accentate sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica; altre volte viene impropriamente utilizzato l'apostrofo.
+- Non esistono linee guida interne per la compilazione dei dataset in una maniera univoca: alcuni CSV utilizzano come separatore la virgola, altri il punto e virgola e altri ancora la tabulazione.
+
+- Non esistono vocabolari interni di nomi. Un altro problema è stato quello riguardante la nomenclatura delle intestazioni, che risulta sempre diversa anche all'interno della stessa serie di dataset (ad esempio: *N_contribuenti* ; *N. Contribuenti* ; ...) e dei nomi quali nomi di vie/zone/quartieri, che non hanno una forma codificata, e vengono chiamati sempre in modo differente (ad esempio: *Sant'Orsola* ; *S.Orsola*; *Sant Orsola* ; ...)
+
+- Problema con le parole accentate: all'interno del testo, le parole accentate sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica, altre volte invece viene impropriamente utilizzato l'apostrofo.
+
+- Nel sito non è presente una descrizione dettagliata del dataset di cui è disponibile il download
+
+- Sono presenti errori di battitura per quanto riguarda le stringhe di testo
 
 In generale, nel corso della pulizia dei vari dataset, abbiamo:
 1. reso le intestazioni delle colonne subito comprensibili e uniformi; abbiamo quindi semplificato i loro nomi ed eliminato i caratteri speciali.
@@ -166,14 +181,32 @@ In generale, nel corso della pulizia dei vari dataset, abbiamo:
 ##### Revisione preliminare
 Si tratta di una serie di 8 dataset che riportano i redditi per area statistica dal 2009 al 2016.
 
-I dati potrebbero rientrare nella categoria di *personal data* in quanto non rappresentano un rischio di de-anonimizzazione di per sé, ma potrebbero farlo se incrociati con altri dati. In particolare:
+I dati potrebbero rientrare nella categoria di *personal data* se incrociati con altri dati. In particolare:
 * se l'*Area statistica* include un territorio particolarmente limitato, e
 * se il *Numero contribuenti* è particolarmente ridotto,
-vi è il rischio che, facendo la media statistica del reddito per contribuente in quella determinata area, sia più semplice identificare quei contribuenti abitanti in quella determinata zona e con quel determinato reddito. Un esempio, in questo senso, è rappresentato da **_Via del Genio_**. I seguenti dati sono presi dal dataset del 2016:
+vi è il rischio che, facendo la media statistica del reddito per contribuente in quella determinata area, sia semplice identificare quei contribuenti abitanti in quella determinata zona e con quel determinato reddito. 
+In questo modo verrebbe infranta la normativa che regola il *Segreto Statistico.*
+
+In Italia il Segreto Statistico è di fatto regolamentato dall'art.9 del DL n.322 del 6 settembre 1989, che recita:
+*1. I dati raccolti nell'ambito di rilevazioni statistiche comprese nel programma statistico nazionale da parte degli uffici di statistica non possono essere esternati se non in forma aggregata, in modo che non se ne possa trarre alcun riferimento relativamente a persone identificabili e possono essere utilizzati solo per scopi statistici.
+2. I dati di cui al comma 1 non possono essere comunicati o diffusi, se non in forma aggregata e secondo modalità che rendano non identificabili gli interessati ad alcun soggetto esterno, pubblico o privato, né ad alcun ufficio della pubblica amministrazione. In ogni caso, i dati non possono essere utilizzati al fine di identificare nuovamente gli interessati.*
+
+Esempi, in questo senso, sono rappresentati da:
+
+**_Via del Genio_**. I seguenti dati sono presi dal dataset del 2016:
 
 | Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
 | --------- | --------- | --------- |
 | Via del Genio | 12 | 833317 |
+
+
+**_Lungo Reno_**. I seguenti dati sono presi dal dataset del 2009:
+
+| Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
+| --------- | --------- | --------- |
+| Lungo Reno | 6 | 102878 |
+
+Incrociando inoltre tali dati con dati satellitari reperibili dall'utente medio semplicemente utilizzando Google Maps, possiamo notare la presenza di un'unica casa in tale area. Tramite il dataset è quindi possibile risalire ai redditi dei residenti in una determinata abitazione! 
 
 ##### Pulitura, De-identificazione e Merge
 
