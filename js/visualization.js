@@ -166,15 +166,16 @@ $(document).ready(function(){
 													   "data":[300,50,100],
 													   "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]},
 										     "options":  {
-											    plugins:
-												  {
-												   render: 'value',
-												   fontSize: 14,
-												   fontStyle: 'bold',
-												   fontColor: '#000',
-												   fontFamily: '"Lucida Console", Monaco, monospace'
-												    
-												  }
+											    plugins:{
+												  labels: [
+													  {
+													    render: 'label',
+													    position: 'outside'
+													  },
+													  {
+													    render: 'value'
+													  }
+													]}
 												
 											    }
 										     });
