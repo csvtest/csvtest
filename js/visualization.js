@@ -159,53 +159,6 @@ $(document).ready(function(){
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) { 
 									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-
-									  
-									    var plug = {
-										    afterDatasetsDraw: function(chartInstance, easing) {
-											if (chartInstance.config.type == "doughnut") {
-											    var ctx = chartInstance.chart.ctx;
-											    var sum = 0;
-											    chartInstance.data.datasets.forEach(function (dataset, i) {
-												var meta = chartInstance.getDatasetMeta(i);
-												if (!meta.hidden) {
-												    meta.data.forEach(function(element, index) {
-													ctx.fillStyle = 'white';
-
-													var fontSize = 16;
-													var fontStyle = 'normal';
-													var fontFamily = 'Helvetica Neue';
-													ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-
-
-													var dataString = chartInstance.data.labels[index];
-													var dataString2 = dataset.data[index];
-
-													ctx.textAlign = 'center';
-													ctx.textBaseline = 'middle';
-
-													var padding = 5;
-													var position = element.tooltipPosition();
-
-													ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
-													ctx.fillText(dataString2, position.x, position.y - (fontSize / 2) - padding + fontSize);
-
-													// 円の中心に表示する合計を集計する
-													sum += dataset.data[index];
-												    });
-												}
-											    });
-
-											    ctx.fillStyle = 'black';
-											    var fontSize = 60;
-											    var fontStyle = 'normal';
-											    var fontFamily = "Helvetica Neue";
-											    ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-
-											    ctx.textAlign = 'center';
-											    ctx.textBaseline = 'middle';
-											    ctx.fillText(sum.toString(), 300, 290);
-											}}}; //plugfine
 											new Chart(document.getElementById('CategorieChart'),
 										     { "plugin" : plug,
 										   	"type":"pie",
@@ -213,8 +166,6 @@ $(document).ready(function(){
 											      "datasets":[{"label":"Categorie Segnalazioni",
 													   "data":[300,50,100],
 													   "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]}});
-										    
-		
 									    }
 									})
 								    }
