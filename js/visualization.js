@@ -158,8 +158,8 @@ $(document).ready(function(){
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
-									    $('#chartContainerSegn').remove();
-									    $('#CategorieChart').append('<canvas id="CategorieChart"><canvas>');
+									    $('#CategorieChart').remove();
+									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
 												Chart.pluginService.register({
 												beforeDraw: function (chart) {
 													if (chart.config.options.elements.center) {
