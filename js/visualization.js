@@ -157,7 +157,24 @@ $(document).ready(function(){
 							    url: "geojson_folder/testsegna.json",
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
-								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
+								    if (arrayItem["Zona"] == feature.properties.Nome_zona) { 
+									    Object.keys(arrayItem).forEach(function(k, v){
+										    console.log(k, v)
+									    }
+									    var grafocategorie =  document.getElementById('CategorieChart').getContext('2d');
+									    var myPieChart = new Chart(grafocategorie,{type: 'pie',data: data,options: options});
+									    var data = {
+										    datasets: [{
+											data: [10, 20, 30]
+										    }],
+
+										    // These labels appear in the legend and in the tooltips when hovering different arcs
+										    labels: [
+											'Microcriminalità',
+											'Degrado sociale',
+											'Degrado ambientale'
+										    ]
+										};
 									    }
 									})
 								    }
