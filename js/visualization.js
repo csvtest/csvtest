@@ -227,12 +227,28 @@ $(document).ready(function(){
 												options: {
 													elements: {
 														center: {
-															text: 'DIO',
-											  color: '#FF6384', // Default is #000000
-											  fontStyle: 'Arial', // Default is Arial
-											  sidePadding: 20 // Defualt is 20 (as a percentage)
+															text: '999',
+											  				color: '#FF6384', // Default is #000000
+											  				fontStyle: 'Arial', // Default is Arial
+											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
 														}
-													}
+													},
+													 plugins:{
+													  labels: [
+														  {
+														    render: 'label',
+														    position: 'outside',
+														    fontSize: 14,
+														    fontStyle: 'bold',
+														    fontColor: '#000'
+														  },
+														  {
+														    render: 'value',
+														    fontSize: 14,
+														    fontStyle: 'bold',
+														    fontColor: '#fff'
+														  }
+													]}
 												}
 											};
 
