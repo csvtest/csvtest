@@ -157,7 +157,8 @@ $(document).ready(function(){
 							    url: "geojson_folder/testsegna.json",
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
-								    if (arrayItem["Zona"] == feature.properties.Nome_zona) { 
+								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
+									    $('#chartContainerSegn').remove();
 									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
 												Chart.pluginService.register({
 												beforeDraw: function (chart) {
@@ -248,7 +249,10 @@ $(document).ready(function(){
 														    fontStyle: 'bold',
 														    fontColor: '#fff'
 														  }
-													]}
+													]},
+													legend: {
+													    display: false
+													 }
 												}
 											};
 
