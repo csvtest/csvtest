@@ -150,7 +150,7 @@ $(document).ready(function(){
 								    }
 								})
 							    }
-							}).error(function() {});
+							});
 							    //inizio
 							$.ajax({
 							    dataType: "json",
