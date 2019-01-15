@@ -51,7 +51,7 @@ $(document).ready(function(){
 									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.087));
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
-									$('#chartContainer').append('<canvas width="400" height="300" id="redditiChart"><canvas>');
+									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 									$('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-6"><form><label class="class="radio-inline active"><input type="radio" id="generale" value="generale" name="chart" autocomplete="off" checked> Generale</label><label class="radio-inline"><input type="radio" id="dettaglio" value="dettaglio" name="chart" autocomplete="off"> Dettaglio</label></form></div><div class="text-right col-lg-6"><a href="https://rivaluta.istat.it/">Fonte Dati FOI: Istat</a></div>');
 									var datizona = {
 										"labels": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
@@ -136,12 +136,12 @@ $(document).ready(function(){
 									switch($(this).val()){
 										case 'generale' :
 										    $('#redditiChart').remove();
-										    $('#chartContainer').append('<canvas width="400" height="300" id="redditiChart"><canvas>');
+										    $('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 										    grafo(datizona, opzionigenerali);
 										    break
 										case 'dettaglio' :
 										    $('#redditiChart').remove();
-										    $('#chartContainer').append('<canvas width="400" height="300" id="redditiChart"><canvas>');
+										    $('#chartContainer').append('<canvas id="redditiChart"><canvas>');
 										    grafo(datizona, opzionidettaglio)
 										    break
 									    }            
