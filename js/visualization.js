@@ -205,7 +205,7 @@ $(document).ready(function(){
 											    ctx.textAlign = 'center';
 											    ctx.textBaseline = 'middle';
 											    ctx.fillText(sum.toString(), 300, 290);
-											}
+											}}}; //plugfine
 											new Chart(document.getElementById('CategorieChart'),
 										     { "plugin" : plug,
 										   	"type":"pie",
@@ -213,8 +213,8 @@ $(document).ready(function(){
 											      "datasets":[{"label":"Categorie Segnalazioni",
 													   "data":[300,50,100],
 													   "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]}});
-										    }
-										});
+										    
+		
 									    }
 									})
 								    }
