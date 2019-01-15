@@ -180,9 +180,10 @@ In generale, nel corso della pulizia dei vari dataset, abbiamo:
 #### DATASET REDDITI
 
 ##### Revisione preliminare
-Si tratta di una serie di 8 dataset che riportano i redditi per area statistica dal 2009 al 2016.
+Si tratta di una serie di 8 dataset che riportano i redditi per area statistica dal 2009 al 2016:
 
-I dati potrebbero rientrare nella categoria di *personal data* se incrociati con altri dati. In particolare:
+
+I dati contenuti in essi potrebbero rientrare nella categoria di *personal data* se incrociati con altri dati. In particolare:
 * se l'*Area statistica* include un territorio particolarmente limitato, e
 * se il *Numero contribuenti* è particolarmente ridotto,
 vi è il rischio che, facendo la media statistica del reddito per contribuente in quella determinata area, sia semplice identificare quei contribuenti, abitanti in quella determinata zona e con quel determinato reddito. 
@@ -277,9 +278,14 @@ MANCAROBBA
 
 |
 
-#### DATASET SEGNALAZIONI : '38.00.03_segnalazioni_czrm2017_area_statistica.shp' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'
+#### DATASET SEGNALAZIONI : '
+38.00.03_segnalazioni_czrm2017_area_statistica.shp' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'
+
 ##### Revisione preliminare
-Il dataset presenta molti errori, presenti nei dati relativi a *Category* e determinati da un procedimento di registrazione della segnalazione non uniformata con il resto delle categorie (*Segnalazioni*, *Richieste di informazioni*, *Manutenzione interna*, *Suggerimenti*). In particolare, sembra che a volte sia stata copiata la segnalazione fatta dal cittadino, parola per parola, senza che sia stato fatto un lavoro di controllo e anonimizzazione sulle informazioni (potenzialmente o palesemente sensibili) ivi contenute. Ad esempio:
+
+Il dataset presenta molti errori, tra cui:
+nei dati relativi a *Category* sembra che a volte sia stata copiata la segnalazione fatta dal cittadino, parola per parola, senza che sia stato fatto un lavoro di controllo e anonimizzazione sulle informazioni (potenzialmente o palesemente sensibili) ivi contenute. 
+Ad esempio:
 
 1. "*all'altezza di via della Barca civico 22/12 Ã¨ posto il segnale di divieto di sosta e di fermata. Il punto Ã¨ molto nevralgico perchÃ© prima di un incrocio stradale. Via della Barca da diversi anni a questa parte Ã¨ un'arteria con grosse criticitÃ  di traffico specialmente nelle ore di punta e tale rimarrÃ  se non si vuole attuare un nuovo piano regolatore semplicemente modificando le direzioni nelle vie laterali. Ad oggi nelle ore di punta per i mezzi di soccorso Ã¨ impossibile transitare e per le strade laterali Ã¨ difficile e pericoloso accedere. Con questa segnalazione si vuole chiedere di intervenire immediatamente almeno nel sanzionare le autovetture che quotidianamente stazionano fisse nella suddetta zona. Sperando che le prime multe possono dissuadere ulteriori successivi parcheggi impropri. Certo di un vostro immediato impegno porgo distinti saluti.*"
 
@@ -297,16 +303,24 @@ Il dataset presenta molti errori, presenti nei dati relativi a *Category* e dete
 
 8. "*quelle giÃ  in essere adiacenti alla scuola media Farini sono mal posizionate (ordine invertito per cui non si riesce a legare le bici)*"
 
-Poi abbiamo lavorato su '38.00.03_segnalazioni_czrm2017_area_statistica', un file di estensione *.shp* che abbiamo convertito in formato *geojson* con l'algoritmo **shp2geojson(input_path, output_path)** in (##IL FILE CHE CONTIENE LO SCRIPT LO SALVERA' FABIO) e successivamente in formato *.csv* con un [convertitore online](http://convertcsv.com/geojson-to-csv.htm). L'output di questo processo è il file 'Segnalazioni2017AreaStatPub.csv'.
+Abbiamo lavorato su '38.00.03_segnalazioni_czrm2017_area_statistica', un file di estensione *.shp* che abbiamo convertito in formato *geojson* con l'algoritmo **shp2geojson(input_path, output_path)** in (##IL FILE CHE CONTIENE LO SCRIPT LO SALVERA' FABIO) e successivamente in formato *.csv* con un [convertitore online](http://convertcsv.com/geojson-to-csv.htm). L'output di questo processo è il file 'Segnalazioni2017AreaStatPub.csv'.
 
-Innanzitutto abbiamo notato che il dataset riporta l'indirizzo preciso di dove una segnalazione è stata fatta (riportandone anche le coordinate *X*, *Y*). In questo modo è possibile sapere l'esatto punto di Bologna dove vi è una problematica espressa in una segnalazione. 
+Tale dataset riporta l'indirizzo preciso, corredato da numero civico, di dove una segnalazione è stata fatta, riportandone anche le coordinate *X*, *Y*. In questo modo è possibile sapere l'esatto punto di Bologna dove vi è una problematica espressa in una segnalazione. 
 
-Il problema si pone sopratutto se la segnalazione riguarda un'altra persona: ad esempio in '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv' abbiamo trovato la segnalazione di avvistamento di una prostituta in relazione ad un preciso indirizzo, con tanto di numero civico. Nell'esempio (5) si capisce che i ragazzini stanno lì ogni giorno, per cui qualcuno potrebbe facilmente rintracciarli.
+Il problema si pone soprattutto se la segnalazione riguarda un'altra persona, come: 
+- L'avvistamento di una prostituta in relazione ad un preciso indirizzo, con tanto di numero civico. Segnalazione che compare piu' volte. 
+Tale segnalazione è particolarmente grave, per diverse motivazioni. In primo luogo non è verificabile che il soggetto in questione svolga effettivamente attività di prostituzione. Nel caso in cui sia invece effettivamente questo il caso, viene messo in Open Data la localizzazione precisa di un'attività spesso collegata ad organizzazioni criminali, tratta di essere umani, discriminazione, e violenza.
+- Nell'esempio (5) si viene a conoscenza che alcuni ragazzini stanno in quel punto ogni giorno, per cui qualcuno potrebbe facilmente rintracciarli
+- Nell'esempio (7) si viene a conoscenza di problematiche personali di due persone che si trovano presumibilmente spesso in quel punto
+
 
 ##### Pulitura, De-identificazione e Merge
+
+Pulitura e De-identificazione:
+
 Per quanto riguarda il primo dataset, con l'eliminazione dell'intera colonna *Category* abbiamo eliminato sia i dati ridondanti che i dati sensibili.
 
-Per quanto riguarda il secondo dataset, la soluzione al problema è non considerare gli indirizzi delle segnalazioni, fornendo unicamente il dato dell'area della segnalazione. Quindi abbiamo creato un dataset intermedio derivato da 'Segnalazioni2017AreaStatPub.csv', contenente unicamente i dati relativi a "*Ticketid*" e "*Tipo Area*". Il file originale presenta però in "*Tipo Area*" diverse diciture prima del nome dell'area ("*Area Statistica:*" e "*Percorso di Ascolto |*"). Abbiamo eliminato le diciture, lasciando solo il nome della zona, con l'algoritrmo '**pulitore_data_geo(data_geo)**' in 'Segnalazioni_2017.py'. L'output è un file intermedio 'Segnalazioni_file_per_merge.csv'. 
+Per quanto riguarda il secondo dataset, la soluzione al problema è stata non considerare gli indirizzi delle segnalazioni, fornendo unicamente il dato dell'area della segnalazione. Quindi abbiamo creato un dataset intermedio derivato da 'Segnalazioni2017AreaStatPub.csv', contenente unicamente i dati relativi a "*Ticketid*" e "*Tipo Area*". Il file originale presenta però in "*Tipo Area*" diverse diciture prima del nome dell'area ("*Area Statistica:*" e "*Percorso di Ascolto |*"). Abbiamo eliminato le diciture, lasciando solo il nome della zona, con l'algoritrmo '**pulitore_data_geo(data_geo)**' in 'Segnalazioni_2017.py'. L'output è un file intermedio 'Segnalazioni_file_per_merge.csv'. 
 
 A questo punto abbiamo ripreso il dataset '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'. Abbiamo selezionato solo le categorie di segnalazioni che ci interessano: "*Degrado urbano-sociale-ambientale*" e "*Microciminalità*". La scelta delle categorie da mantenere è stata fatta da noi considerando gli elementi nel dataset che ci sono sembrati più calzanti con le nostre finalità. Questo processo di pulitura è stato realizzato tramite l'algoritmo "**pulire_segnalazioni(data_segnalazioni)**". 
 
@@ -336,19 +350,23 @@ Poi abbiamo incrociato 'Segnalazioni_file_per_merge.csv' e '38.00.05_segnalazion
 Con l'algoritmo "**counter_segnalazioni(segnalazioni_zone, segnalazioni_zone2)**" abbiamo raggruppato ancora le segnalazioni per zone, eliminando ogni doppione e conteggiando quante volte quella determinata segnalazione è stata fatta in una determinata zona. 
 
 #### DATASET AREE STATISTICHE
+
 ##### Revisione preliminare
+
 Il dataset contiene informazioni di natura geospaziale. In particolare:
 * *COD_AREAST* (Codice area statistica);
 * *NOMEAREAST* (Nome area statistica);
 * *COD_Q* (Codice quartiere);
 * *NOME_QUARTIERE* (Nome quartiere).
 
-I dati potrebbero rientrare nella categoria di *personal data* in quanto non rappresentano un rischio di de-anonimizzazione di per sé, ma potrebbero farlo se incrociati con altri dati, specialmente se i valori in *COD_AREAST*, mappati ai relativi valori presenti in *NOMEAREAST*, venissero incrociati con eventuali informazioni sensibili, contenute in altri dataset e riferibili a persone singole (i.e. reddito, vie, ecc...).
+I dati al suo interno non rientrano nella categoria di *personal data*, in quanto non rappresentano un rischio di de-anonimizzazione di per sé, ma potrebbero farlo se incrociati con altri dati, specialmente se i valori in *COD_AREAST*, mappati ai relativi valori presenti in *NOMEAREAST*, venissero incrociati con eventuali informazioni sensibili, contenute in altri dataset e riferibili a persone singole (i.e. reddito, vie, ecc...).
 
 Prestandosi bene come dataset di confronto, crediamo che il lavoro di de-anonimizzazione andrebbe fatto sugli eventuali altri dataset che potrebbero essere incrociati con questo. 
 
 #### DATASET POLITICHE
+
 ##### Revisione preliminare
+
 Tutti i valori all'interno dei dataset sono di natura statistico-numerica. In particolare:
 - dati statistici, che raccolgono i numeri di iscritti, voti e votanti (es. *Totale Votanti*, *Totale Voti Validi*, ecc...);
 - codificazioni, mappate ad entità geospaziali (es. *Sezione elettorale*, *Quartiere*, *Zona*, ecc...).
@@ -356,6 +374,7 @@ Tutti i valori all'interno dei dataset sono di natura statistico-numerica. In pa
 Il rischio di de-anonimizzazione è nullo.
 
 ##### Pulizia e Merging
+
 Le operazioni di pulizia effettuate solo le seguenti:
 
 1) *Eliminazione di colonne*; in particolare:
