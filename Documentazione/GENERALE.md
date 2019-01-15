@@ -179,7 +179,7 @@ In generale, nel corso della pulizia dei vari dataset, abbiamo:
 
 #### DATASET REDDITI
 
-##### Revisione preliminare
+##### Revisione preliminare: criticità
 Si tratta di una serie di 8 dataset che riportano i redditi per area statistica dal 2009 al 2016:
 
 
@@ -281,7 +281,7 @@ MANCAROBBA
 #### DATASET SEGNALAZIONI : '
 38.00.03_segnalazioni_czrm2017_area_statistica.shp' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'
 
-##### Revisione preliminare
+##### Revisione preliminare: criticità
 
 Il dataset presenta criticità nei dati relativi a *Category*: in questa colonna sembra che a volte sia stata copiata la segnalazione fatta dal cittadino, parola per parola, senza che sia stato fatto un lavoro di controllo e anonimizzazione sulle informazioni (potenzialmente o palesemente sensibili) ivi contenute. 
 Ad esempio:
@@ -353,7 +353,7 @@ Con l'algoritmo "**counter_segnalazioni(segnalazioni_zone, segnalazioni_zone2)**
 
 #### DATASET AREE STATISTICHE
 
-##### Revisione preliminare
+##### Revisione preliminare: criticità
 
 Il dataset contiene informazioni di natura geospaziale. In particolare:
 * *COD_AREAST* (Codice area statistica);
@@ -367,7 +367,7 @@ Prestandosi bene come dataset di confronto, crediamo che il lavoro di de-anonimi
 
 #### DATASET POLITICHE
 
-##### Revisione preliminare
+##### Revisione preliminare: criticità
 
 Tutti i valori all'interno dei dataset sono di natura statistico-numerica. In particolare:
 - dati statistici, che raccolgono i numeri di iscritti, voti e votanti (es. *Totale Votanti*, *Totale Voti Validi*, ecc...);
