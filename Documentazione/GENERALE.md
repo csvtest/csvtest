@@ -283,8 +283,7 @@ MANCAROBBA
 
 ##### Revisione preliminare
 
-Il dataset presenta molti errori, tra cui:
-nei dati relativi a *Category* sembra che a volte sia stata copiata la segnalazione fatta dal cittadino, parola per parola, senza che sia stato fatto un lavoro di controllo e anonimizzazione sulle informazioni (potenzialmente o palesemente sensibili) ivi contenute. 
+Il dataset presenta criticità nei dati relativi a *Category*: in questa colonna sembra che a volte sia stata copiata la segnalazione fatta dal cittadino, parola per parola, senza che sia stato fatto un lavoro di controllo e anonimizzazione sulle informazioni (potenzialmente o palesemente sensibili) ivi contenute. 
 Ad esempio:
 
 1. "*all'altezza di via della Barca civico 22/12 Ã¨ posto il segnale di divieto di sosta e di fermata. Il punto Ã¨ molto nevralgico perchÃ© prima di un incrocio stradale. Via della Barca da diversi anni a questa parte Ã¨ un'arteria con grosse criticitÃ  di traffico specialmente nelle ore di punta e tale rimarrÃ  se non si vuole attuare un nuovo piano regolatore semplicemente modificando le direzioni nelle vie laterali. Ad oggi nelle ore di punta per i mezzi di soccorso Ã¨ impossibile transitare e per le strade laterali Ã¨ difficile e pericoloso accedere. Con questa segnalazione si vuole chiedere di intervenire immediatamente almeno nel sanzionare le autovetture che quotidianamente stazionano fisse nella suddetta zona. Sperando che le prime multe possono dissuadere ulteriori successivi parcheggi impropri. Certo di un vostro immediato impegno porgo distinti saluti.*"
