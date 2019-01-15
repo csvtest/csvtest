@@ -186,7 +186,7 @@ di domande, per ciascun aspetto, a cui rispondere con *Sì o No*.
 | | hai verificato se non ci sono motivi legati al segreto d’ufficio che impediscono la pubblicazione dei dati? |sì | sì | sì | sì
 | | hai verificato se non ci sono motivi legati al segreto di stato che impediscono la pubblicazione dei dati? |sì | sì | sì | sì |
 | **Condizioni economiche** | | |
-| | hai verificato di poter rilasciare in modo gratuito i dati senza infrangere qualche norma di finanza pubblica? | |
+| | hai verificato di poter rilasciare in modo gratuito i dati senza infrangere qualche norma di finanza pubblica? |sì |sì|sì|sì|
 | | se hai imposto condizioni economiche per l’utilizzo dei dati, sei sicuro di avere imposto un prezzo per coprire i soli costi marginali? |/  |/ |/ |/ |
 | **Temporalizzazione** | | |
 | | i dati sono soggetti per legge a restrizioni temporali di pubblicazione? | no|no|no|no|
