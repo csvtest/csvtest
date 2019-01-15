@@ -471,21 +471,21 @@ La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https:/
 
 ## Finalità
 
-### [DATASET REDDITI]
+#### DATASET REDDITI
 La finalità della serie è quella di esporre in Open Data il numero e il reddito dei contribuenti bolognesi ai fini Irpef, dichiarati dal 2009 al 2016, per area statistica.
 
 Il dataset è stato prodotto ed elaborato dall’Area Programmazione Controlli e Statistica del Comune di Bologna.
 
 Il dataset è stato scelto al fine di esaminare l’andamento medio del reddito pro-capite dei contribuenti bolognesi, in una determinata zona della città, nell’arco temporale 2009-2016.
 
-### [DATASET POLITICHE CAMERA & SENATO]
+#### DATASET POLITICHE
 La finalità del dataset è quella di esporre in Open Data i risultati degli scrutini alle elezioni politiche del 4 marzo 2018, per l’elezione al Senato della Repubblica e alla Camera dei Deputati.
 
 I file sono estratti dal data entry dall’Ufficio Servizi Elettorali del Comune di Bologna.
 
 Il dataset è stato scelto al fine di conoscere la percentuale di voto di una determinata lista alle elezioni politiche del 4 marzo 2018, per l’elezione al Senato della Repubblica e alla Camera dei Deputati, in una determinata zona della città.
 
-### [DATASET SEGNALAZIONI]
+#### DATASET CITIZEN MANAGEMENT 
 La finalità del dataset è quella di esporre in Open Data le segnalazioni registrate attraverso il Citizen Relationship Management: strumento di contatto diretto tra amministrazione e cittadini che segnalano problemi all’interno del comprensorio Bolognese. Tali segnalazioni di situazioni di disagio sono inoltre mappate e geolocalizzate all’interno una determinata area cittadina.
 
 Il dataset è stato scelto al fine di comprendere la natura e la quantità di problemi legati al degrado ambientale, urbano e al disagio sociale, in una determinata zona della città, registrati attraverso il Citizen Relationship Management. 
