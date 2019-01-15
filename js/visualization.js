@@ -160,95 +160,54 @@ $(document).ready(function(){
 									$('.information').html(arrayItem["Zona"]);
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
 									    $('.information').html("urlo");
-									var dativari = {"Segnalazioni":
-											    [
-												{
-												"Categoria": "Degrado ambientale",
-												"Sottocategoria": "Rifiuti/rottami",
-												"Numero_Segnalazioni": 14
-											    },
-											    {
+									var diameter = 500, //max size of the bubbles
+									    color    = d3.scale.category20b(); //color category
 
-												"Categoria": "Degrado ambientale",
-												"Sottocategoria": "Neve",
-												"Numero_Segnalazioni": 2
-											    },
-											    {
-
-												"Categoria": "Degrado sociale",
-												"Sottocategoria": "Senza fissa dimora",
-												"Numero_Segnalazioni": 1
-											    },
-											    {
-
-												"Categoria": "Degrado ambientale",
-												"Sottocategoria": "Inquinamento acustico",
-												"Numero_Segnalazioni": 1
-											    },
-											    {
-
-												"Categoria": "Degrado sociale",
-												"Sottocategoria": "Bivacco",
-												"Numero_Segnalazioni": 2
-											    }]};
-									var diameter = 600;
-									var color = d3.scaleOrdinal(d3.schemeCategory20);
-									var bubble = d3.pack(dativari)
+									var bubble = d3.layout.pack()
+									    .sort(null)
 									    .size([diameter, diameter])
 									    .padding(1.5);
-									var svg = d3.select("#grafoSegn")
+
+									var svg = d3.select("body")
 									    .append("svg")
 									    .attr("width", diameter)
 									    .attr("height", diameter)
 									    .attr("class", "bubble");
-									var nodes = d3.hierarchy(dativari)
-									    .sum(function(d) { return d.Numero_Segnalazioni; });
-									var node = svg.selectAll(".node")
-									    .data(bubble(nodes).descendants())
-									    .enter()
-									    .filter(function(d){
-									    return  !d.Segnalazioni
-									    })
-									    .append("g")
-									    .attr("class", "node")
-									    .attr("transform", function(d) {
-									    return "translate(" + d.x + "," + d.y + ")";
-									    });
-									node.append("title")
-									    .text(function(d) {
-									    return d.Sottocategoria + ": " + d.Numero_Segnalazioni;
-									    });
-									node.append("circle")
-									    .attr("r", function(d) {
-									    return d.r;
-									    })
-									    .style("fill", function(d,i) {
-									    return color(i);
-									    });
-									node.append("text")
-									    .attr("dy", ".2em")
-									    .style("text-anchor", "middle")
-									    .text(function(d) {
-									    return d.data.Sottocategoria.substring(0, d.r / 3);
-									    })
-									    .attr("font-family", "sans-serif")
-									    .attr("font-size", function(d){
-									    return d.r/5;
-									    })
-									    .attr("fill", "white");
-									node.append("text")
-									    .attr("dy", "1.3em")
-									    .style("text-anchor", "middle")
-									    .text(function(d) {
-									    return d.data.Numero_Segnalazioni;
-									    })
-									    .attr("font-family",  "Gill Sans", "Gill Sans MT")
-									    .attr("font-size", function(d){
-									    return d.r/5;
-									    })
-									    .attr("fill", "white");
-									d3.select(self.frameElement)
-									    .style("height", diameter + "px");
+
+									d3.json("testsegna.json", function(error, data){
+
+									    //convert numerical values from strings to numbers
+									    data = data.map(function(d){ d.value = +d["Numero_Segnalazioni"]; return d; });
+
+									    //bubbles needs very specific format, convert data to this.
+									    var nodes = bubble.nodes({children:data}).filter(function(d) { return !d.children; });
+
+									    //setup the chart
+									    var bubbles = svg.append("g")
+										.attr("transform", "translate(0,0)")
+										.selectAll(".bubble")
+										.data(nodes)
+										.enter();
+
+									    //create the bubbles
+									    bubbles.append("circle")
+										.attr("r", function(d){ return d.r; })
+										.attr("cx", function(d){ return d.x; })
+										.attr("cy", function(d){ return d.y; })
+										.style("fill", function(d) { return color(d.value); });
+
+									    //format the text for each bubble
+									    bubbles.append("text")
+										.attr("x", function(d){ return d.x; })
+										.attr("y", function(d){ return d.y + 5; })
+										.attr("text-anchor", "middle")
+										.text(function(d){ return d["Categoria"]; })
+										.style({
+										    "fill":"white", 
+										    "font-family":"Helvetica Neue, Helvetica, Arial, san-serif",
+										    "font-size": "12px"
+										});
+									})
 									    }
 									}
 								    )}     
