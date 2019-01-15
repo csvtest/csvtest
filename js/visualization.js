@@ -176,7 +176,7 @@ $(document).ready(function(){
 											'Degrado ambientale'
 										    ]
 										};
-									    }//fineIF
+									    })//fineIF
 									    }
 									})
 								    }
