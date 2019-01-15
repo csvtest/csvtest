@@ -456,18 +456,11 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
-| Creative Commons | Attribuzione Zero |
-| :----------------: | :-----------------: |
-|![](cc.png) | ![](zero.png)
-
 
 #### DATASET AREE STATISTICHE 
 
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
-| Creative Commons | Attribuzione |
-| :----------------: | :-----------------: |
-|![](cc.png) | ![](by.png)
 
 ### [NOSTRO DATASET MASHATO]
 
