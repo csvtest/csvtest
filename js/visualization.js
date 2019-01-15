@@ -158,12 +158,12 @@ $(document).ready(function(){
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) { 
-									    Object.keys(arrayItem).forEach(function(k, v){
-										    console.log(k)
+									    Object.keys(arrayItem).forEach(function(arrayItem){
+										    console.log(arrayItem)
 										    
 									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
 									    var grafocategorie =  document.getElementById('CategorieChart').getContext('2d');
-									    var myPieChart = new Chart(grafocategorie,{type: 'pie',data: data,options: options});
+									    var myPieChart = new Chart(grafocategorie,{type: 'pie',data: data});
 									    var data = {
 										    datasets: [{
 											data: [10, 20, 30]
