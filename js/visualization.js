@@ -157,40 +157,10 @@ $(document).ready(function(){
 							    url: "geojson_folder/testsegna.json",
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
-									$('.information').html(arrayItem["Zona"]);
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
-									    $('.information').html("urlo");
-									var dataset = {
-									    "children": [{
-										"Categoria": "Degrado ambientale",
-										"Sottocategoria": "Rifiuti/rottami",
-										"Numero_Segnalazioni": 14
-									    },
-									    {
-
-										"Categoria": "Degrado ambientale",
-										"Sottocategoria": "Neve",
-										"Numero_Segnalazioni": 2
-									    },
-									    {
-
-										"Categoria": "Degrado sociale",
-										"Sottocategoria": "Senza fissa dimora",
-										"Numero_Segnalazioni": 1
-									    },
-									    {
-
-										"Categoria": "Degrado ambientale",
-										"Sottocategoria": "Inquinamento acustico",
-										"Numero_Segnalazioni": 1
-									    },
-									    {
-
-										"Categoria": "Degrado sociale",
-										"Sottocategoria": "Bivacco",
-										"Numero_Segnalazioni": 2
-									    }]
-									};
+									var datitake = arrayItem["Sottocategoria"];
+									console.log(datitake);
+									var dataset = datitake;
 
 									var diameter = 600;
 									var color = d3.scaleOrdinal(d3.schemeCategory20);
