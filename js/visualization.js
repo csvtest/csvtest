@@ -168,9 +168,12 @@ $(document).ready(function(){
 										     "options":  {
 											    plugins:
 												  {
-												    function (args) {
-												      return args.value;
-												    },
+												   render: 'value',
+												   fontSize: 14,
+												   fontStyle: 'bold',
+												   fontColor: '#000',
+												   fontFamily: '"Lucida Console", Monaco, monospace'
+												    }
 												  }
 												
 											    }
