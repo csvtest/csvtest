@@ -168,7 +168,9 @@ $(document).ready(function(){
 										     "options":  {
 											    plugins:
 												  {
-												    render: 'value'
+												    function (args) {
+												      return args.value;
+												    },
 												  }
 												
 											    }
