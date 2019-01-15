@@ -35,6 +35,40 @@
 
 				    <div id="collELEZIONI" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 				      <div class="card-body">
+					     
+				      </div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-header" id="headingTwo">
+				      <h5 class="mb-0">
+					<button id= "redditiPUL" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collREDDITI" aria-expanded="false" aria-controls="collapseTwo">
+					  REDDITI 2009-2016
+					</button>
+				      </h5>
+				    </div>
+				    <div id="collREDDITI" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+				      <div class="card-body">
+					<div id="chartContainer">
+						<div id="redditiButton">seleziona una zona di Bologna per visualizzarne i dati </div>
+					<canvas id="redditiChart" width="400" height="400"></canvas>
+					</div>
+					<div id="pulsante">
+					</div>	
+				      </div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-header" id="headingThree">
+				      <h5 class="mb-0">
+					<button "segnalazioniPUL" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collSEGNA" aria-expanded="false" aria-controls="collapseThree">
+					  SEGNALAZIONI 2017
+					</button>
+				      </h5>
+				    </div>
+				    <div id="collSEGNA" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+				      <div class="card-body">
+					       <div id="grafoSegn"</div>
 					      <script>
 					 dataset = {
 						    "children": [{"Name":"Olives","Count":4319},
@@ -67,7 +101,7 @@
 						    .size([diameter, diameter])
 						    .padding(1.5);
 
-						var svg = d3.select("body")
+						var svg = d3.select("grafoSegn")
 						    .append("svg")
 						    .attr("width", diameter)
 						    .attr("height", diameter)
@@ -128,38 +162,6 @@
 						d3.select(self.frameElement)
 						    .style("height", diameter + "px");
 				</script>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="card">
-				    <div class="card-header" id="headingTwo">
-				      <h5 class="mb-0">
-					<button id= "redditiPUL" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collREDDITI" aria-expanded="false" aria-controls="collapseTwo">
-					  REDDITI 2009-2016
-					</button>
-				      </h5>
-				    </div>
-				    <div id="collREDDITI" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
-				      <div class="card-body">
-					<div id="chartContainer">
-						<div id="redditiButton">seleziona una zona di Bologna per visualizzarne i dati </div>
-					<canvas id="redditiChart" width="400" height="400"></canvas>
-					</div>
-					<div id="pulsante">
-					</div>	
-				      </div>
-				    </div>
-				  </div>
-				  <div class="card">
-				    <div class="card-header" id="headingThree">
-				      <h5 class="mb-0">
-					<button "segnalazioniPUL" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collSEGNA" aria-expanded="false" aria-controls="collapseThree">
-					  SEGNALAZIONI 2017
-					</button>
-				      </h5>
-				    </div>
-				    <div id="collSEGNA" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-				      <div class="card-body">
 				      </div>
 				    </div>
 				  </div>
