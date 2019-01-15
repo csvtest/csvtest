@@ -425,7 +425,7 @@ L'informazione sul tipo di licenza è metadato indispensabile per determinare co
 * versione;
 * riferimento al testo della licenza.
 
-I dataset pubblicati su OpenData Bologna rispettano queste condizioni. 
+I dataset pubblicati su OpenData Bologna rispettano queste condizioni.
 
 #### DATASET REDDITI
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
@@ -448,9 +448,26 @@ La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https:/
 | :----------------: | :-----------------: |
 |![](cc.png) | ![](by.png)
 
-Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo consentono di condividere, adattare e creare un dtaset, anche per finalità commerciali, nel rispetto però di due vincoli: 
+Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo consentono di condividere, adattare e creare un datataset, anche per finalità commerciali, nel rispetto però di due vincoli: 
 - attribuire la paternità del dataset, fornire un link alla licenza e indicare le modifiche; 
 - distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
+
+#### DATASET POLITICHE 
+
+La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
+
+| Creative Commons | Attribuzione Zero |
+| :----------------: | :-----------------: |
+|![](cc.png) | ![](zero.png)
+
+
+#### DATASET AREE STATISTICHE 
+
+La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
+
+| Creative Commons | Attribuzione |
+| :----------------: | :-----------------: |
+|![](cc.png) | ![](by.png)
 
 ### [NOSTRO DATASET MASHATO]
 
