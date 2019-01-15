@@ -168,7 +168,7 @@ $(document).ready(function(){
 										     "options":  {
 											    plugins: {[
 												  {
-												    render: 'label',
+												    render: 'label'
 												    //position: 'outside'
 												  },
 												  {
