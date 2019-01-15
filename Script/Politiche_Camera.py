@@ -101,11 +101,3 @@ def controllo_percentuale(data):
         lista_prova.append(round(sum(listina)))
         listina = []
     return lista_prova
-
-#dataset_Senato = percentuale(algoritmo(process_data("liste_camera_7.csv")))
-
-merge_dataset = merge(process_data("liste_camera_6.csv"), process_data("liste_camera_7.csv"))
-
-percentuale(algoritmo(merge_dataset))
-
-#controllo_percentuale(dataset_Senato)
