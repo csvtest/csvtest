@@ -65,7 +65,7 @@ def algoritmo(data):
         new_dict = {}
     return new_list
 
-def percentuale(data):
+def sez_elettorali_in_zone(data):
     new_dict = {}
     lista = []
     lista_partiti = list(data[1])
