@@ -174,7 +174,7 @@ $(document).ready(function(){
 									    .attr("height", diameter)
 									    .attr("class", "bubble");
 
-									d3.json("testsegna.json", function(error, data){
+									d3.json("geojson_folder/testsegna.json", function(error, data){
 
 									    //convert numerical values from strings to numbers
 									    data = data.map(function(d){ d.value = +d["Numero_Segnalazioni"]; return d; });
