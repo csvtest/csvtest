@@ -168,8 +168,8 @@ $(document).ready(function(){
 										     "options":  {
 											    plugins: [
 												  {
-												    render: 'label'
-												    //position: 'outside'
+												    render: 'label',
+												    position: 'outside'
 												  },
 												  {
 												    render: 'value'
