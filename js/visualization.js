@@ -162,18 +162,17 @@ $(document).ready(function(){
 									    var grafocategorie =  document.getElementById('CategorieChart').getContext('2d');
 									    var myPieChart = new Chart(grafocategorie,{type: 'pie',data: data});
 									    var data = {
-										    datasets: [{
-											data: [10, 20, 30]
+										    "datasets": [{
+											"data": [10, 20, 30]
 										    }],
 
 										    // These labels appear in the legend and in the tooltips when hovering different arcs
-										    labels: [
+										    "labels": [
 											'Microcriminalità',
 											'Degrado sociale',
 											'Degrado ambientale'
 										    ]
 										};
-									    })//fineIF
 									    }
 									})
 								    }
