@@ -160,13 +160,8 @@ $(document).ready(function(){
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) { 
 									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
 
-									   new Chart(document.getElementById('CategorieChart'),
-										     {"type":"pie",
-										      "data":{"labels":["Microcriminalità","Degrado ambientale","Degrado sociale"],
-											      "datasets":[{"label":"Categorie Segnalazioni",
-													   "data":[300,50,100],
-													   "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]}});
-									    Chart.plugins.register({
+									  
+									    var plug = {
 										    afterDatasetsDraw: function(chartInstance, easing) {
 											if (chartInstance.config.type == "doughnut") {
 											    var ctx = chartInstance.chart.ctx;
@@ -211,6 +206,13 @@ $(document).ready(function(){
 											    ctx.textBaseline = 'middle';
 											    ctx.fillText(sum.toString(), 300, 290);
 											}
+											new Chart(document.getElementById('CategorieChart'),
+										     { "plugin" : plug,
+										   	"type":"pie",
+										      "data":{"labels":["Microcriminalità","Degrado ambientale","Degrado sociale"],
+											      "datasets":[{"label":"Categorie Segnalazioni",
+													   "data":[300,50,100],
+													   "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]}});
 										    }
 										});
 									    }
