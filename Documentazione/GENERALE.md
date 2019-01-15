@@ -138,9 +138,9 @@ di domande, per ciascun aspetto, a cui rispondere con Sì, No o Non Verificabile
 | | se sì, come sono stati trattati dal responsabile della trasparenza nel sito “Amministrazione trasparente”? | /|/|/|/|
 | | in che forma si possono creare sinergie tra il portale “Amministrazione trasparente” e il portal open data per minimizzare le inconsistenze e favorire la trasparenza del dato aperto? |/ |/|/|/| 
 
-### Misure di de-identificazione e pulitura
+## Misure di de-identificazione e pulitura
 
-## Misure di de-identificazione
+### Misure di de-identificazione
 
 Nell'elaborazione della check-list abbiamo preso coscienza di criticità all'interno di alcuni dataset riguardanti la presenza di possibili personal data. I dati che si confermano essere *non-personal data* possono essere infatti usati liberamente, cioè senza restrizioni legali, ma qualora dati specifici possano rientrare nella categoria di *personal data*, o se incrociati con altri dati reperibili sul web possano portare all'identificazione dell'individuo e/o dei suoi personal data, si incorrerebbe in grosse problematiche legali.
 
@@ -156,7 +156,7 @@ Gli standard di de-identificazione per i dati contenuti in un dataset sono i seg
 
 Abbiamo così preso provvedimenti affinché gli individui non fossero più identificabili tramite l'osservazione dei dati o il loro incrocio.
 
-## Pulitura
+### Pulitura
 
 La pulizia è stata effettuata con il programma [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor sviluppato dall'Open Data Institute, che permette di aggiungere, eliminare e modificare righe, colonne e dati e il linguaggio di programmazione Python.
 
