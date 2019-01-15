@@ -170,7 +170,7 @@ di domande, per ciascun aspetto, a cui rispondere con *Sì o No*.
 | | sono i dati liberi da ogni informazione relativa al soggetto che incrociata con dati comunemente reperibili nel web possa identificare l’individuo? In caso negativo, queste informazioni sono autorizzate per legge? |sì |no|no |sì | |
 | | sono i dati liberi da ogni record relativo a profughi, protetti di giustizia, vittime di violenze o in ogni caso categorie protette? |sì |sì| no| sì| |
 | | hai usato un tool per calcolare il rischio di de-anonimizzazione del tuo dataset prima di pubblicarlo? |? |?|?|?|
-| | esponi dei servizi di ricerca tali da poter filtrare i dati in modo da ottenere un solo record geolocalizzato? | |
+| | esponi dei servizi di ricerca tali da poter filtrare i dati in modo da ottenere un solo record geolocalizzato? | no|no|no|no|
 | **Proprietà intellettuale della sorgente** | | |
 | | avete creato voi i dati? | sì| sì| sì |sì|
 | | siete i proprietari dei dati anche se non li avete creati voi? |/ |/|/|/|
@@ -180,7 +180,7 @@ di domande, per ciascun aspetto, a cui rispondere con *Sì o No*.
 | | rilasciate i dati di cui possedete la proprietà accompagnati da una licenza? | sì|sì|sì| sì|
 | | avete incluso anche la clausola di salvaguardia “In ogni caso, i dati non possono essere utilizzati al fine di identificare nuovamente gli interessati”? | no|no|no|no|
 | **Limite alla pubblicazione** | | |
-| | hai verificato che non ci siano impedimenti di legge o contrattuali che impediscano la pubblicazione dei dati? |sì | sì, e sono presenti |sì, e sono presenti | sì|
+| | hai verificato che non ci siano impedimenti di legge o contrattuali che impediscano la pubblicazione dei dati? |sì | sì, ma sono presenti |sì, ma sono presenti | sì|
 | **Segretezza** | | |
 | | hai verificato se non ci sono motivi di ordine pubblico o di sicurezza nazionale che ti impediscono la pubblicazione dei dati? |sì |sì, sono presenti | sì, sono presenti | sì |
 | | hai verificato se non ci sono motivi legati al segreto d’ufficio che impediscono la pubblicazione dei dati? |sì | sì | sì | sì
