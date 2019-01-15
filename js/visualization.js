@@ -173,7 +173,7 @@ $(document).ready(function(){
 												   fontStyle: 'bold',
 												   fontColor: '#000',
 												   fontFamily: '"Lucida Console", Monaco, monospace'
-												    }
+												    
 												  }
 												
 											    }
