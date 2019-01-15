@@ -161,27 +161,35 @@ $(document).ready(function(){
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
 									    $('.information').html("urlo");
 									var dataset = {
-									    "children": [{"Name":"Olives","Count":4319},
-										{"Name":"Tea","Count":4159},
-										{"Name":"Mashed Potatoes","Count":2583},
-										{"Name":"Boiled Potatoes","Count":2074},
-										{"Name":"Milk","Count":1894},
-										{"Name":"Chicken Salad","Count":1809},
-										{"Name":"Vanilla Ice Cream","Count":1713},
-										{"Name":"Cocoa","Count":1636},
-										{"Name":"Lettuce Salad","Count":1566},
-										{"Name":"Lobster Salad","Count":1511},
-										{"Name":"Chocolate","Count":1489},
-										{"Name":"Apple Pie","Count":1487},
-										{"Name":"Orange Juice","Count":1423},
-										{"Name":"American Cheese","Count":1372},
-										{"Name":"Green Peas","Count":1341},
-										{"Name":"Assorted Cakes","Count":1331},
-										{"Name":"French Fried Potatoes","Count":1328},
-										{"Name":"Potato Salad","Count":1306},
-										{"Name":"Baked Potatoes","Count":1293},
-										{"Name":"Roquefort","Count":1273},
-										{"Name":"Stewed Prunes","Count":1268}]
+									    "children": [{
+										"Categoria": "Degrado ambientale",
+										"Sottocategoria": "Rifiuti/rottami",
+										"Numero_Segnalazioni": 14
+									    },
+									    {
+
+										"Categoria": "Degrado ambientale",
+										"Sottocategoria": "Neve",
+										"Numero_Segnalazioni": 2
+									    },
+									    {
+
+										"Categoria": "Degrado sociale",
+										"Sottocategoria": "Senza fissa dimora",
+										"Numero_Segnalazioni": 1
+									    },
+									    {
+
+										"Categoria": "Degrado ambientale",
+										"Sottocategoria": "Inquinamento acustico",
+										"Numero_Segnalazioni": 1
+									    },
+									    {
+
+										"Categoria": "Degrado sociale",
+										"Sottocategoria": "Bivacco",
+										"Numero_Segnalazioni": 2
+									    }]
 									};
 
 									var diameter = 600;
@@ -198,7 +206,7 @@ $(document).ready(function(){
 									    .attr("class", "bubble");
 
 									var nodes = d3.hierarchy(dataset)
-									    .sum(function(d) { return d.Count; });
+									    .sum(function(d) { return d.Numero_Segnalazioni; });
 
 									var node = svg.selectAll(".node")
 									    .data(bubble(nodes).descendants())
@@ -214,7 +222,7 @@ $(document).ready(function(){
 
 									node.append("title")
 									    .text(function(d) {
-										return d.Name + ": " + d.Count;
+										return d.Sottocategoria + ": " + d.Numero_Segnalazioni;
 									    });
 
 									node.append("circle")
@@ -229,7 +237,7 @@ $(document).ready(function(){
 									    .attr("dy", ".2em")
 									    .style("text-anchor", "middle")
 									    .text(function(d) {
-										return d.data.Name.substring(0, d.r / 3);
+										return d.data.Sottocategoria;
 									    })
 									    .attr("font-family", "sans-serif")
 									    .attr("font-size", function(d){
@@ -241,7 +249,7 @@ $(document).ready(function(){
 									    .attr("dy", "1.3em")
 									    .style("text-anchor", "middle")
 									    .text(function(d) {
-										return d.data.Count;
+										return d.data.Numero_Segnalazioni;
 									    })
 									    .attr("font-family",  "Gill Sans", "Gill Sans MT")
 									    .attr("font-size", function(d){
