@@ -65,7 +65,7 @@ I dataset che abbiamo generato nel corso del progetto integrando i dati selezion
 ## Mashup
 Il nostro dataset finale, risultante dall'integrazione dei dati contenuti all'interno dei dataset intermedi:
 
-[INDECISIONE SU COME RENDERLO: SEMPLICE URI o PRESENTAZIONE COMPLETA?]
+[NOSTRO DATASET (URI O TABELLINA)]
 _______________________________________________________________
 
 # Analisi della qualità informativa
@@ -73,78 +73,19 @@ _______________________________________________________________
 ## Requisiti 
 
 I requisiti che abbiamo stabilito per controllare il livello di qualità di un dataset è:
-* il livello 5 sulla scala 5-Star Linked Data;
-* l'**accuratezza** (semantica e sintattica): la misura secondo la quale un dataset rappresenta correttamente le caratteristiche di un oggetto, una situazione o un evento del mondo reale;
-* la **completezza**: la misura secondo la quale un dataset include quei dati che sono necessari al supporto della finalità per cui è stato creato;
 
-[RIVEDERE ...]
+~~* l'**accuratezza** (semantica e sintattica): la misura secondo la quale un dataset rappresenta correttamente le caratteristiche di un oggetto, una situazione o un evento del mondo reale;
+* la **rilevanza**: la misura secondo la quale i dati contengono le informazioni necessarie per supportare la finalità;
+* l'**attualità**: la misura secondo la quale i dati sono messi a disposizione senza ritardi non necessari;
+* la **consistenza**: la misura secondo la quale i dati non contengono contraddizioni interne che possano renderne l'utilizzo difficile o impossibile.~~
 
-Non esistono linee guida interne per la compilazione dei dataset in una maniera univoca. Alcuni CSV utilizzano la virgola come separatore; altri il punto e virgola; altri ancora la tabulazione.
-
-Non esistono vocabolari interni di nomi. Un altro problema ha riguardato la nomenclatura delle intestazioni, che risulta sempre diversa anche all'interno della stessa serie di dataset (ad esempio: *N_contribuenti* ; *N. Contribuenti* ; ...) e dei nomi di aree geografiche (vie, zone, quartieri) che non hanno una forma codificata e che vengono etichettate secondo modalità differenti (ad esempio: *Sant'Orsola* ; *S.Orsola*; *Sant Orsola* ; ...)
-
-All'interno del testo le parole accentate sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica; altre volte viene impropriamente utilizzato l'apostrofo.
-
-Una buona pratica, infine, prevede che ai dataset vadano assegnati nomi autoesplicativi e descrizioni testuali dettagliate.
-
-[CONTINUARE ...]
-
-### Accuratezza
-
-Abbiamo individuato due livelli di accuratezza:
-
-- accuratezza sintattica;
-- accuratezza semantica.
-
-Una misura di accuratezza è data dalla ratio tra gli attributi dei dati con valori accurati e il numero dei dati per i quali è richiesta accuratezza. 
-
-### Completezza
-
-Abbiamo individuato diversi livelli di completezza:
-
-- completezza di schema, calcolata in termini di percentuale di valori nulli per concetti e proprietà rispetto al numero totale di valori attesi;
-- completezza del record, calcolata in termini di numero di dati associati a un valore non nullo rispetto al numero di dati per cui può essere misurata la completezza;
-- completezza di popolazione, calcolata in termini di percentuale di valori nulli rispetto a una popolazione di riferimento.
-
-## Data cleansing
-
-In generale abbiamo cercato di seguire le *best practices* legate ai file CSV nel corso della pulizia del dataset:
-1. Abbiamo reso le intestazioni delle colonne subito comprensibili e uniformi; abbiamo quindi semplificato i loro nomi ed eliminato i caratteri speciali.
-2. Abbiamo uniformato i nomi all'interno dei file.
-3. Abbiamo copiato le versioni pulite dei dataset in formato CSV e codificate in UTF-8.
-
-| ID | Descrizione | Gravità Problema | Tipologia Problema | Soluzione |
-| -- | ----------- | ---------------- | ------------------ | --------- |
-| Acc_1 |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-
-[FINIRE -]
-
-[... ...]
-
-### [DATASET REDDITI, ...]
-
-La pulizia è stata effettuata per lo più con il programma [**_Comma Chameleon_**](http://comma-chameleon.io/) o [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor che permette di aggiungere, eliminare e modificare righe, colonne e dati.
-
-Le operazioni di pulizia effettuate comprendono:
-
-1. *Eliminazione di colonne*; in particolare:
-
-- l'eliminazione delle colonne che non servono agli scopi del nostro lavoro;
-- l'eliminazione delle colonne che compaiono più di una volta, con gli stessi valori, nello stesso dataset.
-
-2. *Modifica delle stringhe d'intestazione*; in particolare:
- 
-- l'uniformazione delle stringhe in tutti i dataset (uppercase e lowercase, trattini, ecc...);
-- la modifica dei nomi dei partiti per farli corrispondere al nomi vigenti ufficiali (precedentemente resi con sigle o denominati in modo errato).
-
-3. *Eliminazione delle righe*; in particolare:
-
-- eliminazione delle righe che non sono servite agli scopi del nostro lavoro (ad esempio: *Non residenti nell'anno di imposta*; *Senza fissa dimora*);
-- eliminazione delle righe che compaiono più volte.
+| Misura | Definizione | Descrizione | Soluzione |
+| -------| ----------- | ----------- | --------- |
+| **Completezza** | la misura secondo la quale un dataset include quei dati che sono necessari al supporto della finalità per cui è stato creato | Percentuale di valori validi nel dataset | Script(**mettere link**) |
+| **Disponibilità** | la misura secondo la quale i dati risultano essere facilmente accessibili ora e nel tempo | Analisi dell'URI | rimando a URI(**mettere link**) |
+| **Processabilità** | la misura secondo la quale i dati possono essere gestiti da processi automatizzati | Analisi dei formati | rimando a Formati(**mettere link**) |
+| **Credibilità** | la misura secondo la quale i dati si basano su fonti attendibili o forniti da organizzazioni affidabili | Metadati di *provenance* | rimando a Provenance(**mettere link**) |
+| **Conformità** | la misura secondo la quale vengono seguite una serie di esplicite regole o standard di pubblicazione e descrizione dei dati | Metadati descrittivi | rimando a Metadatazione(**mettere link**) |
 
 [CONTINUARE ...]
 
@@ -160,7 +101,7 @@ _______________________________________________________________
 L'analisi giuridica è necessaria per garantire sostenibilità nel tempo del processo di produzione e pubblicazione dei dati e creare un servizio equilibrato nel rispetto della funzione pubblica e dei diritti dei singoli individui. L’analisi giuridica delle fonti mira quindi a valutare questi delicati equilibri, evidenziando limitazioni d’uso, finalità di competenza, determinazione dei diritti e dei termini di licenza.
 
 Per attuarla, abbiamo utilizzato una *check list* di riferimento per valutare tutti gli aspetti giuridici del ciclo di vita dei dataset. La check list è formata da una serie
-di domande, per ciascun aspetto, a cui rispondere con *Sì o No*.
+di domande, per ciascun aspetto, a cui rispondere con Sì o No.
 
 | **Privacy** | Domande | D.Elezioni |  D.Redditi | D.Segnalazioni | D.Aree Statistiche |
 | ----------- | --------| ------|--------|-------|---------|
@@ -182,11 +123,11 @@ di domande, per ciascun aspetto, a cui rispondere con *Sì o No*.
 | **Limite alla pubblicazione** | | |
 | | hai verificato che non ci siano impedimenti di legge o contrattuali che impediscano la pubblicazione dei dati? |sì | sì, ma sono presenti |sì, ma sono presenti | sì|
 | **Segretezza** | | |
-| | hai verificato se non ci sono motivi di ordine pubblico o di sicurezza nazionale che ti impediscono la pubblicazione dei dati? |sì |sì, sono presenti | sì, sono presenti | sì |
-| | hai verificato se non ci sono motivi legati al segreto d’ufficio che impediscono la pubblicazione dei dati? |sì | sì | sì | sì
-| | hai verificato se non ci sono motivi legati al segreto di stato che impediscono la pubblicazione dei dati? |sì | sì | sì | sì |
+| | hai verificato se non ci sono motivi di ordine pubblico o di sicurezza nazionale che ti impediscono la pubblicazione dei dati? |?/ non sono presenti |?/ sono presenti | ?/ sono presenti | ?/non sono presenti |
+| | hai verificato se non ci sono motivi legati al segreto d’ufficio che impediscono la pubblicazione dei dati? | ?/ non sono presenti | ?/ non sono presenti | ?/ non sono presenti | ?/ non sono presenti
+| | hai verificato se non ci sono motivi legati al segreto di stato che impediscono la pubblicazione dei dati? |?/ non sono presenti | ?/ non sono presenti | ?/ non sono presenti | ?/ non sono presenti |
 | **Condizioni economiche** | | |
-| | hai verificato di poter rilasciare in modo gratuito i dati senza infrangere qualche norma di finanza pubblica? |sì |sì|sì|sì|
+| | hai verificato di poter rilasciare in modo gratuito i dati senza infrangere qualche norma di finanza pubblica? |?/ non viene infranta |?/ non viene infranta |?/ non viene infranta |?/ non viene infranta |
 | | se hai imposto condizioni economiche per l’utilizzo dei dati, sei sicuro di avere imposto un prezzo per coprire i soli costi marginali? |/  |/ |/ |/ |
 | **Temporalizzazione** | | |
 | | i dati sono soggetti per legge a restrizioni temporali di pubblicazione? | no|no|no|no|
@@ -197,10 +138,7 @@ di domande, per ciascun aspetto, a cui rispondere con *Sì o No*.
 | | se sì, come sono stati trattati dal responsabile della trasparenza nel sito “Amministrazione trasparente”? | /|/|/|/|
 | | in che forma si possono creare sinergie tra il portale “Amministrazione trasparente” e il portal open data per minimizzare le inconsistenze e favorire la trasparenza del dato aperto? |/ |/|/|/| 
 
-[CONTINUARE ...]
-
-### Misure di de-identificazione
-
+### Misure di de-identificazione e pulitura
 Verifichiamo qualora dati specifici possano rientrare nella categoria di *personal data* o no. I dati che si confermano essere *non-personal data* possono essere usati liberamente, cioè senza restrizioni legali.
 
 I *personal data* sono dati che possono identificare una persona vivente e che includono informazioni facilmente integrabili con altre informazioni per perfezionare il processo di re-identificazione.
@@ -209,15 +147,25 @@ Gli standard di de-identificazione per i dati contenuti in un dataset sono i seg
 - gli identificatori non assolutamente necessari vanno eliminati;
 - i valori degli attributi non necessari vanno eliminati; quelli che indicano situazioni fortemente personali necessitano di forti misure di de-identificazione.
 
-Prendiamo provvedimenti affinché gli individui non siano identificabili tramite l'osservazione dei dati o il loro incrocio. Abbiamo scelto una serie di metodi da applicare:
-- soppressione
-- aggregazione, arrotondamento, riarrangiamento
-- riduzione
-- mascheramento, noise
+Abbiamo preso provvedimenti affinché gli individui non fossero identificabili tramite l'osservazione dei dati o il loro incrocio.
 
-#### [DATASET REDDITI]
+La pulizia è stata effettuata per lo più con il programma [**_Comma Chameleon_**](http://comma-chameleon.io/) o [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor che permette di aggiungere, eliminare e modificare righe, colonne e dati.
 
+Non esistono linee guida interne per la compilazione dei dataset in una maniera univoca. Alcuni CSV utilizzano la virgola come separatore; altri il punto e virgola; altri ancora la tabulazione.
+
+Non esistono vocabolari interni di nomi. Un altro problema ha riguardato la nomenclatura delle intestazioni, che risulta sempre diversa anche all'interno della stessa serie di dataset (ad esempio: *N_contribuenti* ; *N. Contribuenti* ; ...) e dei nomi di aree geografiche (vie, zone, quartieri) che non hanno una forma codificata e che vengono etichettate secondo modalità differenti (ad esempio: *Sant'Orsola* ; *S.Orsola*; *Sant Orsola* ; ...)
+
+All'interno del testo le parole accentate sono codificate secondo modalità differenti. A volte viene utilizzata la lettera accentata, facendo emergere però problematiche di codifica; altre volte viene impropriamente utilizzato l'apostrofo.
+
+In generale, nel corso della pulizia dei vari dataset, abbiamo:
+1. reso le intestazioni delle colonne subito comprensibili e uniformi; abbiamo quindi semplificato i loro nomi ed eliminato i caratteri speciali.
+2. uniformato i nomi all'interno dei file.
+3. copiato le versioni pulite dei dataset, in formato CSV e con codifica UTF-8.
+
+#### DATASET REDDITI
 ##### Revisione preliminare
+Si tratta di una serie di 8 dataset che riportano i redditi per area statistica dal 2009 al 2016.
+
 I dati potrebbero rientrare nella categoria di *personal data* in quanto non rappresentano un rischio di de-anonimizzazione di per sé, ma potrebbero farlo se incrociati con altri dati. In particolare:
 * se l'*Area statistica* include un territorio particolarmente limitato, e
 * se il *Numero contribuenti* è particolarmente ridotto,
@@ -227,9 +175,30 @@ vi è il rischio che, facendo la media statistica del reddito per contribuente i
 | --------- | --------- | --------- |
 | Via del Genio | 12 | 833317 |
 
-##### De-identificazione
+##### Pulitura, De-identificazione e Merge
 
-E' possibile applicare metodi di de-identificazione - come il **_Data Masking_** e la **_Data Reduction_** - ai valori che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, come il *Numero contribuenti*. Per quanto riguarda i valori potenzialmente sensibili, come il *Reddito imponibile ai fini irpef*, è possibile anonimizzare i valori precisi convertendoli in valori arrotondati secondo la distribuzione in *scaglioni IRPEF*:
+Per pulirli abbiamo operato nel seguente modo:
+
+1. *Eliminazione di colonne*; in particolare: 
+* abbiamo eliminato le colonne che non servivano agli scopi del nostro lavoro: tra '*Reddito imponibile ai fini dell'irpef*' e '*Reddito imponibile ai fini dell' addizionale irpef*' abbiamo scelto di mantenere unicamente il primo, perché quello comunale (il secondo) è un parziale di quello totale (il primo).
+Per eliminare i dati relativi a questa intestazione abbiamo utilizzato l'algoritmo '**elimina_colonna(data)**' in "Reddito_per_Area.py";
+
+2. *Modifica delle stringhe d'intestazione*; in particolare:
+* abbiamo uniformato le stringhe in modo tale da essere identiche in tutti i dataset della serie (maiuscole e minuscole; trattini, etc...). Per esempio: 
+
+| 2009 | 2010 | 2011 | 2012 | 2013 | 2014 | 2015 | 2016 |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Area Statistica<br>N contribuenti | Area Statistica<br>N contribuenti | Area Statistica<br>N contribuenti | Area statistica<br>N_Contribuenti | Area statistica<br>N.Contribuenti | Area statistica<br>N.Contribuenti | Area statistica<br>N.Contribuenti | Area statistica<br>N.contribuenti |
+
+3. *Eliminazione delle righe*; in particolare:
+* le righe che non servono agli scopi del nostro lavoro (ad es. "*non residenti nell'anno di imposta*" e "*senza fissa dimora*");
+
+4. *Rimozione di eventuali elementi*; in particolare: 
+- rimozione di accenti ed apostrofi (ad es. "*Piazza dell'Unita'*" diventa "*Piazza dell Unita*") ## PER EVITARE CHE PYTHON AVESSE CROLLI MULTIPLI
+
+5. Correzione di errori di battitura; ad es. "*Triumrato*" al posto di "*Triumvirato*".
+
+E' possibile applicare metodi di de-identificazione ai valori che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, come il *Numero contribuenti*. Per quanto riguarda i valori potenzialmente sensibili, come il *Reddito imponibile ai fini irpef*, è possibile anonimizzare i valori precisi convertendoli in valori arrotondati secondo la distribuzione in *scaglioni IRPEF*:
 
 | Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
 | --------- | --------- | --------- |
@@ -241,9 +210,137 @@ oppure
 | --------- | --------- | --------- |
 | Via del Genio | < 100 | tra 55001 e 75000 |
 
-[CONTINUARE ...]
+Il processo di *merging* è stato il seguente:
 
-[CONTINUARE ...]
+1. Abbiamo preso gli 8 dataset come input per un algoritmo chiamato "**process_data(csv_input_file)**". In questo caso il separatore è ';'. Il merge è stato fatto con l'algoritmo 'merge_dataset_redditi_per_area(data1, data2, data3, data4, data5, data6, data7, data8)' in '*Reddito_per_Area.py*': gli 8 dataset vengono incrociati in un unico dataset finale. L'output presenta i nuovi campi '*Reddito pro-capite 2009*' ... '*Reddito pro-capite 2016*'. I dati di queste nuove intestazioni sono il risultato della media matematica '*Reddito imponibile ai fini irpef*' / '*N contribuenti*'.
+
+2. L'output di 'merge_dataset_redditi_per_area(data1, data2, data3, data4, data5, data6, data7, data8)' è stato convertito in formato .csv grazie alla libreria Pandas di Python. Il file di output è 'Reddito_2009-2016_per_area.csv'.
+
+3. Considerando la nostra visualizzazione e i problemi di anonimizzazione, abbiamo raggruppato i dati per aree statistiche in zone. Il processo è stato fatto con l'algoritmo '**zone_creator(data, data2)**': per ogni zona abbiamo quindi ricalcolato le medie del 'Reddito pro-capite'.
+
+4. L'output finale è stato convertito in csv (COMMA separated value) e salvato come "*Reddito_2009-2016_per_zone.csv*".
+
+5. ~~Controllo manuale e a campione dei dati di output: Ci sono ancora errori di battitura non precedentemente indivuati? Se si, vengono corretti. Le medie sono corrette?[MANCA PORCADDYO ...]~~
+|
+
+|
+
+|
+
+MANCAROBBA
+
+|
+
+|
+
+|
+
+#### DATASET SEGNALAZIONI : '38.00.03_segnalazioni_czrm2017_area_statistica.shp' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'
+##### Revisione preliminare
+Il dataset presenta molti errori, presenti nei dati relativi a *Category* e determinati da un procedimento di registrazione della segnalazione non uniformata con il resto delle categorie (*Segnalazioni*, *Richieste di informazioni*, *Manutenzione interna*, *Suggerimenti*). In particolare, sembra che a volte sia stata copiata la segnalazione fatta dal cittadino, parola per parola, senza che sia stato fatto un lavoro di controllo e anonimizzazione sulle informazioni (potenzialmente o palesemente sensibili) ivi contenute. Ad esempio:
+
+1. "*all'altezza di via della Barca civico 22/12 Ã¨ posto il segnale di divieto di sosta e di fermata. Il punto Ã¨ molto nevralgico perchÃ© prima di un incrocio stradale. Via della Barca da diversi anni a questa parte Ã¨ un'arteria con grosse criticitÃ  di traffico specialmente nelle ore di punta e tale rimarrÃ  se non si vuole attuare un nuovo piano regolatore semplicemente modificando le direzioni nelle vie laterali. Ad oggi nelle ore di punta per i mezzi di soccorso Ã¨ impossibile transitare e per le strade laterali Ã¨ difficile e pericoloso accedere. Con questa segnalazione si vuole chiedere di intervenire immediatamente almeno nel sanzionare le autovetture che quotidianamente stazionano fisse nella suddetta zona. Sperando che le prime multe possono dissuadere ulteriori successivi parcheggi impropri. Certo di un vostro immediato impegno porgo distinti saluti.*"
+
+2. "*teme per la sicurezza in quanto crede siano stati abbattuti dei muri portanti.Non sono esposti dati di chi ristruttura*"
+
+3. "*FIORAVANTI E ALBANI.*" (Si tratta probabilmente delle due vie che si incrociano)
+
+4. "*per il periodo di apertura della scuola NELLA SOLA FASCIA ORARIA 15-17 dal LUNEDÃ¬ AL VENERDÃ¬*"
+
+5. "*su una parte di area condominiale di propietÃ ' della coperativa Dozza sostano per molte ore al giorno fino a notte inoltrata gruppi di ragazzi che schiamazzano in modo esagerato producendo rumori che determinano una grava situazione di disturbo.*"
+
+6. "*via stradali guelfi*"
+
+7. "*avendo il marito che si muove con il deambulatore non riesce piÃ¹ a portarlo a fare una passeggiata in quanto  sono obbligati a girare in mezzo alla strada rischiando di  essere investiti dalle macchine*"
+
+8. "*quelle giÃ  in essere adiacenti alla scuola media Farini sono mal posizionate (ordine invertito per cui non si riesce a legare le bici)*"
+
+Poi abbiamo lavorato su '38.00.03_segnalazioni_czrm2017_area_statistica', un file di estensione *.shp* che abbiamo convertito in formato *geojson* con l'algoritmo **shp2geojson(input_path, output_path)** in (##IL FILE CHE CONTIENE LO SCRIPT LO SALVERA' FABIO) e successivamente in formato *.csv* con un [convertitore online](http://convertcsv.com/geojson-to-csv.htm). L'output di questo processo è il file 'Segnalazioni2017AreaStatPub.csv'.
+
+Innanzitutto abbiamo notato che il dataset riporta l'indirizzo preciso di dove una segnalazione è stata fatta (riportandone anche le coordinate *X*, *Y*). In questo modo è possibile sapere l'esatto punto di Bologna dove vi è una problematica espressa in una segnalazione. 
+
+Il problema si pone sopratutto se la segnalazione riguarda un'altra persona: ad esempio in '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv' abbiamo trovato la segnalazione di avvistamento di una prostituta in relazione ad un preciso indirizzo, con tanto di numero civico. Nell'esempio (5) si capisce che i ragazzini stanno lì ogni giorno, per cui qualcuno potrebbe facilmente rintracciarli.
+
+##### Pulitura, De-identificazione e Merge
+Per quanto riguarda il primo dataset, con l'eliminazione dell'intera colonna *Category* abbiamo eliminato sia i dati ridondanti che i dati sensibili.
+
+Per quanto riguarda il secondo dataset, la soluzione al problema è non considerare gli indirizzi delle segnalazioni, fornendo unicamente il dato dell'area della segnalazione. Quindi abbiamo creato un dataset intermedio derivato da 'Segnalazioni2017AreaStatPub.csv', contenente unicamente i dati relativi a "*Ticketid*" e "*Tipo Area*". Il file originale presenta però in "*Tipo Area*" diverse diciture prima del nome dell'area ("*Area Statistica:*" e "*Percorso di Ascolto |*"). Abbiamo eliminato le diciture, lasciando solo il nome della zona, con l'algoritrmo '**pulitore_data_geo(data_geo)**' in 'Segnalazioni_2017.py'. L'output è un file intermedio 'Segnalazioni_file_per_merge.csv'. 
+
+A questo punto abbiamo ripreso il dataset '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'. Abbiamo selezionato solo le categorie di segnalazioni che ci interessano: "*Degrado urbano-sociale-ambientale*" e "*Microciminalità*". La scelta delle categorie da mantenere è stata fatta da noi considerando gli elementi nel dataset che ci sono sembrati più calzanti con le nostre finalità. Questo processo di pulitura è stato realizzato tramite l'algoritmo "**pulire_segnalazioni(data_segnalazioni)**". 
+
+Poi abbiamo incrociato 'Segnalazioni_file_per_merge.csv' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv', per convertire tutti i valori di "*Ticketid*" nelle loro corrispondenti aree statistiche, attraverso l'algoritmo "**incrociatore_segnalazioni(data_segnalazioni, data_geo)**".
+|
+
+|
+
+|
+
+|
+
+|
+
+[MANCA ROBBBBBA]
+
+|
+
+|
+
+|
+
+|
+
+|
+
+Con l'algoritmo "**counter_segnalazioni(segnalazioni_zone, segnalazioni_zone2)**" abbiamo raggruppato ancora le segnalazioni per zone, eliminando ogni doppione e conteggiando quante volte quella determinata segnalazione è stata fatta in una determinata zona. 
+
+#### DATASET AREE STATISTICHE
+##### Revisione preliminare
+Il dataset contiene informazioni di natura geospaziale. In particolare:
+* *COD_AREAST* (Codice area statistica);
+* *NOMEAREAST* (Nome area statistica);
+* *COD_Q* (Codice quartiere);
+* *NOME_QUARTIERE* (Nome quartiere).
+
+I dati potrebbero rientrare nella categoria di *personal data* in quanto non rappresentano un rischio di de-anonimizzazione di per sé, ma potrebbero farlo se incrociati con altri dati, specialmente se i valori in *COD_AREAST*, mappati ai relativi valori presenti in *NOMEAREAST*, venissero incrociati con eventuali informazioni sensibili, contenute in altri dataset e riferibili a persone singole (i.e. reddito, vie, ecc...).
+
+Prestandosi bene come dataset di confronto, crediamo che il lavoro di de-anonimizzazione andrebbe fatto sugli eventuali altri dataset che potrebbero essere incrociati con questo. 
+
+#### DATASET POLITICHE
+##### Revisione preliminare
+Tutti i valori all'interno dei dataset sono di natura statistico-numerica. In particolare:
+- dati statistici, che raccolgono i numeri di iscritti, voti e votanti (es. *Totale Votanti*, *Totale Voti Validi*, ecc...);
+- codificazioni, mappate ad entità geospaziali (es. *Sezione elettorale*, *Quartiere*, *Zona*, ecc...).
+
+Il rischio di de-anonimizzazione è nullo.
+
+##### Pulizia e Merging
+Le operazioni di pulizia effettuate solo le seguenti:
+
+1) *Eliminazione di colonne*; in particolare:
+
+- eliminazione delle colonne che non sono servite agli scopi del nostro lavoro;
+- eliminazione delle colonne che compaiono più di una volta, con gli stessi valori, nello stesso dataset (ad es. *SCHEDE BIANCHE*, *SCHEDE NULLE*, *Totale schede bianche*, *Totale schede nulle*).
+
+2) *Modifica delle stringhe d'intestazione*; in particolare:
+
+-uniformate le stringhe in modo tale da essere identiche nei due dataset politici (maiuscole e minuscole);
+-modificato i nomi dei partiti per corrispondere al nome vigente ufficiale del partito (precedentemente erano sigle o denominati in modo errato).
+
+|
+
+|
+
+|
+
+[MANCA MERGE]
+
+|
+
+|
+
+|
+
+***
 
 ## Licenze
 
@@ -256,7 +353,6 @@ L'informazione sul tipo di licenza è metadato indispensabile per determinare co
 I dataset pubblicati su OpenData Bologna rispettano queste condizioni. 
 
 ### [DATASET REDDITI...]
-
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
 | Creative Commons | Attribuzione Zero |
@@ -269,8 +365,8 @@ Il dichiarante “*apertamente, pienamente, permanentemente, irrevocabilmente e 
 
 In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore, nella misura consentita dalla legge: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*: non vi è alcuna garanzia sul dataset stesso, e ogni responsabilità per qualsivoglia utilizzo del dataset nella misura consentita dalla legge è declinata.
 
-### [DATASET CITIZEN MANAGEMENT ...]
 
+### [DATASET CITIZEN MANAGEMENT ...]
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 | Creative Commons | Attribuzione |
@@ -283,9 +379,10 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 
 ### [NOSTRO DATASET MASHATO]
 
-Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisca libertà di riutilizzo, che sia internazionalmente riconosciuta e che consenta di attribuire la paternità dei dataset (attribuire la fonte). Pertanto, si suggerisce l’adozione generalizzata della licenza CC-BY nella sua versione 4.0. Si raccomanda inoltre di gestire l’attribuzione della fonte indicando il nome dell’organizzazione unitamente all’URL della pagina Web dove si trovano i dataset/contenuti da licenziare.
+~~Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisca libertà di riutilizzo, che sia internazionalmente riconosciuta e che consenta di attribuire la paternità dei dataset (attribuire la fonte). Pertanto, si suggerisce l’adozione generalizzata della licenza CC-BY nella sua versione 4.0. Si raccomanda inoltre di gestire l’attribuzione della fonte indicando il nome dell’organizzazione unitamente all’URL della pagina Web dove si trovano i dataset/contenuti da licenziare.~~
 
 [NOSTRA LICENZA]
+
 
 ## Finalità
 
@@ -308,12 +405,12 @@ La finalità del dataset è quella di esporre in Open Data le segnalazioni regis
 
 Il dataset è stato scelto al fine di comprendere la natura e la quantità di problemi legati al degrado ambientale, urbano e al disagio sociale, in una determinata zona della città, registrati attraverso il Citizen Relationship Management. 
 
-### [DATASET IMMIGRAZIONE]
+~~### [DATASET IMMIGRAZIONE]
 La finalità del dataset è quella di esporre in Open Data la popolazione immigrata nelle zone e quartieri di Bologna, per provenienza e sesso, dal 1986 al 2017.
 
 Il dataset è stato prodotto ed elaborato dall’Area Programmazione Controlli e Statistica del Comune di Bologna.
 
-Il dataset è stato scelto al fine di esaminare l’andamento medio di un fenomeno quale l’immigrazione da paesi esteri, in una determinata zona della città, nell’arco temporale 2009-2016.
+Il dataset è stato scelto al fine di esaminare l’andamento medio di un fenomeno quale l’immigrazione da paesi esteri, in una determinata zona della città, nell’arco temporale 2009-2016.~~
 
 [... ...]
 
@@ -324,7 +421,6 @@ _______________________________________________________________
 # Analisi tecnica
 
 ## Formati
-
 La pubblicazione di dataset in open Data richiede che i dati siano resi disponibili in formati che siano:
 * aperti
 * non proprietari
@@ -332,17 +428,6 @@ La pubblicazione di dataset in open Data richiede che i dati siano resi disponib
 * neutri rispetto agli applicativi necessari per la fruizione dei dati stessi.
 
 Tutti i dataset che abbiamo utilizzato sono pubblicati in formato **CSV**. [*Aree statistiche*] e [*Segnalazioni* ...] sono corredati da un insieme di file in formato **SHP** (uno standard per dati vettoriali spaziali), con file aggiuntivi con estensioni **.sph**, **.dbf**, **.shx** da sui dipendono interpretazione ed utilizzo.
-
-| Dataset | Formato |
-| ------- | ------- |
-| D1 | CSV |
-| D2 | CSV |
-| D3 | CSV |
-| D4 | CSV |
-| D5 | SHP <br> DB <br> PRJ <br> QPJ <br> SHX |
-| D6 | CSV |
-| D7 | SHP <br> DB <br> PRJ <br> QPJ <br> SHX |
-| D8 | CSV |
 
 ### Distribuzioni
 Il nostro dataset lo abbiamo pubblicato in [X ?] distribuzioni:
@@ -388,7 +473,6 @@ Il nostro dataset lo abbiamo pubblicato in [X ?] distribuzioni:
 - **Download** : 
 
 ## Metadati
-
 La metadatazione ricopre un ruolo essenziale laddove i dati sono esposti a utenti terzi e a software. I metadati, infatti, consentono una maggiore comprensione e rappresentano la chiave attraverso cui abilitare più agevolmente la ricerca, la scoperta, l’accesso e quindi il riuso dei dati stessi. La classificazione qualitativa dei metadati si fonda su due fattori principali: legame tra dato-metadati e livello di dettaglio.
 
 Il nostro obiettivo è raggiungere il **livello 4** di metadatazione, per cui:
@@ -396,15 +480,14 @@ Il nostro obiettivo è raggiungere il **livello 4** di metadatazione, per cui:
 * il livello di dettaglio sia massimo: i metadati forniscono informazioni relative al dataset e al singolo dato.
 
 ### Metadatazione dei dataset
-
-I dataset sono descritti dai seguenti metadati human-readable:
+I dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it/) sono descritti dai seguenti metadati human-readable:
 1. **File**: il nome del dataset.
 2. **Anno versione**: l'anno al quale la relativa versione si riferisce.
 3. **versione**: numero di versione.
 4. **Formato**: formato dei dati.
-5. **Data rilascio**: data del rilascio del dataset.
+5. **Data rilascio**: data di pubblicazione del dataset.
 6. **Argomento**: keyword che descrive il contenuto dei dataset.
-7. **Tag**: keyword che descrive ulteriormente il contenuto dei dataset.
+7. **Tag**: keyword che descrive più in profondità il contenuto dei dataset.
 8. **Responsabile**: 
 9. **Fonte**: indicazione di autorità e/o provenienza.
 10. **Licenza**: tipo di licenza del dataset.
@@ -434,37 +517,29 @@ Per quanto riguarda il nostro dataset mashato, abbiamo deciso di mantenere l'inf
 
 Gli URI dei dataset presentano almeno due aspetti problematici:
 
-1. la **_semantica_** non perfettamente chiara:
+1. la **_semantica_** non perfettamente chiara;`
 
-`2009: http://dati.comune.bologna.it/download/file/fid/1136`
+2. l'**_inconsistenza del pattern_**, dovuta probabilmente all'impiego di un meccanismo di **_auto-increment_**.
 
-2. l'**_inconsistenza del pattern_**, dovuta probabilmente all'impiego da parte dell'organizzazione di un meccanismo di *auto-increment*:
-
-```
-2010: http://dati.comune.bologna.it/download/file/fid/1137
-2011: http://dati.comune.bologna.it/download/file/fid/1135
-2012: http://dati.comune.bologna.it/download/file/fid/1878
-```
-
-In via ipotetica, presentiamo un possibile perfezionaento degli URI dei dataset di riferimento:
+In via ipotetica, proponiamo un possibile perfezionamento degli URI dei dataset di riferimento:
 
 | URI originali | URI perfezionati |
 | ------------- | ---------------- |
-| http://dati.comune.bologna.it/download/file/fid/4267 | http://dati.comune.bologna.it/**dataset/risultati-politiche-2018/liste-camere-collegio-6** |
-| http://dati.comune.bologna.it/download/file/fid/4269 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/4265 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/1136 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/1137 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/1135 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/1878 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/2436 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/3422 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/4304 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/4615 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/4493 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/4494 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/4490 | http://dati.comune.bologna.it/ |
-| http://dati.comune.bologna.it/download/file/fid/4492 | http://dati.comune.bologna.it/ |
+| http://dati.comune.bologna.it/download/file/fid/4267 | http://dati.comune.bologna.it/dataset/risultati-politiche-2018/liste-camere-collegio-6 |
+| http://dati.comune.bologna.it/download/file/fid/4269 | http://dati.comune.bologna.it/dataset/risultati-politiche-2018/liste-camere-collegio-7 |
+| http://dati.comune.bologna.it/download/file/fid/4265 | http://dati.comune.bologna.it/dataset/risultati-politiche-2018/liste-senato |
+| http://dati.comune.bologna.it/download/file/fid/1136 | http://dati.comune.bologna.it/dataset/redditi/redditi-2009 |
+| http://dati.comune.bologna.it/download/file/fid/1137 | http://dati.comune.bologna.it/dataset/redditi/redditi-2010 |
+| http://dati.comune.bologna.it/download/file/fid/1135 | http://dati.comune.bologna.it/dataset/redditi/redditi-2011 |
+| http://dati.comune.bologna.it/download/file/fid/1878 | http://dati.comune.bologna.it/dataset/redditi/redditi-2012 |
+| http://dati.comune.bologna.it/download/file/fid/2436 | http://dati.comune.bologna.it/dataset/redditi/redditi-2013 |
+| http://dati.comune.bologna.it/download/file/fid/3422 | http://dati.comune.bologna.it/dataset/redditi/redditi-2014 |
+| http://dati.comune.bologna.it/download/file/fid/4304 | http://dati.comune.bologna.it/dataset/redditi/redditi-2015 |
+| http://dati.comune.bologna.it/download/file/fid/4615 | http://dati.comune.bologna.it/dataset/redditi/redditi-2016 |
+| http://dati.comune.bologna.it/download/file/fid/4493 | http://dati.comune.bologna.it/dataset/aree-statistiche/aree-statistiche-cartografico|
+| http://dati.comune.bologna.it/download/file/fid/4494 | http://dati.comune.bologna.it/dataset/aree-statistiche/aree-statistiche-per-quartiere |
+| http://dati.comune.bologna.it/download/file/fid/4490 | http://dati.comune.bologna.it/dataset/citizen-relationship-management/segnalazioni-2017-cartografico-per-area-statistica |
+| http://dati.comune.bologna.it/download/file/fid/4492 | http://dati.comune.bologna.it/dataset/citizen-relationship-management/segnalazioni-2017 |
 
 ### URI del mashup
 
