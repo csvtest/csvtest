@@ -121,7 +121,7 @@ di domande, per ciascun aspetto, a cui rispondere con Sì, No o Non Verificabile
 | | rilasciate i dati di cui possedete la proprietà accompagnati da una licenza? | sì|sì|sì| sì|
 | | avete incluso anche la clausola di salvaguardia “In ogni caso, i dati non possono essere utilizzati al fine di identificare nuovamente gli interessati”? | no|no|no|no|
 | **Limite alla pubblicazione** | | |
-| | hai verificato che non ci siano impedimenti di legge o contrattuali che impediscano la pubblicazione dei dati? |sì | sì, ma sono presenti |sì, ma sono presenti | sì|
+| | hai verificato che non ci siano impedimenti di legge o contrattuali che impediscano la pubblicazione dei dati? |?/non sono presenti | ? / sono presenti |?/ sono presenti | ?/ non sono presenti|
 | **Segretezza** | | |
 | | hai verificato se non ci sono motivi di ordine pubblico o di sicurezza nazionale che ti impediscono la pubblicazione dei dati? |?/ non sono presenti |?/ sono presenti | ?/ sono presenti | ?/non sono presenti |
 | | hai verificato se non ci sono motivi legati al segreto d’ufficio che impediscono la pubblicazione dei dati? | ?/ non sono presenti | ?/ non sono presenti | ?/ non sono presenti | ?/ non sono presenti
@@ -184,7 +184,7 @@ Si tratta di una serie di 8 dataset che riportano i redditi per area statistica 
 I dati potrebbero rientrare nella categoria di *personal data* se incrociati con altri dati. In particolare:
 * se l'*Area statistica* include un territorio particolarmente limitato, e
 * se il *Numero contribuenti* è particolarmente ridotto,
-vi è il rischio che, facendo la media statistica del reddito per contribuente in quella determinata area, sia semplice identificare quei contribuenti abitanti in quella determinata zona e con quel determinato reddito. 
+vi è il rischio che, facendo la media statistica del reddito per contribuente in quella determinata area, sia semplice identificare quei contribuenti, abitanti in quella determinata zona e con quel determinato reddito. 
 In questo modo verrebbe infranta la normativa che regola il *Segreto Statistico.*
 
 In Italia il Segreto Statistico è di fatto regolamentato dall'art.9 del DL n.322 del 6 settembre 1989, che recita:
@@ -206,11 +206,12 @@ Esempi, in questo senso, sono rappresentati da:
 | --------- | --------- | --------- |
 | Lungo Reno | 6 | 102878 |
 
-Incrociando inoltre tali dati con dati satellitari reperibili dall'utente medio semplicemente utilizzando Google Maps, possiamo notare la presenza di un'unica casa in tale area. Tramite il dataset è quindi possibile risalire ai redditi dei residenti in una determinata abitazione! 
+Incrociando poi tali dati con dati satellitari reperibili dall'utente medio semplicemente utilizzando Google Maps, possiamo notare la presenza di un'unica casa in tale area. Tramite il dataset è quindi possibile risalire ai redditi dei residenti di una determinata abitazione! 
 
 ##### Pulitura, De-identificazione e Merge
 
-Per pulirli abbiamo operato nel seguente modo:
+
+Pulitura:
 
 1. *Eliminazione di colonne*; in particolare: 
 * abbiamo eliminato le colonne che non servivano agli scopi del nostro lavoro: tra '*Reddito imponibile ai fini dell'irpef*' e '*Reddito imponibile ai fini dell' addizionale irpef*' abbiamo scelto di mantenere unicamente il primo, perché quello comunale (il secondo) è un parziale di quello totale (il primo).
@@ -231,6 +232,10 @@ Per eliminare i dati relativi a questa intestazione abbiamo utilizzato l'algorit
 
 5. Correzione di errori di battitura; ad es. "*Triumrato*" al posto di "*Triumvirato*".
 
+
+
+De-identificazione:
+
 E' possibile applicare metodi di de-identificazione ai valori che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, come il *Numero contribuenti*. Per quanto riguarda i valori potenzialmente sensibili, come il *Reddito imponibile ai fini irpef*, è possibile anonimizzare i valori precisi convertendoli in valori arrotondati secondo la distribuzione in *scaglioni IRPEF*:
 
 | Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
@@ -243,7 +248,9 @@ oppure
 | --------- | --------- | --------- |
 | Via del Genio | < 100 | tra 55001 e 75000 |
 
-Il processo di *merging* è stato il seguente:
+
+
+Processo di *merging*:
 
 1. Abbiamo preso gli 8 dataset come input per un algoritmo chiamato "**process_data(csv_input_file)**". In questo caso il separatore è ';'. Il merge è stato fatto con l'algoritmo 'merge_dataset_redditi_per_area(data1, data2, data3, data4, data5, data6, data7, data8)' in '*Reddito_per_Area.py*': gli 8 dataset vengono incrociati in un unico dataset finale. L'output presenta i nuovi campi '*Reddito pro-capite 2009*' ... '*Reddito pro-capite 2016*'. I dati di queste nuove intestazioni sono il risultato della media matematica '*Reddito imponibile ai fini irpef*' / '*N contribuenti*'.
 
