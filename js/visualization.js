@@ -164,7 +164,12 @@ $(document).ready(function(){
 										      "data":{"labels":["Microcriminalità","Degrado ambientale","Degrado sociale"],
 											      "datasets":[{"label":"Categorie Segnalazioni",
 													   "data":[300,50,100],
-													   "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]}});
+													   "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]},
+										     "options":  {
+											    "plugins": {
+											     	"labels": ['value','label']
+											    }}
+										     });
 									    }
 									})
 								    }
