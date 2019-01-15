@@ -48,6 +48,15 @@ I dataset che abbiamo utilizzato sono:
 | 5.0 | http://dati.comune.bologna.it/download/file/fid/4490 | 38.00.03_segnalazioni_czrm2017_area_statistica | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
 | 5.1 | http://dati.comune.bologna.it/download/file/fid/4492 | 38.00.05_segnalazioni_czrm2017_tot_tipologia | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
 
+
+Che in documentazione saranno analizzati nei seguenti blocchi: 
+
+- DATASET POLITICHE: ID [1.0 ; 1.1 ; 2.0]
+- DATASET REDDITI: ID [3.0 ; 3.1]
+- DATASET AREE STATISTICHE: ID [4.0 ; 4.1]
+- DATASET CITIZEN MANANGEMENT: ID [5.0 ; 5.1] 
+
+
 ## Dataset Puliti
 I dataset che abbiamo utilizzato, ma ripuliti:
 
@@ -284,7 +293,7 @@ MANCAROBBA
 
 |
 
-#### DATASET SEGNALAZIONI : '
+#### DATASET CITIZEN MANAGEMENT : '
 38.00.03_segnalazioni_czrm2017_area_statistica.shp' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'
 
 ##### Revisione preliminare: criticità
@@ -421,7 +430,7 @@ L'informazione sul tipo di licenza è metadato indispensabile per determinare co
 
 I dataset pubblicati su OpenData Bologna rispettano queste condizioni. 
 
-### [DATASET REDDITI...]
+#### DATASET REDDITI
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
 | Creative Commons | Attribuzione Zero |
@@ -435,7 +444,7 @@ Il dichiarante “*apertamente, pienamente, permanentemente, irrevocabilmente e 
 In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore, nella misura consentita dalla legge: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*: non vi è alcuna garanzia sul dataset stesso, e ogni responsabilità per qualsivoglia utilizzo del dataset nella misura consentita dalla legge è declinata.
 
 
-### [DATASET CITIZEN MANAGEMENT ...]
+#### DATASET CITIZEN MANAGEMENT
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 | Creative Commons | Attribuzione |
