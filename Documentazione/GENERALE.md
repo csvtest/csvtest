@@ -54,7 +54,7 @@ Che in documentazione saranno analizzati nei seguenti blocchi:
 - DATASET POLITICHE: ID [1.0 ; 1.1 ; 2.0]
 - DATASET REDDITI: ID [3.0 ; 3.1]
 - DATASET AREE STATISTICHE: ID [4.0 ; 4.1]
-- DATASET CITIZEN MANANGEMENT: ID [5.0 ; 5.1] 
+- DATASET CITIZEN MANAGEMENT: ID [5.0 ; 5.1] 
 
 
 ## Dataset Puliti
@@ -195,8 +195,6 @@ In generale, nel corso della pulizia dei vari dataset, abbiamo:
 #### DATASET REDDITI
 
 ##### Revisione preliminare: criticità
-Si tratta di una serie di 8 dataset che riportano i redditi per area statistica dal 2009 al 2016:
-
 
 I dati contenuti in essi potrebbero rientrare nella categoria di *personal data* se incrociati con altri dati. In particolare:
 * se l'*Area statistica* include un territorio particolarmente limitato, e
@@ -293,8 +291,7 @@ MANCAROBBA
 
 |
 
-#### DATASET CITIZEN MANAGEMENT : '
-38.00.03_segnalazioni_czrm2017_area_statistica.shp' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'
+#### DATASET CITIZEN MANAGEMENT : 
 
 ##### Revisione preliminare: criticità
 
