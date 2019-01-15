@@ -98,7 +98,3 @@ def controllo_percentuale(data):
         lista_prova.append(round(sum(listina)))
         listina = []
     print (lista_prova)
-
-dataset_Senato = percentuale(algoritmo(process_data('liste_senato.csv')))
-
-#controllo_percentuale(dataset_Senato)
