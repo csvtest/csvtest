@@ -158,7 +158,7 @@ $(document).ready(function(){
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
-									var datitake = arrayItem["Sottocategoria"];
+									var datitake = arrayItem.Sottocategoria;
 									console.log(datitake);
 									var dataset = datitake;
 
