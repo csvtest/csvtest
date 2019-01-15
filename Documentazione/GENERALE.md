@@ -89,6 +89,12 @@ I requisiti che abbiamo stabilito per controllare il livello di qualità di un d
 
 [CONTINUARE ...]
 
+Gli indici di completezza sono i seguenti:
+
+| Dataset | Valori totali | Valori nulli | Completezza |
+| ------- | ------------- | ------------ | ----------- |
+|         |               |              |             |
+
 [NOSTRO DATASET ... metadati di qualità?]
 _______________________________________________________________
 
