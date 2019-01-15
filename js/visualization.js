@@ -159,7 +159,7 @@ $(document).ready(function(){
 								datisegn.forEach(function(arrayItem) {
 									$('.information').html(arrayItem["Zona"]);
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
-									    $('.information').html(urlo);
+									    $('.information').html("urlo");
 									var dativari = arrayItem["Segnalazioni"]
 									var diameter = 600;
 									var color = d3.scaleOrdinal(d3.schemeCategory20);
