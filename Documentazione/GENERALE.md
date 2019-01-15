@@ -307,8 +307,8 @@ Abbiamo lavorato su '38.00.03_segnalazioni_czrm2017_area_statistica', un file di
 Tale dataset riporta l'indirizzo preciso, corredato da numero civico, di dove una segnalazione è stata fatta, riportandone anche le coordinate *X*, *Y*. In questo modo è possibile sapere l'esatto punto di Bologna dove vi è una problematica espressa in una segnalazione. 
 
 Il problema si pone soprattutto se la segnalazione riguarda un'altra persona, come: 
-- L'avvistamento di una prostituta in relazione ad un preciso indirizzo, con tanto di numero civico. Segnalazione che compare piu' volte. 
-Tale segnalazione è particolarmente grave, per diverse motivazioni. In primo luogo non è verificabile che il soggetto in questione svolga effettivamente attività di prostituzione. Nel caso in cui sia invece effettivamente questo il caso, viene messo in Open Data la localizzazione precisa di un'attività spesso collegata ad organizzazioni criminali, tratta di essere umani, discriminazione, e violenza.
+- L'avvistamento di una prostituta. Segnalazione che compare piu' volte. 
+Tale segnalazione è particolarmente grave, per diverse motivazioni. In primo luogo non è verificabile che il soggetto in questione svolga effettivamente attività di prostituzione. Nel caso in cui sia invece effettivamente questo il caso, viene messo in Open Data la presenza di un'attività spesso collegata ad organizzazioni criminali, tratta di essere umani, discriminazione, e violenza.
 - Nell'esempio (5) si viene a conoscenza che alcuni ragazzini stanno in quel punto ogni giorno, per cui qualcuno potrebbe facilmente rintracciarli
 - Nell'esempio (7) si viene a conoscenza di problematiche personali di due persone che si trovano presumibilmente spesso in quel punto
 
