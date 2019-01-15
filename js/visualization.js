@@ -158,78 +158,54 @@ $(document).ready(function(){
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
-									var datitake = arrayItem.Sottocategoria;
-									console.log(datitake);
-									var dataset = datitake;
+									var diameter = 500, //max size of the bubbles
+									    color    = d3.scaleOrdinal(d3.schemeCategory20); //color category
 
-									var diameter = 600;
-									var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-									var bubble = d3.pack(dataset)
+									var bubble = d3.layout.pack()
+									    .sort(null)
 									    .size([diameter, diameter])
 									    .padding(1.5);
 
-									var svg = d3.select("#grafoSegn")
+									var svg = d3.select("body")
 									    .append("svg")
 									    .attr("width", diameter)
 									    .attr("height", diameter)
 									    .attr("class", "bubble");
 
-									var nodes = d3.hierarchy(dataset)
-									    .sum(function(d) { return d.Numero_Segnalazioni; });
+									d3.json("geojson_folder/testsegna.json", function(error, data){
 
-									var node = svg.selectAll(".node")
-									    .data(bubble(nodes).descendants())
-									    .enter()
-									    .filter(function(d){
-										return  !d.children
-									    })
-									    .append("g")
-									    .attr("class", "node")
-									    .attr("transform", function(d) {
-										return "translate(" + d.x + "," + d.y + ")";
-									    });
+									    //convert numerical values from strings to numbers
+									    data = data.map(function(d){ d.value = +d["Numero_Segnalazioni"]; return d; });
 
-									node.append("title")
-									    .text(function(d) {
-										return d.Sottocategoria + ": " + d.Numero_Segnalazioni;
-									    });
+									    //bubbles needs very specific format, convert data to this.
+									    var nodes = bubble.nodes({children:data}).filter(function(d) { return !d.children; });
 
-									node.append("circle")
-									    .attr("r", function(d) {
-										return d.r;
-									    })
-									    .style("fill", function(d,i) {
-										return color(i);
-									    });
+									    //setup the chart
+									    var bubbles = svg.append("g")
+										.attr("transform", "translate(0,0)")
+										.selectAll(".bubble")
+										.data(nodes)
+										.enter();
 
-									node.append("text")
-									    .attr("dy", ".2em")
-									    .style("text-anchor", "middle")
-									    .text(function(d) {
-										return d.data.Sottocategoria;
-									    })
-									    .attr("font-family", "sans-serif")
-									    .attr("font-size", function(d){
-										return d.r/5;
-									    })
-									    .attr("fill", "white");
+									    //create the bubbles
+									    bubbles.append("circle")
+										.attr("r", function(d){ return d.r; })
+										.attr("cx", function(d){ return d.x; })
+										.attr("cy", function(d){ return d.y; })
+										.style("fill", function(d) { return color(d.value); });
 
-									node.append("text")
-									    .attr("dy", "1.3em")
-									    .style("text-anchor", "middle")
-									    .text(function(d) {
-										return d.data.Numero_Segnalazioni;
-									    })
-									    .attr("font-family",  "Gill Sans", "Gill Sans MT")
-									    .attr("font-size", function(d){
-										return d.r/5;
-									    })
-									    .attr("fill", "white");
-
-									d3.select(self.frameElement)
-									    .style("height", diameter + "px");
-									    }
+									    //format the text for each bubble
+									    bubbles.append("text")
+										.attr("x", function(d){ return d.x; })
+										.attr("y", function(d){ return d.y + 5; })
+										.attr("text-anchor", "middle")
+										.text(function(d){ return d["Sottocategoria"]; })
+										.style({
+										    "fill":"white", 
+										    "font-family":"Helvetica Neue, Helvetica, Arial, san-serif",
+										    "font-size": "12px"
+										});
+									})
 									}
 								    )}     
 								});
