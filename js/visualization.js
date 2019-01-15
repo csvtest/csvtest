@@ -160,7 +160,7 @@ $(document).ready(function(){
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) { 
 									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
 									   new Chart(document.getElementById('CategorieChart'),
-										     {"type":"doughnut",
+										     {"type":"pie",
 										      "data":{"labels":["Microcriminalità","Degrado ambientale","Degrado sociale"],
 											      "datasets":[{"label":"Categorie Segnalazioni",
 													   "data":[300,50,100],
