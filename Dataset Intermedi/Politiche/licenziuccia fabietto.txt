@@ -1,6 +1,13 @@
+NOTE LEGALI DEL MINISERO DELL'INTERNO: 
 http://www.interno.gov.it/it/note-legali
-
 CC-BY 3.0
+
+ISTAT COEFFICIENTE FOI:
+		Trovi sta roba in Note Legali: https://www.istat.it/it/note-legali
+		Tutti i contenuti sul sito dell' istat vengono rilasciati con la Licenza CC-BY
+		Attribuzione - versione 3.0
+	Il calcolatore è in rivaluta.istat.it che tanto da quello che ho capito è solo un branch di istat, quindi suppongo sia uguale. 
+
 
 
 
@@ -11,3 +18,4 @@ CC-BY 3.0
 
 
 												valentina puzza di gipsy
+													Sebi tvb xs
