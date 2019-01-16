@@ -310,14 +310,22 @@ $(document).ready(function(){
 										};
 			
 									    var radarpolitico = document.getElementById("EleChartrad").getContext("2d");
-									    new Chart(radarpolitico,{"type":'radar',"data": dataelesen ,"options":opzionisenato});
+									    new Chart(radarpolitico,{"type":'radar',"data": dataelesen ,"options":{"tooltips": {
+												"enabled": true,
+												"mode": 'single',
+												"callbacks": {
+												    "label": function(tooltipItems, data) {
+													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel + '%';
+												    }
+												}
+											    }}});
 									    var opzionisenato = {
 										"tooltips": {
 												"enabled": true,
 												"mode": 'single',
 												"callbacks": {
 												    "label": function(tooltipItems, data) {
-													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.yLabel + '%';
+													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel + '%';
 												    }
 												}
 											    },
@@ -338,14 +346,16 @@ $(document).ready(function(){
 										{labels: ["Movimento 5 Stelle", "Partito Democratico", "Lega Nord", "Forza Italia", "Fratelli D'Italia", "Liberi E Uguali", "Più Europa", "Altri Partiti"],
 										 datasets: [{
 											 "label": "Risultati Senato Zona",
-											data: datisenatozona },
-											    
+												data: datisenatozona ,
+											    backgroundColor: "red"},
 											    {
 											"label": "Risultati Senato Italia",
-											data: [32.22, 19.14, 17.61, 14.43, 4.26, 3.28, 2.37, 6.69]},
+											data: [32.22, 19.14, 17.61, 14.43, 4.26, 3.28, 2.37, 6.69],
+											 },
 											   {
 											"label": "Risultati Senato Bologna",
-											data: [21.97, 28.15, 13.99, 9.75, 3.48, 9.56, 5.43, 7.67]}
+											data: [21.97, 28.15, 13.99, 9.75, 3.48, 9.56, 5.43, 7.67],
+											      backgroundColor: "#545556"}
 											   ]
 										};
 									    
