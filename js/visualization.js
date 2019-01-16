@@ -326,7 +326,7 @@ $(document).ready(function(){
 											   ]
 										};
 									    var barrapolitica = document.getElementById("EleChartbar").getContext("2d");
-									    new Chart(barrapolitica,{"type":"horizontalBar","data": dataelesen ,"options":{"beginAtZero": true}});
+									    new Chart(barrapolitica,{"type":"horizontalBar","data": dataelesentot ,"options":{"beginAtZero": true}});
 									    }
 									})
 								    }
