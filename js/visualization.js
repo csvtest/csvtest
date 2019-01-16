@@ -34,14 +34,6 @@ $(document).ready(function(){
 						function onEachFeature(feature, layer) {
 						    layer.bindPopup(feature.properties.Nome_zona);
 						    layer.on('click', function(e) {
-							geojson.resetStyle(e.target);
-							var selected = e.layer;
-							selected.setStyle({
-								weight: 5,
-								color: '#666',
-								dashArray: '',
-								fillOpacity: 0.7
-							 });
 							$.ajax({
 							    dataType: "json",
 							    url: "geojson_folder/Reddito_2009-2016_per_zone.json",
