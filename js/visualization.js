@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 						function dehighlight (layer) {
 						  if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
-							  layer.setStyle(stylegeo);
+							  layer.resetStyle(e.layer)
 						  }
 						}
 
@@ -64,7 +64,9 @@ $(document).ready(function(){
 								      highlight(e.target);
 								    },
 								'mouseout': function (e) {
-								      dehighlight(e.target);
+									if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
+							  		layer.resetStyle(e.layer)}
+								      //dehighlight(e.target);
 								    },
   								'click': function(e) {
 							select(e.target);
