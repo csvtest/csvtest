@@ -131,7 +131,7 @@ Gli indici di completezza sono i seguenti:
 [NOSTRO DATASET ... metadati di qualità?]
 _______________________________________________________________
 
-# Analisi giuridica
+# Analisi etico-giuridica
 
 ## Privacy
 
