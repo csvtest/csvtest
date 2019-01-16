@@ -271,7 +271,7 @@ Esempi, in questo senso, sono rappresentati da:
 | --------- | --------- | --------- |
 | Lungo Reno | 6 | 102878 |
 
-Incrociando poi tali dati con dati satellitari reperibili dall'utente medio semplicemente utilizzando Google Maps, possiamo notare la presenza di un'unica casa in tale area. Tramite il dataset è quindi possibile risalire ai redditi dei residenti di una determinata abitazione! 
+Incrociando poi tali dati con dati satellitari reperibili dall'utente medio semplicemente utilizzando Google Maps, possiamo notare la presenza di un'unica casa in tale area. Tramite il dataset è quindi possibile risalire alla posizione economica dei soggetti di un'abitazione! 
 
 
 ##### Pulitura, De-identificazione e Merge
