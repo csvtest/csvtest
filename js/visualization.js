@@ -20,7 +20,34 @@ $(document).ready(function(){
 						    return {
 							fillColor: getColor(feature.properties.Codice_zona),
 						    };
-						};						
+						};
+						function highlight (layer) {
+							layer.setStyle({
+								weight: 5,
+								dashArray: ''
+							});
+							if (!L.Browser.ie && !L.Browser.opera) {
+								layer.bringToFront();
+							}
+						}
+
+						function dehighlight (layer) {
+						  if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
+							  geojson.resetStyle(layer);
+						  }
+						}
+
+						function select (layer) {
+						  if (selected !== null) {
+						    var previous = selected;
+						  }
+							selected = layer;
+							if (previous) {
+							  dehighlight(previous);
+							}
+						}
+
+						var selected = null;
 						var geojson = $.ajax({
 						    dataType: "json",
 						    url: "geojson_folder/ZoneBologna.geojson",
@@ -33,7 +60,14 @@ $(document).ready(function(){
 						}).error(function() {});
 						function onEachFeature(feature, layer) {
 						    layer.bindPopup(feature.properties.Nome_zona);
-						    layer.on('click', function(e) {
+						    layer.on( {'mouseover': function (e) {
+								      highlight(e.target);
+								    },
+								'mouseout': function (e) {
+								      dehighlight(e.target);
+								    },
+							    'click', function(e) {
+							select(e.target);
 							$.ajax({
 							    dataType: "json",
 							    url: "geojson_folder/Reddito_2009-2016_per_zone.json",
@@ -298,6 +332,6 @@ $(document).ready(function(){
 								    }
 								})
 							    //fine
-						    });
+						    }});
 						};
 						})
