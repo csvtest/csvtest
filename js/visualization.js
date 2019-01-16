@@ -64,7 +64,12 @@ $(document).ready(function(){
 								      highlight(e.target);
 								    },
 								'mouseout': function (e) {
-								      dehighlight(e.target);
+									function dehighlighta (layer) {
+									  if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
+										  geojson.resetStyle(layer);
+									  }
+									}
+								      dehighlighta(e.target);
 								    },
   								'click': function(e) {
 							select(e.target);
