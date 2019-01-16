@@ -54,30 +54,30 @@ $(document).ready(function(){
 
 							$.ajax({
 							    dataType: "json",
-							    url: "geojson_folder/Reddito_2009-2016_per_zone.json",
+							    url: "geojson_folder/redditizone.json",
 							    success: function(dati) {
 								dati.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
 									$('.information').html('');
 									$('.information').html('<h2><span class="badge badge-primary">'+arrayItem["Zona"])+'</span></h2>';
 									var listRedditi = [];
-									listRedditi.push(arrayItem["Reddito pro-capite 2009"]);
-									listRedditi.push(arrayItem["Reddito pro-capite 2010"]);
-									listRedditi.push(arrayItem["Reddito pro-capite 2011"]);
-									listRedditi.push(arrayItem["Reddito pro-capite 2012"]);
-									listRedditi.push(arrayItem["Reddito pro-capite 2013"]);
-									listRedditi.push(arrayItem["Reddito pro-capite 2014"]);
-									listRedditi.push(arrayItem["Reddito pro-capite 2015"]);
-									listRedditi.push(arrayItem["Reddito pro-capite 2016"]);
+									listRedditi.push(arrayItem["Reddito medio pro-capite 2009"]);
+									listRedditi.push(arrayItem["Reddito medio pro-capite 2010"]);
+									listRedditi.push(arrayItem["Reddito medio pro-capite 2011"]);
+									listRedditi.push(arrayItem["Reddito medio pro-capite 2012"]);
+									listRedditi.push(arrayItem["Reddito medio pro-capite 2013"]);
+									listRedditi.push(arrayItem["Reddito medio pro-capite 2014"]);
+									listRedditi.push(arrayItem["Reddito medio pro-capite 2015"]);
+									listRedditi.push(arrayItem["Reddito medio pro-capite 2016"]);
 									var listIndex = [];
 									listIndex.push(arrayItem["Reddito pro-capite 2009"]);
-									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.011));
-									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.038));
-									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.070));
-									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.082));
-									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.084));
-									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.083));
-									listIndex.push(Math.round(arrayItem["Reddito pro-capite 2009"] * 1.087));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.011));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.038));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.070));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.082));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.084));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.083));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.087));
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
@@ -101,7 +101,7 @@ $(document).ready(function(){
 										    },
 										    {
 											"label": "Reddito Medio Bologna",
-											"data": [28641, 28594, 28500, 28431, 28708, 28968, 29386, 30173],
+											"data": [24718, 24819, 24833, 24709, 25112, 25178, 25510, 25815],
 											"type": "line",
 											"fill": true,
 											"borderColor": "rgb(169,169,169)",
