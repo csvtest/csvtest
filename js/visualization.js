@@ -52,7 +52,7 @@ $(document).ready(function(){
 						    dataType: "json",
 						    url: "geojson_folder/ZoneBologna.geojson",
 						    success: function(data) {
-							var geojson = L.geoJson(data, {
+							var geojson = new L.geoJson(data, {
 							    style: stylegeo,
 							    onEachFeature: onEachFeature
 							}).addTo(map);
@@ -64,12 +64,7 @@ $(document).ready(function(){
 								      highlight(e.target);
 								    },
 								'mouseout': function (e) {
-									function dehighlighta (layer) {
-									  if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
-										  geojson.resetStyle(layer);
-									  }
-									}
-								      dehighlighta(e.target);
+								      dehighlight(e.target);
 								    },
   								'click': function(e) {
 							select(e.target);
