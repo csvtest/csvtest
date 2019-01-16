@@ -324,26 +324,28 @@ $(document).ready(function(){
 										"scales": {
 										    "xAxes": [{
 											"ticks": {
-											    "beginAtZero": true
+											    "beginAtZero": true,
 											    "callback": function(value, index, values) {
 													return value + '%';
 												}
 											}
 										    }]
 										}
+									    };
 										    
 										    
 									    var dataelesentot =
 										{labels: ["Movimento 5 Stelle", "Partito Democratico", "Lega Nord", "Forza Italia", "Fratelli D'Italia", "Liberi E Uguali", "Più Europa", "Altri Partiti"],
 										 datasets: [{
+											 "label": "Risultati Senato Zona",
+											data: datisenatozona },
+											    
+											    {
 											"label": "Risultati Senato Italia",
 											data: [32.22, 19.14, 17.61, 14.43, 4.26, 3.28, 2.37, 6.69]},
 											   {
 											"label": "Risultati Senato Bologna",
-											data: [21.97, 28.15, 13.99, 9.75, 3.48, 9.56, 5.43, 7.67]},
-											   {
-											"label": "Risultati Senato Zona",
-											data: datisenatozona }
+											data: [21.97, 28.15, 13.99, 9.75, 3.48, 9.56, 5.43, 7.67]}
 											   ]
 										};
 									    
