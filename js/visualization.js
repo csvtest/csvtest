@@ -151,7 +151,7 @@ $(document).ready(function(){
 								})
 							    }
 							});
-							    //inizio
+					//inizio Segnalazioni
 							$.ajax({
 							    dataType: "json",
 							    url: "geojson_folder/testsegna.json",
@@ -261,6 +261,29 @@ $(document).ready(function(){
 
 												var ctx = document.getElementById("CategorieChart").getContext("2d");
 												var myChart = new Chart(ctx, config);
+									    }
+									})
+								    }
+								})
+							    //fine segnalazioni
+					//inizio Politiche
+							$.ajax({
+							    dataType: "json",
+							    url: "geojson_folder/testsegna.json",
+							    success: function(datisegn) {
+								datisegn.forEach(function(arrayItem) {
+								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
+									    $('#EleChart').remove();
+									    $('#chartContainerEle').append('<canvas id="EleChart"><canvas>');
+									    var data =
+										{labels: ["pd", "Leu", "m5s", "fi", "lega", "pap", "casapound", "8", "9", "10", "11", "12", "13", "14", "15", "16", "18"],
+										 datasets: {
+											data: [300, 50, 100, 152, 432, 323, 234,123, 21, 321, 32, 12, 42, 15, 63, 28, 84, 102]}}
+									    var radarpolitico = document.getElementById("EleChart").getContext("2d");
+									    var myRadarChart = new Chart(radarpolitico, {
+										    type: 'radar',
+										    data: data
+										});
 									    }
 									})
 								    }
