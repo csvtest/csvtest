@@ -321,7 +321,18 @@ $(document).ready(function(){
 												},
 												legend: {
 													    display: false
-													 }
+													 },
+												"scales": {
+												    "yAxes": [{
+													"ticks": {
+													    "beginAtZero": true,
+													"max": 35,
+													    "callback": function(value, index, values) {
+															return value + '%';
+														}
+													}
+												    }]
+												}
 											    }
 										      });
 									    var opzionisenato = {
@@ -338,6 +349,7 @@ $(document).ready(function(){
 										    "xAxes": [{
 											"ticks": {
 											    "beginAtZero": true,
+											    "max": 35,
 											    "callback": function(value, index, values) {
 													return value + '%';
 												}
