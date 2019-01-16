@@ -278,7 +278,7 @@ $(document).ready(function(){
 									    var dataele =
 										{labels: ["pd", "Leu", "m5s", "fi", "lega", "pap", "casapound", "8", "9", "10", "11", "12", "13", "14", "15", "16", "18"],
 										 datasets: [{
-											data: [28.15, 28.15, 28.15, 28.15, 28.15, 28.15, 28.15,28.15, 28.15, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17]}]
+											data: [3, 3, 3, 3, 3, 3, 3,3, 3, 3, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17]}]
 										};
 									    var radarpolitico = document.getElementById("EleChart").getContext("2d");
 									    var myRadarChart = new Chart(radarpolitico, {
