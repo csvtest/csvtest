@@ -33,3 +33,6 @@ http://inumeridibolognametropolitana.it/basi-territoriali-del-comune-di-bologna
 
 http://dati.comune.bologna.it/node/1029
 --> dataset conversione AREE_ST - ZONE - QUARTIERI
+
+https://elezionistorico.interno.gov.it/index.php?tpel=S&dtel=04/03/2018&tpa=I&tpe=L&lev0=0&levsut0=0&lev1=8&levsut1=1&lev2=1&levsut2=2&lev3=4&levsut3=3&ne1=8&ne2=81&ne3=814&es0=S&es1=S&es2=S&es3=S&ms=S
+--> DATI DEL MINISTERO PER LE PERCENTUALI DEI VOTI 
