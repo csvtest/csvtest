@@ -48,10 +48,10 @@
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
 	dcat:landingPage <INSERIRE URL ACCESSO AL DATASET> ;
 	dct:conformsTo  <http://dati.gov.it/resource/Standard/standard-org> ;
-	prov:wasDerivedFrom <http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0500VALUTAZIONE_ESITI_STA> ;
-	prov:wasDerivedFrom <http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0280EDICONSICUREZZASTA> ;
-	prov:wasDerivedFrom <http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0540RUBRICA_VAL> ;
-	prov:wasDerivedFrom <http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0400SCUANAGRAFESTAT> ;
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/244> ; #redditi
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3328> ; #politiche camera
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3323> ; #politiche senato
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/161> #aree statistiche ;
 
 #Distribution dataset 1 
 
