@@ -84,9 +84,17 @@ Che in documentazione saranno analizzati nei seguenti blocchi:
 ## Dataset puliti
 I dataset che abbiamo utilizzato, ma ripuliti:
 
-| Dataset ID | URI (pulito) | URI (originale) |
-| ---------- | ------------ | --------------- |
-|  |  |  |
+| Dataset ID | URI (pulito) |
+| ---------- | ------------ |
+| 1.0 |  |  
+| 1.1 |  |  
+| 2.0 |  |  
+| 3.0 |  |  
+| 3.1 |  |  
+| 4.0 |  |  
+| 4.1 |  |  
+| 5.0 |  |  
+| 5.1 |  | 
 
 ## Dataset intermedi
 I dataset che abbiamo generato nel corso del progetto integrando i dati selezionati all' interno dei dataset ripuliti:
@@ -126,7 +134,25 @@ Gli indici di completezza sono i seguenti:
 
 | Dataset | Valori totali | Valori nulli | Completezza |
 | ------- | ------------- | ------------ | ----------- |
-|         |               |              |             |
+| Politiche | - | - | - |
+| 1.0 | 10428 | 0 | 100% |
+| 1.1 | 4257 | 0 | 100% |
+| 2.0 | 15130 | 0 | 100% |
+| Redditi | - | - | - |
+| 3.0 | 92 | 0 | 100% |
+| 3.1 | 92 | 0 | 100% |
+| 3.2 | 3097 | 0 | 100% |
+| 3.3 | 92 | 0 | 100% |
+| 3.4 | 92 | 0 | 100% |
+| 3.5 | 94 | 0 | 100% |
+| 3.6 | 92 | 0 | 100% |
+| 3.7 | 92 | 0 | 100% |
+| Aree | - | - | - |
+| 4.0 |  |  |  |
+| 4.1 | 360 | 0 | 100% |
+| Segnalazioni | - | - | - |
+| 5.0 |  |  |  |
+| 5.1 | 63485 | 6695 | 89.45% |
 
 [NOSTRO DATASET ... metadati di qualità?]
 _______________________________________________________________
