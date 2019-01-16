@@ -1,0 +1,26 @@
+@prefix dcatapit <http://dati.gov.it/onto/dcatapit> . 
+@prefix dct <http://purl.org/dc/terms/> .
+@prefix dcat <http://www.w3.org/ns/dcat#> .
+@prefix foaf <http://xmlns.com/foaf/0.1/> .
+@prefix owl <http://www.w3.org/2002/07/owl#> .
+@prefix prov <http://www.w3.org/ns/prov#> .
+@prefix xsd <http://www.w3.org/2001/XMLSchema#> .
+
+#Catalog
+
+< INSERIRE URI NOSTRA RACCOLTA >
+	a dcatapit:Catalog , dcat:Catalog ;
+	dct:title "Catalogo del progetto NOME DEL PROGETTO"@it ;
+	dct:description "Il catalogo dei dati aperti del progetto NOME DEL PROGETTO"@it ;
+  dct:publisher <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
+	dct:modified "2018-01-19"^^xsd:date ;
+  dct:issued "2018-01-19"^^xsd:date ;
+  dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+	foaf:homepage <INSERIRE URI HOMEPAGE> ;
+  dcat:dataset <INSERIRE URI DATASET 1> ;
+	dcat:dataset <INSERIRE URI DATASET 2> ;
+	dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> .
+
+
+#Dataset 1
+
