@@ -35,22 +35,7 @@ $(document).ready(function(){
 						function onEachFeature(feature, layer) {
 						    layer.bindPopup(feature.properties.Nome_zona);
 						    layer.on( 'click', function(e) {
-							if (selected) {
-								selected.setStyle({
-									fillColor: "#a6a6a6",
-									color: "grey",
-									fillOpacity: 0.8
-								}) //ripristina l'elemento all'origine quando si seleziona un nuovo elemento
-							}
-							//determina una nuovo elemento selezionato
-							var selected = e.target
-							//porta il selezionato in primo piano
-							selected.bringToFront()
-							//assegna un nuovo aspetto all'elemento selezionato
-							selected.setStyle({
-								'color': 'red',
-								'fillColor': '#d27979',
-							})
+							
 
 							$.ajax({
 							    dataType: "json",
@@ -70,7 +55,7 @@ $(document).ready(function(){
 									listRedditi.push(arrayItem["Reddito medio pro-capite 2015"]);
 									listRedditi.push(arrayItem["Reddito medio pro-capite 2016"]);
 									var listIndex = [];
-									listIndex.push(arrayItem["Reddito pro-capite 2009"]);
+									listIndex.push(arrayItem["Reddito medio pro-capite 2009"]);
 									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.011));
 									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.038));
 									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.070));
