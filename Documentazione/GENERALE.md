@@ -28,21 +28,10 @@ _______________________________________________________________
 
 # Task 0: Scenario applicativo
 
-Il portale OpenData Bologna mette a disposizione interessanti collezioni di dataset di natura sociale, geografica, economica e politica relative alla Città Metropolitana di Bologna. 
+Le elezioni politiche del 4 marzo 2018 hanno 
+Il portale OpenData Comune di Bologna mette a disposizione interessanti collezioni di dataset di natura sociale, economica, geografica e politica, relative alla Città Metropolitana di Bologna. 
 
-|
 
-|
-
-|
-
-Alle 1:27 del 16/01/2019 FABIO MARIANI ha proclamato la sua intenzione di diventare lo schiavo SCRIBA e SESSUALE del gruppo formato da FROCI, LELLE e VALENTINA. 
-
-|
-
-|
-
-|
 
 _______________________________________________________________
 
