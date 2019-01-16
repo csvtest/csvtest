@@ -66,7 +66,7 @@ $(document).ready(function(){
 								'mouseout': function (e) {
 								      dehighlight(e.target);
 								    },
-							    'click', function(e) {
+  								'click': function(e) {
 							select(e.target);
 							$.ajax({
 							    dataType: "json",
