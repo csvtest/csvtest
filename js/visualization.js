@@ -44,7 +44,6 @@ $(document).ready(function(){
 							}
 							//determina una nuovo elemento selezionato
 							var selected = e.layer
-							map.fitBounds(e.layer.getBounds())
 							//porta il selezionato in primo piano
 							selected.bringToFront()
 							//assegna un nuovo aspetto all'elemento selezionato
