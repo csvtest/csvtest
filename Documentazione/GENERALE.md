@@ -1,4 +1,4 @@
-# Introduzione (Task 0)
+# Introduzione
 
 Il progetto è stato sviluppato nell'ambito dell' esame di *Open Access and Digital Ethics* del corso di laurea magistrale **Digital Humanities and Digital Knowledge** dell' Università di Bologna. 
 
@@ -48,8 +48,7 @@ Il piano di lavoro è stato suddiviso nelle seguenti sezioni:
 
 _______________________________________________________________
 
-<a name="scenario-applicativo"/>
-# Task 0: Scenario applicativo
+# Scenario applicativo
 
 Dalle elezioni del 1946, prime elezioni della storia italiana dopo il periodo di dittatura fascista, l’Emilia-Romagna ha sempre votato in maggioranza le forze di (centro)sinistra; le ultime Politiche del 4 marzo 2018 ci hanno invece restituito una differente cartina regionale.
 Partendo da questa considerazione abbiamo deciso di analizzare la situazione politico-sociale Bolognese da diversi punti di vista.
@@ -61,11 +60,11 @@ portale OpenData Comune di Bologna mette a disposizione interessanti collezioni 
 
 _______________________________________________________________
 
-# Task 1: Dataset
+# Dataset
 
 Abbiamo selezionato dataset singoli e serie di dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it), sito di Bologna dedicato alla trasparenza e accessibilità dei dati aperti, secondo i principi dell'Open Government.
 
-## Dataset Usati
+## Dataset usati
 
 I dataset che abbiamo utilizzato sono:
 
@@ -96,21 +95,21 @@ Che in documentazione saranno analizzati nei seguenti blocchi:
 - DATASET CITIZEN MANAGEMENT: ID [5.0 ; 5.1] 
 
 
-## Dataset Puliti
+## Dataset puliti
 I dataset che abbiamo utilizzato, ma ripuliti:
 
 | Dataset ID | URI (pulito) | URI (originale) |
 | ---------- | ------------ | --------------- |
 |  |  |  |
 
-## Dataset Intermedi
+## Dataset intermedi
 I dataset che abbiamo generato nel corso del progetto integrando i dati selezionati all' interno dei dataset ripuliti:
 
 | Dataset ID | Dataset 1 | Dataset 2 |
 | ---------- | --------- | --------- |
 |  |  |  |
 
-## Mashup
+## Dataset finali
 Il nostro dataset finale, risultante dall'integrazione dei dati contenuti all'interno dei dataset intermedi:
 
 [NOSTRO DATASET (URI O TABELLINA)]
@@ -466,7 +465,7 @@ L'informazione sul tipo di licenza è metadato indispensabile per determinare co
 
 I dataset pubblicati su OpenData Bologna rispettano queste condizioni.
 
-#### DATASET REDDITI
+#### DATASET REDDITI, DATASET POLITICHE
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
 | Creative Commons | Attribuzione Zero |
@@ -480,7 +479,7 @@ Il dichiarante “*apertamente, pienamente, permanentemente, irrevocabilmente e 
 In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore, nella misura consentita dalla legge: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*: non vi è alcuna garanzia sul dataset stesso, e ogni responsabilità per qualsivoglia utilizzo del dataset nella misura consentita dalla legge è declinata.
 
 
-#### DATASET CITIZEN MANAGEMENT
+#### DATASET CITIZEN MANAGEMENT, DATASET AREE STATISTICHE 
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 | Creative Commons | Attribuzione |
@@ -490,15 +489,6 @@ La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https:/
 Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo consentono di condividere, adattare e creare un datataset, anche per finalità commerciali, nel rispetto però di due vincoli: 
 - attribuire la paternità del dataset, fornire un link alla licenza e indicare le modifiche; 
 - distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
-
-#### DATASET POLITICHE 
-
-La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
-
-
-#### DATASET AREE STATISTICHE 
-
-La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 
 ### [NOSTRO DATASET MASHATO]
