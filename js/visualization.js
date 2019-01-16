@@ -54,7 +54,7 @@ $(document).ready(function(){
 							}    
 							if (selected) { selected.resetHighlight();}
 							var selected = e.layer;
-							selected.highlightFeature();
+							selected.highlightFeature(e);
 							$.ajax({
 							    dataType: "json",
 							    url: "geojson_folder/Reddito_2009-2016_per_zone.json",
