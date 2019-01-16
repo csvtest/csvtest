@@ -28,7 +28,7 @@
 <INSERISCI URI RISORSA>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "INSERISCI IDENTIFIER" ;
-	dct:title "INSERISCI TITOLO"@en ;
+	dct:title "INSERISCI TITOLO"@it ;
 	dct:description "Il dataset contiene i dati divisi per zona di Bologna di: redditi medi pro-capite dei contribuenti bolognesi dal 2009 al 2016, i risutati degli scrutini alle elezioni politiche per l'elezione al Senato della Repubblica e alla Camera dei Deputati del 4.3.2018, e il numero di residenti."@it ;
 	dct:modified "2018-01-16"^^xsd:date ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
