@@ -316,12 +316,14 @@ $(document).ready(function(){
 												"callbacks": {
 												    "label": function(tooltipItems, data) {
 													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.yLabel + '%';
-												    },
+												    }
+												}
+												},
 												legend: {
 													    display: false
 													 }
-												}
-											    }}});
+											    }
+										      });
 									    var opzionisenato = {
 										"tooltips": {
 												"enabled": true,
