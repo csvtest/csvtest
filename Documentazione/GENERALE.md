@@ -34,18 +34,6 @@ Il piano di lavoro è stato suddiviso nelle seguenti sezioni:
 6. [Analisi della sostenibilità](#analisi-della-sostenibilità)
 7. [Visualizzazione](#visualizzazione)
 
-| Task | Titolo | Descrizione |
-| ---- | ---- | ---- |
-| 0 |  | Presentazione del progetto |
-| 1 | Dataset | Dataset Usati<br>Dataset Puliti<br>Dataset Intermedi<br>Mashup | 
-| 2 | Analisi della qualità informativa | Requisiti |
-| 3 | Analisi etico-giuridica | Privacy<br>Licenze<br>Finalità |
-| 3.1 | Privacy | Checklist giuridica<br>De-identificazione<br>Pulitura<br>Merging |
-| 4 | Analisi tecnica | Formati<br>Metadati<br>Provenance<br>URI |
-| 4.1 |
-| 5 | Analisi sostenibilità | Modello, curation |
-| 6 | Visualizzazione | - |
-
 _______________________________________________________________
 
 # Scenario applicativo
