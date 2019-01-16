@@ -283,20 +283,36 @@ $(document).ready(function(){
 					//inizio Politiche
 							$.ajax({
 							    dataType: "json",
-							    url: "geojson_folder/testsegna.json",
+							    url: "geojson_folder/Politiche_Senato_Prova.json",
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
 									    $('#EleChart').remove();
 									    $('#chartContainerEle').append('<canvas id="EleChart"><canvas>');
-									    var dataele =
-										{labels: ["pd", "Leu", "m5s", "fi", "lega", "pap", "casapound", "8", "9"],
+									    var datisenatozona = [];
+									    datisenatozona.push(arrayItem["Percentuale voti Movimento 5 Stelle"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Partito Democratico"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Lega Nord"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Forza Italia"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Fratelli d Italia"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Liberi e Uguali"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Piu Europa"]);
+									    datisenatozona.push(100 - datisenatozona.reduce((x, y) => x + y));
+									    var dataelesen =
+										{labels: ["Movimento 5 Stelle", "Partito Democratico", "Lega Nord", "Forza Italia", "Fratelli D'Italia", "Liberi E Uguali", "Più Europa", "Altri Partiti"],
 										 datasets: [{
-											data: [28, 15, 18, 18, 18, 18, 18, 18, 3]}]
+											"label": "Risultati Senato Italia",
+											data: [32.22, 19.14, 17.61, 14.43, 4.26, 3.28, 2.37, 6.69]},
+											   {
+											"label": "Risultati Senato Bologna",
+											data: [21.97, 28.15, 13.99, 9.75, 3.48, 9.56, 5.43, 7.67]},
+											   {
+											"label": "Risultati Senato Zona",
+											data: datisenatozona }
+											   ]
 										};
-									    //""
 									    var radarpolitico = document.getElementById("EleChart").getContext("2d");
-									    new Chart(radarpolitico,{"type":'radar',"data": dataele});
+									    new Chart(radarpolitico,{"type":'radar',"data": dataelesen});
 									    }
 									})
 								    }
