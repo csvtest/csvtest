@@ -20,22 +20,7 @@ $(document).ready(function(){
 						    return {
 							fillColor: getColor(feature.properties.Codice_zona),
 						    };
-						};
-						function highlightFeature(e) {
-						    var layer = e.target;
-
-						    layer.setStyle({
-							weight: 5,
-							color: '#666',
-							dashArray: '',
-							fillOpacity: 0.7
-						    });
-
-						    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-							layer.bringToFront();
-						    }
-						};
-						
+						};						
 						var geojson = $.ajax({
 						    dataType: "json",
 						    url: "geojson_folder/ZoneBologna.geojson",
@@ -49,12 +34,14 @@ $(document).ready(function(){
 						function onEachFeature(feature, layer) {
 						    layer.bindPopup(feature.properties.Nome_zona);
 						    layer.on('click', function(e) {
-							function resetHighlight(e) {
-							    geojson.resetStyle(e.target);
-							}    
-							if (selected) { selected.resetHighlight();}
+							if (selected) { geojson.resetStyle(e.target);}
 							var selected = e.layer;
-							selected.highlightFeature(e);
+							selected.setStyle({
+								weight: 5,
+								color: '#666',
+								dashArray: '',
+								fillOpacity: 0.7
+							 });
 							$.ajax({
 							    dataType: "json",
 							    url: "geojson_folder/Reddito_2009-2016_per_zone.json",
