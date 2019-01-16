@@ -315,8 +315,11 @@ $(document).ready(function(){
 												"mode": 'single',
 												"callbacks": {
 												    "label": function(tooltipItems, data) {
-													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel + '%';
-												    }
+													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.yLabel + '%';
+												    },
+												legend: {
+													    display: false
+													 }
 												}
 											    }}});
 									    var opzionisenato = {
