@@ -287,7 +287,7 @@ $(document).ready(function(){
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Codice_zona) {
-									    $('#EleButton').remove();
+									    $('#ELEButton').remove();
 									    $('#EleChartrad').remove();
 									    $('#EleChartbar').remove();
 									    $('#pulsanteELE').append('<div class="row" id="ELEButton"><form><label class="class="radio-inline active"><input type="radio" id="camera" value="camera" name="chart" autocomplete="off" checked>Camera dei Deputati</label><label class="radio-inline"><input type="radio" id="senato" value="senato" name="chart" autocomplete="off">Senato</label></form>');
