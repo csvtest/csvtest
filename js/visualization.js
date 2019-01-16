@@ -297,7 +297,7 @@ $(document).ready(function(){
 									    datisenatozona.push(arrayItem["Percentuale voti Fratelli d Italia"]);
 									    datisenatozona.push(arrayItem["Percentuale voti Liberi e Uguali"]);
 									    datisenatozona.push(arrayItem["Percentuale voti Piu Europa"]);
-									    datisenatozona.push(100 - datisenatozona.reduce((x, y) => x + y));
+									    datisenatozona.push(Math.round(100 - datisenatozona.reduce((x, y) => x + y)));
 									    var dataelesen =
 										{labels: ["Movimento 5 Stelle", "Partito Democratico", "Lega Nord", "Forza Italia", "Fratelli D'Italia", "Liberi E Uguali", "Più Europa", "Altri Partiti"],
 										 datasets: [{
