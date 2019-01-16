@@ -310,8 +310,29 @@ $(document).ready(function(){
 										};
 			
 									    var radarpolitico = document.getElementById("EleChartrad").getContext("2d");
-									    new Chart(radarpolitico,{"type":'radar',"data": dataelesen ,"options":{"beginAtZero": true}});
-									    
+									    new Chart(radarpolitico,{"type":'radar',"data": dataelesen ,"options":opzionisenato});
+									    var opzionisenato = {
+										"tooltips": {
+												"enabled": true,
+												"mode": 'single',
+												"callbacks": {
+												    "label": function(tooltipItems, data) {
+													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.yLabel + '%';
+												    }
+												}
+											    },
+										"scales": {
+										    "xAxes": [{
+											"ticks": {
+											    "beginAtZero": true
+											    "callback": function(value, index, values) {
+													return value + '%';
+												}
+											}
+										    }]
+										}
+										    
+										    
 									    var dataelesentot =
 										{labels: ["Movimento 5 Stelle", "Partito Democratico", "Lega Nord", "Forza Italia", "Fratelli D'Italia", "Liberi E Uguali", "Più Europa", "Altri Partiti"],
 										 datasets: [{
@@ -325,8 +346,9 @@ $(document).ready(function(){
 											data: datisenatozona }
 											   ]
 										};
+									    
 									    var barrapolitica = document.getElementById("EleChartbar").getContext("2d");
-									    new Chart(barrapolitica,{"type":"horizontalBar","data": dataelesentot ,"options":{"beginAtZero": true}});
+									    new Chart(barrapolitica,{"type":"horizontalBar","data": dataelesentot ,"options":opzionisenato});
 									    }
 									})
 								    }
