@@ -427,7 +427,7 @@ L'informazione sul tipo di licenza è metadato indispensabile per determinare co
 
 I dataset pubblicati su OpenData Bologna rispettano queste condizioni.
 
-#### DATASET REDDITI
+#### DATASET REDDITI & DATASET POLITICHE
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
 | Creative Commons | Attribuzione Zero |
@@ -441,7 +441,7 @@ Il dichiarante “*apertamente, pienamente, permanentemente, irrevocabilmente e 
 In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore, nella misura consentita dalla legge: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*: non vi è alcuna garanzia sul dataset stesso, e ogni responsabilità per qualsivoglia utilizzo del dataset nella misura consentita dalla legge è declinata.
 
 
-#### DATASET CITIZEN MANAGEMENT
+#### DATASET CITIZEN MANAGEMENT & DATASET AREE STATISTICHE 
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 | Creative Commons | Attribuzione |
@@ -450,16 +450,8 @@ La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https:/
 
 Le licenze per l’open data con richiesta di attribuzione e condivisione allo stesso modo consentono di condividere, adattare e creare un datataset, anche per finalità commerciali, nel rispetto però di due vincoli: 
 - attribuire la paternità del dataset, fornire un link alla licenza e indicare le modifiche; 
-- distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
+- distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive.  
 
-#### DATASET POLITICHE 
-
-La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
-
-
-#### DATASET AREE STATISTICHE 
-
-La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 
 ### [NOSTRO DATASET MASHATO]
