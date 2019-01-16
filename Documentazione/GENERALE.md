@@ -28,12 +28,10 @@ _______________________________________________________________
 
 # Task 0: Scenario applicativo
 
-Dalle elezioni del 1946, prime elezioni della storia italiana dopo il periodo di dittatura fascista, l’Emilia-Romagna ha sempre votato in maggioranza le forze di (centro)sinistra; le ultime Politiche del 4 marzo 2018 ci hanno invece restituito una differente cartina regionale.
-Partendo da questa considerazione abbiamo deciso di analizzare la situazione politico-sociale Bolognese da diversi punti di vista.
+Dalle elezioni del 1948, prime elezioni della storia italiana dopo il periodo di dittatura fascista in cui si potè votare per Camera e Senato, l’Emilia-Romagna ha sempre votato in maggioranza le forze di (centro)sinistra; le ultime Politiche del 4 marzo 2018 ci hanno invece restituito una differente cartina regionale.
+Partendo da questa considerazione abbiamo deciso di analizzare la situazione politico-economica-sociale Bolognese degli ultimi anni, per introdurre l'utente alla questione, lasciandolo però libero di analizzare ed interpretare tali dati a suo piacimento.
 
-
-portale OpenData Comune di Bologna mette a disposizione interessanti collezioni di dataset di natura sociale, economica, geografica e politica, relative alla Città Metropolitana di Bologna. 
-
+Per farlo abbiamo utilizzato i dataset contenuti all'interno di http://dati.comune.bologna.it/, sito web del progetto **OpenData Comune di Bologna**, in cui il Comune di Bologna pubblica e mette a disposizione interessanti collezioni di dataset di natura sociale, economica, geografica e politica, relative alla Città Metropolitana di Bologna. 
 
 
 _______________________________________________________________
