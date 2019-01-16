@@ -113,20 +113,45 @@ _______________________________________________________________
 
 ## Requisiti 
 
-I requisiti che abbiamo stabilito per controllare il livello di qualità di un dataset è:
+I requisiti che abbiamo stabilito per controllare il livello di qualità dei dati utilizzati sono:
+
+|  | Accuratezza | Completezza<br>(dati) | Completezza<br>(dataset) | Coerenza | Tempestività |
+| -------| ----------- | --------- | ----- | ----- | ------ |
+| Politiche |  |  |  |  |  |
+| 1.0 |  |  |  |  |  |
+| 1.1 |  |  |  |  |  |
+| 2.0 |  |  |  |  |  |
+| Redditi |  |  |  |  |  |
+| 3.0 |  |  |  |  |  |
+| 3.1 |  |  |  |  |  |
+| 3.2 |  |  |  |  |  |
+| 3.3 |  |  |  |  |  |
+| 3.4 |  |  |  |  |  |
+| 3.5 |  |  |  |  |  |
+| 3.6 |  |  |  |  |  |
+| 3.7 |  |  |  |  |  |
+| Aree |  |  |  |  |  |
+| 4.0 |  |  |  |  |  |
+| 4.1 |  |  |  |  |  |
+| Segnalazioni |  |  |  |  |  |
+| 5.0 |  |  |  |  |  |
+| 5.1 |  |  |  |  |  |
+
+
+I requisiti che abbiamo stabilito per controllare il livello di qualità dei nostri dataset sono:
 
 ~~* l'**accuratezza** (semantica e sintattica): la misura secondo la quale un dataset rappresenta correttamente le caratteristiche di un oggetto, una situazione o un evento del mondo reale;
 * la **rilevanza**: la misura secondo la quale i dati contengono le informazioni necessarie per supportare la finalità;
 * l'**attualità**: la misura secondo la quale i dati sono messi a disposizione senza ritardi non necessari;
 * la **consistenza**: la misura secondo la quale i dati non contengono contraddizioni interne che possano renderne l'utilizzo difficile o impossibile.~~
 
-| Misura | Definizione | Descrizione | Soluzione |
-| -------| ----------- | ----------- | --------- |
-| **Completezza** | la misura secondo la quale un dataset include quei dati che sono necessari al supporto della finalità per cui è stato creato | Percentuale di valori validi nel dataset | Script(**mettere link**) |
-| **Disponibilità** | la misura secondo la quale i dati risultano essere facilmente accessibili ora e nel tempo | Analisi dell'URI | [URI dei dataset](#uri-dei-dataset) |
-| **Processabilità** | la misura secondo la quale i dati possono essere gestiti da processi automatizzati | Analisi dei formati | [Formati](#formati) |
-| **Credibilità** | la misura secondo la quale i dati si basano su fonti attendibili o forniti da organizzazioni affidabili | Metadati di *provenance* | [Provenance](#provenance) |
-| **Conformità** | la misura secondo la quale vengono seguite una serie di esplicite regole o standard di pubblicazione e descrizione dei dati | Metadati descrittivi | [Metadati](#metadati) |
+| Requisito | Descrizione |  |
+| -------| ----------- | --------- |
+| **Completezza**<br>(del **dataset**) | Percentuale di valori validi nel dataset | Script(**mettere link**) |
+| **Disponibilità** | Analisi dell'URI | [URI dei dataset](#uri-dei-dataset) |
+| **Processabilità** | Analisi dei formati | [Formati](#formati) |
+| **Credibilità** | Metadati di *provenance* | [Provenance](#provenance) |
+| **Conformità** | Metadati descrittivi | [Metadati](#metadati) |
 
 [CONTINUARE ...]
 
