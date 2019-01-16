@@ -287,8 +287,10 @@ $(document).ready(function(){
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Codice_zona) {
-									    $('#EleChart').remove();
-									    $('#chartContainerEle').append('<canvas id="EleChart"><canvas>');
+									    $('#EleChartrad').remove();
+									    $('#EleChartbar').remove();
+									    $('#chartContainerEle').append('<canvas id="EleChartrad"><canvas>');
+									    $('#chartContainerEle').append('<canvas id="EleChartbar"><canvas>');
 									    var datisenatozona = [];
 									    datisenatozona.push(arrayItem["Percentuale voti Movimento 5 Stelle"]);
 									    datisenatozona.push(arrayItem["Percentuale voti Partito Democratico"]);
@@ -299,6 +301,18 @@ $(document).ready(function(){
 									    datisenatozona.push(arrayItem["Percentuale voti Piu Europa"]);
 									    datisenatozona.push((100 - datisenatozona.reduce((x, y) => x + y)).toFixed(2));
 									    var dataelesen =
+										{labels: ["Movimento 5 Stelle", "Partito Democratico", "Lega Nord", "Forza Italia", "Fratelli D'Italia", "Liberi E Uguali", "Più Europa", "Altri Partiti"],
+										 datasets: [
+											   {
+											"label": "Risultati Senato Zona",
+											data: datisenatozona }
+											   ]
+										};
+			
+									    var radarpolitico = document.getElementById("EleChartrad").getContext("2d");
+									    new Chart(radarpolitico,{"type":'radar',"data": dataelesen ,"options":{"beginAtZero": true}});
+									    
+									    var dataelesentot =
 										{labels: ["Movimento 5 Stelle", "Partito Democratico", "Lega Nord", "Forza Italia", "Fratelli D'Italia", "Liberi E Uguali", "Più Europa", "Altri Partiti"],
 										 datasets: [{
 											"label": "Risultati Senato Italia",
@@ -311,9 +325,8 @@ $(document).ready(function(){
 											data: datisenatozona }
 											   ]
 										};
-			
-									    var radarpolitico = document.getElementById("EleChart").getContext("2d");
-									    new Chart(radarpolitico,{"type":'radar',"data": dataelesen ,"options":{"beginAtZero": true}});
+									    var barrapolitica = document.getElementById("EleChartbar").getContext("2d");
+									    new Chart(barrapolitica,{"type":"horizontalBar","data": dataelesen ,"options":{"beginAtZero": true}});
 									    }
 									})
 								    }
