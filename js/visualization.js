@@ -286,7 +286,7 @@ $(document).ready(function(){
 							    url: "geojson_folder/Politiche_Senato_Prova.json",
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
-								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
+								    if (arrayItem["Zona"] == feature.properties.Codice_zona) {
 									    $('#EleChart').remove();
 									    $('#chartContainerEle').append('<canvas id="EleChart"><canvas>');
 									    var datisenatozona = [];
