@@ -52,7 +52,7 @@ $(document).ready(function(){
 						    dataType: "json",
 						    url: "geojson_folder/ZoneBologna.geojson",
 						    success: function(data) {
-							var geojson = new L.GeoJson(data, {
+							var geojson = new L.geoJson(data, {
 							    style: stylegeo,
 							    onEachFeature: onEachFeature
 							}).addTo(map);
