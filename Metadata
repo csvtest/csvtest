@@ -1,8 +1,8 @@
 @prefix dcatapit <http://dati.gov.it/onto/dcatapit> . 
 @prefix dct <http://purl.org/dc/terms/> .
 @prefix dcat <http://www.w3.org/ns/dcat#> .
-@prefix foaf <http://xmlns.com/foaf/0.1/> .
-@prefix owl <http://www.w3.org/2002/07/owl#> .
+@prefix foaf <http://xmlns.com/foaf/0.1/> . ?????
+@prefix owl <http://www.w3.org/2002/07/owl#> . ????? 
 @prefix prov <http://www.w3.org/ns/prov#> .
 @prefix xsd <http://www.w3.org/2001/XMLSchema#> .
 
@@ -34,8 +34,42 @@
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ; 
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
-	dct:rightsHolder <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
+	dct:subject <http://eurovoc.europa.eu/700> , <http://eurovoc.europa.eu/3319> , <http://eurovoc.europa.eu/3460>; # elezioni nazionali,  distribuzione del reddito , residenza
+	dcat:keyword "elezioni"@it , "bologna"@it, "redditi"@it ;
+	dct:spatial <https://www.geonames.org/3181928/> ;
 	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/OTHER> ; # other = ogni 5 anni
-	
+	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
+	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
+	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
+	dcat:contactPoint <INSERIRE PUNTO DI CONTATTO> ;
+	dct:rightsHolder <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
+	dct:publisher <INSERIRE URI PUBLISHER> ;
+	dct:creator <INSERIRE URI CREATOR> ;
+	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+	dcat:landingPage <INSERIRE URL ACCESSO AL DATASET> ;
+	dct:conformsTo  <http://dati.gov.it/resource/Standard/standard-org> ;
+	prov:wasDerivedFrom <http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0500VALUTAZIONE_ESITI_STA> ;
+	prov:wasDerivedFrom <http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0280EDICONSICUREZZASTA> ;
+	prov:wasDerivedFrom <http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0540RUBRICA_VAL> ;
+	prov:wasDerivedFrom <http://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?datasetId=DS0400SCUANAGRAFESTAT> ;
 
+#Distribution dataset 1 
+
+<URI DISTRIBUZIONE> 
+	a dcatapit:Distribution , dcat:Distribution ;
+	dct:title "Distribuzione RDF di BOLIDE."@it ;
+	dct:description "Distribuzione RDF-Turtle di BOLIDE"@it ;
+	dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
+	dct:license <http://creativecommons.org/licenses/by/4.0> ;
+	dcat:downloadURL <URL PER IL DOWNLOAD> ;
+	dcat:accessURL <URL PER L'ACCESSO> .
+
+<URI DISTRIBUZIONE > 
+	a dcatapit:Distribution , dcat:Distribution ;
+	dct:title "CSV distribution of the SEBuCCI dataset."@it ;
+	dct:description "."@it ;
+	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+	dct:license <http://creativecommons.org/licenses/by/4.0> ;
+	dcat:downloadURL <URL PER IL DOWNLOAD> ;
+	dcat:accessURL <URL PER L'ACCESSO> .
 
