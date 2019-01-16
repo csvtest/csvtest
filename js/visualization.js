@@ -159,6 +159,8 @@ $(document).ready(function(){
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
 									    $('#CategorieChart').remove();
+									    $('#SegnalazioniButton').remove();
+									    $('#pulsanteSEGN').append('<div class="row" id="SegnalazioniButton"><div class="col-lg-6"><form><label class="class="radio-inline active"><input type="radio" id="sociale" value="sociale" name="chart" autocomplete="off" checked> Degrado Sociale </label><label class="radio-inline"><input type="radio" id="ambientale" value="ambientale" name="chart" autocomplete="off">Degrado Ambientale</label><label class="class="radio-inline active"><input type="radio" id="microcriminalita" value="microcriminalita" name="chart" autocomplete="off"> Microcriminalità </label></form></div>');
 									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
 												Chart.pluginService.register({
 												beforeDraw: function (chart) {
