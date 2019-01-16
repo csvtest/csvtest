@@ -311,8 +311,9 @@ $(document).ready(function(){
 											data: datisenatozona }
 											   ]
 										};
+			
 									    var radarpolitico = document.getElementById("EleChart").getContext("2d");
-									    new Chart(radarpolitico,{"type":'radar',"data": dataelesen});
+									    new Chart(radarpolitico,{"type":'radar',"data": dataelesen ,"options":{"beginAtZero": true}});
 									    }
 									})
 								    }
