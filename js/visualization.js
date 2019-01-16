@@ -11,11 +11,22 @@ $(document).ready(function(){
 						// var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
 						var limiti = map.getBounds();
 						map.setMaxBounds(limiti);
+					// Settaggio colore feature geojson
+						function getColor(d) {
+						    return d > 9 ? '#800026' :
+								      '#FFEDA0';
+						}
+						function stylegeo(feature) {
+						    return {
+							fillColor: getColor(feature.properties.Codice_zona),
+						    };
+						}
 						$.ajax({
 						    dataType: "json",
 						    url: "geojson_folder/ZoneBologna.geojson",
 						    success: function(data) {
 							L.geoJson(data, {
+							    style: stylegeo,
 							    onEachFeature: onEachFeature
 							}).addTo(map);
 						    }
