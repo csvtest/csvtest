@@ -34,7 +34,7 @@ $(document).ready(function(){
 						function onEachFeature(feature, layer) {
 						    layer.bindPopup(feature.properties.Nome_zona);
 						    layer.on('click', function(e) {
-							if (selected) { geojson.resetStyle(e.target);}
+							geojson.resetStyle(e.target);
 							var selected = e.layer;
 							selected.setStyle({
 								weight: 5,
