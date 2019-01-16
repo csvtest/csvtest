@@ -229,7 +229,7 @@ $(document).ready(function(){
 													elements: {
 														center: {
 															text: '999',
-											  				color: '#FF6384', // Default is #000000
+											  				color: '#000000', // Default is #000000
 											  				fontStyle: 'Arial', // Default is Arial
 											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
 														}
@@ -239,13 +239,13 @@ $(document).ready(function(){
 														  {
 														    render: 'label',
 														    position: 'outside',
-														    fontSize: 14,
+														    fontSize: 18,
 														    fontStyle: 'bold',
 														    fontColor: '#000'
 														  },
 														  {
 														    render: 'value',
-														    fontSize: 14,
+														    fontSize: 18,
 														    fontStyle: 'bold',
 														    fontColor: '#fff'
 														  }
