@@ -122,7 +122,7 @@ I requisiti che abbiamo stabilito per controllare il livello di qualità dei dat
 | 1.1 |  |  | [Tabella](#indici-di-completezza) |  |  |
 | 2.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
 | Redditi |  |  |  |  |  |
-| 3.0 -<br>3.7 |  |  | [Tabella](#indici-di-completezza) |  |  |
+| 3.0 - 3.7 |  |  | [Tabella](#indici-di-completezza) |  |  |
 | Aree |  |  |  |  |  |
 | 4.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
 | 4.1 |  |  | [Tabella](#indici-di-completezza) |  |  |
