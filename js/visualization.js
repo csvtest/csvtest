@@ -294,9 +294,9 @@ $(document).ready(function(){
 										 datasets: [{
 											data: [28, 28, 28, 28, 28, 28, 28, 28, 1]}]
 										};
-									    //'radar'
+									    //"horizontalBar"
 									    var radarpolitico = document.getElementById("EleChart").getContext("2d");
-									    new Chart(radarpolitico,{"type":"horizontalBar","data": dataele});
+									    new Chart(radarpolitico,{"type":'radar',"data": dataele});
 									    }
 									})
 								    }
