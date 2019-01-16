@@ -122,15 +122,15 @@ I requisiti che abbiamo stabilito per controllare il livello di qualità dei dat
 |  | Accuratezza | Completezza <br> (dati) | Completezza <br> (dataset) | Coerenza | Tempestività |
 | -------| ----------- | --------- | ----- | ----- | ------ |
 | Politiche | ### | ### | ### | ### | ### |
-| 1.0 - 1.1 - 2.0 | uso arbitrario di uppercase e lowercase; <br> ambiguità semantica (*Totale voti di cui*) <br> |  | [Tabella](#indici-di-completezza) |  |  |
+| 1.0 - 1.1 - 2.0 | alcuni totali inseriti nella nomenclatura; <br> ambiguità semantica (*Totale voti di cui*); <br> | True | [Tabella](#indici-di-completezza) | uso arbitrario di uppercase e lowercase; |  |
 | Redditi | ### | ### | ### | ### | ### |
-| 3.0 - 3.7 |  |  | [Tabella](#indici-di-completezza) | sovraffollamento di semi-colon (2011); <br> "*SENZA FISSA DIMORA*" e "*NON RESIDENTI NELL' ANNO DI IMPOSTA*" presenti sono nel 2014 |  |
-| Aree |  |  |  |  |  |
-| 4.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
-| 4.1 | True | True | [Tabella](#indici-di-completezza) | nomenclatura incoerente |  |
-| Segnalazioni |  |  |  |  |  |
-| 5.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
-| 5.1 | semantica troppo generica di *Category* <br> semantica poco chiara in alcuni casi di *Subcategory_1*, *Subcategory_2*, *Subcategory_3* | mancano spiegazioni di *Category* <br> mancano spiegazioni di *Subcategory_1*, *Subcategory_2*, *Subcategory_3* <br>  | [Tabella](#indici-di-completezza) | presenza di segnalazioni de-anonimizzate |  |
+| 3.0 - 3.7 | grossolanità della sintassi di nomenclatura; | True | [Tabella](#indici-di-completezza) | sovraffollamento di semi-colon (2011); <br> "*SENZA FISSA DIMORA*" e "*NON RESIDENTI NELL' ANNO DI IMPOSTA*" presenti sono nel 2014; |  |
+| Aree | ### | ### | ### | ### | ### |
+| 4.0 | nomenclatura non armonizzata con [4.1] | True | [Tabella](#indici-di-completezza) | True |  |
+| 4.1 | nomenclatura incoerente; | True | [Tabella](#indici-di-completezza) | True |  |
+| Segnalazioni | ### | ### | ### | ### | ### |
+| 5.0 | nomenclature non armonizzate con [5.1]; <br> sintassi di *TIPO_AREA_* | rischio di de-anonimizzazione | [Tabella](#indici-di-completezza) | True |  |
+| 5.1 | semantica troppo generica di *Category* <br> semantica poco chiara in alcuni casi di *Subcategory_1*, *Subcategory_2*, *Subcategory_3* | mancano spiegazioni di *Category*; <br> mancano spiegazioni di *Subcategory_1*, *Subcategory_2*, *Subcategory_3*; <br>  | [Tabella](#indici-di-completezza) | presenza di segnalazioni de-anonimizzate; |  |
 
 
 I requisiti che abbiamo stabilito per controllare il livello di qualità dei nostri dataset sono:
