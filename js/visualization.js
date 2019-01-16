@@ -21,33 +21,7 @@ $(document).ready(function(){
 							fillColor: getColor(feature.properties.Codice_zona),
 						    };
 						};
-						function highlight (layer) {
-							layer.setStyle({
-								weight: 5,
-								dashArray: ''
-							});
-							if (!L.Browser.ie && !L.Browser.opera) {
-								layer.bringToFront();
-							}
-						}
-
-						function dehighlight (layer) {
-						  if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
-							  layer.resetStyle(e.layer)
-						  }
-						}
-
-						function select (layer) {
-						  if (selected !== null) {
-						    var previous = selected;
-						  }
-							selected = layer;
-							if (previous) {
-							  dehighlight(previous);
-							}
-						}
-
-						var selected = null;
+						
 						$.ajax({
 						    dataType: "json",
 						    url: "geojson_folder/ZoneBologna.geojson",
@@ -60,16 +34,25 @@ $(document).ready(function(){
 						}).error(function() {});
 						function onEachFeature(feature, layer) {
 						    layer.bindPopup(feature.properties.Nome_zona);
-						    layer.on( {'mouseover': function (e) {
-								      highlight(e.target);
-								    },
-								'mouseout': function (e) {
-									if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
-							  		layer.resetStyle(e.layer)}
-								      //dehighlight(e.target);
-								    },
-  								'click': function(e) {
-							select(e.target);
+						    layer.on( 'click', function(e) {
+							if (selected) {
+								selected.setStyle({
+									fillColor: "#a6a6a6",
+									color: "grey",
+									fillOpacity: 0.8
+								}) //ripristina l'elemento all'origine quando si seleziona un nuovo elemento
+							}
+							//determina una nuovo elemento selezionato
+							var selected = e.layer
+							map.fitBounds(e.layer.getBounds())
+							//porta il selezionato in primo piano
+							selected.bringToFront()
+							//assegna un nuovo aspetto all'elemento selezionato
+							selected.setStyle({
+								'color': 'red',
+								'fillColor': '#d27979',
+							})
+
 							$.ajax({
 							    dataType: "json",
 							    url: "geojson_folder/Reddito_2009-2016_per_zone.json",
