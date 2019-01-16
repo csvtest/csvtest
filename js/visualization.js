@@ -48,11 +48,11 @@ $(document).ready(function(){
 						}
 
 						var selected = null;
-						var geojson = $.ajax({
+						$.ajax({
 						    dataType: "json",
 						    url: "geojson_folder/ZoneBologna.geojson",
 						    success: function(data) {
-							L.geoJson(data, {
+							var geojson = L.geoJson(data, {
 							    style: stylegeo,
 							    onEachFeature: onEachFeature
 							}).addTo(map);
