@@ -223,7 +223,9 @@ Abbiamo così preso provvedimenti affinché gli individui non fossero più ident
 
 ### Pulitura
 
-La pulizia è stata effettuata con il programma [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor sviluppato dall'Open Data Institute, che permette di aggiungere, eliminare e modificare righe, colonne e dati e il linguaggio di programmazione Python.
+La pulizia è stata effettuata con:
+* il programma [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor sviluppato dall'Open Data Institute, che permette di aggiungere, eliminare e modificare righe, colonne e dati;
+* il linguaggio di programmazione **Python**.
 
 Oltre alla problematica riguardante i dati personali, abbiamo riscontrato altre criticità riguardanti la pulizia del dataset:
 
