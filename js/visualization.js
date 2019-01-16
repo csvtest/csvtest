@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 						function dehighlight (layer) {
 						  if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
-							  geojson.resetStyle(layer);
+							  layer.setStyle(stylegeo);
 						  }
 						}
 
