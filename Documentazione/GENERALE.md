@@ -117,7 +117,7 @@ _______________________________________________________________
 
 ## Requisiti 
 
-I requisiti che abbiamo stabilito per controllare il livello di qualità dei dati utilizzati sono:
+I requisiti necessari che abbiamo stabilito per controllare il livello di qualità informativa sono:
 
 |  | Accuratezza | Completezza <br> (dati) | Completezza <br> (dataset) | Coerenza | Tempestività |
 | -------| ----------- | --------- | ----- | ----- | ------ |
@@ -132,13 +132,7 @@ I requisiti che abbiamo stabilito per controllare il livello di qualità dei dat
 | 5.0 | nomenclature non armonizzate con [5.1]; <br> sintassi di *TIPO_AREA_* | rischio di de-anonimizzazione | [Tabella](#indici-di-completezza) | True | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 | 5.1 | semantica troppo generica di *Category* <br> semantica poco chiara in alcuni casi di *Subcategory_1*, *Subcategory_2*, *Subcategory_3* | mancano spiegazioni di *Category*; <br> mancano spiegazioni di *Subcategory_1*, *Subcategory_2*, *Subcategory_3*; <br>  | [Tabella](#indici-di-completezza) | presenza di segnalazioni de-anonimizzate; | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 
-
-I requisiti che abbiamo stabilito per controllare il livello di qualità dei nostri dataset sono:
-
-~~* l'**accuratezza** (semantica e sintattica): la misura secondo la quale un dataset rappresenta correttamente le caratteristiche di un oggetto, una situazione o un evento del mondo reale;
-* la **rilevanza**: la misura secondo la quale i dati contengono le informazioni necessarie per supportare la finalità;
-* l'**attualità**: la misura secondo la quale i dati sono messi a disposizione senza ritardi non necessari;
-* la **consistenza**: la misura secondo la quale i dati non contengono contraddizioni interne che possano renderne l'utilizzo difficile o impossibile.~~
+I requisiti aggiuntivi che abbiamo stabilito per controllare il livello di qualità informativa sono:
 
 | Requisito | Descrizione |  |
 | -------| ----------- | --------- |
