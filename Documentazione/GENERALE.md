@@ -28,7 +28,7 @@ Il piano di lavoro è stato suddiviso nelle seguenti sezioni:
 5. [Analisi tecnica](#analisi-tecnica)
     1. [Formati](#formati)
         1. [Distribuzioni](#distribuzioni)
-    2. [Metadati](#metadati]
+    2. [Metadati](#metadati)
     3. [Provenance](#provenance)
     4. [URI](#uri)
 6. [Analisi della sostenibilità](#analisi-della-sostenibilità)
