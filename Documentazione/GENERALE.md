@@ -25,16 +25,27 @@ Il piano di lavoro è stato suddiviso nelle seguenti sezioni:
     3. [Dataset intermedi](#dataset-intermedi)
     4. [Dataset finali](#dataset-finali)
 3. [Analisi della qualità informativa](#analisi-della-qualità-informativa)
+    1. [Requisiti](#requisiti)
 4. [Analisi etico-giuridica](#analisi-etico-giuridica)
     1. [Privacy](#privacy)
         1. [Checklist giuridica](#checklist-giuridica)
         2. [Misure di de-identificazione e pulitura](#misure-di-de-identificazione-e-pulitura)
+            1. [Misure di de-identificazione](#misure-di-de-identificazione)
+            2. [Pulitura](#pulitura)
+        3. [Licenze](#licenze)
+        4. [Finalità](#finalità)
 5. [Analisi tecnica](#analisi-tecnica)
     1. [Formati](#formati)
         1. [Distribuzioni](#distribuzioni)
     2. [Metadati](#metadati)
+        1. [Metadatazione dei dataset iniziali](#metadatazione-dei-dataset-iniziali)
+        2. [Metadatazione dei dataset finali](#metadatazione-dei-dataset-finali)
     3. [Provenance](#provenance)
+        1. [Provenance dei dataset iniziali](#provenance-dei-dataset-iniziali)
+        2. [Provenance dei dataset finali](#provenance-dei-dataset-finali)
     4. [URI](#uri)
+        1. [URI dei dataset iniziali](#uri-dei-dataset-iniziali)
+        2. [URI dei dataset finali](#uri-dei-dataset-finali)
 6. [Analisi della sostenibilità](#analisi-della-sostenibilità)
 7. [Visualizzazione](#visualizzazione)
 
@@ -44,9 +55,6 @@ _______________________________________________________________
 
 Dalle elezioni del 1948, prime elezioni della storia italiana dopo il periodo di dittatura fascista in cui si potè votare per Camera e Senato, l’Emilia-Romagna ha sempre votato in maggioranza le forze di (centro)sinistra; le ultime Politiche del 4 marzo 2018 ci hanno invece restituito una differente cartina regionale.
 Partendo da questa considerazione abbiamo deciso di analizzare la situazione politico-economica-sociale Bolognese degli ultimi anni, per introdurre l'utente alla questione, lasciandolo però libero di analizzare ed interpretare tali dati a suo piacimento.
-
-
-
 _______________________________________________________________
 
 # Dataset
@@ -65,25 +73,27 @@ I dataset che abbiamo utilizzato sono:
 | 2.0 | http://dati.comune.bologna.it/download/file/fid/4265 | 26.01.04_risultati_politiche_<br>2018_bologna_liste_senato | [Risultati politiche 2018 - Bologna Senato](http://dati.comune.bologna.it/node/3323) | 
 | 3.0 | http://dati.comune.bologna.it/download/file/fid/1136 | redditi_2009_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) | 
 | 3.1  | http://dati.comune.bologna.it/download/file/fid/1137 | redditi_2010_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| 3.0 | http://dati.comune.bologna.it/download/file/fid/1135 | redditi_2011_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| 3.0 | http://dati.comune.bologna.it/download/file/fid/1878 | redditi2012_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| 3.0 | http://dati.comune.bologna.it/download/file/fid/2436 | redditi2013_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| 3.0 | http://dati.comune.bologna.it/download/file/fid/3422 | redditi2014_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| 3.0 | http://dati.comune.bologna.it/download/file/fid/4304 | redditi2015_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| 3.0 | http://dati.comune.bologna.it/download/file/fid/4615 | redditi2016_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.2 | http://dati.comune.bologna.it/download/file/fid/1135 | redditi_2011_per_area_statistica | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.3 | http://dati.comune.bologna.it/download/file/fid/1878 | redditi2012_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.4 | http://dati.comune.bologna.it/download/file/fid/2436 | redditi2013_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.5 | http://dati.comune.bologna.it/download/file/fid/3422 | redditi2014_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.6 | http://dati.comune.bologna.it/download/file/fid/4304 | redditi2015_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
+| 3.7 | http://dati.comune.bologna.it/download/file/fid/4615 | redditi2016_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
 | 4.0 | http://dati.comune.bologna.it/download/file/fid/4493 | Aree 03.00.02_aree_statistiche_bologna | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
 | 4.1 | http://dati.comune.bologna.it/download/file/fid/4494 | Aree 03.00.03_areestat_quartiere | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
 | 5.0 | http://dati.comune.bologna.it/download/file/fid/4490 | 38.00.03_segnalazioni_czrm2017_area_statistica | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
 | 5.1 | http://dati.comune.bologna.it/download/file/fid/4492 | 38.00.05_segnalazioni_czrm2017_tot_tipologia | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
+| **_CENSIMENTO_** | | | | 
 
+Nella documentazione i dataset pubblicati nella tabella precedente vengono raccolti nei seguenti blocchi: 
 
-Che in documentazione saranno analizzati nei seguenti blocchi: 
-
-- DATASET POLITICHE: ID [1.0 ; 1.1 ; 2.0]
-- DATASET REDDITI: ID [3.0 ; 3.1]
-- DATASET AREE STATISTICHE: ID [4.0 ; 4.1]
-- DATASET CITIZEN MANAGEMENT: ID [5.0 ; 5.1] 
-
+| Sigla Dataset | ID |
+| ------------- | -- |
+| D. POLITICHE  | 1.0, 1.1, 2.0 |
+| D. REDDITI    | 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7 |
+| D. AREE STATISTICHE | 4.0, 4.1 |
+| D. CITIZEN MANAGEMENT | 5.0, 5.1 |
+| **_D. CENSIMENTO_** | |
 
 ## Dataset puliti
 I dataset che abbiamo utilizzato, ma ripuliti:
@@ -103,14 +113,14 @@ I dataset che abbiamo utilizzato, ma ripuliti:
 ## Dataset intermedi
 I dataset che abbiamo generato nel corso del progetto integrando i dati selezionati all' interno dei dataset ripuliti:
 
-| Dataset ID | Dataset 1 | Dataset 2 |
+| Dataset Intermedio | Dataset 1 | Dataset 2 |
 | ---------- | --------- | --------- |
 |  |  |  |
 
 ## Dataset finali
 Il nostro dataset finale, risultante dall'integrazione dei dati contenuti all'interno dei dataset intermedi:
 
-[NOSTRO DATASET (URI O TABELLINA)]
+[**NOSTRO DATASET (URI O TABELLINA)**]
 _______________________________________________________________
 
 # Analisi della qualità informativa
@@ -615,7 +625,7 @@ Il nostro obiettivo è raggiungere il **livello 4** di metadatazione, per cui:
 * il legame dato-metadato sia forte: i dati incorporano i metadati che li descrivono;
 * il livello di dettaglio sia massimo: i metadati forniscono informazioni relative al dataset e al singolo dato.
 
-### Metadatazione dei dataset
+### Metadatazione dei dataset iniziali
 I dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it/) sono descritti dai seguenti metadati human-readable:
 1. **File**: il nome del dataset.
 2. **Anno versione**: l'anno al quale la relativa versione si riferisce.
@@ -630,12 +640,23 @@ I dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it/) sono 
 
 Non sembrano essere corredati da metadati machine-readable.
 
-### Metadatazione del mashup
+### Metadatazione dei dataset finali
+
+|
+
+|
+
+|
 
 [METADATAZIONE CICCIONA PATATONA]
 
-## URI
+|
 
+|
+
+|
+
+## URI
 E' assolutamente necessario garantire che gli URI siano **persistenti**, **dereferenziabili** e **non ambigui**. Dovrebbero essere supportati da un'infrastruttura affidabile.
 Dovrebbero seguire il seguente modello di pattern:
 
@@ -649,8 +670,7 @@ Vanno evitati:
 
 Per quanto riguarda il nostro dataset mashato, abbiamo deciso di mantenere l'informazione sull'*ownership*, ovvero il nome dell'organizzazione o progetto che ha coniato l'URI (il nostro progetto). Siamo consapevoli del rischio che rappresenta tale decisione, considerando quanto spesso organizzazioni e progetti cambino nome nel corso del tempo; tuttavia confidiamo nel fatto che il nostro progetto mantenga inalterato il proprio nome nel lungo periodo.
 
-### URI dei dataset
-
+### URI dei dataset iniziali
 Gli URI dei dataset presentano almeno due aspetti problematici:
 
 1. la **_semantica_** non perfettamente chiara;`
@@ -677,15 +697,42 @@ In via ipotetica, proponiamo un possibile perfezionamento degli URI dei dataset 
 | http://dati.comune.bologna.it/download/file/fid/4490 | http://dati.comune.bologna.it/dataset/citizen-relationship-management/segnalazioni-2017-cartografico-per-area-statistica |
 | http://dati.comune.bologna.it/download/file/fid/4492 | http://dati.comune.bologna.it/dataset/citizen-relationship-management/segnalazioni-2017 |
 
-### URI del mashup
+### URI dei dataset finali
 
-[BLABLABLA ...]
+|
+
+|
+
+ROBA A CASO MANNAGGIA 
+
+|
+
+|
 
 ## Provenance
+### Provenance dei dataset iniziali
 
-La *Provenance* 
+|
 
-[CONTINUARE ...]
+|
+
+ROBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBA
+
+|
+
+|
+
+### Provenance dei dataset finali
+
+|
+
+|
+
+ROBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBETTTTTTA
+
+|
+
+|
 _______________________________________________________________
 
 # Analisi della sostenibilità
