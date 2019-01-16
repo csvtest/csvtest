@@ -123,10 +123,10 @@ I requisiti che abbiamo stabilito per controllare il livello di qualità di un d
 | Misura | Definizione | Descrizione | Soluzione |
 | -------| ----------- | ----------- | --------- |
 | **Completezza** | la misura secondo la quale un dataset include quei dati che sono necessari al supporto della finalità per cui è stato creato | Percentuale di valori validi nel dataset | Script(**mettere link**) |
-| **Disponibilità** | la misura secondo la quale i dati risultano essere facilmente accessibili ora e nel tempo | Analisi dell'URI | rimando a URI(**mettere link**) |
-| **Processabilità** | la misura secondo la quale i dati possono essere gestiti da processi automatizzati | Analisi dei formati | rimando a Formati(**mettere link**) |
-| **Credibilità** | la misura secondo la quale i dati si basano su fonti attendibili o forniti da organizzazioni affidabili | Metadati di *provenance* | rimando a Provenance(**mettere link**) |
-| **Conformità** | la misura secondo la quale vengono seguite una serie di esplicite regole o standard di pubblicazione e descrizione dei dati | Metadati descrittivi | rimando a Metadatazione(**mettere link**) |
+| **Disponibilità** | la misura secondo la quale i dati risultano essere facilmente accessibili ora e nel tempo | Analisi dell'URI | [URI dei dataset](#uri-dei-dataset) |
+| **Processabilità** | la misura secondo la quale i dati possono essere gestiti da processi automatizzati | Analisi dei formati | [Formati](#formati) |
+| **Credibilità** | la misura secondo la quale i dati si basano su fonti attendibili o forniti da organizzazioni affidabili | Metadati di *provenance* | [Provenance](#provenance) |
+| **Conformità** | la misura secondo la quale vengono seguite una serie di esplicite regole o standard di pubblicazione e descrizione dei dati | Metadati descrittivi | [Metadati](#metadati) |
 
 [CONTINUARE ...]
 
@@ -148,10 +148,10 @@ Gli indici di completezza sono i seguenti:
 | 3.6 | 92 | 0 | 100% |
 | 3.7 | 92 | 0 | 100% |
 | Aree | - | - | - |
-| 4.0 |  |  |  |
+| 4.0 | 540 | 0 | 100% |
 | 4.1 | 360 | 0 | 100% |
 | Segnalazioni | - | - | - |
-| 5.0 |  |  |  |
+| 5.0 | 76170 | 0 | 100% |
 | 5.1 | 63485 | 6695 | 89.45% |
 
 [NOSTRO DATASET ... metadati di qualità?]
@@ -271,7 +271,7 @@ Esempi, in questo senso, sono rappresentati da:
 | --------- | --------- | --------- |
 | Lungo Reno | 6 | 102878 |
 
-Incrociando poi tali dati con dati satellitari reperibili dall'utente medio semplicemente utilizzando Google Maps, possiamo notare la presenza di un'unica casa in tale area. Tramite il dataset è quindi possibile risalire alla posizione economica dei soggetti di un'abitazione! 
+Incrociando poi tali dati con dati satellitari reperibili dall'utente medio semplicemente utilizzando Google Maps, possiamo notare la presenza di un'unica casa in tale area. Tramite il dataset è quindi possibile risalire ai redditi dei residenti di una determinata abitazione! 
 
 
 ##### Pulitura, De-identificazione e Merge
