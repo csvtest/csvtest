@@ -118,24 +118,17 @@ I requisiti che abbiamo stabilito per controllare il livello di qualità dei dat
 |  | Accuratezza | Completezza<br>(dati) | Completezza<br>(dataset) | Coerenza | Tempestività |
 | -------| ----------- | --------- | ----- | ----- | ------ |
 | Politiche |  |  |  |  |  |
-| 1.0 |  |  |  |  |  |
-| 1.1 |  |  |  |  |  |
-| 2.0 |  |  |  |  |  |
+| 1.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
+| 1.1 |  |  | [Tabella](#indici-di-completezza) |  |  |
+| 2.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
 | Redditi |  |  |  |  |  |
-| 3.0 |  |  |  |  |  |
-| 3.1 |  |  |  |  |  |
-| 3.2 |  |  |  |  |  |
-| 3.3 |  |  |  |  |  |
-| 3.4 |  |  |  |  |  |
-| 3.5 |  |  |  |  |  |
-| 3.6 |  |  |  |  |  |
-| 3.7 |  |  |  |  |  |
+| 3.0 -<br>3.7 |  |  | [Tabella](#indici-di-completezza) |  |  |
 | Aree |  |  |  |  |  |
-| 4.0 |  |  |  |  |  |
-| 4.1 |  |  |  |  |  |
+| 4.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
+| 4.1 |  |  | [Tabella](#indici-di-completezza) |  |  |
 | Segnalazioni |  |  |  |  |  |
-| 5.0 |  |  |  |  |  |
-| 5.1 |  |  |  |  |  |
+| 5.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
+| 5.1 |  |  | [Tabella](#indici-di-completezza) |  |  |
 
 
 I requisiti che abbiamo stabilito per controllare il livello di qualità dei nostri dataset sono:
@@ -155,6 +148,7 @@ I requisiti che abbiamo stabilito per controllare il livello di qualità dei nos
 
 [CONTINUARE ...]
 
+### Indici di completezza
 Gli indici di completezza sono i seguenti:
 
 | Dataset | Valori totali | Valori nulli | Completezza |
