@@ -281,10 +281,7 @@ $(document).ready(function(){
 											data: [28, 28, 28, 28, 28, 28, 28,28, 28, 28, 1.1, 1.1, 1.1, 1.1, 1, 1, 1, 1]}]
 										};
 									    var radarpolitico = document.getElementById("EleChart").getContext("2d");
-									    var myRadarChart = new Chart(radarpolitico, {
-										    type: 'radar',
-										    data: dataele
-										});
+									    new Chart(radarpolitico,{"type":"horizontalBar","data": dataele}):
 									    }
 									})
 								    }
