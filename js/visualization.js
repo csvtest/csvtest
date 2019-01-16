@@ -43,7 +43,7 @@ $(document).ready(function(){
 								}) //ripristina l'elemento all'origine quando si seleziona un nuovo elemento
 							}
 							//determina una nuovo elemento selezionato
-							var selected = e.layer
+							var selected = e.target
 							//porta il selezionato in primo piano
 							selected.bringToFront()
 							//assegna un nuovo aspetto all'elemento selezionato
