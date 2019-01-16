@@ -319,6 +319,12 @@ $(document).ready(function(){
 												    }
 												}
 												},
+												"scale": {
+													"ticks": {
+													    "beginAtZero": false,
+													    "max": 35
+													}
+												},
 												legend: {
 													    display: false
 													 },
