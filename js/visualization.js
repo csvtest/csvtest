@@ -292,11 +292,11 @@ $(document).ready(function(){
 									    var dataele =
 										{labels: ["pd", "Leu", "m5s", "fi", "lega", "pap", "casapound", "8", "9"],
 										 datasets: [{
-											data: [28, 28, 28, 28, 28, 28, 28, 28, 1]}]
+											data: [28, 15, 18, 18, 18, 18, 18, 18, 3]}]
 										};
 									    //""
 									    var radarpolitico = document.getElementById("EleChart").getContext("2d");
-									    new Chart(radarpolitico,{"type":'horizontalBar',"data": dataele});
+									    new Chart(radarpolitico,{"type":'radar',"data": dataele});
 									    }
 									})
 								    }
