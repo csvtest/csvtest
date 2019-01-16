@@ -119,20 +119,18 @@ _______________________________________________________________
 
 I requisiti che abbiamo stabilito per controllare il livello di qualità dei dati utilizzati sono:
 
-|  | Accuratezza | Completezza<br>(dati) | Completezza<br>(dataset) | Coerenza | Tempestività |
+|  | Accuratezza | Completezza <br> (dati) | Completezza <br> (dataset) | Coerenza | Tempestività |
 | -------| ----------- | --------- | ----- | ----- | ------ |
-| Politiche |  |  |  |  |  |
-| 1.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
-| 1.1 |  |  | [Tabella](#indici-di-completezza) |  |  |
-| 2.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
-| Redditi |  |  |  |  |  |
-| 3.0 - 3.7 |  |  | [Tabella](#indici-di-completezza) |  |  |
+| Politiche | ### | ### | ### | ### | ### |
+| 1.0 - 1.1 - 2.0 | uso arbitrario di uppercase e lowercase; <br> ambiguità semantica (*Totale voti di cui*) <br> |  | [Tabella](#indici-di-completezza) |  |  |
+| Redditi | ### | ### | ### | ### | ### |
+| 3.0 - 3.7 |  |  | [Tabella](#indici-di-completezza) | sovraffollamento di semi-colon (2011); <br> "*SENZA FISSA DIMORA*" e "*NON RESIDENTI NELL' ANNO DI IMPOSTA*" presenti sono nel 2014 |  |
 | Aree |  |  |  |  |  |
 | 4.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
-| 4.1 |  |  | [Tabella](#indici-di-completezza) |  |  |
+| 4.1 | True | True | [Tabella](#indici-di-completezza) | nomenclatura incoerente |  |
 | Segnalazioni |  |  |  |  |  |
 | 5.0 |  |  | [Tabella](#indici-di-completezza) |  |  |
-| 5.1 |  |  | [Tabella](#indici-di-completezza) |  |  |
+| 5.1 | semantica troppo generica di *Category* <br> semantica poco chiara in alcuni casi di *Subcategory_1*, *Subcategory_2*, *Subcategory_3* | mancano spiegazioni di *Category* <br> mancano spiegazioni di *Subcategory_1*, *Subcategory_2*, *Subcategory_3* <br>  | [Tabella](#indici-di-completezza) | presenza di segnalazioni de-anonimizzate |  |
 
 
 I requisiti che abbiamo stabilito per controllare il livello di qualità dei nostri dataset sono:
