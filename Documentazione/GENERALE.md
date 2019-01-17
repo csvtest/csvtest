@@ -75,7 +75,7 @@ I dataset che abbiamo utilizzato sono:
 | 3.5 | http://dati.comune.bologna.it/download/file/fid/3422 | redditi2014_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
 | 3.6 | http://dati.comune.bologna.it/download/file/fid/4304 | redditi2015_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
 | 3.7 | http://dati.comune.bologna.it/download/file/fid/4615 | redditi2016_areastat | [Redditi per area statistica](http://dati.comune.bologna.it/node/244) |
-| 4.0 | http://dati.comune.bologna.it/download/file/fid/4493 | Aree 03.00.02_aree_statistiche_bologna | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
+| 4.0 | http://dati.comune.bologna.it/download/file/fid/1275 | Aree 03.00.02_aree_statistiche_bologna | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/1030) |
 | 4.1 | http://dati.comune.bologna.it/download/file/fid/4494 | Aree 03.00.03_areestat_quartiere | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
 | 5.0 | http://dati.comune.bologna.it/download/file/fid/4490 | 38.00.03_segnalazioni_czrm2017_area_statistica | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
 | 5.1 | http://dati.comune.bologna.it/download/file/fid/4492 | 38.00.05_segnalazioni_czrm2017_tot_tipologia | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
@@ -150,7 +150,7 @@ I requisiti necessari, stabiliti dalle **Linee guida nazionali per la valorizzaz
 | 5.0 | nomenclature non armonizzate con [5.1]; <br> sintassi di *TIPO_AREA_* | True, rischio di de-anonimizzazione | True | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 | 5.1 | semantica troppo generica di *Category* <br> semantica poco chiara in alcuni casi di *Subcategory_1*, *Subcategory_2*, *Subcategory_3* | mancano spiegazioni di *Category*; <br> mancano spiegazioni di *Subcategory_1*, *Subcategory_2*, *Subcategory_3*; | presenza di segnalazioni de-anonimizzate; | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 | 6.0 |  |  |  |  |
-|  |  |  |  |  |
+| 7.0 |  |  |  |  |
 
 I requisiti aggiuntivi che abbiamo stabilito per controllare il livello di qualità informativa sono:
 
@@ -282,7 +282,6 @@ In generale, nel corso della pulizia dei vari dataset, abbiamo:
 3. copiato le versioni pulite dei dataset, in formato CSV e con codifica UTF-8.
 
 #### DATASET REDDITI
-
 ##### Revisione preliminare: criticità
 I dati contenuti in essi potrebbero rientrare nella categoria di *personal data* se incrociati con altri dati. In particolare:
 * se l'*Area statistica* include un territorio particolarmente limitato, e
@@ -311,9 +310,9 @@ La fase di **pulitura** ha previsto le seguenti operazioni:
     * le righe che non servono agli scopi del nostro lavoro (ad es. "*non residenti nell'anno di imposta*" e "*senza fissa dimora*");
 
 4. *Rimozione di eventuali elementi*; in particolare: 
-    * rimozione di accenti ed apostrofi (ad es. "*Piazza dell'Unita'*" diventa "*Piazza dell Unita*") ## PER EVITARE CHE PYTHON AVESSE CROLLI MULTIPLI
+    * rimozione di accenti ed apostrofi (ad es. "*Piazza dell'Unita'*" diventa "*Piazza dell Unita*");
 
-5. Correzione di errori di battitura; ad es. "*Triumrato*" al posto di "*Triumvirato*".
+5. *Correzione di errori di battitura*; ad es. "*Triumrato*" al posto di "*Triumvirato*".
 
 In sede di **de-identificazione** è possibile applicare delle tecniche di anonimizzazione ai valori che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, come il *Numero contribuenti*. Per quanto riguarda i valori potenzialmente sensibili, come il *Reddito imponibile ai fini irpef*, è possibile anonimizzare i valori precisi convertendoli in valori arrotondati secondo la distribuzione in *scaglioni IRPEF*.
 
@@ -402,6 +401,9 @@ Le operazioni di pulizia effettuate solo le seguenti:
 |
 
 #### DATASET CENSIMENTO
+##### Revisione preliminare: criticità
+
+##### Pulitura
 
 #### DATASET ZONE 7.0 & DATASET AREE STATISTICHE 4.0
 ##### Revisione preliminare & pulitura
@@ -436,7 +438,7 @@ Il dichiarante “*apertamente, pienamente, permanentemente, irrevocabilmente e 
 In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore, nella misura consentita dalla legge: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*: non vi è alcuna garanzia sul dataset stesso, e ogni responsabilità per qualsivoglia utilizzo del dataset nella misura consentita dalla legge è declinata.
 
 
-#### DATASET CITIZEN MANAGEMENT, DATASET AREE STATISTICHE 
+#### DATASET SEGNALAZIONI, DATASET AREE STATISTICHE 
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 | Creative Commons | Attribuzione |
@@ -448,32 +450,35 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 - distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
 
 
-#### [NOSTRI DATASET]
+#### Dataset finali
 
-~~Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisca libertà di riutilizzo, che sia internazionalmente riconosciuta e che consenta di attribuire la paternità dei dataset (attribuire la fonte). Pertanto, si suggerisce l’adozione generalizzata della licenza CC-BY nella sua versione 4.0. Si raccomanda inoltre di gestire l’attribuzione della fonte indicando il nome dell’organizzazione unitamente all’URL della pagina Web dove si trovano i dataset/contenuti da licenziare.~~
+Per pubblicare i nostri dataset abbiamo scelto la licenza [IODL 2.0](https://www.dati.gov.it/content/italian-open-data-license-v20). Essa:
+* consente di condividere, modificare, usare e riusare i dataset, i dati e le informazioni al loro interno, garantendo la stessa libertà per altri;
+* non implica trasferimenti di diritto di titolarità sulla banche di dati, sui dati e sulle informazioni pubbliche;
+* la versione 2.0, in particolare, permette di creare un lavoro derivato ed esercitare su di esso gli stessi diritti, per esempio attraverso la *mashup* con altre informazioni, utilizzando anche dati rilasciati con altre licenze *attribution* (che richiedono all’utente la sola indicazione della fonte,) come le licenze Creative Commons Attribution (CC-BY).
 
-[NOSTRA LICENZA]
+![](logo_iodl_esteso.png)
 
 ### Librerie
 Le librerie che abbiamo utilizzato per compilare i codici Javascript, Python e HTML sono:
 
 | Libreria | Licenza |
 | -------- | ------- |
-| pandas | Nuova licenza BSD (3 clausole) |
-| Jquery | MIT License |
-| Bootstrap | MIT License |
-| Leaflet | Licenza FreeBSD (2 clausole) |
-| Chartjs | MIT License |
-| chartjs-plugin-labels | MIT License |
-| shapely | Nuova licenza BSD (3 clausole) |
+| pandas | [Nuova licenza BSD (3 clausole)] |
+| Jquery | [MIT License] |
+| Bootstrap | [MIT License] |
+| Leaflet | [Licenza FreeBSD (2 clausole)] |
+| Chartjs | [MIT License] |
+| chartjs-plugin-labels | [MIT License] |
+| shapely | [Nuova licenza BSD (3 clausole)] |
 
 ### Codice
-La licenza del nostro codice è GNU-GPL.
+La licenza del nostro codice è [GNU-GPL].
 
 ### Documentazione
 La licenza della documentazione di Bootstrap è [CC-BY 3.0 Unported]. 
 
-La licenza di questa documentazione è 
+La licenza di questa documentazione è [CC-BY 4.0].
 
 ## Finalità
 
@@ -516,6 +521,11 @@ I dataset sono stati scelti per essere usati come dataset di raccordo per permet
 
 |
 
+#### DATASET ZONE
+La finalità del dataset è quella di evidenziare la divisione del Comune di Bologna in *18 zone*, ovvero i vecchi quartieri che nel 1985 sono stati accorpati negli attuali 9 quartieri. I quartieri sono composti da zone che sono composte da aree statistiche, dunque è possibile relazionare queste tre differenti modalità di suddivisione del territorio bolognese. 
+
+Il dataset è stato scelto perché la divisione in zone è più specifica della divisione in quartieri, e meno specifica della divisione in aree statistiche, quindi rappresenta un buon compromesso per visualizzare i dati che ci interessano.
+
 ### DATASET FINALI
 La finalità dei dataset finali è quella di esporre in Open Data alcuni dati relativi la situazione politico-economica-sociale Bolognese degli ultimi anni. In particolare:
 
@@ -538,7 +548,7 @@ Tutti i dataset che abbiamo utilizzato sono pubblicati in formato **CSV**. In te
 
 *È un formato di file testuale utilizzato per rappresentare informazioni con struttura tabellare. Esso è spesso usato per importare ed esportare il contenuto di tabelle di database relazionali e fogli elettronici. Le righe delle tabelle corrispondono a righe nel file di testo CSV e i valori delle celle sono divisi da un carattere separatore, che di solito, come indica il nome stesso, è la virgola. Il CSV non è uno standard vero e proprio ma la sua modalità d’uso è descritta nell’RFC 4180. Nel rilascio di dati secondo il formato CSV, per agevolare i riutilizzatoti, si raccomanda di dichiarare almeno 1) il separatore di campo utilizzato (e.g, virgola, punto e virgola); 2) se è stato usato un carattere per delimitare i campi di testo. Nel corso del 2015, un gruppo di lavoro del W3C «CSV on the web» ha rilasciato una serie di standard del Web tra cui alcuni relativi ai meccanismi necessari a trasformare CSV in vari formati quali JSON, XML e RDF. *
 
-I D. AREE STATISTICHE e D. SEGNALAZIONI sono corredati da un insieme di file in formato **.shp** (*Shapefile*, uno standard per dati vettoriali spaziali), con file aggiuntivi con estensioni **.sph**, **.dbf**, **.shx** da sui dipendono interpretazione ed utilizzo.
+I D. AREE STATISTICHE e D. SEGNALAZIONI sono corredati da un insieme di file in formato **.shp** (*shapefile*, uno standard per dati vettoriali spaziali), con file aggiuntivi con estensioni **.sph**, **.dbf**, **.shx** da sui dipendono interpretazione ed utilizzo.
 
 *È il formato standard de-facto per la rappresentazione dei dati dei sistemi informativi geografici (GIS). I dati sono di tipo vettoriale. Lo shapefile è stato creato dalla società privata ESRI che rende comunque pubbliche le sue specifiche. L’apertura delle specifiche ha consentito lo sviluppo di diversi strumenti in grado di gestire e creare tale formato. Seppur impropriamente ci si riferisca a uno shapefile, nella pratica si devono considerare almeno tre file: un .shp contenente le forme geometriche, un .dbf contenente il database degli attributi delle forme geometriche e un file .shx come indice delle forme geometriche. A questi tre si deve anche accompagnare un file .prj che contiene le impostazioni del sistema di riferimento. Si raccomanda comunque di specificare nei metadati la proiezione utilizzata. È importante notare che non risulta ancora chiaro se tale formato lo si possa considerare propriamente aperto (e quindi coerente con la definizione introdotta dall’art. 68 del CAD) di livello 3 secondo il modello per i dati proposto nel presente documento. Questo è dovuto al fatto che, per alcune comunità, esso è un formato proprietario e quindi di livello 2, mentre per altre i dati possono essere gestiti attraverso una serie di strumenti non necessariamente confinati a determinate tipologie software (grazie alle specifiche tecniche aperte e pubbliche rese disponibili da ESRI).*
 
@@ -626,6 +636,7 @@ In via ipotetica, proponiamo un possibile perfezionamento degli URI dei dataset 
 | http://dati.comune.bologna.it/download/file/fid/4490 | http://dati.comune.bologna.it/dataset/citizen-relationship-management/segnalazioni-2017-cartografico-per-area-statistica |
 | http://dati.comune.bologna.it/download/file/fid/4492 | http://dati.comune.bologna.it/dataset/citizen-relationship-management/segnalazioni-2017 |
 | **_CENSIMENTO_** |  |
+| http://dati.comune.bologna.it/download/file/fid/1737 | http://dati.comune.bologna.it/dataset/zone |
 
 ### URI dei dataset finali
 
@@ -674,6 +685,8 @@ Per riuscire a mantenere la curation nel lungo periodo:
 * mantenere serie storica;
 * usare [URI persistenti](#uri);
 * integrare idati con i **metadati di provenance**;
+
+CERCARE TIZI DEL CITIZEN MANAGEMENT PER PARLARE DI SOSTENIBILITA' anche sociale
 
 _______________________________________________________________
 
