@@ -22,7 +22,7 @@ $(document).ready(function(){
 						    };
 						};
 						
-						var data = = new L.GeoJSON.AJAX("ZoneBologna.geojson"); 
+						var data = new L.GeoJSON.AJAX("ZoneBologna.geojson"); 
 						var geojson = L.geoJson(data, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 						//$.ajax({
 						 //   dataType: "json",
