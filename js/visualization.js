@@ -29,9 +29,6 @@ $(document).ready(function(){
 							weight: 5,
 							//dashArray: ''
 						});
-						if (!L.Browser.ie && !L.Browser.opera) {
-							layer.bringToFront();
-						}
 						}
 
 						function dehighlight (layer) {
