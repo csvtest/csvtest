@@ -8,14 +8,9 @@ def process_data(source_csv_file_path):
         data = [dict(x) for x in reader]
     return data
 
-def algoritmo(data):
+def voti_per_zona(data):
     lista_zone = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18']
     lista1, lista2, lista3, lista4, lista5, lista6, lista7, lista8, lista9, lista10, lista11, lista12, lista13, lista14, lista15, lista16, lista17, lista18, lista19 = [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
-    lista_partiti = ['Movimento per le Destre unite - Movimento per i Forconi', 'Il Popolo della Famiglia',
-     'Partito Repubblicato Italiano - Alleanza Liberalpopolare - Autonomie', 'Potere al Popolo', 'Civica Popolare',
-     'Italia Europa Insieme', 'Piu Europa', 'Partito Democratico', 'Per una Sinistra Rivoluzionaria',
-     'Partito Comunista', 'CasaPound', 'Liberi e Uguali', 'Italia agli Italiani', 'Movimento 5 Stelle', 'Forza Italia',
-     'Unione di Centro', 'Lega Nord', 'Fratelli d Italia', 'Totale Voti Validi']
     new_dict = {}
     new_list = []
     for element in lista_zone:
@@ -65,7 +60,7 @@ def algoritmo(data):
         new_dict = {}
     return new_list
 
-def sez_elettorali_in_zone(data):
+def calcolo_percentuale(data):
     new_dict = {}
     lista = []
     lista_partiti = list(data[1])
@@ -85,7 +80,7 @@ def sez_elettorali_in_zone(data):
         new_dict = {}
 
         df = pandas.DataFrame(lista)
-        df.to_csv('Politiche_Senato_Prova2.csv', columns=['Zona', 'Movimento per le Destre unite - Movimento per i Forconi', 'Percentuale voti Movimento per le Destre unite - Movimento per i Forconi', 'Il Popolo della Famiglia', 'Percentuale voti Il Popolo della Famiglia', 'Partito Repubblicato Italiano - Alleanza Liberalpopolare - Autonomie', 'Percentuale voti Partito Repubblicato Italiano - Alleanza Liberalpopolare - Autonomie', 'Potere al Popolo', 'Percentuale voti Potere al Popolo', 'Civica Popolare', 'Percentuale voti Civica Popolare', 'Italia Europa Insieme', 'Percentuale voti Italia Europa Insieme', 'Piu Europa', 'Percentuale voti Piu Europa', 'Partito Democratico', 'Percentuale voti Partito Democratico', 'Per una Sinistra Rivoluzionaria', 'Percentuale voti Per una Sinistra Rivoluzionaria', 'Partito Comunista', 'Percentuale voti Partito Comunista', 'CasaPound', 'Percentuale voti CasaPound', 'Liberi e Uguali', 'Percentuale voti Liberi e Uguali', 'Italia agli Italiani', 'Percentuale voti Italia agli Italiani', 'Movimento 5 Stelle', 'Percentuale voti Movimento 5 Stelle', 'Forza Italia', 'Percentuale voti Forza Italia', 'Unione di Centro', 'Percentuale voti Unione di Centro', 'Lega Nord', 'Percentuale voti Lega Nord', 'Fratelli d Italia', 'Percentuale voti Fratelli d Italia', 'Totale Voti Validi'], sep=',', encoding='utf-8', index=False)
+        df.to_csv('Politiche_Senato_intermedio.csv', columns=['Zona', 'Movimento per le Destre unite - Movimento per i Forconi', 'Percentuale voti Movimento per le Destre unite - Movimento per i Forconi', 'Il Popolo della Famiglia', 'Percentuale voti Il Popolo della Famiglia', 'Partito Repubblicato Italiano - Alleanza Liberalpopolare - Autonomie', 'Percentuale voti Partito Repubblicato Italiano - Alleanza Liberalpopolare - Autonomie', 'Potere al Popolo', 'Percentuale voti Potere al Popolo', 'Civica Popolare', 'Percentuale voti Civica Popolare', 'Italia Europa Insieme', 'Percentuale voti Italia Europa Insieme', 'Piu Europa', 'Percentuale voti Piu Europa', 'Partito Democratico', 'Percentuale voti Partito Democratico', 'Per una Sinistra Rivoluzionaria', 'Percentuale voti Per una Sinistra Rivoluzionaria', 'Partito Comunista', 'Percentuale voti Partito Comunista', 'CasaPound', 'Percentuale voti CasaPound', 'Liberi e Uguali', 'Percentuale voti Liberi e Uguali', 'Italia agli Italiani', 'Percentuale voti Italia agli Italiani', 'Movimento 5 Stelle', 'Percentuale voti Movimento 5 Stelle', 'Forza Italia', 'Percentuale voti Forza Italia', 'Unione di Centro', 'Percentuale voti Unione di Centro', 'Lega Nord', 'Percentuale voti Lega Nord', 'Fratelli d Italia', 'Percentuale voti Fratelli d Italia', 'Totale Voti Validi'], sep=',', encoding='utf-8', index=False)
 
     return lista
 
