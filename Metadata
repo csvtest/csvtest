@@ -28,9 +28,11 @@
 <INSERISCI URI RISORSA>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "INSERISCI IDENTIFIER" ;
-	dct:title "Dataset riguardante redditi, elezioni politiche 2018 e residenti per zona di Bologna"@it ;
+	dct:title "Redditi, elezioni politiche 2018 e residenti per zona di Bologna"@it ;
 	dct:description "Il dataset contiene i dati divisi per zona di Bologna di: redditi medi pro-capite dei contribuenti bolognesi dal 2009 al 2016, i risutati degli scrutini alle elezioni politiche per l'elezione al Senato della Repubblica e alla Camera dei Deputati del 4.3.2018, e il numero di residenti."@it ;
 	dct:modified "2018-01-19"^^xsd:date ;
+	dct:issued "2018-01-19"^^xsd:date ;
+	owl:versionInfo "0.1.0" ; 
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ; 
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
@@ -41,13 +43,13 @@
 	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
 	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
 	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
-	dcat:contactPoint <INSERIRE PUNTO DI CONTATTO> ;
+	dcat:contactPoint <INSERIRE URI PUNTO DI CONTATTO> ;
 	dct:rightsHolder <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
 	dct:publisher <INSERIRE URI PUBLISHER> ;
 	dct:creator <INSERIRE URI CREATOR> ;
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
 	dcat:landingPage <INSERIRE URL ACCESSO AL DATASET> ;
-	dct:conformsTo  <http://dati.gov.it/resource/Standard/standard-org> ;
+	dct:conformsTo  <INSERIRE STANDARD > ;
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/244> ; #redditi
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3328> ; #politiche camera
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3323> ; #politiche senato
@@ -57,19 +59,29 @@
 
 <URI DISTRIBUZIONE> 
 	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "Distribuzione RDF di BOLIDE."@it ;
-	dct:description "Distribuzione RDF-Turtle di BOLIDE"@it ;
+	dct:title "Distribuzione RDF di Redditi, elezioni politiche 2018 e residenti per zona di Bologna."@it ;
+	dct:description "Distribuzione RDF-Turtle del dataset Redditi, elezioni politiche 2018 e residenti per zona di Bologna"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
-	dct:license <http://creativecommons.org/licenses/by/4.0> ;
+	dct:license <INSERISCI LICENZA> ;
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
 
 <URI DISTRIBUZIONE > 
 	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "CSV distribution of the SEBuCCI dataset."@it ;
-	dct:description "."@it ;
+	dct:title "Distribuzione CSV di Redditi, elezioni politiche 2018 e residenti per zona di Bologna."@it ;
+	dct:description "Distribuzione CSV del dataset Redditi, elezioni politiche 2018 e residenti per zona di Bologna"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-	dct:license <http://creativecommons.org/licenses/by/4.0> ;
+	dct:license <INSERISCI LICENZA> ;
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
+	
+# Temporal dataset 1
+
+
+# Contact Point 
+
+<INSERIRE URI>
+	a dcatapit:Agent
+	vcard:hasEmail <mailto:INSERIRE MAIL> ;
+	vcard:hasURL <INSERIRE URL> .
 
