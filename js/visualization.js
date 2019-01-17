@@ -257,11 +257,21 @@ $(document).ready(function(){
 													}
 												}
 											});
-
-
-												var config = {
-													type: 'doughnut',
-													data: {
+									    
+									    		var Labelcrim = [];
+									    		var Labelamb = [];
+											var Labelsoc = [];
+											
+									    		var Valcrim = arrayItem.map(function (el) {if( el.Categoria === "Microcriminalita"){ Labelcrim.push(el["Sottocategoria"]); return el["Numero Segnalazioni"]; }});
+									    		var Valamb = arrayItem.map(function (el) {if( el.Categoria === "Degrado ambientale"){ Labelamb.push(el["Sottocategoria"]); return el["Numero Segnalazioni"]; }});
+											var Valsoc = arrayItem.map(function (el) {if( el.Categoria === "Degrado sociale"){ Labelsoc.push(el["Sottocategoria"]); return el["Numero Segnalazioni"]; }});
+											
+											var TOTsegn = arrayItem["Totale Degrado Sociale"]+ arrayItem["Totale Degrado Ambientale"]+ arrayItem["Totale Microcriminalita"];
+											var TOTcrim = Valcrim.reduce((x, y) => x + y));
+											var TOTamb = Valamb.reduce((x, y) => x + y));
+											var TOTsoc = Valsoc.reduce((x, y) => x + y));
+											//totale segnalazioni
+												var datitotsegn = {
 														labels: [
 														  "Degrado Sociale",
 														  "Degrado Ambientale",
@@ -280,11 +290,66 @@ $(document).ready(function(){
 															  "#FFCE56"
 															]
 														}]
-													},
-												options: {
+													};
+									    //ambiente
+									    			var datiamb = {
+														labels: Labelamb,
+														datasets: [{
+															data: Valamb,
+															backgroundColor: [
+															  "#FF6384",
+															  "#36A2EB",
+															  "#FFCE56"
+															],
+															hoverBackgroundColor: [
+															  "#FF6384",
+															  "#36A2EB",
+															  "#FFCE56"
+															]
+														}]
+													};
+									    //sociale
+									                       var datisoc = {
+														labels: Labelsoc,
+														datasets: [{
+															data: Valsoc,
+															backgroundColor: [
+															  "#FF6384",
+															  "#36A2EB",
+															  "#FFCE56"
+															],
+															hoverBackgroundColor: [
+															  "#FF6384",
+															  "#36A2EB",
+															  "#FFCE56"
+															]
+														}]
+													};
+									    //microcrimine
+									                       var daticrim = {
+														labels: Labelcrim,
+														datasets: [{
+															data: Valcrim,
+															backgroundColor: [
+															  "#FF6384",
+															  "#36A2EB",
+															  "#FFCE56"
+															],
+															hoverBackgroundColor: [
+															  "#FF6384",
+															  "#36A2EB",
+															  "#FFCE56"
+															]
+														}]
+													};
+											
+
+									    		function grafisegn(datsegn, TOT) {
+									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
+												new Chart(ctx, {type: 'doughnut',data: datsegn, options: {
 													elements: {
 														center: {
-															text: arrayItem["Totale Degrado Sociale"]+ arrayItem["Totale Degrado Ambientale"]+ arrayItem["Totale Microcriminalita"],
+															text: TOT,
 											  				color: '#000000', // Default is #000000
 											  				fontStyle: 'Arial', // Default is Arial
 											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
@@ -309,43 +374,38 @@ $(document).ready(function(){
 													legend: {
 													    display: false
 													 }
-												}
-											};
-
-
-											//	var ctx = document.getElementById("CategorieChart").getContext("2d");
-											//	var myChart = new Chart(ctx, config);
-									    		function grafisegn(datsegn) {
-									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
-												new Chart(ctx, {type: 'line',data: dati, options: opzioni});
+												} 
+											});
 											}
 									    		$('input[type=radio][name=radioseg]').change(function() {
 										switch($(this).val()){
 											case 'segnalazioni' :
 											    $('#CategorieChart').remove();
 											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(dataelecam, dataelecamtot);
+											    grafisegn(datitotsegn, TOTsegn);
 											    break
 											case 'sociale' :
 											    $('#CategorieChart').remove();
 											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(dataelesen, dataelesentot)
+											    grafisegn(datisoc, TOTsoc)
 											    break
 											case 'ambientale' :
 											    $('#CategorieChart').remove();
    											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(dataelesen, dataelesentot)
+											    grafisegn(datiamb, TOTamb)
 											    break
 											case 'microcriminalita' :
 											    $('#CategorieChart').remove();
 											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafiseg(dataelesen, dataelesentot)
+											    grafisegn(daticrim, TOTcrim)
 											    break
-										}
-									    )}
-									})
-								    }
-								})
+												}
+												}
+											    )
+											}
+                                               					 })
+                                                				}
+                                           				 })
 							    //fine segnalazioni
 					//inizio Politiche
 							$.ajax({
