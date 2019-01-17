@@ -267,9 +267,9 @@ $(document).ready(function(){
 											var Valsoc = arrayItem.map(function (el) {if( el.Categoria === "Degrado sociale"){ Labelsoc.push(el["Sottocategoria"]); return el["Numero Segnalazioni"]; }});
 											
 											var TOTsegn = arrayItem["Totale Degrado Sociale"]+ arrayItem["Totale Degrado Ambientale"]+ arrayItem["Totale Microcriminalita"];
-											var TOTcrim = Valcrim.reduce((x, y) => x + y));
-											var TOTamb = Valamb.reduce((x, y) => x + y));
-											var TOTsoc = Valsoc.reduce((x, y) => x + y));
+											var TOTcrim = Valcrim.reduce((x, y) => x + y);
+											var TOTamb = Valamb.reduce((x, y) => x + y);
+											var TOTsoc = Valsoc.reduce((x, y) => x + y);
 											//totale segnalazioni
 												var datitotsegn = {
 														labels: [
