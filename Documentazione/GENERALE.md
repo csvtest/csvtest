@@ -116,13 +116,21 @@ I dataset che abbiamo generato nel corso del progetto integrando i dati selezion
 ## Dataset finali
 I nostrI dataset finalI, risultantI dall'integrazione dei dati contenuti all'interno dei dataset intermedi:
 
-[**NOSTRI DATASET (URI O TABELLINA)**]
+|
+
+|
+
+[**LINK PAGINA DATASET FINALI DEL SITO**]
+
+|
+
+|
 _______________________________________________________________
 
 # Analisi della qualità informativa
 
 ## Requisiti 
-I requisiti necessari che abbiamo stabilito per controllare il livello di qualità informativa sono:
+I requisiti necessari, stabiliti dalle **Linee guida nazionali per la valorizzazione del patrimonio informativo pubblico** alla voce [Qualità dei dati](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/bozza/aspettiorg.html#qualita-dei-dati), per controllare il livello di qualità informativa sono:
 
 |  | Accuratezza | Completezza <br> (dati) | Coerenza | Tempestività |
 | -------| ----------- | --------- | ----- | ----- |
@@ -139,18 +147,16 @@ I requisiti necessari che abbiamo stabilito per controllare il livello di qualit
 
 I requisiti aggiuntivi che abbiamo stabilito per controllare il livello di qualità informativa sono:
 
-| Requisito | Descrizione |  |
+|  |  |  |
 | -------| ----------- | --------- |
-| **Completezza**<br>(del **dataset**) | Percentuale di valori validi nel dataset | Script(**mettere link**) |
+| **Completezza**<br>(del **dataset**) | Percentuale di valori non-nulli nel dataset | Script(**mettere link**) |
 | **Disponibilità** | Analisi dell'URI | [URI dei dataset](#uri-dei-dataset) |
 | **Processabilità** | Analisi dei formati | [Formati](#formati) |
 | **Credibilità** | Metadati di *provenance* | [Provenance](#provenance) |
 | **Conformità** | Metadati descrittivi | [Metadati](#metadati) |
 
-[CONTINUARE ...]
-
 ### Indici di completezza
-Gli indici di completezza sono i seguenti:
+Gli indici di completezza che abbiamo calcolato sono i seguenti:
 
 | Dataset | Valori totali | Valori nulli | Completezza |
 | ------- | ------------- | ------------ | ----------- |
@@ -475,99 +481,92 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 
 
 ## Finalità
-### DATASET REDDITI
+
+### Dataset iniziali
+#### DATASET REDDITI
 La finalità della serie è quella di esporre in Open Data il numero e il reddito dei contribuenti bolognesi ai fini Irpef, dichiarati dal 2009 al 2016, per area statistica.
 
 Il dataset è stato prodotto ed elaborato dall’Area Programmazione Controlli e Statistica del Comune di Bologna.
 
 Il dataset è stato scelto al fine di esaminare l’andamento medio del reddito pro-capite dei contribuenti bolognesi, in una determinata zona della città, nell’arco temporale 2009-2016.
 
-### DATASET POLITICHE
+#### DATASET POLITICHE
 La finalità del dataset è quella di esporre in Open Data i risultati degli scrutini alle elezioni politiche del 4 marzo 2018, per l’elezione al Senato della Repubblica e alla Camera dei Deputati.
 
 I file sono estratti dal data entry dall’Ufficio Servizi Elettorali del Comune di Bologna.
 
 Il dataset è stato scelto al fine di conoscere la percentuale di voto di una determinata lista alle elezioni politiche del 4 marzo 2018, per l’elezione al Senato della Repubblica e alla Camera dei Deputati, in una determinata zona della città.
 
-### DATASET CITIZEN MANAGEMENT 
-La finalità del dataset è quella di esporre in Open Data le segnalazioni registrate attraverso il Citizen Relationship Management: strumento di contatto diretto tra amministrazione e cittadini che segnalano problemi all’interno del comprensorio Bolognese. Tali segnalazioni di situazioni di disagio sono inoltre mappate e geolocalizzate all’interno una determinata area cittadina.
+#### DATASET SEGNALAZIONI 
+La finalità dei dataset è quella di esporre in Open Data le segnalazioni registrate attraverso il Citizen Relationship Management: strumento di contatto diretto tra amministrazione e cittadini che segnalano problemi all’interno del comprensorio Bolognese. Tali segnalazioni di situazioni di disagio sono inoltre mappate e geolocalizzate all’interno una determinata area cittadina.
 
 Il dataset è stato scelto al fine di comprendere la natura e la quantità di problemi legati al degrado ambientale, urbano e al disagio sociale, in una determinata zona della città, registrati attraverso il Citizen Relationship Management. 
 
-[... ...]
+#### DATASET AREE STATISTICHE
+La finalità dei dataset è quella di esporre in Open Data i nomi delle aree Statistiche e dei quartieri e i relativi codici.
+
+I dataset sono stati scelti per essere usati come dataset di raccordo per permettere la conversione/accorpamento dalle aree statistiche a zone.
+
+|
+
+|
+
+|
+
+#### DATASET CENSIMENTO
+
+|
+
+|
+
+|
 
 ### DATASET FINALI
 La finalità dei dataset finali è quella di esporre in Open Data alcuni dati relativi la situazione politico-economica-sociale Bolognese degli ultimi anni. In particolare:
 
-Dataset 1:
+#### Dataset 1:
 All'interno del primo dataset ritroviamo i dati divisi per zona di Bologna di: redditi medi pro-capite dei contribuenti bolognesi dal 2009 al 2016, i risutati degli scrutini alle elezioni politiche per l'elezione al Senato della Repubblica e alla Camera dei Deputati del 4.3.2018, e il numero di residenti.
 
-Dataset 2:
+#### Dataset 2:
 All'interno del secondo dataset ritroviamo i dati i dati divisi per zona di Bologna delle segnalazioni riguardanti il degrado ambientale, urbano, sociale e microcriminalità divisi per categoria, sottocategoria e numero di segnalazioni.
 _______________________________________________________________
 
 # Analisi tecnica
 ## Formati
-La pubblicazione di dataset in open Data richiede che i dati siano resi disponibili in formati che siano:
-* aperti
-* non proprietari
-* standardizzati
+La pubblicazione di dataset in open Data richiede che i dati siano resi disponibili in formati:
+* aperti;
+* non proprietari;
+* standardizzati;
 * neutri rispetto agli applicativi necessari per la fruizione dei dati stessi.
 
-Tutti i dataset che abbiamo utilizzato sono pubblicati in formato **CSV**. [*Aree statistiche*] e [*Segnalazioni* ...] sono corredati da un insieme di file in formato **SHP** (uno standard per dati vettoriali spaziali), con file aggiuntivi con estensioni **.sph**, **.dbf**, **.shx** da sui dipendono interpretazione ed utilizzo.
+Tutti i dataset che abbiamo utilizzato sono pubblicati in formato **CSV**. In termini di *Processabilità*, i dataset sono quindi *machine-readable* e in formato aperto ma non corredati da metadati che descrivono i dati.
+
+*È un formato di file testuale utilizzato per rappresentare informazioni con struttura tabellare. Esso è spesso usato per importare ed esportare il contenuto di tabelle di database relazionali e fogli elettronici. Le righe delle tabelle corrispondono a righe nel file di testo CSV e i valori delle celle sono divisi da un carattere separatore, che di solito, come indica il nome stesso, è la virgola. Il CSV non è uno standard vero e proprio ma la sua modalità d’uso è descritta nell’RFC 4180. Nel rilascio di dati secondo il formato CSV, per agevolare i riutilizzatoti, si raccomanda di dichiarare almeno 1) il separatore di campo utilizzato (e.g, virgola, punto e virgola); 2) se è stato usato un carattere per delimitare i campi di testo. Nel corso del 2015, un gruppo di lavoro del W3C «CSV on the web» ha rilasciato una serie di standard del Web tra cui alcuni relativi ai meccanismi necessari a trasformare CSV in vari formati quali JSON, XML e RDF. *
+
+I D. AREE STATISTICHE e D. SEGNALAZIONI sono corredati da un insieme di file in formato **.shp** (*Shapefile*, uno standard per dati vettoriali spaziali), con file aggiuntivi con estensioni **.sph**, **.dbf**, **.shx** da sui dipendono interpretazione ed utilizzo.
+
+*È il formato standard de-facto per la rappresentazione dei dati dei sistemi informativi geografici (GIS). I dati sono di tipo vettoriale. Lo shapefile è stato creato dalla società privata ESRI che rende comunque pubbliche le sue specifiche. L’apertura delle specifiche ha consentito lo sviluppo di diversi strumenti in grado di gestire e creare tale formato. Seppur impropriamente ci si riferisca a uno shapefile, nella pratica si devono considerare almeno tre file: un .shp contenente le forme geometriche, un .dbf contenente il database degli attributi delle forme geometriche e un file .shx come indice delle forme geometriche. A questi tre si deve anche accompagnare un file .prj che contiene le impostazioni del sistema di riferimento. Si raccomanda comunque di specificare nei metadati la proiezione utilizzata. È importante notare che non risulta ancora chiaro se tale formato lo si possa considerare propriamente aperto (e quindi coerente con la definizione introdotta dall’art. 68 del CAD) di livello 3 secondo il modello per i dati proposto nel presente documento. Questo è dovuto al fatto che, per alcune comunità, esso è un formato proprietario e quindi di livello 2, mentre per altre i dati possono essere gestiti attraverso una serie di strumenti non necessariamente confinati a determinate tipologie software (grazie alle specifiche tecniche aperte e pubbliche rese disponibili da ESRI).*
 
 ### Distribuzioni
-Il nostro dataset lo abbiamo pubblicato in [X ?] distribuzioni:
-
-#### RDF
-
-- **Titolo** : 
-- **Descrizione** : 
-- **Tipo** : 
-- **Licenza** : 
-- **Data di pubblicazione** : 
-- **Data di ultima modifica** : 
-- **Download** : 
-
-#### CSV
-
-- **Titolo** : 
-- **Descrizione** : 
-- **Tipo** : 
-- **Licenza** : 
-- **Data di pubblicazione** : 
-- **Data di ultima modifica** : 
-- **Download** : 
-
-#### JSON
-
-- **Titolo** : 
-- **Descrizione** : 
-- **Tipo** : 
-- **Licenza** : 
-- **Data di pubblicazione** : 
-- **Data di ultima modifica** : 
-- **Download** : 
-
-#### XML
-
-- **Titolo** : 
-- **Descrizione** : 
-- **Tipo** : 
-- **Licenza** : 
-- **Data di pubblicazione** : 
-- **Data di ultima modifica** : 
-- **Download** : 
+Abbiamo deciso di pubblicare i dataset finali in [TOT] distribuzioni: [1], [2], [...]. Si veda la pagina di pubblicazione del dataset, sotto la voce [Distribuzioni].
 
 ## Metadati
 La metadatazione ricopre un ruolo essenziale laddove i dati sono esposti a utenti terzi e a software. I metadati, infatti, consentono una maggiore comprensione e rappresentano la chiave attraverso cui abilitare più agevolmente la ricerca, la scoperta, l’accesso e quindi il riuso dei dati stessi. La classificazione qualitativa dei metadati si fonda su due fattori principali: legame tra dato-metadati e livello di dettaglio.
 
-Il nostro obiettivo è raggiungere il **livello 4** di metadatazione, per cui:
-* il legame dato-metadato sia forte: i dati incorporano i metadati che li descrivono;
-* il livello di dettaglio sia massimo: i metadati forniscono informazioni relative al dataset e al singolo dato.
-
 ### Metadatazione dei dataset iniziali
+
+Il livello del modello per i metadati raggiunto dai dataset è il **Livello 2**:
+* Legame dato-metadato debole: i dati sono accompagnati da metadati esterni, inclusi nella pagina di download;
+* Livello di dettaglio generale: i metadati forniscono informazioni relativamente a un dataset, quindi sono informazioni condivise dall’insieme di dati interni a quel dataset.
+
 I dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it/) sono descritti dai seguenti metadati human-readable:
+
+| Metadato | Descrizione |
+| File | il nome del dataset |
+| Anno versione | numero di versione |
+| Versione | numero di versione |
+|  |  |
+
 1. **File**: il nome del dataset.
 2. **Anno versione**: l'anno al quale la relativa versione si riferisce.
 3. **versione**: numero di versione.
@@ -578,8 +577,6 @@ I dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it/) sono 
 8. **Responsabile**: 
 9. **Fonte**: indicazione di autorità e/o provenienza.
 10. **Licenza**: tipo di licenza del dataset.
-
-Non sembrano essere corredati da metadati machine-readable.
 
 ### Metadatazione dei dataset finali
 
@@ -618,7 +615,7 @@ Gli URI dei dataset presentano almeno due aspetti problematici:
 
 2. l'**_inconsistenza del pattern_**, dovuta probabilmente all'impiego di un meccanismo di **_auto-increment_**.
 
-In via ipotetica, proponiamo un possibile perfezionamento degli URI dei dataset di riferimento:
+In via ipotetica, proponiamo un possibile perfezionamento degli URI dei dataset iniziali:
 
 | URI originali | URI perfezionati |
 | ------------- | ---------------- |
@@ -637,6 +634,7 @@ In via ipotetica, proponiamo un possibile perfezionamento degli URI dei dataset 
 | http://dati.comune.bologna.it/download/file/fid/4494 | http://dati.comune.bologna.it/dataset/aree-statistiche/aree-statistiche-per-quartiere |
 | http://dati.comune.bologna.it/download/file/fid/4490 | http://dati.comune.bologna.it/dataset/citizen-relationship-management/segnalazioni-2017-cartografico-per-area-statistica |
 | http://dati.comune.bologna.it/download/file/fid/4492 | http://dati.comune.bologna.it/dataset/citizen-relationship-management/segnalazioni-2017 |
+| **_CENSIMENTO_** |  |
 
 ### URI dei dataset finali
 
