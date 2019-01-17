@@ -22,10 +22,9 @@ $(document).ready(function(){
 						    };
 						};
 						var datageo;
-						$.ajax({
-						    dataType: "json",
-						    url: "geojson_folder/ZoneBologna.json",
-						    success: function(x) { datageo = x}})
+						$.getJSON("geojson_folder/ZoneBologna.json",function(json){
+						    datageo = json;               
+						});
 						var geojson = L.geoJson(datageo, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 
 						//var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
