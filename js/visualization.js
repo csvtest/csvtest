@@ -266,7 +266,7 @@ $(document).ready(function(){
 									    		var Valamb = [];
 											var Valsoc = [];
 	
-									    		$('.information').html('arrayItem.Segnalazioni.objArray.map(a => a.Categoria);')
+									    		$('.information').html(arrayItem.Segnalazioni.objArray.map(a => a.Categoria))
 										    	//if( arrayItem.Segnalazioni.Categoria === "Microcriminalita"){ Labelcrim.push(arrayItem.Segnalazioni["Sottocategoria"]); Valcrim.push(arrayItem.Segnalazioni["Numero Segnalazioni"])};
 											//if( arrayItem.Segnalazioni.Categoria === "Degrado ambientale"){ Labelamb.push(arrayItem.Segnalazioni["Sottocategoria"]); Valamb.push(arrayItem.Segnalazioni["Numero Segnalazioni"])};
 											//if( arrayItem.Segnalazioni.Categoria === "Degrado sociale"){ Labelsoc.push(arrayItem.Segnalazioni["Sottocategoria"]); Valsoc.push(arrayItem.Segnalazioni["Numero Segnalazioni"])};	
