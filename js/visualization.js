@@ -447,7 +447,7 @@ $(document).ready(function(){
 
 									    		function grafisegn(datsegn, opt) {
 									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
-												new Chart(ctx, {type: 'pie',data: datsegn, options: opt});
+												new Chart(ctx, {type: 'outlabeledPie',data: datsegn, options: opt});
 											}
 									   		//doughnut
 											 grafisegn(datitotsegn, optiongensegn);
