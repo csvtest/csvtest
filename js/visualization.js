@@ -267,9 +267,9 @@ $(document).ready(function(){
 											var Valsoc = [];
 	
 									    for (var i in arrayItem.Segnalazioni){
-										    	if( i.Categoria === "Microcriminalita"){ Labelcrim.push(i["Sottocategoria"]); Valcrim.push(i["Numero Segnalazioni"])};
-											if( i.Categoria === "Degrado ambientale"){ Labelamb.push(i["Sottocategoria"]); Valamb.push(i["Numero Segnalazioni"])};
-											if( i.Categoria === "Degrado sociale"){ Labelsoc.push(i["Sottocategoria"]); Valsoc.push(i["Numero Segnalazioni"])};	
+										    	if( arrayItem.Segnalazioni.Categoria === "Microcriminalita"){ Labelcrim.push(arrayItem.Segnalazioni["Sottocategoria"]); Valcrim.push(arrayItem.Segnalazioni["Numero Segnalazioni"])};
+											if( arrayItem.Segnalazioni.Categoria === "Degrado ambientale"){ Labelamb.push(arrayItem.Segnalazioni["Sottocategoria"]); Valamb.push(arrayItem.Segnalazioni["Numero Segnalazioni"])};
+											if( arrayItem.Segnalazioni.Categoria === "Degrado sociale"){ Labelsoc.push(arrayItem.Segnalazioni["Sottocategoria"]); Valsoc.push(arrayItem.Segnalazioni["Numero Segnalazioni"])};	
 								    }
 											var TOTsegn = arrayItem["Totale Degrado Sociale"]+ arrayItem["Totale Degrado Ambientale"]+ arrayItem["Totale Microcriminalita"];
 											var TOTcrim = Valcrim.reduce((x, y) => x + y);
