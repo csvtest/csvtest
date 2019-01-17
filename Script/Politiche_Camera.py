@@ -17,7 +17,7 @@ def merge(data1, data2):
     return lista_row
 
 
-def sez_elettorali_in_zone(data):
+def sez_elettorali_in_zone_Camera(data):
     lista_zone = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18']
     lista2, lista3, lista4, lista5, lista6, lista7, lista8, lista9, lista10, lista11, lista12, lista13, lista14, lista15, lista16, lista17, lista18, lista19 = [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
     new_dict = {}
