@@ -1,5 +1,4 @@
 # Introduzione
-
 Il progetto è stato sviluppato nell'ambito dell' esame di *Open Access and Digital Ethics* del corso di laurea magistrale **Digital Humanities and Digital Knowledge** dell' Università di Bologna, da:
 - Sebastian Barzaghi 
 - Alessandra Foschi
@@ -52,18 +51,15 @@ Il piano di lavoro è stato suddiviso nelle seguenti sezioni:
 _______________________________________________________________
 
 # Scenario applicativo
-
 Dalle elezioni del 1948, prime elezioni della storia italiana dopo il periodo di dittatura fascista in cui si potè votare per Camera e Senato, l’Emilia-Romagna ha sempre votato in maggioranza le forze di (centro)sinistra; le ultime Politiche del 4 marzo 2018 ci hanno invece restituito una differente cartina regionale.
 Partendo da questa considerazione abbiamo deciso di analizzare la situazione politico-economica-sociale Bolognese degli ultimi anni, per introdurre l'utente alla questione, lasciandolo però libero di analizzare ed interpretare tali dati a suo piacimento.
 _______________________________________________________________
 
 # Dataset
-
 Ai fini del progetto abbiamo utilizzato dataset singoli e serie di dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it), Sito Web del progetto **OpenData Comune di Bologna** dedicato alla trasparenza e accessibilità dei dati aperti, secondo i principi dell'Open Government. All'interno dei sito il Comune di Bologna pubblica e mette a disposizione interessanti collezioni di dataset di natura sociale, economica, geografica e politica, in formato open, relative alla Città Metropolitana di Bologna. 
 
 
 ## Dataset usati
-
 I dataset che abbiamo utilizzato sono:
 
 | ID | URI | Nome | Pagina |
@@ -126,7 +122,6 @@ _______________________________________________________________
 # Analisi della qualità informativa
 
 ## Requisiti 
-
 I requisiti necessari che abbiamo stabilito per controllare il livello di qualità informativa sono:
 
 |  | Accuratezza | Completezza <br> (dati) | Completezza <br> (dataset) | Coerenza | Tempestività |
@@ -179,7 +174,10 @@ Gli indici di completezza sono i seguenti:
 | 5.0 | 76170 | 0 | 100% |
 | 5.1 | 63485 | 6695 | 89.45% |
 
-[NOSTRO DATASET ... metadati di qualità?]
+Dalla tabella è possibile osservare come i dataset scelti siano tendenzialmente completi dal punto di vista dei valori non-nulli. Un'eccezione a questa tendenza è rappresentata dal Dataset Segnalazioni 5.1, con un indice di completezza pari a 89.45%. Il conteggio dei valori non-nulli totali, inoltre, ci ha permesso fin da subito di osservare altre peculiarità riguardanti le popolazioni dei vari dataset. E' interessante notare soprattutto osservare la tendenza sostanzialmente uniforme (92) all'interno della serie dei Redditi, ad eccezione di 3.2 (Redditi del 2011), con ben 3097 (!) valori non-nulli, e di 3.5 (Redditi del 2014), con due valori in più rispetto al normale (94).
+
+## Misure di qualità nella metadatazione
+Vedere sezione [Metadatazione dei dataset finali](#metadatazione-dei-dataset-finali) per l'inserimento delle misure di qualità secondo le best practices contenute nel [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dqv/).
 _______________________________________________________________
 
 # Analisi etico-giuridica
@@ -187,7 +185,6 @@ _______________________________________________________________
 ## Privacy
 
 ### Checklist giuridica
-
 L'analisi giuridica è necessaria per garantire sostenibilità nel tempo del processo di produzione e pubblicazione dei dati e creare un servizio equilibrato nel rispetto della funzione pubblica e dei diritti dei singoli individui. L’analisi giuridica delle fonti mira quindi a valutare questi delicati equilibri, evidenziando limitazioni d’uso, finalità di competenza, determinazione dei diritti e dei termini di licenza.
 
 Per attuarla, abbiamo utilizzato una *check list* di riferimento per valutare tutti gli aspetti giuridici del ciclo di vita dei dataset. La check list è formata da una serie
@@ -231,7 +228,6 @@ di domande, per ciascun aspetto, a cui rispondere con Sì, No o Non Verificabile
 ## Misure di de-identificazione e pulitura
 
 ### Misure di de-identificazione
-
 Nell'elaborazione della check-list abbiamo preso coscienza di criticità all'interno di alcuni dataset riguardanti la presenza di possibili personal data. I dati che si confermano essere *non-personal data* possono essere infatti usati liberamente, cioè senza restrizioni legali, ma qualora dati specifici possano rientrare nella categoria di *personal data*, o se incrociati con altri dati reperibili sul web possano portare all'identificazione dell'individuo e/o dei suoi personal data, si incorrerebbe in grosse problematiche legali.
 
 L'Articolo 4 del Regolamento Europeo Generale sulla Protezione dei Dati (EU RGPD) definisce il concetto di *personal data*: per dato personale si intende:
@@ -247,7 +243,6 @@ Gli standard di de-identificazione per i dati contenuti in un dataset sono i seg
 Abbiamo così preso provvedimenti affinché gli individui non fossero più identificabili tramite l'osservazione dei dati o il loro incrocio.
 
 ### Pulitura
-
 La pulitura è stata effettuata con:
 * il programma [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor sviluppato dall'Open Data Institute, che permette di aggiungere, eliminare e modificare righe, colonne e dati;
 * il linguaggio di programmazione **Python**.
@@ -272,7 +267,6 @@ In generale, nel corso della pulizia dei vari dataset, abbiamo:
 #### DATASET REDDITI
 
 ##### Revisione preliminare: criticità
-
 I dati contenuti in essi potrebbero rientrare nella categoria di *personal data* se incrociati con altri dati. In particolare:
 * se l'*Area statistica* include un territorio particolarmente limitato, e
 * se il *Numero contribuenti* è particolarmente ridotto,
@@ -284,7 +278,6 @@ In Italia il Segreto Statistico è di fatto regolamentato dall'art.9 del DL n.32
 2. I dati di cui al comma 1 non possono essere comunicati o diffusi, se non in forma aggregata e secondo modalità che rendano non identificabili gli interessati ad alcun soggetto esterno, pubblico o privato, né ad alcun ufficio della pubblica amministrazione. In ogni caso, i dati non possono essere utilizzati al fine di identificare nuovamente gli interessati.*
 
 ##### Pulitura, De-identificazione e *Merging*
-
 La fase di **pulitura** ha previsto le seguenti operazioni:
 
 1. *Eliminazione di colonne*; in particolare: 
@@ -349,7 +342,6 @@ Il problema si pone soprattutto se la segnalazione riguarda un'altra persona, co
 
 
 ##### Pulitura, De-identificazione e Merge
-
 In fase di **pulitura** e **de-identificazione** abbiamo operato una serie di operazioni sui due dataset in questione:
 
 * per quanto riguarda il primo dataset, con l'eliminazione dell'intera colonna *Category* abbiamo eliminato sia i dati ridondanti che i dati sensibili;
@@ -403,8 +395,8 @@ I dati al suo interno non rientrano nella categoria di *personal data*, in quant
 Prestandosi bene come dataset di confronto, crediamo che il lavoro di de-anonimizzazione andrebbe fatto sugli eventuali altri dataset che potrebbero essere incrociati con questo. 
 
 #### DATASET POLITICHE
-##### Revisione preliminare: criticità
 
+##### Revisione preliminare: criticità
 Tutti i valori all'interno dei dataset sono di natura statistico-numerica. In particolare:
 - dati statistici, che raccolgono i numeri di iscritti, voti e votanti (es. *Totale Votanti*, *Totale Voti Validi*, ecc...);
 - codificazioni, mappate ad entità geospaziali (es. *Sezione elettorale*, *Quartiere*, *Zona*, ecc...).
@@ -412,7 +404,6 @@ Tutti i valori all'interno dei dataset sono di natura statistico-numerica. In pa
 Il rischio di de-anonimizzazione è nullo.
 
 ##### Pulizia e Merging
-
 Le operazioni di pulizia effettuate solo le seguenti:
 
 1) *Eliminazione di colonne*; in particolare:
