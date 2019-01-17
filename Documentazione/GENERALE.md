@@ -79,7 +79,8 @@ I dataset che abbiamo utilizzato sono:
 | 4.1 | http://dati.comune.bologna.it/download/file/fid/4494 | Aree 03.00.03_areestat_quartiere | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
 | 5.0 | http://dati.comune.bologna.it/download/file/fid/4490 | 38.00.03_segnalazioni_czrm2017_area_statistica | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
 | 5.1 | http://dati.comune.bologna.it/download/file/fid/4492 | 38.00.05_segnalazioni_czrm2017_tot_tipologia | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
-| **_CENSIMENTO_** | | | | 
+| **_CENSIMENTO_** | | | |
+| 7.0 | http://dati.comune.bologna.it/download/file/fid/1737 | 03.00.34_zone.zip | [Zone Bologna](http://dati.comune.bologna.it/node/1184) |
 
 Nella documentazione i dataset pubblicati nella tabella precedente vengono raccolti nei seguenti blocchi: 
 
@@ -89,11 +90,12 @@ Nella documentazione i dataset pubblicati nella tabella precedente vengono racco
 | D. REDDITI    | 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7 |
 | D. AREE STATISTICHE | 4.0, 4.1 |
 | D. CITIZEN MANAGEMENT | 5.0, 5.1 |
-| **_D. CENSIMENTO_** | |
+| **_D. CENSIMENTO_** | 6.0 |
+| D. ZONE | 7.0 |
 
 ## Dataset puliti
 I dataset che abbiamo utilizzato, ma ripuliti:
-
+    
 | Dataset ID | URI (pulito) |
 | ---------- | ------------ |
 | 1.0 |  |  
@@ -104,7 +106,9 @@ I dataset che abbiamo utilizzato, ma ripuliti:
 | 4.0 |  |  
 | 4.1 |  |  
 | 5.0 |  |  
-| 5.1 |  | 
+| 5.1 |  |
+| 6.0 |  |
+| 7.0 |  |
 
 ## Dataset intermedi
 I dataset che abbiamo generato nel corso del progetto integrando i dati selezionati all' interno dei dataset ripuliti:
@@ -113,8 +117,9 @@ I dataset che abbiamo generato nel corso del progetto integrando i dati selezion
 | ---------- | --------- | --------- |
 |  |  |  |
 
+
 ## Dataset finali
-I nostrI dataset finalI, risultantI dall'integrazione dei dati contenuti all'interno dei dataset intermedi:
+I nostri dataset finali, risultanti dall'integrazione dei dati contenuti all'interno dei dataset intermedi:
 
 |
 
@@ -144,6 +149,8 @@ I requisiti necessari, stabiliti dalle **Linee guida nazionali per la valorizzaz
 | **Segnalazioni** |  |  |  |  |  |
 | 5.0 | nomenclature non armonizzate con [5.1]; <br> sintassi di *TIPO_AREA_* | True, rischio di de-anonimizzazione | True | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 | 5.1 | semantica troppo generica di *Category* <br> semantica poco chiara in alcuni casi di *Subcategory_1*, *Subcategory_2*, *Subcategory_3* | mancano spiegazioni di *Category*; <br> mancano spiegazioni di *Subcategory_1*, *Subcategory_2*, *Subcategory_3*; | presenza di segnalazioni de-anonimizzate; | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
+| 6.0 |  |  |  |  |
+|  |  |  |  |  |
 
 I requisiti aggiuntivi che abbiamo stabilito per controllare il livello di qualità informativa sono:
 
@@ -179,6 +186,10 @@ Gli indici di completezza che abbiamo calcolato sono i seguenti:
 | Segnalazioni | - | - | - |
 | 5.0 | 76170 | 0 | 100% |
 | 5.1 | 63485 | 6695 | 89.45% |
+| Censimento | - | - | - |
+| 6.0 |  |  |
+| Zone | - | - | - |
+| 7.0 |  |  |
 
 Dalla tabella è possibile osservare come i dataset scelti siano tendenzialmente completi dal punto di vista dei valori non-nulli. Un'eccezione a questa tendenza è rappresentata dal Dataset Segnalazioni 5.1, con un indice di completezza pari a 89.45%. Il conteggio dei valori non-nulli totali, inoltre, ci ha permesso fin da subito di osservare altre peculiarità riguardanti le popolazioni dei vari dataset. E' interessante notare soprattutto osservare la tendenza sostanzialmente uniforme (92) all'interno della serie dei Redditi, ad eccezione di 3.2 (Redditi del 2011), con ben 3097 (!) valori non-nulli, e di 3.5 (Redditi del 2014), con due valori in più rispetto al normale (94).
 
@@ -342,7 +353,7 @@ L'ultimo step è stato quindi il calcolo del numero totale di ogni segnalazione 
 
 Il dataset è stato stampato in formato .csv tramite la libreria *pandas*. Infine abbiamo fatto un controllo manuale del dataset per verificarne la correttezza.
 
-#### DATASET AREE STATISTICHE
+#### DATASET AREE STATISTICHE 4.1
 ##### Revisione preliminare: criticità
 
 Il dataset contiene informazioni di natura geospaziale. In particolare:
@@ -356,7 +367,6 @@ I dati al suo interno non rientrano nella categoria di *personal data*, in quant
 Prestandosi bene come dataset di confronto, crediamo che il lavoro di de-anonimizzazione andrebbe fatto sugli eventuali altri dataset che potrebbero essere incrociati con questo. 
 
 #### DATASET POLITICHE
-
 ##### Revisione preliminare: criticità
 Tutti i valori all'interno dei dataset sono di natura statistico-numerica. In particolare:
 - dati statistici, che raccolgono i numeri di iscritti, voti e votanti (es. *Totale Votanti*, *Totale Voti Validi*, ecc...);
@@ -391,6 +401,15 @@ Le operazioni di pulizia effettuate solo le seguenti:
 
 |
 
+#### DATASET CENSIMENTO
+
+#### DATASET ZONE 7.0 & DATASET AREE STATISTICHE 4.0
+##### Revisione preliminare & pulitura
+
+Per poter manipolare i dati geospaziali all'interno del dataset abbiamo dovuto convertire il formato da .shp a .geojson tramite l'algoritmo **shp2geojson**. Le coordinate nello *shapefile* delle zone hanno come riferimento l'**UTMA ED50**, il sistema di coordinate locale dell'Emilia Romagna. Ciò porta ad un bug di conversione in *.geojson*, che invece usa come sistema di riferimento delle coordinate WGS84 (un formato globale). Inoltre, qualora si volesse lavorare con il file *shapefile* originario, si nota un grave *offset* delle coordinate.
+
+Abbiamo poi lavorato sullo *shapefile* delle Aree Statistiche (4.0): il sistema di riferimento delle coordinate utilizzato in questo caso è l'**ED50 UTM Zone 32N** (un sistema europeo). Essendo un formato più diffuso, è possibile convertire direttamente in .geojson attraverso l'algoritmo **shp2geojson**. La precisione di descrizione è quindi maggiore. Ciò ci ha permesso di eseguire il **_merging_** delle aree statistiche per creare le zone tramite il programma open-source QGIS seguendo le informazioni contenute nel DATASET AREE STATISTICE 4.1.
+
 ***
 
 ## Licenze
@@ -402,6 +421,7 @@ L'informazione sul tipo di licenza è metadato indispensabile per determinare co
 
 I dataset pubblicati su OpenData Bologna rispettano queste condizioni.
 
+### Dataset
 #### DATASET REDDITI, DATASET POLITICHE
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
@@ -428,12 +448,32 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 - distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
 
 
-### [NOSTRI DATASET]
+#### [NOSTRI DATASET]
 
 ~~Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisca libertà di riutilizzo, che sia internazionalmente riconosciuta e che consenta di attribuire la paternità dei dataset (attribuire la fonte). Pertanto, si suggerisce l’adozione generalizzata della licenza CC-BY nella sua versione 4.0. Si raccomanda inoltre di gestire l’attribuzione della fonte indicando il nome dell’organizzazione unitamente all’URL della pagina Web dove si trovano i dataset/contenuti da licenziare.~~
 
 [NOSTRA LICENZA]
 
+### Librerie
+Le librerie che abbiamo utilizzato per compilare i codici Javascript, Python e HTML sono:
+
+| Libreria | Licenza |
+| -------- | ------- |
+| pandas | Nuova licenza BSD (3 clausole) |
+| Jquery | MIT License |
+| Bootstrap | MIT License |
+| Leaflet | Licenza FreeBSD (2 clausole) |
+| Chartjs | MIT License |
+| chartjs-plugin-labels | MIT License |
+| shapely | Nuova licenza BSD (3 clausole) |
+
+### Codice
+La licenza del nostro codice è GNU-GPL.
+
+### Documentazione
+La licenza della documentazione di Bootstrap è [CC-BY 3.0 Unported]. 
+
+La licenza di questa documentazione è 
 
 ## Finalità
 
