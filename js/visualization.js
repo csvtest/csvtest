@@ -447,9 +447,9 @@ $(document).ready(function(){
 
 									    		function grafisegn(datsegn, opt) {
 									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
-												new Chart(ctx, {type: 'doughnut',data: datsegn, options: opt});
+												new Chart(ctx, {type: 'pie',data: datsegn, options: opt});
 											}
-									   		
+									   		//doughnut
 											 grafisegn(datitotsegn, optiongensegn);
 									    if (arrayItem["Zona"] != "Colli"){
 									    		$('input[type=radio][name=radioseg]').change(function() {
