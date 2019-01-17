@@ -13,12 +13,15 @@ $(document).ready(function(){
 						map.setMaxBounds(limiti);
 					// Settaggio colore feature geojson
 						function getColor(d) {
-						    return d > 9 ? '#800026' :
-								      '#FFEDA0';
+						return 	d > 36600 ? '#800026' :
+							d > 27200  ? '#BD0026' :
+							d > 20800  ? '#E31A1C' :
+							d > 14400  ? '#FC4E2A' :
+								     '#FD8D3C' ;
 						};
 						function stylegeo(feature) {
 						    return {
-							fillColor: getColor(feature.properties.Codice_zona),
+							fillColor: getColor(feature.properties.Censimento2017_zona),
 						    };
 						};
 	
