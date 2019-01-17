@@ -114,9 +114,9 @@ I dataset che abbiamo generato nel corso del progetto integrando i dati selezion
 |  |  |  |
 
 ## Dataset finali
-Il nostro dataset finale, risultante dall'integrazione dei dati contenuti all'interno dei dataset intermedi:
+I nostrI dataset finalI, risultantI dall'integrazione dei dati contenuti all'interno dei dataset intermedi:
 
-[**NOSTRO DATASET (URI O TABELLINA)**]
+[**NOSTRI DATASET (URI O TABELLINA)**]
 _______________________________________________________________
 
 # Analisi della qualità informativa
@@ -467,7 +467,7 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 - distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
 
 
-### [NOSTRO DATASET MASHATO]
+### [NOSTRI DATASET]
 
 ~~Si ritiene opportuno fare riferimento ad una licenza unica aperta, che garantisca libertà di riutilizzo, che sia internazionalmente riconosciuta e che consenta di attribuire la paternità dei dataset (attribuire la fonte). Pertanto, si suggerisce l’adozione generalizzata della licenza CC-BY nella sua versione 4.0. Si raccomanda inoltre di gestire l’attribuzione della fonte indicando il nome dell’organizzazione unitamente all’URL della pagina Web dove si trovano i dataset/contenuti da licenziare.~~
 
@@ -496,8 +496,14 @@ Il dataset è stato scelto al fine di comprendere la natura e la quantità di pr
 
 [... ...]
 
-[NOSTRA FINALITA']
+### DATASET FINALI
+La finalità dei dataset finali è quella di esporre in Open Data alcuni dati relativi la situazione politico-economica-sociale Bolognese degli ultimi anni. In particolare:
 
+Dataset 1:
+All'interno del primo dataset ritroviamo i dati divisi per zona di Bologna di: redditi medi pro-capite dei contribuenti bolognesi dal 2009 al 2016, i risutati degli scrutini alle elezioni politiche per l'elezione al Senato della Repubblica e alla Camera dei Deputati del 4.3.2018, e il numero di residenti.
+
+Dataset 2:
+All'interno del secondo dataset ritroviamo i dati i dati divisi per zona di Bologna delle segnalazioni riguardanti il degrado ambientale, urbano, sociale e microcriminalità divisi per categoria, sottocategoria e numero di segnalazioni.
 _______________________________________________________________
 
 # Analisi tecnica
