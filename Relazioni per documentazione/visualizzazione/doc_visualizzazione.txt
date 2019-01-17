@@ -31,8 +31,11 @@ Il sistema bicamerale italiano comporta elezioni sia per la Camera dei Deputati 
   La seconda "finestra" è dedicata alla rappresentazione dei dati di reddito della zona dal 2009 al 2016, mediante un grafo a linee multiple. In primis la scala del grafo è stata standardizzata lungo l'asse Y con una scala a base 10000€ che parte da 18000€ fino a 58000€. Questo procedimento risulta un accorgimento importante per la qualità della visualizzazione dal momento che permette di visualizzare i redditi di tutte le zone sulla stessa scala, a prescindere dall'effettivo reddito medio di una determinata zona. Ovviamente tale accorgimento va a generalizzare la visualizzazione del reddito di una singola area, per questo motivo, tramite radio button, si può passare ad una visualizzazione più dettagliata per accedere, consapevolmente, ad una visualizzazione su scala locale (con i minimi e i massimi dell'asse Y rapportati esclusivamente alla singola Zona).
   
   Inoltre, in entrambe le modalità di visualizzazione, l'andamento del reddito medio della zona è paragonato alla media del reddito dell'intera città (dato calcolato e conservato nel dataset intermedio: "redditi_bologna_per_anno.csv"). Infine per valorizzare l'andamento del reddito negli anni, e permettere analisi critiche, è stata introdotta una linea che mostra l'andamento del reddito medio della zona nel 2009 negli anni successivi attraverso il coefficente FOI (Indice dei prezzi al consumo per le famiglie di operai e impiegati), dato che permette di valutare l'andamento dell'inflazione, più semplicemente, l'ipotetica crescita del reddito 2009 negli anni successivi per mantenerne invariato il potere di acquisto.
+
+
+ 2.3
+  Segnalazioni
   
- 
 
 
 
