@@ -1,0 +1,25 @@
+Visualizzazione
+
+La pagina html dedicata alla visualizzazione dei dati è stata creata attraverso l'utilizzo della libreria Bootstrap, un set di strumenti open source per mantenere la pagina pulita nel design e funzionale.
+Tutti i dati visualizzati sono caricati sul sito tramite  Ajax, strumento incluso in Jquery (una libreria Javascript), che permette di caricare informazioni in tempo reale dalla nostra repository al sito web finale.
+1-MAPPA
+La quantità e la varietà di informazioni da visualizzare ha richiesto un'attenta organizzazione dello spazio della pagina html del progetto.
+Dal momento che abbiamo scelto come punto focale per la raccolta dei nostri dati le zone della città di Bologna, la mappa della città di Bologna divisa in zone risulta lo strumento ideale per iniziare la navigazione all'interno dei nostri dataset.
+Tale mappa è stata realizzata utilizzando i dati geografici di Open Street Map, un'archivio dati aperto finalizzato alla creazione di mappe, mediante Leaflet, una libreria Javascript dedicata alla programmazione delle mappe.
+
+Tramite javascript (con l'ausilio di Leaflet) viene visualizzato il geojson interattivo delle zone di Bologna, con la possibilità da parte dell'utente di poter selezionare cliccando sull'apposita zona.
+Per dare un peso statistico alle zone è stato scelto di creare una scala cromatica per differenziare le zone in base alla densità abitativa (duqnue dei residenti in base ai dati del censimento 2017). Le 5 fasce demografiche sono state calcolate prendendo come riferimento la zona con meno abitanti (8820) e quella col maggior numero (38358). 
+La scala parte da 8000 abitanti per poi giungere a 40000 abitanti con step da 6400 abitanti (come spiegato nell'apposita legenda).
+
+2-SEZIONE ZONA SELEZIONATA
+Alla mappa cittadina è dedicata metà della pagina del nostro sito. Nel momento della selezione di una Zona di Bologna, la seconda metà della pagina viene popolata dalla visualizzazione dei dati riferiti alla zona specifica.
+Per mantenere la visualizzazione pulita, e non disperdere verticalmente le informazioni, si è scelto di inserire i grafici delle singole sezioni (elezioni,reddito, segnalazioni) in appositi accordion (finestre a scomparsa), con la possibilità da parte dell'utente di poter aprire le sezioni desiderate per visualizzare più grafici contemporneamente. 
+
+2.1
+  Elezioni politiche
+  La prima "finestra" è dedicata ai dati delle elezioni politiche del 4 Marzo 2018, tale finestra è aperta di default, rappresentando il tema principale del progetto.
+  La visualizzazione dei dati elettorali è distribuita in 2 grafici, realizzati tramite la libreria Chartjs (Javascript), un tool open source per la realizzazione di grafici, strumento molto interessante per il supporto che riceve della comunità di sviluppatori che forniscono tool avanzati per la personalizzazione.
+  Nonostante il dataset fornisca dati elettorali di tutti i partiti partecipanti alle elezioni 2018, è stato scelto di ridurre la visualizzazione ai soli partiti che abbiano superato, nel comune di Bologna, la soglia del 3% (soglia di sbarramento nazionale), dunque: Movimento 5 Stelle, Partito Democratico, Lega Nord, Forza Italia, Fratelli D'Italia, Liberi E Uguali, Più Europa.
+  Gli altri partiti sono invece raggruppati nella categoria "Altri Partiti".
+  Il primo grafo è un modello Radar che mostra i risultati elettorali specifici della zona, 
+
