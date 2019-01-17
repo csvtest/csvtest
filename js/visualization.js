@@ -470,7 +470,7 @@ $(document).ready(function(){
 												new Chart(ctx, {type: 'doughnut',data: datsegn, options: opt});
 											}
 									   		
-											 grafisegn(datitotsegn, TOTsegn);
+											 grafisegn(datitotsegn, optiongensegn);
 									    		$('input[type=radio][name=radioseg]').change(function() {
 										switch($(this).val()){
 											case 'segnalazioni' :
