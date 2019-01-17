@@ -1,0 +1,1743 @@
+[  
+    {  
+       "Zona":"Lame",
+       "Totale Degrado Sociale":36,
+       "Totale Degrado Ambientale":82,
+       "Totale Microcriminalita":5,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni": 54
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Neve",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento elettromagnetico",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni": 3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni": 1 
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni": 9
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni": 8
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni": 6 
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni": 12
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni": 5
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni": 4 
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni": 8
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Spaccio",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Adulti in difficolta",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni": 1
+          }
+       ]
+    },
+    {  
+       "Zona":"Corticella",
+       "Totale Degrado Sociale":21,
+       "Totale Degrado Ambientale":115,
+       "Totale Microcriminalita":5,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni": 84
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni": 11
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Furti/rapine",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni": 4
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni": 3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni": 5
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni": 6
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni": 3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni": 5
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Adulti in difficolta",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Prostituzione",
+             "Numero Segnalazioni": 3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Neve",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Dissesto idro-geologico",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Punkabbestia",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni": 1
+          }
+       ]
+    },
+    {  
+       "Zona":"San Donato",
+       "Totale Degrado Sociale":61,
+       "Totale Degrado Ambientale":82,
+       "Totale Microcriminalita":17,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni": 43
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni": 24
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Truffe",
+             "Numero Segnalazioni": 3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Dissesto idro-geologico",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni": 4
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni": 24
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni": 7
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni": 3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni": 3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni": 8
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni": 7
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni": 4
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Spaccio",
+             "Numero Segnalazioni": 8
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni": 7 
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Neve",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni": 2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Punkabbestia",
+             "Numero Segnalazioni": 3 
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Prostituzione",
+             "Numero Segnalazioni": 1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Furti/rapine",
+             "Numero Segnalazioni": 2
+          }
+       ]
+    },
+    {  
+       "Zona":"Bolognina",
+       "Totale Degrado Sociale":50,
+       "Totale Degrado Ambientale":178,
+       "Totale Microcriminalita":33,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni": 117
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni": 20
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni": 3
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Furti/rapine",
+             "Numero Segnalazioni": 3
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Spaccio",
+             "Numero Segnalazioni": 12
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni": 27
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":13
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Dissesto idro-geologico",
+             "Numero Segnalazioni":6
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":7
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Prostituzione",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":6
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni":9
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Neve",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":6
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":7
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni":1
+          }
+       ]
+    },
+    {  
+       "Zona":"Santa Viola",
+       "Totale Degrado Sociale":11,
+       "Totale Degrado Ambientale":28,
+       "Totale Microcriminalita":2,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":16
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Prostituzione",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Donne in difficolta",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Dissesto idro-geologico",
+             "Numero Segnalazioni":2
+          }
+       ]
+    },
+    {  
+       "Zona":"Barca",
+       "Totale Degrado Sociale":10,
+       "Totale Degrado Ambientale":33,
+       "Totale Microcriminalita":4,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":21
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":8
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Dissesto idro-geologico",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Furti/rapine",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":1
+          }
+       ]
+    },
+    {  
+       "Zona":"Saffi",
+       "Totale Degrado Sociale":40,
+       "Totale Degrado Ambientale":90,
+       "Totale Microcriminalita":11,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":6
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":10
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":60
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":12
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":15
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Adulti in difficolta",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni":7
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Truffe",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Anziani non autosufficienti",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Donne in difficolta",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Spaccio",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":1
+          }
+       ]
+    },
+    {  
+       "Zona":"Costa Saragozza",
+       "Totale Degrado Sociale":15,
+       "Totale Degrado Ambientale":116,
+       "Totale Microcriminalita":10,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":79
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":7
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":15
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Neve",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":9
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Furti/rapine",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Adulti in difficolta",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Prostituzione",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni":1
+          }
+       ]
+    },
+    {  
+       "Zona":"Colli",
+       "Totale Degrado Sociale":3,
+       "Totale Degrado Ambientale":17,
+       "Totale Microcriminalita":0,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":14
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Neve",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":2
+          }
+       ]
+    },
+    {  
+       "Zona":"San Ruffillo",
+       "Totale Degrado Sociale":10,
+       "Totale Degrado Ambientale":42,
+       "Totale Microcriminalita":6,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":22
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":6
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Neve",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Dissesto idro-geologico",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Videosorveglianza",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni":1
+          }
+       ]
+    },
+    {  
+       "Zona":"Mazzini",
+       "Totale Degrado Sociale":30,
+       "Totale Degrado Ambientale":60,
+       "Totale Microcriminalita":11,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":12
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":39
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":12
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Furti/rapine",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Prostituzione",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Anziani non autosufficienti",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Adulti in difficolta",
+             "Numero Segnalazioni":1
+          }
+       ]
+    },
+    {  
+       "Zona":"Murri",
+       "Totale Degrado Sociale":8,
+       "Totale Degrado Ambientale":55,
+       "Totale Microcriminalita":1,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":27
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":8
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":8
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":6
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Neve",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Dissesto idro-geologico",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":1
+          }
+       ]
+    },
+    {  
+       "Zona":"San Vitale",
+       "Totale Degrado Sociale":54,
+       "Totale Degrado Ambientale":92,
+       "Totale Microcriminalita":11,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":54
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":22
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":10
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":7
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":12
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":19
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Spaccio",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Adulti in difficolta",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Punkabbestia",
+             "Numero Segnalazioni":1
+          }
+       ]
+    },
+    {  
+       "Zona":"Marconi",
+       "Totale Degrado Sociale":70,
+       "Totale Degrado Ambientale":115,
+       "Totale Microcriminalita":19,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":64
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":34
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni":7
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":24
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":14
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni":8
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":10
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":13
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Neve",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Punkabbestia",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":6
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Adulti in difficolta",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Spaccio",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Videosorveglianza",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Furti/rapine",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Truffe",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni":1
+          }
+       ]
+    },
+    {  
+       "Zona":"Irnerio",
+       "Totale Degrado Sociale":59,
+       "Totale Degrado Ambientale":88,
+       "Totale Microcriminalita":20,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni":16
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":57
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":11
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni":8
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":15
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":18
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Truffe",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":9
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Spaccio",
+             "Numero Segnalazioni":10
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Nomadi",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Furti/rapine",
+             "Numero Segnalazioni":2
+          }
+       ]
+    },
+    {  
+       "Zona":"Galvani",
+       "Totale Degrado Sociale":38,
+       "Totale Degrado Ambientale":84,
+       "Totale Microcriminalita":14,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":12
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":48
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":15
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":16
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":7
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni":6
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Neve",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Donne in difficolta",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni":5
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Videosorveglianza",
+             "Numero Segnalazioni":2
+          }
+       ]
+    },
+    {  
+       "Zona":"Malpighi",
+       "Totale Degrado Sociale":31,
+       "Totale Degrado Ambientale":89,
+       "Totale Microcriminalita":12,
+       "Segnalazioni":[  
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Sporcizia/deiezioni/problemi igienici",
+             "Numero Segnalazioni":23
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bande giovanili",
+             "Numero Segnalazioni":7
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Comportamenti sanzionabili",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Bivacco",
+             "Numero Segnalazioni":11
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Rifiuti/rottami",
+             "Numero Segnalazioni":52
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Occupazioni abusive",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Spaccio",
+             "Numero Segnalazioni":4
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Mendicanti",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Furti/rapine",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento acustico",
+             "Numero Segnalazioni":10
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Senza fissa dimora",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Altro",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Conflitti",
+             "Numero Segnalazioni":3
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Tossicodipendenti",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado sociale",
+             "Sottocategoria":"Adulti in difficolta",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Scarichi idrici",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Degrado ambientale",
+             "Sottocategoria":"Inquinamento atmosferico",
+             "Numero Segnalazioni":2
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Truffe",
+             "Numero Segnalazioni":1
+          },
+          {  
+             "Categoria":"Microcriminalita",
+             "Sottocategoria":"Vandalismi",
+             "Numero Segnalazioni":1
+          }
+       ]
+    },
+    {  
+        "Zona":"Borgo Panigale",
+        "Totale Degrado Sociale":37,
+        "Totale Degrado Ambientale":99,
+        "Totale Microcriminalita":8,
+        "Segnalazioni":[  
+           {  
+              "Categoria":"Degrado ambientale",
+              "Sottocategoria":"Rifiuti/rottami",
+              "Numero Segnalazioni":56
+           },
+           {  
+              "Categoria":"Degrado ambientale",
+              "Sottocategoria":"Inquinamento acustico",
+              "Numero Segnalazioni":7
+           },
+           {  
+              "Categoria":"Degrado sociale",
+              "Sottocategoria":"Nomadi",
+              "Numero Segnalazioni":10
+           },
+           {  
+              "Categoria":"Degrado sociale",
+              "Sottocategoria":"Bande Giovanili",
+              "Numero Segnalazioni":4
+           },
+           {  
+              "Categoria":"Degrado ambientale",
+              "Sottocategoria":"Sporcizia/deiezioni/problemi igenici",
+              "Numero Segnalazioni":21
+           },
+           {  
+              "Categoria":"Degrado ambientale",
+              "Sottocategoria":"Inquinamento atmosferico",
+              "Numero Segnalazioni":6
+           },
+           {  
+              "Categoria":"Microcriminalita",
+              "Sottocategoria":"Vandalismi",
+              "Numero Segnalazioni":6
+           },
+           {  
+              "Categoria":"Degrado sociale",
+              "Sottocategoria":"Bivacco",
+              "Numero Segnalazioni":9
+           },
+           {  
+              "Categoria":"Degrado ambientale",
+              "Sottocategoria":"Dissessto idro-geologico",
+              "Numero Segnalazioni":5
+           },
+           {  
+              "Categoria":"Degrado ambientale",
+              "Sottocategoria":"Scarichi idrici",
+              "Numero Segnalazioni":4
+           },
+           {  
+              "Categoria":"Microcriminalita",
+              "Sottocategoria":"Videosorveglianza",
+              "Numero Segnalazioni":1
+           },
+           {  
+              "Categoria":"Degrado sociale",
+              "Sottocategoria":"Prostituzione",
+              "Numero Segnalazioni":10
+           },
+           {  
+              "Categoria":"Degrado sociale",
+              "Sottocategoria":"Senza fissa dimora",
+              "Numero Segnalazioni":2
+           },
+           {  
+              "Categoria":"Microcriminalita",
+              "Sottocategoria":"Comportamenti sanzionabili",
+              "Numero Segnalazioni":1
+           },
+           {  
+              "Categoria":"Degrado sociale",
+              "Sottocategoria":"Conflitti",
+              "Numero Segnalazioni":2
+           }
+           
+        ]
+     }
+
+ ]
