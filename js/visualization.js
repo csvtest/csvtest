@@ -75,7 +75,7 @@ $(document).ready(function(){
 							      dehighlight(e.target);
 							    },
 							    'click': function (e) {
-
+								    select(e.target);
 							$.ajax({
 							    dataType: "json",
 							    url: "geojson_folder/redditizone.json",
