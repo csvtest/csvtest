@@ -368,6 +368,7 @@ $(document).ready(function(){
 														}
 													},
 													 plugins:{
+													zoomOutPercentage: 60, 
 													outlabels: {
 														    text: '%l %p',
 														    color: 'white',
