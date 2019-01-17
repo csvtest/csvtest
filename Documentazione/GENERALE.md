@@ -248,7 +248,7 @@ Abbiamo così preso provvedimenti affinché gli individui non fossero più ident
 
 ### Pulitura
 
-La pulizia è stata effettuata con:
+La pulitura è stata effettuata con:
 * il programma [**Data Curator**](https://theodi.org.au/data-curator/), CSV editor sviluppato dall'Open Data Institute, che permette di aggiungere, eliminare e modificare righe, colonne e dati;
 * il linguaggio di programmazione **Python**.
 
@@ -283,67 +283,31 @@ In Italia il Segreto Statistico è di fatto regolamentato dall'art.9 del DL n.32
 *1. I dati raccolti nell'ambito di rilevazioni statistiche comprese nel programma statistico nazionale da parte degli uffici di statistica non possono essere esternati se non in forma aggregata, in modo che non se ne possa trarre alcun riferimento relativamente a persone identificabili e possono essere utilizzati solo per scopi statistici.
 2. I dati di cui al comma 1 non possono essere comunicati o diffusi, se non in forma aggregata e secondo modalità che rendano non identificabili gli interessati ad alcun soggetto esterno, pubblico o privato, né ad alcun ufficio della pubblica amministrazione. In ogni caso, i dati non possono essere utilizzati al fine di identificare nuovamente gli interessati.*
 
-Esempi, in questo senso, sono rappresentati da:
+##### Pulitura, De-identificazione e *Merging*
 
-**_Via del Genio_**. I seguenti dati sono presi dal dataset del 2016:
-
-| Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
-| --------- | --------- | --------- |
-| Via del Genio | 12 | 833317 |
-
-
-**_Lungo Reno_**. I seguenti dati sono presi dal dataset del 2009:
-
-| Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
-| --------- | --------- | --------- |
-| Lungo Reno | 6 | 102878 |
-
-Incrociando poi tali dati con dati satellitari reperibili dall'utente medio semplicemente utilizzando Google Maps, possiamo notare la presenza di un'unica casa in tale area. Tramite il dataset è quindi possibile risalire ai redditi dei residenti di una determinata abitazione! 
-
-
-##### Pulitura, De-identificazione e Merge
-
-
-Pulitura:
+La fase di **pulitura** ha previsto le seguenti operazioni:
 
 1. *Eliminazione di colonne*; in particolare: 
-* abbiamo eliminato le colonne che non servivano agli scopi del nostro lavoro: tra '*Reddito imponibile ai fini dell'irpef*' e '*Reddito imponibile ai fini dell' addizionale irpef*' abbiamo scelto di mantenere unicamente il primo, perché quello comunale (il secondo) è un parziale di quello totale (il primo).
-Per eliminare i dati relativi a questa intestazione abbiamo utilizzato l'algoritmo '**elimina_colonna(data)**' in "Reddito_per_Area.py";
+    * abbiamo eliminato le colonne che non servivano agli scopi del nostro lavoro: tra '*Reddito imponibile ai fini dell'irpef*' e '      *Reddito imponibile ai fini dell' addizionale irpef*' abbiamo scelto di mantenere unicamente il primo, perché quello comunale (il secondo) è un parziale di quello totale (il primo). Per eliminare i dati relativi a questa intestazione abbiamo utilizzato l'algoritmo '**elimina_colonna(data)**' in "Reddito_per_Area.py";
 
 2. *Modifica delle stringhe d'intestazione*; in particolare:
-* abbiamo uniformato le stringhe in modo tale da essere identiche in tutti i dataset della serie (maiuscole e minuscole; trattini, etc...). Per esempio: 
+    * abbiamo uniformato le stringhe in modo tale da essere identiche in tutti i dataset della serie (maiuscole e minuscole; trattini, etc...). Per esempio: 
 
 | 2009 | 2010 | 2011 | 2012 | 2013 | 2014 | 2015 | 2016 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Area Statistica<br>N contribuenti | Area Statistica<br>N contribuenti | Area Statistica<br>N contribuenti | Area statistica<br>N_Contribuenti | Area statistica<br>N.Contribuenti | Area statistica<br>N.Contribuenti | Area statistica<br>N.Contribuenti | Area statistica<br>N.contribuenti |
 
 3. *Eliminazione delle righe*; in particolare:
-* le righe che non servono agli scopi del nostro lavoro (ad es. "*non residenti nell'anno di imposta*" e "*senza fissa dimora*");
+    * le righe che non servono agli scopi del nostro lavoro (ad es. "*non residenti nell'anno di imposta*" e "*senza fissa dimora*");
 
 4. *Rimozione di eventuali elementi*; in particolare: 
-- rimozione di accenti ed apostrofi (ad es. "*Piazza dell'Unita'*" diventa "*Piazza dell Unita*") ## PER EVITARE CHE PYTHON AVESSE CROLLI MULTIPLI
+    * rimozione di accenti ed apostrofi (ad es. "*Piazza dell'Unita'*" diventa "*Piazza dell Unita*") ## PER EVITARE CHE PYTHON AVESSE CROLLI MULTIPLI
 
 5. Correzione di errori di battitura; ad es. "*Triumrato*" al posto di "*Triumvirato*".
 
+In sede di **de-identificazione** è possibile applicare delle tecniche di anonimizzazione ai valori che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, come il *Numero contribuenti*. Per quanto riguarda i valori potenzialmente sensibili, come il *Reddito imponibile ai fini irpef*, è possibile anonimizzare i valori precisi convertendoli in valori arrotondati secondo la distribuzione in *scaglioni IRPEF*.
 
-
-De-identificazione:
-
-E' possibile applicare metodi di de-identificazione ai valori che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, come il *Numero contribuenti*. Per quanto riguarda i valori potenzialmente sensibili, come il *Reddito imponibile ai fini irpef*, è possibile anonimizzare i valori precisi convertendoli in valori arrotondati secondo la distribuzione in *scaglioni IRPEF*:
-
-| Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
-| --------- | --------- | --------- |
-| Via del Genio | *2 | tra 55001 e 75000 |
-
-oppure
-
-| Area statistica | N contribuenti | Reddito imponibile ai fini irpef |
-| --------- | --------- | --------- |
-| Via del Genio | < 100 | tra 55001 e 75000 |
-
-
-
-Processo di *merging*:
+Il processo di **_merging_** ha previsto le seguenti operazioni:
 
 1. Abbiamo preso gli 8 dataset come input per un algoritmo chiamato "**process_data(csv_input_file)**". In questo caso il separatore è ';'. Il merge è stato fatto con l'algoritmo 'merge_dataset_redditi_per_area(data1, data2, data3, data4, data5, data6, data7, data8)' in '*Reddito_per_Area.py*': gli 8 dataset vengono incrociati in un unico dataset finale. L'output presenta i nuovi campi '*Reddito pro-capite 2009*' ... '*Reddito pro-capite 2016*'. I dati di queste nuove intestazioni sono il risultato della media matematica '*Reddito imponibile ai fini irpef*' / '*N contribuenti*'.
 
@@ -373,49 +337,28 @@ MANCAROBBA
 ##### Revisione preliminare: criticità
 
 Il dataset presenta criticità nei dati relativi a *Category*: in questa colonna sembra che a volte sia stata copiata la segnalazione fatta dal cittadino, parola per parola, senza che sia stato fatto un lavoro di controllo e anonimizzazione sulle informazioni (potenzialmente o palesemente sensibili) ivi contenute. 
-Ad esempio:
-
-1. "*all'altezza di via della Barca civico 22/12 Ã¨ posto il segnale di divieto di sosta e di fermata. Il punto Ã¨ molto nevralgico perchÃ© prima di un incrocio stradale. Via della Barca da diversi anni a questa parte Ã¨ un'arteria con grosse criticitÃ  di traffico specialmente nelle ore di punta e tale rimarrÃ  se non si vuole attuare un nuovo piano regolatore semplicemente modificando le direzioni nelle vie laterali. Ad oggi nelle ore di punta per i mezzi di soccorso Ã¨ impossibile transitare e per le strade laterali Ã¨ difficile e pericoloso accedere. Con questa segnalazione si vuole chiedere di intervenire immediatamente almeno nel sanzionare le autovetture che quotidianamente stazionano fisse nella suddetta zona. Sperando che le prime multe possono dissuadere ulteriori successivi parcheggi impropri. Certo di un vostro immediato impegno porgo distinti saluti.*"
-
-2. "*teme per la sicurezza in quanto crede siano stati abbattuti dei muri portanti.Non sono esposti dati di chi ristruttura*"
-
-3. "*FIORAVANTI E ALBANI.*" (Si tratta probabilmente delle due vie che si incrociano)
-
-4. "*per il periodo di apertura della scuola NELLA SOLA FASCIA ORARIA 15-17 dal LUNEDÃ¬ AL VENERDÃ¬*"
-
-5. "*su una parte di area condominiale di propietÃ ' della coperativa Dozza sostano per molte ore al giorno fino a notte inoltrata gruppi di ragazzi che schiamazzano in modo esagerato producendo rumori che determinano una grava situazione di disturbo.*"
-
-6. "*via stradali guelfi*"
-
-7. "*avendo il marito che si muove con il deambulatore non riesce piÃ¹ a portarlo a fare una passeggiata in quanto  sono obbligati a girare in mezzo alla strada rischiando di  essere investiti dalle macchine*"
-
-8. "*quelle giÃ  in essere adiacenti alla scuola media Farini sono mal posizionate (ordine invertito per cui non si riesce a legare le bici)*"
 
 Abbiamo lavorato su '38.00.03_segnalazioni_czrm2017_area_statistica', un file di estensione *.shp* che abbiamo convertito in formato *geojson* con l'algoritmo **shp2geojson(input_path, output_path)** in (##IL FILE CHE CONTIENE LO SCRIPT LO SALVERA' FABIO) e successivamente in formato *.csv* con un [convertitore online](http://convertcsv.com/geojson-to-csv.htm). L'output di questo processo è il file 'Segnalazioni2017AreaStatPub.csv'.
 
 Tale dataset riporta l'indirizzo preciso, corredato da numero civico, di dove una segnalazione è stata fatta, riportandone anche le coordinate *X*, *Y*. In questo modo è possibile sapere l'esatto punto di Bologna dove vi è una problematica espressa in una segnalazione. 
 
 Il problema si pone soprattutto se la segnalazione riguarda un'altra persona, come: 
-- L'avvistamento di una prostituta. Segnalazione che compare piu' volte. 
-Tale segnalazione è particolarmente grave, per diverse motivazioni. In primo luogo non è verificabile che il soggetto in questione svolga effettivamente attività di prostituzione. Nel caso in cui sia invece effettivamente questo il caso, viene messo in Open Data la presenza di un'attività spesso collegata ad organizzazioni criminali, tratta di essere umani, discriminazione, e violenza.
-- Nell'esempio (5) si viene a conoscenza che alcuni ragazzini stanno in quel punto ogni giorno, per cui qualcuno potrebbe facilmente rintracciarli
-- Nell'esempio (7) si viene a conoscenza di problematiche personali di due persone che si trovano presumibilmente spesso in quel punto
+- l'avvistamento di una prostituta. Segnalazione che compare piu' volte. Tale segnalazione è particolarmente grave, per diverse motivazioni. In primo luogo non è verificabile che il soggetto in questione svolga effettivamente attività di prostituzione. Nel caso in cui sia invece effettivamente questo il caso, viene messo in Open Data la presenza di un'attività spesso collegata ad organizzazioni criminali, tratta di essere umani, discriminazione, e violenza;
+- in un altro caso si viene a conoscenza che alcuni ragazzini stanno in quel punto ogni giorno, per cui qualcuno potrebbe facilmente rintracciarli;
+- in altri casi ancora si viene a conoscenza di problematiche personali di due persone che si trovano presumibilmente spesso in quel punto.
 
 
 ##### Pulitura, De-identificazione e Merge
 
-Pulitura e De-identificazione:
+In fase di **pulitura** e **de-identificazione** abbiamo operato una serie di operazioni sui due dataset in questione:
 
-Per quanto riguarda il primo dataset, con l'eliminazione dell'intera colonna *Category* abbiamo eliminato sia i dati ridondanti che i dati sensibili.
+* per quanto riguarda il primo dataset, con l'eliminazione dell'intera colonna *Category* abbiamo eliminato sia i dati ridondanti che i dati sensibili;
 
-Per quanto riguarda il secondo dataset, la soluzione al problema è stata non considerare gli indirizzi delle segnalazioni, fornendo unicamente il dato dell'area della segnalazione. Quindi abbiamo creato un dataset intermedio derivato da 'Segnalazioni2017AreaStatPub.csv', contenente unicamente i dati relativi a "*Ticketid*" e "*Tipo Area*". Il file originale presenta però in "*Tipo Area*" diverse diciture prima del nome dell'area ("*Area Statistica:*" e "*Percorso di Ascolto |*"). Abbiamo eliminato le diciture, lasciando solo il nome della zona, con l'algoritrmo '**pulitore_data_geo(data_geo)**' in 'Segnalazioni_2017.py'. L'output è un file intermedio 'Segnalazioni_file_per_merge.csv'. 
+* per quanto riguarda il secondo dataset, la soluzione al problema è stata non considerare gli indirizzi delle segnalazioni, fornendo unicamente il dato dell'area della segnalazione. Quindi abbiamo creato un dataset intermedio derivato da 'Segnalazioni2017AreaStatPub.csv', contenente unicamente i dati relativi a "*Ticketid*" e "*Tipo Area*". Il file originale presenta però in "*Tipo Area*" diverse diciture prima del nome dell'area ("*Area Statistica:*" e "*Percorso di Ascolto |*"). Abbiamo eliminato le diciture, lasciando solo il nome della zona, con l'algoritrmo '**pulitore_data_geo(data_geo)**' in 'Segnalazioni_2017.py'. L'output è un file intermedio 'Segnalazioni_file_per_merge.csv'. 
 
 A questo punto abbiamo ripreso il dataset '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'. Abbiamo selezionato solo le categorie di segnalazioni che ci interessano: "*Degrado urbano-sociale-ambientale*" e "*Microciminalità*". La scelta delle categorie da mantenere è stata fatta da noi considerando gli elementi nel dataset che ci sono sembrati più calzanti con le nostre finalità. Questo processo di pulitura è stato realizzato tramite l'algoritmo "**pulire_segnalazioni(data_segnalazioni)**". 
 
-
-Merge:
-
-Abbiamo poi incrociato 'Segnalazioni_file_per_merge.csv' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv', per convertire tutti i valori di "*Ticketid*" nelle loro corrispondenti aree statistiche, attraverso l'algoritmo "**incrociatore_segnalazioni(data_segnalazioni, data_geo)**".
+In fase di **merging** abbiamo poi incrociato 'Segnalazioni_file_per_merge.csv' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv', per convertire tutti i valori di "*Ticketid*" nelle loro corrispondenti aree statistiche, attraverso l'algoritmo "**incrociatore_segnalazioni(data_segnalazioni, data_geo)**".
 |
 
 |
@@ -440,8 +383,13 @@ Abbiamo poi incrociato 'Segnalazioni_file_per_merge.csv' e '38.00.05_segnalazion
 
 Con l'algoritmo "**counter_segnalazioni(segnalazioni_zone, segnalazioni_zone2)**" abbiamo raggruppato ancora le segnalazioni per zone, eliminando ogni doppione e conteggiando quante volte quella determinata segnalazione è stata fatta in una determinata zona. 
 
-#### DATASET AREE STATISTICHE
+|
 
+|
+
+|
+
+#### DATASET AREE STATISTICHE
 ##### Revisione preliminare: criticità
 
 Il dataset contiene informazioni di natura geospaziale. In particolare:
@@ -455,7 +403,6 @@ I dati al suo interno non rientrano nella categoria di *personal data*, in quant
 Prestandosi bene come dataset di confronto, crediamo che il lavoro di de-anonimizzazione andrebbe fatto sugli eventuali altri dataset che potrebbero essere incrociati con questo. 
 
 #### DATASET POLITICHE
-
 ##### Revisione preliminare: criticità
 
 Tutti i valori all'interno dei dataset sono di natura statistico-numerica. In particolare:
@@ -475,8 +422,8 @@ Le operazioni di pulizia effettuate solo le seguenti:
 
 2) *Modifica delle stringhe d'intestazione*; in particolare:
 
--uniformate le stringhe in modo tale da essere identiche nei due dataset politici (maiuscole e minuscole);
--modificato i nomi dei partiti per corrispondere al nome vigente ufficiale del partito (precedentemente erano sigle o denominati in modo errato).
+- uniformate le stringhe in modo tale da essere identiche nei due dataset politici (maiuscole e minuscole);
+- modificato i nomi dei partiti per corrispondere al nome vigente ufficiale del partito (precedentemente erano sigle o denominati in modo errato).
 
 |
 
@@ -495,7 +442,6 @@ Le operazioni di pulizia effettuate solo le seguenti:
 ***
 
 ## Licenze
-
 L'informazione sul tipo di licenza è metadato indispensabile per determinare come poter riutilizzare il dataset. Essa deve essere **sempre** specificata, mettendola in evidenza in forma *human-* e *machine-readable*, indicando:
 
 * nome;
@@ -538,22 +484,21 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 
 
 ## Finalità
-
-#### DATASET REDDITI
+### DATASET REDDITI
 La finalità della serie è quella di esporre in Open Data il numero e il reddito dei contribuenti bolognesi ai fini Irpef, dichiarati dal 2009 al 2016, per area statistica.
 
 Il dataset è stato prodotto ed elaborato dall’Area Programmazione Controlli e Statistica del Comune di Bologna.
 
 Il dataset è stato scelto al fine di esaminare l’andamento medio del reddito pro-capite dei contribuenti bolognesi, in una determinata zona della città, nell’arco temporale 2009-2016.
 
-#### DATASET POLITICHE
+### DATASET POLITICHE
 La finalità del dataset è quella di esporre in Open Data i risultati degli scrutini alle elezioni politiche del 4 marzo 2018, per l’elezione al Senato della Repubblica e alla Camera dei Deputati.
 
 I file sono estratti dal data entry dall’Ufficio Servizi Elettorali del Comune di Bologna.
 
 Il dataset è stato scelto al fine di conoscere la percentuale di voto di una determinata lista alle elezioni politiche del 4 marzo 2018, per l’elezione al Senato della Repubblica e alla Camera dei Deputati, in una determinata zona della città.
 
-#### DATASET CITIZEN MANAGEMENT 
+### DATASET CITIZEN MANAGEMENT 
 La finalità del dataset è quella di esporre in Open Data le segnalazioni registrate attraverso il Citizen Relationship Management: strumento di contatto diretto tra amministrazione e cittadini che segnalano problemi all’interno del comprensorio Bolognese. Tali segnalazioni di situazioni di disagio sono inoltre mappate e geolocalizzate all’interno una determinata area cittadina.
 
 Il dataset è stato scelto al fine di comprendere la natura e la quantità di problemi legati al degrado ambientale, urbano e al disagio sociale, in una determinata zona della città, registrati attraverso il Citizen Relationship Management. 
@@ -565,7 +510,6 @@ Il dataset è stato scelto al fine di comprendere la natura e la quantità di pr
 _______________________________________________________________
 
 # Analisi tecnica
-
 ## Formati
 La pubblicazione di dataset in open Data richiede che i dati siano resi disponibili in formati che siano:
 * aperti
