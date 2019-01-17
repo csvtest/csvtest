@@ -22,16 +22,18 @@ $(document).ready(function(){
 						    };
 						};
 						
-						$.ajax({
-						    dataType: "json",
-						    url: "geojson_folder/ZoneBologna.geojson",
-						    success: function(data) {
-							var geojson = new L.geoJson(data, {
-							    style: stylegeo,
-							    onEachFeature: onEachFeature
-							}).addTo(map);
-						    }
-						}).error(function() {});
+						var data = = new L.GeoJSON.AJAX("ZoneBologna.geojson"); 
+						var geojson = L.geoJson(data, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
+						//$.ajax({
+						 //   dataType: "json",
+						 //   url: "geojson_folder/ZoneBologna.geojson",
+						 //   success: function(data) {
+						//	var geojson = L.geoJson(data, {
+						//	    style: stylegeo,
+						//	    onEachFeature: onEachFeature
+						//	}).addTo(map);
+						//    }
+						//}).error(function() {});
 						function onEachFeature(feature, layer) {
 						    layer.bindPopup(feature.properties.Nome_zona);
 						    layer.on( 'click', function(e) {
