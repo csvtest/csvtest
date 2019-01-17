@@ -368,15 +368,17 @@ $(document).ready(function(){
 														}
 													},
 													 plugins:{
+													outlabels: {
+														    text: '%l %p',
+														    color: 'white',
+														    stretch: 45,
+														    font: {
+															resizable: true,
+															minSize: 12,
+															maxSize: 18
+														    }
+														},
 													  labels: [
-														  {
-														    render: 'label',
-														    position: 'outside',
-														    fontSize: 12,
-														    fontStyle: 'bold',
-														    fontColor: '#000',
-														    //overlap: false
-														  },
 														  {
 														    render: 'value',
 														    fontSize: 18,
