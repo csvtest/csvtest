@@ -215,7 +215,7 @@ $(document).ready(function(){
 									    $('#CategorieChart').remove();
 									    $('#SegnalazioniButton').remove();
 									    $('#pulsanteSEGN').append('<div class="row" id="SegnalazioniButton"><form><label class="class="radio-inline active"><input type="radio" id="segnalazioni" value="segnalazioni" name="radioseg" autocomplete="off" checked>Tutte le Segnalazioni </label><input type="radio" id="sociale" value="sociale" name="radioseg" autocomplete="off"> Degrado Sociale </label><label class="radio-inline"><input type="radio" id="ambientale" value="ambientale" name="radioseg" autocomplete="off">Degrado Ambientale</label><label class="class="radio-inline active"><input type="radio" id="microcriminalita" value="microcriminalita" name="radioseg" autocomplete="off"> Microcriminalità </label></form></div>');
-									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
+									    $('#chartContainerSegn').append('<canvas height="500" id="CategorieChart"><canvas>');
 											Chart.pluginService.register({
 												beforeDraw: function (chart) {
 													if (chart.config.options.elements.center) {
@@ -358,121 +358,59 @@ $(document).ready(function(){
 													    display: false
 													 }
 												};
-									    		var optioncrim = {
+									    		var optionspec = {
 												        zoomOutPercentage: 60,
 													
 													 plugins:{
 													outlabels: {
 														    //text: '%l %p',
-														    color: 'white',
+														    color: 'black',
 														    stretch: 45,
 														    font: {
-															resizable: true,
-															minSize: 12,
+															//resizable: true,
+															minSize: 16,
 															maxSize: 18
 														    }
 														},
-													  labels: [
-														  {
-														    render: 'value',
-														    fontSize: 18,
-														    fontStyle: 'bold',
-														    fontColor: '#fff'
-														  }
-													]},
+													 },
 													legend: {
 													    display: false
 													 }
 												};
-									    		var optionamb = {
-													elements: {
-														center: {
-															text: TOTamb,
-											  				color: '#000000', // Default is #000000
-											  				fontStyle: 'Arial', // Default is Arial
-											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
-														}
-													},
-													 plugins:{
-													  labels: [
-														  {
-														    render: 'label',
-														    position: 'outside',
-														    fontSize: 12,
-														    fontStyle: 'bold',
-														    fontColor: '#000',
-														    //overlap: false
-														  },
-														  {
-														    render: 'value',
-														    fontSize: 18,
-														    fontStyle: 'bold',
-														    fontColor: '#fff'
-														  }
-													]},
-													legend: {
-													    display: false
-													 }
-												};
-									    		var optionsoc = {
-													elements: {
-														center: {
-															text: TOTsoc,
-											  				color: '#000000', // Default is #000000
-											  				fontStyle: 'Arial', // Default is Arial
-											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
-														}
-													},
-													 plugins:{
-													  labels: [
-														  {
-														    render: 'label',
-														    position: 'outside',
-														    fontSize: 12,
-														    fontStyle: 'bold',
-														    fontColor: '#000',
-														    //overlap: false
-														  },
-														  {
-														    render: 'value',
-														    fontSize: 18,
-														    fontStyle: 'bold',
-														    fontColor: '#fff'
-														  }
-													]},
-													legend: {
-													    display: false
-													 }
-												};
+									    		
 
 									    		function grafisegn(datsegn, opt) {
 									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
 												new Chart(ctx, {type: 'outlabeledPie',data: datsegn, options: opt});
 											}
-									   		//doughnut
-											 grafisegn(datitotsegn, optiongensegn);
+									    		function grafitot(datsegn, opt) {
+									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
+												new Chart(ctx, {type: 'doughnut',data: datsegn, options: opt});
+											}
+									   		
+											 grafitot(datitotsegn, optiongensegn);
 									    if (arrayItem["Zona"] != "Colli"){
 									    		$('input[type=radio][name=radioseg]').change(function() {
 										switch($(this).val()){
 											case 'segnalazioni' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(datitotsegn, optiongensegn);
+											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
+											    grafitot(datitotsegn, optiongensegn);
 											    break
 											case 'sociale' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(datisoc, optionsoc)
+											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
+											    grafisegn(datisoc, optionspec)
 											    break
 											case 'ambientale' :
 											    $('#CategorieChart').remove();
-   											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(datiamb, optionamb)
+   											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
+											    grafisegn(datiamb, optionspec)
 											    break
 											case 'microcriminalita' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(daticrim, optioncrim)
+											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
+											    grafisegn(daticrim, optionspec)
 											    break
 												}
 												}
@@ -482,17 +420,17 @@ $(document).ready(function(){
 										switch($(this).val()){
 											case 'segnalazioni' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
+											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
 											    grafisegn(datitotsegn, optiongensegn);
 											    break
 											case 'sociale' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
+											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
 											    grafisegn(datisoc, optionsoc)
 											    break
 											case 'ambientale' :
 											    $('#CategorieChart').remove();
-   											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
+   											    $('#chartContainerSegn').append('<canvas  <canvas height="500" id="CategorieChart"><canvas>');
 											    grafisegn(datiamb, optionamb)
 											    break
 											case 'microcriminalita' :
