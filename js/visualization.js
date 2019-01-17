@@ -208,7 +208,7 @@ $(document).ready(function(){
 					//inizio Segnalazioni
 							$.ajax({
 							    dataType: "json",
-							    url: "geojson_folder/testsegna.json",
+							    url: "geojson_folder/lejsonfait.json",
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
@@ -216,7 +216,7 @@ $(document).ready(function(){
 									    $('#SegnalazioniButton').remove();
 									    $('#pulsanteSEGN').append('<div class="row" id="SegnalazioniButton"><form><label class="class="radio-inline active"><input type="radio" id="sociale" value="sociale" name="radioseg" autocomplete="off" checked> Degrado Sociale </label><label class="radio-inline"><input type="radio" id="ambientale" value="ambientale" name="radioseg" autocomplete="off">Degrado Ambientale</label><label class="class="radio-inline active"><input type="radio" id="microcriminalita" value="microcriminalita" name="radioseg" autocomplete="off"> Microcriminalità </label></form></div>');
 									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-												Chart.pluginService.register({
+											Chart.pluginService.register({
 												beforeDraw: function (chart) {
 													if (chart.config.options.elements.center) {
 											//Get ctx from string
@@ -263,12 +263,12 @@ $(document).ready(function(){
 													type: 'doughnut',
 													data: {
 														labels: [
-														  "Red",
-														  "Green",
-														  "Yellow"
+														  "Degrado Sociale",
+														  "Degrado Ambientale",
+														  "Microcriminalità"
 														],
 														datasets: [{
-															data: [300, 50, 100],
+															data: [arrayItem["Totale Degrado Sociale"], arrayItem["Totale Degrado Ambientale"], arrayItem["Totale Microcriminalita"]],
 															backgroundColor: [
 															  "#FF6384",
 															  "#36A2EB",
