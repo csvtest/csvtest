@@ -421,17 +421,17 @@ $(document).ready(function(){
 											case 'segnalazioni' :
 											    $('#CategorieChart').remove();
 											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
-											    grafisegn(datitotsegn, optiongensegn);
+											    grafitot(datitotsegn, optiongensegn);
 											    break
 											case 'sociale' :
 											    $('#CategorieChart').remove();
 											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
-											    grafisegn(datisoc, optionsoc)
+											    grafisegn(datisoc, optionspec)
 											    break
 											case 'ambientale' :
 											    $('#CategorieChart').remove();
    											    $('#chartContainerSegn').append('<canvas  <canvas height="500" id="CategorieChart"><canvas>');
-											    grafisegn(datiamb, optionamb)
+											    grafisegn(datiamb, optionspec)
 											    break
 											case 'microcriminalita' :
 											    $('#CategorieChart').remove();
