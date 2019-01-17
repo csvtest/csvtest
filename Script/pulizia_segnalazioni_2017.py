@@ -53,8 +53,6 @@ def incrociatore_segnalazioni(data_segnalazioni, data_geo):
             new_dict_list.append(new_dict)
             new_dict = {}
 
-    df = pandas.DataFrame(new_dict_list)
-    df.to_csv('Prova_Segnalazioni_finito_corto.csv', columns=['Area Statistica', 'Categoria', 'Sottocategoria', 'Descrizione'], sep=',', encoding='utf-8', index=False)
     return new_dict_list
 
 def diz_aree_in_zone(csv_file):
@@ -92,8 +90,6 @@ def segnalazioni_per_zone(diz_zone_aree, segnalazioni_aree):
                         lista.append(new_dict)
                         new_dict = {}
 
-    df = pandas.DataFrame(lista)
-    df.to_csv('Segnalazioni_2017_per_zone.csv', columns=['Zona', 'Categoria', 'Sottocategoria', 'Descrizione'], sep=',', encoding='utf-8', index=False)
     return lista
 
 
@@ -112,10 +108,6 @@ def counter_segnalazioni(segnalazioni_zone, segnalazioni_zone2):
             if pos == pos1:
                 elem.update({'Numero Segnalazioni': elem1})
 
-    #df = pandas.DataFrame(lista)
-    #df.to_csv('Segnalazioni_2017_FINITO.csv', columns=['Zona', 'Categoria', 'Sottocategoria', 'Descrizione', 'Numero Segnalazioni'], sep=',', encoding='utf-8', index=False)
-    df = pandas.DataFrame(lista)
-    df.to_csv('Segnalazioni_2017_per_zone_altraprova_ancora.csv', columns=['Zona', 'Categoria', 'Sottocategoria', 'Numero Segnalazioni'], sep=',', encoding='utf-8', index=False)
     return lista
 
 
@@ -158,8 +150,6 @@ def sottocat_in_altro(data):
             lista.append(new_dict)
             new_dict = {}
 
-            df = pandas.DataFrame(lista)
-            df.to_csv('Segnalazioni_2017_per_zone_altraprova_ancora.csv', columns=['Zona', 'Categoria', 'Sottocategoria', 'Numero Segnalazioni'], sep=',', encoding='utf-8', index=False)
     return data
 
 def counter_segnalazioni_finale(segnalazioni_zone, segnalazioni_zone2):
