@@ -1,6 +1,5 @@
 import pandas
 
-
 def process_data(source_csv_file_path):
     import csv
     with open(source_csv_file_path, 'r', encoding='utf-8') as csvfile:
