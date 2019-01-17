@@ -324,9 +324,7 @@ $(document).ready(function(){
 														datasets: [{
 															data: Valcrim,
 															backgroundColor: [
-															  "#FF6384",
-															  "#36A2EB",
-															  "#FFCE56"
+															  "#ffa345", "#fff2e6", "#ffe6cc", "#ffd9b3",  "#ffcc99", "#ffbf80", "#ffb366", "#ffa64d", "#ffa345", "#ff9933", "#ff8c1a", "#ff8000", "#e67300"
 															],
 															
 														}]
