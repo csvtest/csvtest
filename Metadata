@@ -93,14 +93,13 @@
 <INSERISCI URI RISORSA>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "INSERISCI IDENTIFIER" ;
-	dct:title "Redditi, elezioni politiche 2018 e residenti per zona di Bologna"@it ;
-	dct:description "Il dataset contiene i dati divisi per zona di Bologna di: redditi medi pro-capite dei contribuenti bolognesi dal 2009 al 2016, i risutati degli scrutini alle elezioni politiche per l'elezione al Senato della Repubblica e alla Camera dei Deputati del 4.3.2018, e il numero di residenti."@it ;
+	dct:title "Segnalazioni di Degrado e Microcriminalità per zona di Bologna"@it ;
+	dct:description "Il dataset contiene i dati divisi per zona di Bologna delle segnalazioni di degrado e microcriminalità rilevate nell'anno 2017"@it ;
 	dct:modified "2018-01-19"^^xsd:date ;
 	dct:issued "2018-01-19"^^xsd:date ;
 	owl:versionInfo "0.1.0" ; 
-	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
+	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ; 
-	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
 	dct:subject <http://eurovoc.europa.eu/700> , <http://eurovoc.europa.eu/3319> , <http://eurovoc.europa.eu/3460>; # elezioni nazionali,  distribuzione del reddito , residenza
 	dcat:keyword "elezioni"@it , "bologna"@it, "redditi"@it ;
 	dct:spatial <https://www.geonames.org/3181928/> ;
