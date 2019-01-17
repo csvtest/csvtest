@@ -273,7 +273,7 @@ $(document).ready(function(){
 											if( arrayItem.Segnalazioni[i].Categoria === "Degrado sociale"){ Labelsoc.push(arrayItem.Segnalazioni[i].Sottocategoria); Valsoc.push(arrayItem.Segnalazioni[i]["Numero Segnalazioni"])};	
 											}
 											var TOTsegn = arrayItem["Totale Degrado Sociale"]+ arrayItem["Totale Degrado Ambientale"]+ arrayItem["Totale Microcriminalita"];
-											var TOTcrim = Valcrim.reduce((x, y) => x + y);
+											if (arrayItem["Zona"] != "Colli"){var TOTcrim = Valcrim.reduce((x, y) => x + y);};
 											var TOTamb = Valamb.reduce((x, y) => x + y);
 											var TOTsoc = Valsoc.reduce((x, y) => x + y);
 											//totale segnalazioni
@@ -470,10 +470,11 @@ $(document).ready(function(){
 
 									    		function grafisegn(datsegn, opt) {
 									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
-												new Chart(ctx, {type: 'polarArea',data: datsegn, options: opt});
+												new Chart(ctx, {type: 'doughnut',data: datsegn, options: opt});
 											}
 									   		
 											 grafisegn(datitotsegn, optiongensegn);
+									    if (arrayItem["Zona"] != "Colli"){
 									    		$('input[type=radio][name=radioseg]').change(function() {
 										switch($(this).val()){
 											case 'segnalazioni' :
@@ -498,7 +499,34 @@ $(document).ready(function(){
 											    break
 												}
 												}
+											    )}
+										    if (arrayItem["Zona"] = "Colli"){
+											    $('input[type=radio][name=radioseg]').change(function() {
+										switch($(this).val()){
+											case 'segnalazioni' :
+											    $('#CategorieChart').remove();
+											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
+											    grafisegn(datitotsegn, optiongensegn);
+											    break
+											case 'sociale' :
+											    $('#CategorieChart').remove();
+											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
+											    grafisegn(datisoc, optionsoc)
+											    break
+											case 'ambientale' :
+											    $('#CategorieChart').remove();
+   											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
+											    grafisegn(datiamb, optionamb)
+											    break
+											case 'microcriminalita' :
+											    $('#CategorieChart').remove();
+											    $('#chartContainerSegn').append('<div id="CategorieChart">Nessuna segnalazione di microcriminalità in questa Zona<div>');
+											    break
+												}
+												}
 											    )
+										    }
+									    //fine if
 											}
                                                					 })
                                                 				}
