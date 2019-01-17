@@ -306,21 +306,13 @@ La fase di **pulitura** ha previsto le seguenti operazioni:
 
 In sede di **de-identificazione** è possibile applicare delle tecniche di anonimizzazione ai valori che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, come il *Numero contribuenti*. Per quanto riguarda i valori potenzialmente sensibili, come il *Reddito imponibile ai fini irpef*, è possibile anonimizzare i valori precisi convertendoli in valori arrotondati secondo la distribuzione in *scaglioni IRPEF*.
 
+In fase di **_merging_** abbiamo usato l'algoritmo **process_data(data)** per creare una lista di dizionari. Con l'algoritmo **reddito_medio_per_zona(data)** abbiamo accorpato le aree statistiche per formare le zone corrispondenti, confrontando il dataset con la lista di dizionari prodotta dall'algoritmo **diz_aree_in_zone(csv_file)** applicato al DATASET AREE STATISTICHE 4.1. Per ogni zona abbiamo calcolato la media pro-capite (distriuzione del reddito = reddito_area_1 + ... + reddito_area_n // n_contribuenti_1 + ... + n_contribuenti_n). Con **merge_dataset(data1, data2, data3, data4, data5, data6, data7, data8)** abbiamo raggruppato le distribuzioni del reddito per anno e per zona in un unico dataset. 
 
-
-
-|||||||||||||||||||||||||| INSERIRE QUI |||||||||||||||||||||||||||||
-
-
-
-
-
-
+Il dataset è stato stampato in formato .csv tramite la libreria *pandas*. Infine abbiamo fatto un controllo manuale del dataset per verificarne la correttezza.
 
 #### DATASET SEGNALAZIONI : 
 
 ##### Revisione preliminare: criticità
-
 Il dataset presenta criticità nei dati relativi a *Category*: in questa colonna sembra che a volte sia stata copiata la segnalazione fatta dal cittadino, parola per parola, senza che sia stato fatto un lavoro di controllo e anonimizzazione sulle informazioni (potenzialmente o palesemente sensibili) ivi contenute. 
 
 Abbiamo lavorato su '38.00.03_segnalazioni_czrm2017_area_statistica', un file di estensione *.shp* che abbiamo convertito in formato *geojson* con l'algoritmo **shp2geojson(input_path, output_path)** in (##IL FILE CHE CONTIENE LO SCRIPT LO SALVERA' FABIO) e successivamente in formato *.csv* con un [convertitore online](http://convertcsv.com/geojson-to-csv.htm). L'output di questo processo è il file 'Segnalazioni2017AreaStatPub.csv'.
@@ -340,19 +332,15 @@ In fase di **pulitura** e **de-identificazione** abbiamo operato una serie di op
 
 * per quanto riguarda il secondo dataset, la soluzione al problema è stata non considerare gli indirizzi delle segnalazioni, fornendo unicamente il dato dell'area della segnalazione. Quindi abbiamo creato un dataset intermedio derivato da 'Segnalazioni2017AreaStatPub.csv', contenente unicamente i dati relativi a "*Ticketid*" e "*Tipo Area*". Il file originale presenta però in "*Tipo Area*" diverse diciture prima del nome dell'area ("*Area Statistica:*" e "*Percorso di Ascolto |*"). Abbiamo eliminato le diciture, lasciando solo il nome della zona, con l'algoritrmo '**pulitore_data_geo(data_geo)**' in 'Segnalazioni_2017.py'. L'output è un file intermedio 'Segnalazioni_file_per_merge.csv'. 
 
-A questo punto abbiamo ripreso il dataset '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'. Abbiamo selezionato solo le categorie di segnalazioni che ci interessano: "*Degrado urbano-sociale-ambientale*" e "*Microciminalità*". La scelta delle categorie da mantenere è stata fatta da noi considerando gli elementi nel dataset che ci sono sembrati più calzanti con le nostre finalità. Questo processo di pulitura è stato realizzato tramite l'algoritmo "**pulire_segnalazioni(data_segnalazioni)**". 
+A questo punto abbiamo ripreso il dataset '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'. Abbiamo selezionato solo le categorie di segnalazioni che ci interessano: "*Degrado sociale*, *Degrado ambientale*" e "*Microciminalità*". La scelta delle categorie da mantenere è stata fatta da noi considerando gli elementi nel dataset che ci sono sembrati più calzanti con le nostre finalità. Questo processo di pulitura è stato realizzato tramite l'algoritmo "**pulire_segnalazioni(data_segnalazioni)**". 
 
-In fase di **merging** abbiamo poi incrociato 'Segnalazioni_file_per_merge.csv' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv', per convertire tutti i valori di "*Ticketid*" nelle loro corrispondenti aree statistiche, attraverso l'algoritmo "**incrociatore_segnalazioni(data_segnalazioni, data_geo)**".
+In fase di **merging** abbiamo creato un dataset di raffronto tra aree statistiche e zone con **diz_aree_in_zone(csv_file)**. Poi abbiamo incrociato 'Segnalazioni_file_per_merge.csv' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv', per convertire tutti i valori di "*Ticketid*" nelle loro corrispondenti aree statistiche, attraverso l'algoritmo "**incrociatore_segnalazioni(data_segnalazioni, data_geo)**". Gli output dei due algoritmi precedenti sono stati utilizzati come input in **segnalazioni_per_zone(diz_zone_aree, segnalazioni_aree**, in modo da sostituire il nome di ogni area statistica con la zona corrispondente. 
 
+Attraverso l'algoritmo **counter_segnalazioni(segnalazioni_zone, segnalazioni_zone2)** sono stati rimossi tutti i duplicati e ne è stata contata la frequenza in *Numero Segnalazioni*. Con l'algoritmo **delete_descrizione(data)** abbiamo eliminato tutti i dati relativi alla *Descrizione* della segnalazione, poiché questi dati in origine si sono rivelati essere eccessivamente specifici rispetto ai fini del nostro progetto. Abbiamo eliminato il dato *Segnalazioni* (ridondante, dato che il dataset è in sé composto da segnalazioni!) e l'abbiamo sostituito con il contenuto di *Descrizione*; nel caso invece in cui *Segnalazione* risultasse un valore vuoto, l'abbiamo sostituito con "*Altro*".
 
+L'ultimo step è stato quindi il calcolo del numero totale di ogni segnalazione ed eliminare i duplicati con l'algoritmo **counter_segnalazioni_finale(segnalazioni_zone, segnalazioni_zone2)**.
 
-
-
-|||||||||||||||||||||||||||||||| INSERIRE QUI |||||||||||||||||||||||||||||||||||
-
-
-
-
+Il dataset è stato stampato in formato .csv tramite la libreria *pandas*. Infine abbiamo fatto un controllo manuale del dataset per verificarne la correttezza.
 
 #### DATASET AREE STATISTICHE
 ##### Revisione preliminare: criticità
