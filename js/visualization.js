@@ -284,7 +284,7 @@ $(document).ready(function(){
 												options: {
 													elements: {
 														center: {
-															text: [arrayItem["Totale Degrado Sociale"]+ arrayItem["Totale Degrado Ambientale"]+ arrayItem["Totale Microcriminalita"],
+															text: arrayItem["Totale Degrado Sociale"]+ arrayItem["Totale Degrado Ambientale"]+ arrayItem["Totale Microcriminalita"],
 											  				color: '#000000', // Default is #000000
 											  				fontStyle: 'Arial', // Default is Arial
 											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
