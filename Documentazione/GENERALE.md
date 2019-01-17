@@ -417,7 +417,7 @@ Abbiamo poi lavorato sullo *shapefile* delle Aree Statistiche (4.0): il sistema 
 #### DATASET FINALI
 
 | **Privacy** | Domande | ANALISI POLITICHE |  SEGNALAZIONI | ZONE | 
-| ----------- | --------| ------|--------|-------|---------|
+| ----------- | --------| ------|--------|-------|
 | | sono i dati liberi da ogni informazione                    personale che possa identificare in modo                       diretto l’individuo?|sì |sì| sì |
 | | sono i dati liberi da ogni informazione indiretta che      possa identificare l’individuo? In caso negativo, queste       informazioni sono autorizzate per legge?|sì |sì|sì |
 | | sono i dati liberi da ogni informazione sensibile che può essere ricondotta all’individuo? In caso negativo, queste informazioni sono autorizzate per legge? |sì |sì|sì |
