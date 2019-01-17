@@ -403,7 +403,7 @@ $(document).ready(function(){
 													},
 													"scale": {
 														"ticks": {
-														    "beginAtZero": false,
+														    "beginAtZero": true,
 														    "max": 35
 														}
 													},
