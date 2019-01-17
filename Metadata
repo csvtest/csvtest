@@ -51,11 +51,10 @@
 	dct:creator <INSERIRE URI CREATOR> ;
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
 	dcat:landingPage <INSERIRE URL ACCESSO AL DATASET> ;
-	dct:conformsTo  <INSERIRE STANDARD > ;
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/244> ; #redditi
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3328> ; #politiche camera
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3323> ; #politiche senato
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/161> ; #aree statistiche 
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/161> ; #aree statistiche in zone
 
 #Distribution dataset 1 
 
@@ -113,11 +112,10 @@
 	dct:creator <INSERIRE URI CREATOR> ;
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
 	dcat:landingPage <INSERIRE URL ACCESSO AL DATASET> ;
-	dct:conformsTo  <INSERIRE STANDARD > ;
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/244> ; #redditi
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3328> ; #politiche camera
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3323> ; #politiche senato
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/161> ; #aree statistiche 
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/244> ; #segnalazioni
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/161> ; #aree statistiche in zone
+	
+
 
 #Distribution dataset 2 
 
