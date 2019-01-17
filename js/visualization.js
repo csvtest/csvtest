@@ -393,7 +393,9 @@ $(document).ready(function(){
 														    position: 'outside',
 														    fontSize: 9,
 														    fontStyle: 'bold',
-														    fontColor: '#000'
+														    fontColor: '#000',
+														    outsidePadding: 4,
+													            textMargin: 4
 														  },
 														  {
 														    render: 'value',
@@ -422,7 +424,9 @@ $(document).ready(function(){
 														    position: 'outside',
 														    fontSize: 9,
 														    fontStyle: 'bold',
-														    fontColor: '#000'
+														    fontColor: '#000',
+														    outsidePadding: 4,
+													            textMargin: 4
 														  },
 														  {
 														    render: 'value',
@@ -451,7 +455,9 @@ $(document).ready(function(){
 														    position: 'outside',
 														    fontSize: 9,
 														    fontStyle: 'bold',
-														    fontColor: '#000'
+														    fontColor: '#000',
+														    outsidePadding: 4,
+													            textMargin: 4
 														  },
 														  {
 														    render: 'value',
