@@ -371,8 +371,8 @@ $(document).ready(function(){
 														    stretch: 45,
 														    font: {
 															//resizable: true,
-															minSize: 16,
-															maxSize: 18
+															minSize: 12,
+															maxSize: 12
 														    }
 														},
 													 },
