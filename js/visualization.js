@@ -265,18 +265,12 @@ $(document).ready(function(){
 									    		var Valcrim = [];
 									    		var Valamb = [];
 											var Valsoc = [];
-										var robo = arrayItem.Segnalazioni	
-									    for(var i = 0; i < robo.length; i++) {
-										    if( i.Categoria == "Microcriminalita"){ Labelcrim.push(i["Sottocategoria"]); Valcrim.push(i["Numero Segnalazioni"])};
-											if( i.Categoria == "Degrado ambientale"){ Labelamb.push(i["Sottocategoria"]); Valamb.push(i["Numero Segnalazioni"])};
-											if( i.Categoria == "Degrado sociale"){ Labelsoc.push(i["Sottocategoria"]); Valsoc.push(i["Numero Segnalazioni"])};	
-										}
-									    		//for(var i in arrayItem.Segnalazioni)
-											//	{
-											//		if( i.Categoria == "Microcriminalita"){ Labelcrim.push(i["Sottocategoria"]); Valcrim.push(i["Numero Segnalazioni"])};
-											//		if( i.Categoria == "Degrado ambientale"){ Labelamb.push(i["Sottocategoria"]); Valamb.push(i["Numero Segnalazioni"])};
-											//		if( i.Categoria == "Degrado sociale"){ Labelsoc.push(i["Sottocategoria"]); Valsoc.push(i["Numero Segnalazioni"])};	
-											//	}
+	
+									    for (var i in arrayItem.Segnalazioni){
+										    	if( i.Categoria === "Microcriminalita"){ Labelcrim.push(i["Sottocategoria"]); Valcrim.push(i["Numero Segnalazioni"])};
+											if( i.Categoria === "Degrado ambientale"){ Labelamb.push(i["Sottocategoria"]); Valamb.push(i["Numero Segnalazioni"])};
+											if( i.Categoria === "Degrado sociale"){ Labelsoc.push(i["Sottocategoria"]); Valsoc.push(i["Numero Segnalazioni"])};	
+								    }
 											var TOTsegn = arrayItem["Totale Degrado Sociale"]+ arrayItem["Totale Degrado Ambientale"]+ arrayItem["Totale Microcriminalita"];
 											var TOTcrim = Valcrim.reduce((x, y) => x + y);
 											var TOTamb = Valamb.reduce((x, y) => x + y);
