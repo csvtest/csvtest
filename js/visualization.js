@@ -24,7 +24,7 @@ $(document).ready(function(){
 						var datageo;
 						$.ajax({
 						    dataType: "json",
-						    url: "geojson_folder/ZoneBologna.geojson",
+						    url: "geojson_folder/ZoneBologna.json",
 						    success: function(x) { datageo = x}})
 						var geojson = L.geoJson(datageo, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 
