@@ -317,7 +317,7 @@ $(document).ready(function(){
 											//	var myChart = new Chart(ctx, config);
 									    		function grafisegn(datsegn) {
 									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
-												var myChart = new Chart(ctx, config);
+												new Chart(ctx, {type: 'line',data: dati, options: opzioni});
 											}
 									    		$('input[type=radio][name=radioseg]').change(function() {
 										switch($(this).val()){
@@ -342,7 +342,7 @@ $(document).ready(function(){
 											    grafiseg(dataelesen, dataelesentot)
 											    break
 										}
-									    }
+									    )}
 									})
 								    }
 								})
