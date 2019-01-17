@@ -215,7 +215,7 @@ $(document).ready(function(){
 									    $('#CategorieChart').remove();
 									    $('#SegnalazioniButton').remove();
 									    $('#pulsanteSEGN').append('<div class="row" id="SegnalazioniButton"><form><label class="class="radio-inline active"><input type="radio" id="segnalazioni" value="segnalazioni" name="radioseg" autocomplete="off" checked>Tutte le Segnalazioni </label><input type="radio" id="sociale" value="sociale" name="radioseg" autocomplete="off"> Degrado Sociale </label><label class="radio-inline"><input type="radio" id="ambientale" value="ambientale" name="radioseg" autocomplete="off">Degrado Ambientale</label><label class="class="radio-inline active"><input type="radio" id="microcriminalita" value="microcriminalita" name="radioseg" autocomplete="off"> Microcriminalità </label></form></div>');
-									    $('#chartContainerSegn').append('<canvas height="500" id="CategorieChart"><canvas>');
+									    $('#chartContainerSegn').append('<canvas height="250" id="CategorieChart"><canvas>');
 											Chart.pluginService.register({
 												beforeDraw: function (chart) {
 													if (chart.config.options.elements.center) {
@@ -339,6 +339,9 @@ $(document).ready(function(){
 														}
 													},
 													 plugins:{
+														 outlabels: {
+														 display : false,
+														 },
 													  labels: [
 														  {
 														    render: 'label',
@@ -363,7 +366,7 @@ $(document).ready(function(){
 													
 													 plugins:{
 													outlabels: {
-														    //text: '%l %p',
+														    text: '%l %v',
 														    color: 'black',
 														    stretch: 45,
 														    font: {
@@ -394,22 +397,22 @@ $(document).ready(function(){
 										switch($(this).val()){
 											case 'segnalazioni' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
+											    $('#chartContainerSegn').append('<canvas <canvas height="250" id="CategorieChart"><canvas>');
 											    grafitot(datitotsegn, optiongensegn);
 											    break
 											case 'sociale' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
+											    $('#chartContainerSegn').append('<canvas <canvas height="250" id="CategorieChart"><canvas>');
 											    grafisegn(datisoc, optionspec)
 											    break
 											case 'ambientale' :
 											    $('#CategorieChart').remove();
-   											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
+   											    $('#chartContainerSegn').append('<canvas <canvas height="250" id="CategorieChart"><canvas>');
 											    grafisegn(datiamb, optionspec)
 											    break
 											case 'microcriminalita' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
+											    $('#chartContainerSegn').append('<canvas <canvas height="250" id="CategorieChart"><canvas>');
 											    grafisegn(daticrim, optionspec)
 											    break
 												}
@@ -420,17 +423,17 @@ $(document).ready(function(){
 										switch($(this).val()){
 											case 'segnalazioni' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
+											    $('#chartContainerSegn').append('<canvas <canvas height="250" id="CategorieChart"><canvas>');
 											    grafitot(datitotsegn, optiongensegn);
 											    break
 											case 'sociale' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<canvas <canvas height="500" id="CategorieChart"><canvas>');
+											    $('#chartContainerSegn').append('<canvas <canvas height="250" id="CategorieChart"><canvas>');
 											    grafisegn(datisoc, optionspec)
 											    break
 											case 'ambientale' :
 											    $('#CategorieChart').remove();
-   											    $('#chartContainerSegn').append('<canvas  <canvas height="500" id="CategorieChart"><canvas>');
+   											    $('#chartContainerSegn').append('<canvas  <canvas height="250" id="CategorieChart"><canvas>');
 											    grafisegn(datiamb, optionspec)
 											    break
 											case 'microcriminalita' :
