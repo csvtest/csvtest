@@ -500,7 +500,7 @@ $(document).ready(function(){
 												}
 												}
 											    )}
-										    if (arrayItem["Zona"] = "Colli"){
+										    if (arrayItem["Zona"] == "Colli"){
 											    $('input[type=radio][name=radioseg]').change(function() {
 										switch($(this).val()){
 											case 'segnalazioni' :
