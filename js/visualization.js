@@ -66,7 +66,7 @@ $(document).ready(function(){
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
 									$('#chartContainer').append('<canvas id="redditiChart"><canvas>');
-									$('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-6"><form><label class="class="radio-inline active"><input type="radio" id="generale" value="generale" name="chart" autocomplete="off" checked> Generale</label><label class="radio-inline"><input type="radio" id="dettaglio" value="dettaglio" name="chart" autocomplete="off"> Dettaglio</label></form></div><div class="text-right col-lg-6"><a href="https://rivaluta.istat.it/">Fonte Dati FOI: Istat</a></div>');
+									$('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-6"><form><label class="class="radio-inline active"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Generale</label><label class="radio-inline"><input type="radio" id="dettaglio" value="dettaglio" name="chart" autocomplete="off"> Dettaglio</label></form></div><div class="text-right col-lg-6"><a href="https://rivaluta.istat.it/">Fonte Dati FOI: Istat</a></div>');
 									var datizona = {
 										"labels": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
 										"datasets": [
@@ -146,7 +146,7 @@ $(document).ready(function(){
 									
 									grafo(datizona, opzionigenerali);
 									
-									$('input[type=radio][name=chart]').change(function() {
+									$('input[type=radio][name=radiored]').change(function() {
 									switch($(this).val()){
 										case 'generale' :
 										    $('#redditiChart').remove();
@@ -174,7 +174,7 @@ $(document).ready(function(){
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
 									    $('#CategorieChart').remove();
 									    $('#SegnalazioniButton').remove();
-									    $('#pulsanteSEGN').append('<div class="row" id="SegnalazioniButton"><form><label class="class="radio-inline active"><input type="radio" id="sociale" value="sociale" name="chart" autocomplete="off" checked> Degrado Sociale </label><label class="radio-inline"><input type="radio" id="ambientale" value="ambientale" name="chart" autocomplete="off">Degrado Ambientale</label><label class="class="radio-inline active"><input type="radio" id="microcriminalita" value="microcriminalita" name="chart" autocomplete="off"> Microcriminalità </label></form></div>');
+									    $('#pulsanteSEGN').append('<div class="row" id="SegnalazioniButton"><form><label class="class="radio-inline active"><input type="radio" id="sociale" value="sociale" name="radioseg" autocomplete="off" checked> Degrado Sociale </label><label class="radio-inline"><input type="radio" id="ambientale" value="ambientale" name="chart" autocomplete="off">Degrado Ambientale</label><label class="class="radio-inline active"><input type="radio" id="microcriminalita" value="microcriminalita" name="chart" autocomplete="off"> Microcriminalità </label></form></div>');
 									    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
 												Chart.pluginService.register({
 												beforeDraw: function (chart) {
@@ -283,77 +283,75 @@ $(document).ready(function(){
 					//inizio Politiche
 							$.ajax({
 							    dataType: "json",
-							    url: "geojson_folder/Politiche_Senato_Prova.json",
+							    url: "geojson_folder/elezioni.json",
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
-								    if (arrayItem["Zona"] == feature.properties.Codice_zona) {
+								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
 									    $('#ELEButton').remove();
 									    $('#EleChartrad').remove();
 									    $('#EleChartbar').remove();
-									    $('#pulsanteELE').append('<div class="row" id="ELEButton"><form><label class="class="radio-inline active"><input type="radio" id="camera" value="camera" name="chart" autocomplete="off" checked>Camera dei Deputati</label><label class="radio-inline"><input type="radio" id="senato" value="senato" name="chart" autocomplete="off">Senato</label></form>');
+									    $('#pulsanteELE').append('<div class="row" id="ELEButton"><form><label class="class="radio-inline active"><input type="radio" id="camera" value="camera" name="radioele" autocomplete="off" checked>Camera dei Deputati</label><label class="radio-inline"><input type="radio" id="senato" value="senato" name="chart" autocomplete="off">Senato</label></form>');
 									    $('#chartContainerEle').append('<canvas id="EleChartrad"><canvas>');
 									    $('#chartContainerEle').append('<canvas id="EleChartbar"><canvas>');
 									    var datisenatozona = [];
-									    datisenatozona.push(arrayItem["Percentuale voti Movimento 5 Stelle"]);
-									    datisenatozona.push(arrayItem["Percentuale voti Partito Democratico"]);
-									    datisenatozona.push(arrayItem["Percentuale voti Lega Nord"]);
-									    datisenatozona.push(arrayItem["Percentuale voti Forza Italia"]);
-									    datisenatozona.push(arrayItem["Percentuale voti Fratelli d Italia"]);
-									    datisenatozona.push(arrayItem["Percentuale voti Liberi e Uguali"]);
-									    datisenatozona.push(arrayItem["Percentuale voti Piu Europa"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Movimento 5 Stelle Senato"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Partito Democratico Senato"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Lega Nord Senato"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Forza Italia Senato"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Fratelli d Italia Senato"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Liberi e Uguali Senato"]);
+									    datisenatozona.push(arrayItem["Percentuale voti Piu Europa Senato"]);
 									    datisenatozona.push((100 - datisenatozona.reduce((x, y) => x + y)).toFixed(2));
+									    var daticamerazona = [];
+									    daticamerazona.push(arrayItem["Percentuale voti Movimento 5 Stelle Camera"]);
+									    daticamerazona.push(arrayItem["Percentuale voti Partito Democratico Camera"]);
+									    daticamerazona.push(arrayItem["Percentuale voti Lega Nord Camera"]);
+									    daticamerazona.push(arrayItem["Percentuale voti Forza Italia Camera"]);
+									    daticamerazona.push(arrayItem["Percentuale voti Fratelli d Italia Camera"]);
+									    daticamerazona.push(arrayItem["Percentuale voti Liberi e Uguali Camera"]);
+									    daticamerazona.push(arrayItem["Percentuale voti Piu Europa Camera"]);
+									    daticamerazona.push((100 - daticamerazona.reduce((x, y) => x + y)).toFixed(2));
+									    
+									    
+									    //CAMERA
+									    //
+									    var dataelecam =
+										{labels: ["Movimento 5 Stelle", "Partito Democratico", "Lega Nord", "Forza Italia", "Fratelli D'Italia", "Liberi E Uguali", "Più Europa", "Altri Partiti"],
+										 datasets: [{
+											"label": "Risultati Camera Zona",
+											data: daticamerazona }
+											   ]
+										};
+									    var dataelecamtot =
+										{labels: ["Movimento 5 Stelle", "Partito Democratico", "Lega Nord", "Forza Italia", "Fratelli D'Italia", "Liberi E Uguali", "Più Europa", "Altri Partiti"],
+										 datasets: [{
+											 "label": "Risultati Camera Zona",
+												data: daticamerazona ,
+											    backgroundColor: "red"},
+											    {
+											"label": "Risultati Camera Italia",
+		// DA CAMBIAREEEEEEEEEEEEEEEEEEEEEEE!!!!!!
+											data: [32.22, 19.14, 17.61, 14.43, 4.26, 3.28, 2.37, 6.69],
+											 },
+											   {
+											"label": "Risultati Camera Bologna",
+											data: [21.97, 28.15, 13.99, 9.75, 3.48, 9.56, 5.43, 7.67],
+											      backgroundColor: "#545556"}
+											   ]
+										};
+									    
+									    
+									    
+									    //SENATO
+									    //
 									    var dataelesen =
 										{labels: ["Movimento 5 Stelle", "Partito Democratico", "Lega Nord", "Forza Italia", "Fratelli D'Italia", "Liberi E Uguali", "Più Europa", "Altri Partiti"],
-										 datasets: [
-											   {
+										 datasets: [{
 											"label": "Risultati Senato Zona",
 											data: datisenatozona }
 											   ]
 										};
-			
-									    var radarpolitico = document.getElementById("EleChartrad").getContext("2d");
-									    new Chart(radarpolitico,{"type":'radar',"data": dataelesen ,"options":{"tooltips": {
-												"enabled": true,
-												"mode": 'single',
-												"callbacks": {
-												    "label": function(tooltipItems, data) {
-													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.yLabel + '%';
-												    }
-												}
-												},
-												"scale": {
-													"ticks": {
-													    "beginAtZero": false,
-													    "max": 35
-													}
-												},
-												legend: {
-													    display: false
-													 },
-											    }
-										      });
-									    var opzionisenato = {
-										"tooltips": {
-												"enabled": true,
-												"mode": 'single',
-												"callbacks": {
-												    "label": function(tooltipItems, data) {
-													return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel + '%';
-												    }
-												}
-											    },
-										"scales": {
-										    "xAxes": [{
-											"ticks": {
-											    "beginAtZero": true,
-											    "max": 35,
-											    "callback": function(value, index, values) {
-													return value + '%';
-												}
-											}
-										    }]
-										}
-									    };
+										
 										    
 										    
 									    var dataelesentot =
@@ -373,8 +371,92 @@ $(document).ready(function(){
 											   ]
 										};
 									    
-									    var barrapolitica = document.getElementById("EleChartbar").getContext("2d");
-									    new Chart(barrapolitica,{"type":"horizontalBar","data": dataelesentot ,"options":opzionisenato});
+									    var opzionibarsenato = {
+											"tooltips": {"enabled": true,
+													"mode": 'single',
+													"callbacks": {
+													    "label": function(tooltipItems, data) {
+														return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel + '%';
+													    }
+													}
+												    },
+											"scales": {
+											    "xAxes": [{
+												"ticks": {
+												    "beginAtZero": true,
+												    "max": 35,
+												    "callback": function(value, index, values) {
+														return value + '%';
+													}
+												}
+											    }]
+											}
+									    	};
+									    
+									     var opzioniradarsenato = {"tooltips": {
+														"enabled": true,
+														"mode": 'single',
+														"callbacks": {
+														    "label": function(tooltipItems, data) {
+															return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.yLabel + '%';
+														    }
+														}
+													},
+													"scale": {
+														"ticks": {
+														    "beginAtZero": false,
+														    "max": 35
+														}
+													},
+													legend: {
+														    display: false
+														 },
+											   		};
+									    
+									    
+			
+									    
+									    function grafiele(datirad, datibar) {
+										var radarpolitico = document.getElementById("EleChartrad").getContext("2d");
+									   	new Chart(radarpolitico,{"type":'radar',"data": datirad ,"options":opzioniradarsenato});
+									    
+									   	var barrapolitica = document.getElementById("EleChartbar").getContext("2d");
+									    	new Chart(barrapolitica,{"type":"horizontalBar","data": datibar ,"options":opzionibarsenato});
+										};
+									    
+									    grafiele(dataelecam, dataelecamtot);
+									    
+									    $('input[type=radio][name=radioele]').change(function() {
+										switch($(this).val()){
+											case 'camera' :
+											    $('#EleChartrad').remove();
+									    		    $('#EleChartbar').remove();
+											    $('#chartContainerEle').append('<canvas id="EleChartrad"><canvas>');
+									    		    $('#chartContainerEle').append('<canvas id="EleChartbar"><canvas>');	
+											    grafiele(dataelecam, dataelecamtot);
+											    break
+											case 'senato' :
+											    $('#EleChartrad').remove();
+									    		    $('#EleChartbar').remove();
+											    $('#chartContainerEle').append('<canvas id="EleChartrad"><canvas>');
+									    		    $('#chartContainerEle').append('<canvas id="EleChartbar"><canvas>');
+											    grafiele(dataelesen, dataelesentot)
+											    break
+										    }            
+										}); 
+									    
+									    
+									    
+									    
+									    
+									    
+									    
+									   // var radarpolitico = document.getElementById("EleChartrad").getContext("2d");
+									   // new Chart(radarpolitico,{"type":'radar',"data": dataelesen ,"options":opzioniradarsenato});
+									    
+									    
+									   // var barrapolitica = document.getElementById("EleChartbar").getContext("2d");
+									    //new Chart(barrapolitica,{"type":"horizontalBar","data": dataelesentot ,"options":opzionibarsenato});
 									    }
 									})
 								    }
