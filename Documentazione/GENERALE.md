@@ -424,7 +424,7 @@ L'informazione sul tipo di licenza è metadato indispensabile per determinare co
 I dataset pubblicati su OpenData Bologna rispettano queste condizioni.
 
 ### Dataset
-#### DATASET REDDITI, DATASET POLITICHE
+#### DATASET REDDITI, DATASET POLITICHE ![](cc.png) ![](zero.png)
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
 | Creative Commons | Attribuzione Zero |
@@ -438,7 +438,7 @@ Il dichiarante “*apertamente, pienamente, permanentemente, irrevocabilmente e 
 In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore, nella misura consentita dalla legge: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*: non vi è alcuna garanzia sul dataset stesso, e ogni responsabilità per qualsivoglia utilizzo del dataset nella misura consentita dalla legge è declinata.
 
 
-#### DATASET SEGNALAZIONI, DATASET AREE STATISTICHE 
+#### DATASET SEGNALAZIONI, DATASET AREE STATISTICHE ![](cc.png) ![](by.png)
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 | Creative Commons | Attribuzione |
@@ -450,14 +450,12 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 - distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
 
 
-#### Dataset finali
+#### Dataset finali ![](logo_iodl_esteso.png)
 
 Per pubblicare i nostri dataset abbiamo scelto la licenza [IODL 2.0](https://www.dati.gov.it/content/italian-open-data-license-v20). Essa:
 * consente di condividere, modificare, usare e riusare i dataset, i dati e le informazioni al loro interno, garantendo la stessa libertà per altri;
 * non implica trasferimenti di diritto di titolarità sulla banche di dati, sui dati e sulle informazioni pubbliche;
 * la versione 2.0, in particolare, permette di creare un lavoro derivato ed esercitare su di esso gli stessi diritti, per esempio attraverso la *mashup* con altre informazioni, utilizzando anche dati rilasciati con altre licenze *attribution* (che richiedono all’utente la sola indicazione della fonte,) come le licenze Creative Commons Attribution (CC-BY).
-
-![](logo_iodl_esteso.png)
 
 ### Librerie
 Le librerie che abbiamo utilizzato per compilare i codici Javascript, Python e HTML sono:
