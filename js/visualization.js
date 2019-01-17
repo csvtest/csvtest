@@ -302,6 +302,9 @@ $(document).ready(function(){
 														labels: Labelamb,
 														datasets: [{
 															data: Valamb,
+															backgroundColor: [
+															  
+															],
 														}]
 													};
 									    //sociale
@@ -309,6 +312,9 @@ $(document).ready(function(){
 														labels: Labelsoc,
 														datasets: [{
 															data: Valsoc,
+															backgroundColor: [
+																"#f2eef7", "#e5ddee", "#d8cce6", "#cbbbdd", "#beaad5", "#b198cd", "#a487c4", "#9776bc", "#8a65b3", "#7d54ab", "#704c9a", "#644389"
+															],
 															
 														}]
 													};
@@ -317,6 +323,11 @@ $(document).ready(function(){
 														labels: Labelcrim,
 														datasets: [{
 															data: Valcrim,
+															backgroundColor: [
+															  "#FF6384",
+															  "#36A2EB",
+															  "#FFCE56"
+															],
 															
 														}]
 													};
