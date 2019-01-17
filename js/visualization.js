@@ -383,7 +383,7 @@ $(document).ready(function(){
 												} 
 											});
 											}
-									   		 $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
+									   		
 											 grafisegn(datitotsegn, TOTsegn);
 									    		$('input[type=radio][name=radioseg]').change(function() {
 										switch($(this).val()){
