@@ -520,7 +520,7 @@ $(document).ready(function(){
 											    break
 											case 'microcriminalita' :
 											    $('#CategorieChart').remove();
-											    $('#chartContainerSegn').append('<div id="CategorieChart">Nessuna segnalazione di microcriminalità in questa Zona<div>');
+											    $('#chartContainerSegn').append('<div id="CategorieChart"><div>Nessuna segnalazione di microcriminalità in questa Zona</div><canvas"><canvas></div>');
 											    break
 												}
 												}
