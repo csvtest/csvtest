@@ -51,10 +51,18 @@
 	dct:creator <INSERIRE URI CREATOR> ;
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
 	dcat:landingPage <INSERIRE URL ACCESSO AL DATASET> ;
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/244> ; #redditi
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3328> ; #politiche camera
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3323> ; #politiche senato
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/1030> . #aree statistiche in zone
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1136> ; #redditi 2009
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1137> ; #redditi 2010
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1135> ; #redditi 2011
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1878> ; #redditi 2012
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/2436> ; #redditi 2013
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/3422> ; #redditi 2014
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4304> ; #redditi 2015
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4615> ; #redditi 2016
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4267> ; #politiche camera collegio 6
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4269> ; #politiche camera collegio 7
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4265> ; #politiche senato
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1275> . #aree statistiche in zone
 
 #Distribution dataset 1 
 
@@ -112,8 +120,9 @@
 	dct:creator <INSERIRE URI CREATOR> ;
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
 	dcat:landingPage <INSERIRE URL ACCESSO AL DATASET> ;
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/244> ; #segnalazioni
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/1030> . #aree statistiche in zone
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4490> ; #segnalazioni area
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4490> ; #segnalazioni tot-tipologia
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1275> . #aree statistiche in zone
 	
 
 
