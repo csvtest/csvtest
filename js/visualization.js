@@ -8,7 +8,7 @@ $(document).ready(function(){
 						var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 						    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 						}).addTo(map);
-						// var zone = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.geojson");
+
 						var limiti = map.getBounds();
 						map.setMaxBounds(limiti);
 					// Settaggio colore feature geojson
@@ -21,12 +21,10 @@ $(document).ready(function(){
 							fillColor: getColor(feature.properties.Codice_zona),
 						    };
 						};
-						var datageo;
-						$.getJSON("geojson_folder/ZoneBologna.json",function(json){
-						    datageo = json;               
-						});
-						var geojson = L.geoJson(datageo, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
-
+	
+						var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
+						
+	
 						//var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 						//$.ajax({
 						 //   dataType: "json",
@@ -40,8 +38,15 @@ $(document).ready(function(){
 						//}).error(function() {});
 						function onEachFeature(feature, layer) {
 						    layer.bindPopup(feature.properties.Nome_zona);
-						    layer.on( 'click', function(e) {
-							
+						    //layer.on( 'click', function(e) {
+							layer.on({
+							    'mouseover': function (e) {
+							      highlight(e.target);
+							    },
+							    'mouseout': function (e) {
+							      dehighlight(e.target);
+							    },
+							    'click': function (e) {
 
 							$.ajax({
 							    dataType: "json",
@@ -467,6 +472,6 @@ $(document).ready(function(){
 								    }
 								})
 							    //fine
-						    });
+						    }});
 						};
 						})
