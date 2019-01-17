@@ -391,11 +391,10 @@ $(document).ready(function(){
 														  {
 														    render: 'label',
 														    position: 'outside',
-														    fontSize: 9,
+														    fontSize: 12,
 														    fontStyle: 'bold',
 														    fontColor: '#000',
-														    outsidePadding: 4,
-													            textMargin: 4
+														    overlap: false
 														  },
 														  {
 														    render: 'value',
@@ -422,11 +421,10 @@ $(document).ready(function(){
 														  {
 														    render: 'label',
 														    position: 'outside',
-														    fontSize: 9,
+														    fontSize: 12,
 														    fontStyle: 'bold',
 														    fontColor: '#000',
-														    outsidePadding: 4,
-													            textMargin: 4
+														    overlap: false
 														  },
 														  {
 														    render: 'value',
@@ -453,11 +451,10 @@ $(document).ready(function(){
 														  {
 														    render: 'label',
 														    position: 'outside',
-														    fontSize: 9,
+														    fontSize: 12,
 														    fontStyle: 'bold',
 														    fontColor: '#000',
-														    outsidePadding: 4,
-													            textMargin: 4
+														    overlap: false
 														  },
 														  {
 														    render: 'value',
