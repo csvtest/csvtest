@@ -423,8 +423,8 @@ L'informazione sul tipo di licenza è metadato indispensabile per determinare co
 
 I dataset pubblicati su OpenData Bologna rispettano queste condizioni.
 
-### Dataset
-#### DATASET REDDITI, DATASET POLITICHE ![](cc.png) ![](zero.png)
+### Licenze dei dataset
+#### DATASET REDDITI, DATASET POLITICHE
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
 | Creative Commons | Attribuzione Zero |
@@ -438,7 +438,7 @@ Il dichiarante “*apertamente, pienamente, permanentemente, irrevocabilmente e 
 In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore, nella misura consentita dalla legge: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*: non vi è alcuna garanzia sul dataset stesso, e ogni responsabilità per qualsivoglia utilizzo del dataset nella misura consentita dalla legge è declinata.
 
 
-#### DATASET SEGNALAZIONI, DATASET AREE STATISTICHE ![](cc.png) ![](by.png)
+#### DATASET SEGNALAZIONI, DATASET AREE STATISTICHE
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 | Creative Commons | Attribuzione |
@@ -450,33 +450,38 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 - distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
 
 
-#### Dataset finali ![](logo_iodl_esteso.png)
-
+#### Dataset finali 
 Per pubblicare i nostri dataset abbiamo scelto la licenza [IODL 2.0](https://www.dati.gov.it/content/italian-open-data-license-v20). Essa:
 * consente di condividere, modificare, usare e riusare i dataset, i dati e le informazioni al loro interno, garantendo la stessa libertà per altri;
 * non implica trasferimenti di diritto di titolarità sulla banche di dati, sui dati e sulle informazioni pubbliche;
 * la versione 2.0, in particolare, permette di creare un lavoro derivato ed esercitare su di esso gli stessi diritti, per esempio attraverso la *mashup* con altre informazioni, utilizzando anche dati rilasciati con altre licenze *attribution* (che richiedono all’utente la sola indicazione della fonte,) come le licenze Creative Commons Attribution (CC-BY).
 
-### Librerie
+![](logo_iodl_esteso.png)
+
+### Licenze delle librerie
 Le librerie che abbiamo utilizzato per compilare i codici Javascript, Python e HTML sono:
 
 | Libreria | Licenza |
 | -------- | ------- |
-| pandas | [Nuova licenza BSD (3 clausole)] |
-| Jquery | [MIT License] |
-| Bootstrap | [MIT License] |
-| Leaflet | [Licenza FreeBSD (2 clausole)] |
-| Chartjs | [MIT License] |
-| chartjs-plugin-labels | [MIT License] |
-| shapely | [Nuova licenza BSD (3 clausole)] |
+| pandas | [Nuova licenza BSD (3 clausole)](https://opensource.org/licenses/BSD-3-Clause) |
+| Jquery | [MIT License](https://opensource.org/licenses/MIT) |
+| Bootstrap | [MIT License](https://opensource.org/licenses/MIT) |
+| Leaflet | [Licenza FreeBSD (2 clausole)](https://opensource.org/licenses/BSD-2-Clause) |
+| Chartjs | [MIT License](https://opensource.org/licenses/MIT) |
+| chartjs-plugin-labels | [MIT License](https://opensource.org/licenses/MIT) |
+| shapely | [Nuova licenza BSD (3 clausole)](https://opensource.org/licenses/BSD-3-Clause) |
+| chartjs-pluginm-piechart-hawtlabels | [MIT License](https://opensource.org/licenses/MIT) |
 
-### Codice
-La licenza del nostro codice è [GNU-GPL].
+### Licenze del codice
+La licenza del nostro codice è [GNU-GPL](https://www.gnu.org/licenses/gpl-3.0.html).
 
-### Documentazione
-La licenza della documentazione di Bootstrap è [CC-BY 3.0 Unported]. 
+### Licenze della documentazione
+La licenza della documentazione di Bootstrap è [CC-BY 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.it). 
 
-La licenza di questa documentazione è [CC-BY 4.0].
+La licenza di questa documentazione è [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it).
+
+### Altre licenze
+La licenza di **OpenStreetMaps** è [ODbL](https://www.openstreetmap.org/copyright). La licenza delle tavole cartografiche è [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
 
 ## Finalità
 
