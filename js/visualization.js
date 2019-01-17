@@ -41,7 +41,7 @@ $(document).ready(function(){
 						  if (selected !== null) {
 						    var previous = selected;
 						  }
-							map.fitBounds(layer.getBounds());
+							//map.fitBounds(layer.getBounds());
 							selected = layer;
 							if (previous) {
 							  dehighlight(previous);
