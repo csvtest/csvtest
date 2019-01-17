@@ -348,14 +348,10 @@ $(document).ready(function(){
 															]
 														}]
 													};
-											
-
-									    		function grafisegn(datsegn, TOT) {
-									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
-												new Chart(ctx, {type: 'doughnut',data: datsegn, options: {
+											var optiongensegn = {
 													elements: {
 														center: {
-															text: TOT,
+															text: TOTsegn,
 											  				color: '#000000', // Default is #000000
 											  				fontStyle: 'Arial', // Default is Arial
 											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
@@ -380,8 +376,98 @@ $(document).ready(function(){
 													legend: {
 													    display: false
 													 }
-												} 
-											});
+												};
+									    		var optioncrim = {
+													elements: {
+														center: {
+															text: TOTcrim,
+											  				color: '#000000', // Default is #000000
+											  				fontStyle: 'Arial', // Default is Arial
+											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
+														}
+													},
+													 plugins:{
+													  labels: [
+														  {
+														    render: 'label',
+														    position: 'outside',
+														    fontSize: 9,
+														    fontStyle: 'bold',
+														    fontColor: '#000'
+														  },
+														  {
+														    render: 'value',
+														    fontSize: 18,
+														    fontStyle: 'bold',
+														    fontColor: '#fff'
+														  }
+													]},
+													legend: {
+													    display: false
+													 }
+												};
+									    		var optionamb = {
+													elements: {
+														center: {
+															text: TOTamb,
+											  				color: '#000000', // Default is #000000
+											  				fontStyle: 'Arial', // Default is Arial
+											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
+														}
+													},
+													 plugins:{
+													  labels: [
+														  {
+														    render: 'label',
+														    position: 'outside',
+														    fontSize: 9,
+														    fontStyle: 'bold',
+														    fontColor: '#000'
+														  },
+														  {
+														    render: 'value',
+														    fontSize: 18,
+														    fontStyle: 'bold',
+														    fontColor: '#fff'
+														  }
+													]},
+													legend: {
+													    display: false
+													 }
+												};
+									    		var optionsoc = {
+													elements: {
+														center: {
+															text: TOTsoc,
+											  				color: '#000000', // Default is #000000
+											  				fontStyle: 'Arial', // Default is Arial
+											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
+														}
+													},
+													 plugins:{
+													  labels: [
+														  {
+														    render: 'label',
+														    position: 'outside',
+														    fontSize: 9,
+														    fontStyle: 'bold',
+														    fontColor: '#000'
+														  },
+														  {
+														    render: 'value',
+														    fontSize: 18,
+														    fontStyle: 'bold',
+														    fontColor: '#fff'
+														  }
+													]},
+													legend: {
+													    display: false
+													 }
+												};
+
+									    		function grafisegn(datsegn, opt) {
+									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
+												new Chart(ctx, {type: 'doughnut',data: datsegn, options: opt});
 											}
 									   		
 											 grafisegn(datitotsegn, TOTsegn);
@@ -390,22 +476,22 @@ $(document).ready(function(){
 											case 'segnalazioni' :
 											    $('#CategorieChart').remove();
 											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(datitotsegn, TOTsegn);
+											    grafisegn(datitotsegn, optiongensegn);
 											    break
 											case 'sociale' :
 											    $('#CategorieChart').remove();
 											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(datisoc, TOTsoc)
+											    grafisegn(datisoc, optionsoc)
 											    break
 											case 'ambientale' :
 											    $('#CategorieChart').remove();
    											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(datiamb, TOTamb)
+											    grafisegn(datiamb, optionamb)
 											    break
 											case 'microcriminalita' :
 											    $('#CategorieChart').remove();
 											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
-											    grafisegn(daticrim, TOTcrim)
+											    grafisegn(daticrim, optioncrim)
 											    break
 												}
 												}
