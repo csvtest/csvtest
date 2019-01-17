@@ -21,9 +21,14 @@ $(document).ready(function(){
 							fillColor: getColor(feature.properties.Codice_zona),
 						    };
 						};
-						
-						 
-						var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
+						var datageo;
+						$.ajax({
+						    dataType: "json",
+						    url: "geojson_folder/ZoneBologna.geojson",
+						    success: function(x) { datageo = x}})
+						var geojson = L.geoJson(datageo, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
+
+						//var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 						//$.ajax({
 						 //   dataType: "json",
 						 //   url: "geojson_folder/ZoneBologna.geojson",
