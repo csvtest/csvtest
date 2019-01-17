@@ -33,7 +33,6 @@ def pulitore_data_geo(data_geo):
 
     df = pandas.DataFrame(dict_list_pulita)
     df.to_csv('Segnalazioni_file_per_merge.csv', columns=['Ticketid', 'Tipo Area'], sep=',', encoding='utf-8',  index=False)
-
     return dict_list_pulita
 
 def pulire_segnalazioni(data_segnalazioni):
@@ -56,7 +55,6 @@ def incrociatore_segnalazioni(data_segnalazioni, data_geo):
 
     df = pandas.DataFrame(new_dict_list)
     df.to_csv('Prova_Segnalazioni_finito_corto.csv', columns=['Area Statistica', 'Categoria', 'Sottocategoria', 'Descrizione'], sep=',', encoding='utf-8', index=False)
-
     return new_dict_list
 
 def diz_aree_in_zone(csv_file):
@@ -96,7 +94,6 @@ def segnalazioni_per_zone(diz_zone_aree, segnalazioni_aree):
 
     df = pandas.DataFrame(lista)
     df.to_csv('Segnalazioni_2017_per_zone.csv', columns=['Zona', 'Categoria', 'Sottocategoria', 'Descrizione'], sep=',', encoding='utf-8', index=False)
-
     return lista
 
 
@@ -119,8 +116,8 @@ def counter_segnalazioni(segnalazioni_zone, segnalazioni_zone2):
     #df.to_csv('Segnalazioni_2017_FINITO.csv', columns=['Zona', 'Categoria', 'Sottocategoria', 'Descrizione', 'Numero Segnalazioni'], sep=',', encoding='utf-8', index=False)
     df = pandas.DataFrame(lista)
     df.to_csv('Segnalazioni_2017_per_zone_altraprova_ancora.csv', columns=['Zona', 'Categoria', 'Sottocategoria', 'Numero Segnalazioni'], sep=',', encoding='utf-8', index=False)
-
     return lista
+
 
 def delete_descrizione(data):
     lista = []
@@ -140,7 +137,6 @@ def delete_descrizione(data):
             new_dict.update({'Numero Segnalazioni': row['Numero Segnalazioni']})
             lista.append(new_dict)
             new_dict = {}
-
     return data
 
 def sottocat_in_altro(data):
@@ -164,7 +160,6 @@ def sottocat_in_altro(data):
 
             df = pandas.DataFrame(lista)
             df.to_csv('Segnalazioni_2017_per_zone_altraprova_ancora.csv', columns=['Zona', 'Categoria', 'Sottocategoria', 'Numero Segnalazioni'], sep=',', encoding='utf-8', index=False)
-
     return data
 
 def counter_segnalazioni_finale(segnalazioni_zone, segnalazioni_zone2):
@@ -193,35 +188,4 @@ def counter_segnalazioni_finale(segnalazioni_zone, segnalazioni_zone2):
                     lista.append(new_diz)
                     new_list.append(x)
                     new_diz = {}
-
-    print(new_list)
-
-#counter_segnalazioni_finale(process_data('Segnalazioni_2017_per_zone_ULTIMATOMAI.csv'), process_data('Segnalazioni_2017_per_zone_ULTIMATOMAI.csv'))
-
-
-
-#counter_segnalazioni(sottocat_in_altro(delete_descrizione(process_data('Segnalazioni_2017_per_zone.csv'))), (sottocat_in_altro(delete_descrizione(process_data('Segnalazioni_2017_per_zone.csv')))))
-
-
-
-
-
-
-#sottocat_in_altro(delete_descrizione(process_data('Segnalazioni_2017_per_zone.csv'), process_data('Segnalazioni_2017_per_zone.csv'))))
-
-
-
-
-
-#segnalazioni_per_zone(diz_aree_in_zone(process_data_punto_e_virgola('aree_statistiche_zone_quartieri.csv')), process_data('Segnalazioni_per_aree_statistiche.csv'))
-
-
-
-
-
-
-
-#pulitore_data_geo(process_data('Segnalazioni2017AreaStatPub.csv')) #QUESTO ALGORITMO HA CREATO IL DATASET PULITO 'Segnalazioni_file_per_merge.csv'
-
-#incrociatore_segnalazioni(pulire_segnalazioni(process_data('segnalazioni_CZRM_Bologna_2017.csv')), process_data('Segnalazioni_file_per_merge.csv'))
-
+    return new_list
