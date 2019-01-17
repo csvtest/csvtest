@@ -22,12 +22,11 @@ $(document).ready(function(){
 						function stylegeo(feature) {
 						    return {
 							fillColor: getColor(feature.properties.Censimento2017_zona),
-							 opacity: 5,
 						    };
 						};
 	
 						var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
-						
+						geojson.setOpacity(2);
 						function highlight (layer) {
 						layer.setStyle({
 							weight: 5,
