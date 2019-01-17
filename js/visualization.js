@@ -262,10 +262,16 @@ $(document).ready(function(){
 									    		var Labelamb = [];
 											var Labelsoc = [];
 											
-									    		var Valcrim = arrayItem.map(function (el) {if( el.Categoria === "Microcriminalita"){ Labelcrim.push(el["Sottocategoria"]); return el["Numero Segnalazioni"]; }});
-									    		var Valamb = arrayItem.map(function (el) {if( el.Categoria === "Degrado ambientale"){ Labelamb.push(el["Sottocategoria"]); return el["Numero Segnalazioni"]; }});
-											var Valsoc = arrayItem.map(function (el) {if( el.Categoria === "Degrado sociale"){ Labelsoc.push(el["Sottocategoria"]); return el["Numero Segnalazioni"]; }});
+									    		var Valcrim = [];
+									    		var Valamb = [];
+											var Valsoc = [];
 											
+									    		for(var i in arrayItem.Segnalazioni)
+												{
+													if( i.Categoria == "Microcriminalita"){ Labelcrim.push(i["Sottocategoria"]); Valcrim.push(i["Numero Segnalazioni"])};
+													if( i.Categoria == "Degrado ambientale"){ Labelamb.push(i["Sottocategoria"]); Valamb.push(i["Numero Segnalazioni"])};
+													if( i.Categoria == "Degrado sociale"){ Labelsoc.push(i["Sottocategoria"]); Valsoc.push(i["Numero Segnalazioni"])};	
+												}
 											var TOTsegn = arrayItem["Totale Degrado Sociale"]+ arrayItem["Totale Degrado Ambientale"]+ arrayItem["Totale Microcriminalita"];
 											var TOTcrim = Valcrim.reduce((x, y) => x + y);
 											var TOTamb = Valamb.reduce((x, y) => x + y);
@@ -377,6 +383,8 @@ $(document).ready(function(){
 												} 
 											});
 											}
+									   		 $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
+											 grafisegn(datitotsegn, TOTsegn);
 									    		$('input[type=radio][name=radioseg]').change(function() {
 										switch($(this).val()){
 											case 'segnalazioni' :
