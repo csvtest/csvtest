@@ -268,7 +268,7 @@ $(document).ready(function(){
 											
 									    		for(var i in arrayItem.Segnalazioni)
 												{
-													concole.log(i);
+													console.log(i);
 													if( i.Categoria == "Microcriminalita"){ Labelcrim.push(i["Sottocategoria"]); Valcrim.push(i["Numero Segnalazioni"])};
 													if( i.Categoria == "Degrado ambientale"){ Labelamb.push(i["Sottocategoria"]); Valamb.push(i["Numero Segnalazioni"])};
 													if( i.Categoria == "Degrado sociale"){ Labelsoc.push(i["Sottocategoria"]); Valsoc.push(i["Numero Segnalazioni"])};	
