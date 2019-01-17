@@ -359,6 +359,7 @@ $(document).ready(function(){
 													 }
 												};
 									    		var optioncrim = {
+												        zoomOutPercentage: 60,
 													elements: {
 														center: {
 															text: TOTcrim,
@@ -367,7 +368,6 @@ $(document).ready(function(){
 											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
 														}
 													},
-													zoomOutPercentage: 60,
 													 plugins:{
 													outlabels: {
 														    //text: '%l %p',
