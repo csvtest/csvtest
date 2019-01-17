@@ -14,7 +14,7 @@ $(document).ready(function(){
 						map.setMaxBounds(limiti);
 					// Settaggio colore feature geojson
 						function getColor(d) {
-						return 	d > 36600 ? '#194d33' :
+						return 	d > 33600 ? '#194d33' :
 							d > 27200  ? '#2d8659' :
 							d > 20800  ? '#40bf80' :
 							d > 14400  ? '#79d2a6' :
@@ -34,7 +34,7 @@ $(document).ready(function(){
 						legend.onAdd = function (map) {
 
 							var div = L.DomUtil.create('div', 'info legend'),
-								grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+								grades = [8000, 14400, 20800, 27200 , 33600, 40000],
 								labels = [],
 								from, to;
 
