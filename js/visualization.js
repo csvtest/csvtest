@@ -303,7 +303,7 @@ $(document).ready(function(){
 														datasets: [{
 															data: Valamb,
 															backgroundColor: [
-															  "#3da997", "#ecf8f6", "#daf1ed", "#c7ebe5", "#b4e4dc", "#a1ddd3", "#8fd6ca", "#7cd0c2", "#69c9b9", "#56c2b0", "#44bba7", "#3da997", "#369686"
+															  "#ecf8f6", "#daf1ed", "#c7ebe5", "#b4e4dc", "#a1ddd3", "#8fd6ca", "#7cd0c2", "#69c9b9", "#56c2b0", "#44bba7", "#3da997", "#369686", "#3da997"
 															],
 														}]
 													};
@@ -324,7 +324,7 @@ $(document).ready(function(){
 														datasets: [{
 															data: Valcrim,
 															backgroundColor: [
-															  "#ffa345", "#fff2e6", "#ffe6cc", "#ffd9b3",  "#ffcc99", "#ffbf80", "#ffb366", "#ffa64d", "#ffa345", "#ff9933", "#ff8c1a", "#ff8000", "#e67300"
+															  "#fff2e6", "#ffe6cc", "#ffd9b3",  "#ffcc99", "#ffbf80", "#ffb366", "#ffa64d", "#ffa345", "#ff9933", "#ff8c1a", "#ff8000", "#e67300", "#ffa345"
 															],
 															
 														}]
