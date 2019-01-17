@@ -367,10 +367,10 @@ $(document).ready(function(){
 											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
 														}
 													},
+													zoomOutPercentage: 60,
 													 plugins:{
-													zoomOutPercentage: 60, 
 													outlabels: {
-														    text: '%l %p',
+														    //text: '%l %p',
 														    color: 'white',
 														    stretch: 45,
 														    font: {
