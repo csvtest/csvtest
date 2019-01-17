@@ -17,7 +17,7 @@ zone_aree = [{'Borgo Panigale': ['Via del Vivaio', 'Lavino di Mezzo', 'Rigosa', 
 {'Marconi': ['Marconi-1', 'Marconi-2']},
 {'Irnerio': ['Irnerio-1', 'Irnerio-2']},
 {'Galvani': ['Galvani-1', 'Galvani-2']},
-{'Malpighi': ['Malpighi-1', 'Malpighi-2']}]
+{'Malpighi': ['Malpighi-1', 'Malpighi-2']}]  #Risultato di diz_aree_in_zone(csv_file) in Script delle Segnalazioni
 
 lista_zone = ['Borgo Panigale', 'Lame', 'Corticella', 'San Donato', 'Bolognina', 'Santa Viola', 'Barca', 'Saffi', 'Costa Saragozza', 'Colli', 'San Ruffillo', 'Mazzini', 'Murri', 'San Vitale', 'Marconi', 'Irnerio', 'Galvani', 'Malpighi']
 
@@ -90,21 +90,10 @@ def merge_dataset(data1, data2, data3, data4, data5, data6, data7, data8):
 
         df = pandas.DataFrame(new_list)
         df.to_csv('Redditi_nuova_media_2009-2016.csv', columns=['Zona', 'Reddito medio pro-capite 2009', 'Reddito medio pro-capite 2010', 'Reddito medio pro-capite 2011', 'Reddito medio pro-capite 2012', 'Reddito medio pro-capite 2013', 'Reddito medio pro-capite 2014', 'Reddito medio pro-capite 2015', 'Reddito medio pro-capite 2016'], sep=',', encoding='utf-8',index=False)
-
-    print(new_list)
     return new_list
 
 
-#d9 = reddito_medio_per_zona(process_data('redditi_2009_per_area_statistica.csv'))
-#d10 = reddito_medio_per_zona(process_data('redditi_2010_per_area_statistica.csv'))
-#d11 = reddito_medio_per_zona(process_data('redditi_2011_per_area_statistica.csv'))
-#d12 = reddito_medio_per_zona(process_data('redditi_2012_per_area_statistica.csv'))
-#d13 = reddito_medio_per_zona(process_data('redditi_2013_per_area_statistica.csv'))
-#d14 = reddito_medio_per_zona(process_data('redditi_2014_per_area_statistica.csv'))
-#d15 = reddito_medio_per_zona(process_data('redditi_2015_per_area_statistica.csv'))
-#d16 = reddito_medio_per_zona(process_data('redditi_2016_per_area_statistica.csv'))
 
-#merge_dataset(d9, d10, d11, d12, d13, d14, d15, d16)
 
 
 
