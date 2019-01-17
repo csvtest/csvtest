@@ -51,7 +51,7 @@
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/244> ; #redditi
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3328> ; #politiche camera
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/3323> ; #politiche senato
-	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/161> #aree statistiche ;
+	prov:wasDerivedFrom <http://dati.comune.bologna.it/node/161> ; #aree statistiche 
 
 #Distribution dataset 1 
 
