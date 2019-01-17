@@ -10,8 +10,8 @@
 
 < INSERIRE URI NOSTRA RACCOLTA >
 	a dcatapit:Catalog , dcat:Catalog ;
-	dct:title "Catalogo del progetto Bolide"@it ;
-	dct:description "Il catalogo dei dati aperti del progetto Bolide"@it ;
+	dct:title "Catalogo del progetto INSERIRE NOME DEL PROGETTO"@it ;
+	dct:description "Il catalogo dei dati aperti del progetto INSERIRE NOME DEL PROGETTO"@it ;
         dct:publisher <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
 	dct:modified "2018-01-19"^^xsd:date ;
         dct:issued "2018-01-19"^^xsd:date ;
