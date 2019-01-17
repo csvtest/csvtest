@@ -24,6 +24,34 @@ $(document).ready(function(){
 	
 						var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 						
+						function highlight (layer) {
+						layer.setStyle({
+							weight: 5,
+							//dashArray: ''
+						});
+						if (!L.Browser.ie && !L.Browser.opera) {
+							layer.bringToFront();
+						}
+						}
+
+						function dehighlight (layer) {
+						  if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
+							  geojson.resetStyle(layer);
+						  }
+						}
+
+						function select (layer) {
+						  if (selected !== null) {
+						    var previous = selected;
+						  }
+							map.fitBounds(layer.getBounds());
+							selected = layer;
+							if (previous) {
+							  dehighlight(previous);
+							}
+						}
+
+						var selected = null;
 	
 						//var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 						//$.ajax({
