@@ -14,7 +14,7 @@ $(document).ready(function(){
 						map.setMaxBounds(limiti);
 					// Settaggio colore feature geojson
 						function getColor(d) {
-						return 	d > 33600 ? '#194d33' :
+						return 	d > 33600 ?  '#800026': //'#194d33' :
 							d > 27200  ? '#2d8659' :
 							d > 20800  ? '#40bf80' :
 							d > 14400  ? '#79d2a6' :
