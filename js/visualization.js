@@ -302,16 +302,6 @@ $(document).ready(function(){
 														labels: Labelamb,
 														datasets: [{
 															data: Valamb,
-															backgroundColor: [
-															  "#FF6384",
-															  "#36A2EB",
-															  "#FFCE56"
-															],
-															hoverBackgroundColor: [
-															  "#FF6384",
-															  "#36A2EB",
-															  "#FFCE56"
-															]
 														}]
 													};
 									    //sociale
@@ -319,16 +309,7 @@ $(document).ready(function(){
 														labels: Labelsoc,
 														datasets: [{
 															data: Valsoc,
-															backgroundColor: [
-															  "#FF6384",
-															  "#36A2EB",
-															  "#FFCE56"
-															],
-															hoverBackgroundColor: [
-															  "#FF6384",
-															  "#36A2EB",
-															  "#FFCE56"
-															]
+															
 														}]
 													};
 									    //microcrimine
@@ -336,16 +317,7 @@ $(document).ready(function(){
 														labels: Labelcrim,
 														datasets: [{
 															data: Valcrim,
-															backgroundColor: [
-															  "#FF6384",
-															  "#36A2EB",
-															  "#FFCE56"
-															],
-															hoverBackgroundColor: [
-															  "#FF6384",
-															  "#36A2EB",
-															  "#FFCE56"
-															]
+															
 														}]
 													};
 											var optiongensegn = {
