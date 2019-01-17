@@ -341,6 +341,7 @@ $(document).ready(function(){
 											    $('#chartContainerSegn').append('<canvas id="CategorieChart"><canvas>');
 											    grafiseg(dataelesen, dataelesentot)
 											    break
+										}
 									    }
 									})
 								    }
