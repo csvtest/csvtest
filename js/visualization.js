@@ -22,8 +22,8 @@ $(document).ready(function(){
 						    };
 						};
 						
-						var data = new L.GeoJSON.AJAX("geojson_folder/ZoneBologna.json"); 
-						var geojson = L.geoJson(data, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
+						 
+						var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 						//$.ajax({
 						 //   dataType: "json",
 						 //   url: "geojson_folder/ZoneBologna.geojson",
