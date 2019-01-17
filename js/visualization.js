@@ -360,14 +360,7 @@ $(document).ready(function(){
 												};
 									    		var optioncrim = {
 												        zoomOutPercentage: 60,
-													elements: {
-														center: {
-															text: TOTcrim,
-											  				color: '#000000', // Default is #000000
-											  				fontStyle: 'Arial', // Default is Arial
-											 				 sidePadding: 20 // Defualt is 20 (as a percentage)
-														}
-													},
+													
 													 plugins:{
 													outlabels: {
 														    //text: '%l %p',
