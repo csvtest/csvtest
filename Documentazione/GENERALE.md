@@ -306,32 +306,18 @@ La fase di **pulitura** ha previsto le seguenti operazioni:
 
 In sede di **de-identificazione** è possibile applicare delle tecniche di anonimizzazione ai valori che sotto ad una certa soglia possono rappresentare un rischio di re-identificazione, come il *Numero contribuenti*. Per quanto riguarda i valori potenzialmente sensibili, come il *Reddito imponibile ai fini irpef*, è possibile anonimizzare i valori precisi convertendoli in valori arrotondati secondo la distribuzione in *scaglioni IRPEF*.
 
-Il processo di **_merging_** ha previsto le seguenti operazioni:
 
-1. Abbiamo preso gli 8 dataset come input per un algoritmo chiamato "**process_data(csv_input_file)**". In questo caso il separatore è ';'. Il merge è stato fatto con l'algoritmo 'merge_dataset_redditi_per_area(data1, data2, data3, data4, data5, data6, data7, data8)' in '*Reddito_per_Area.py*': gli 8 dataset vengono incrociati in un unico dataset finale. L'output presenta i nuovi campi '*Reddito pro-capite 2009*' ... '*Reddito pro-capite 2016*'. I dati di queste nuove intestazioni sono il risultato della media matematica '*Reddito imponibile ai fini irpef*' / '*N contribuenti*'.
 
-2. L'output di 'merge_dataset_redditi_per_area(data1, data2, data3, data4, data5, data6, data7, data8)' è stato convertito in formato .csv grazie alla libreria Pandas di Python. Il file di output è 'Reddito_2009-2016_per_area.csv'.
 
-3. Considerando la nostra visualizzazione e i problemi di anonimizzazione, abbiamo raggruppato i dati per aree statistiche in zone. Il processo è stato fatto con l'algoritmo '**zone_creator(data, data2)**': per ogni zona abbiamo quindi ricalcolato le medie del 'Reddito pro-capite'.
+|||||||||||||||||||||||||| INSERIRE QUI |||||||||||||||||||||||||||||
 
-4. L'output finale è stato convertito in csv (COMMA separated value) e salvato come "*Reddito_2009-2016_per_zone.csv*".
 
-5. ~~Controllo manuale e a campione dei dati di output: Ci sono ancora errori di battitura non precedentemente indivuati? Se si, vengono corretti. Le medie sono corrette?[MANCA PORCADDYO ...]~~
-|
 
-|
 
-|
 
-MANCAROBBA
 
-|
 
-|
-
-|
-
-#### DATASET CITIZEN MANAGEMENT : 
+#### DATASET SEGNALAZIONI : 
 
 ##### Revisione preliminare: criticità
 
@@ -357,35 +343,16 @@ In fase di **pulitura** e **de-identificazione** abbiamo operato una serie di op
 A questo punto abbiamo ripreso il dataset '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv'. Abbiamo selezionato solo le categorie di segnalazioni che ci interessano: "*Degrado urbano-sociale-ambientale*" e "*Microciminalità*". La scelta delle categorie da mantenere è stata fatta da noi considerando gli elementi nel dataset che ci sono sembrati più calzanti con le nostre finalità. Questo processo di pulitura è stato realizzato tramite l'algoritmo "**pulire_segnalazioni(data_segnalazioni)**". 
 
 In fase di **merging** abbiamo poi incrociato 'Segnalazioni_file_per_merge.csv' e '38.00.05_segnalazioni_czrm2017_tot_tipologia.csv', per convertire tutti i valori di "*Ticketid*" nelle loro corrispondenti aree statistiche, attraverso l'algoritmo "**incrociatore_segnalazioni(data_segnalazioni, data_geo)**".
-|
 
-|
 
-|
 
-|
 
-|
 
-[MANCA ROBBBBBA]
+|||||||||||||||||||||||||||||||| INSERIRE QUI |||||||||||||||||||||||||||||||||||
 
-|
 
-|
 
-|
 
-|
-
-|
-
-Con l'algoritmo "**counter_segnalazioni(segnalazioni_zone, segnalazioni_zone2)**" abbiamo raggruppato ancora le segnalazioni per zone, eliminando ogni doppione e conteggiando quante volte quella determinata segnalazione è stata fatta in una determinata zona. 
-
-|
-
-|
-
-|
 
 #### DATASET AREE STATISTICHE
 ##### Revisione preliminare: criticità
@@ -562,21 +529,17 @@ Il livello del modello per i metadati raggiunto dai dataset è il **Livello 2**:
 I dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it/) sono descritti dai seguenti metadati human-readable:
 
 | Metadato | Descrizione |
+| -------- | ----------- |
 | File | il nome del dataset |
 | Anno versione | numero di versione |
 | Versione | numero di versione |
-|  |  |
-
-1. **File**: il nome del dataset.
-2. **Anno versione**: l'anno al quale la relativa versione si riferisce.
-3. **versione**: numero di versione.
-4. **Formato**: formato dei dati.
-5. **Data rilascio**: data di pubblicazione del dataset.
-6. **Argomento**: keyword che descrive il contenuto dei dataset.
-7. **Tag**: keyword che descrive più in profondità il contenuto dei dataset.
-8. **Responsabile**: 
-9. **Fonte**: indicazione di autorità e/o provenienza.
-10. **Licenza**: tipo di licenza del dataset.
+| Formato | formato dei dati |
+| Data rilascio | data di pubblicazione del dataset |
+| Argomento | parole/e chiave che descrive/ono la natura e il contenuto informativo del dataset |
+| Tag | parola/e chiave che descrive/ono la natura e il contenuto informativo del dataset |
+| Responsabile | agente che ha gestito la creazione e il popolamento del dataset |
+| Fonte | provenienza dei dati |
+| Licenza | tipo di licenza associata al dataset |
 
 ### Metadatazione dei dataset finali
 
@@ -676,7 +639,13 @@ _______________________________________________________________
 
 # Analisi della sostenibilità
 
-[CONTINUARE ...]
+Nella comunicazione della Commissione pubblicata sulla Gazzetta ufficiale dell'Unione Europea [2014/C 240/01](https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:52014XC0724(01)&from=IT) del 24/07/2014, al paragrafo 4.1.2 si legge: 
+- *nell’ambiente in linea, invece, la totalità del corrispettivo potrebbe essere limitata ai costi collegati direttamente alla manutenzione e al funzionamento dell’infrastruttura (ossia della banca dati elettronica) nella misura necessaria a riprodurre il documento e a metterlo a disposizione di un riutilizzatore in più. Considerate l’esiguità e la tendenza al ribasso dei costi operativi medi di una banca dati, è probabile che l’importo sia prossimo allo zero. Si raccomanda pertanto agli enti pubblici di valutare a cadenza periodica i costi e benefici potenziali della politica di costo zero e della politica dei costi marginali, tenendo presente che la tariffazione com porta in sé dei costi (gestione delle fatture, monitoraggio e amministrazione dei pagamenti ecc.). In conclusione, il metodo dei costi marginali può essere applicato per recuperare le spese sostenute per la riproduzione di una copia supplementare e la distribuzione fisica dei documenti non digitali, mentre **per i documenti digitali (file) divulgati per via elettronica (ossia scaricati) si raccomanderebbe una politica di costo zero.***
+
+Per riuscire a mantenere la curation nel lungo periodo:
+* mantenere serie storica;
+* usare [URI persistenti](#uri);
+* integrare idati con i **metadati di provenance**;
 
 _______________________________________________________________
 
