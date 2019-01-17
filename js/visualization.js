@@ -330,12 +330,11 @@ $(document).ready(function(){
 											    backgroundColor: "red"},
 											    {
 											"label": "Risultati Camera Italia",
-		// DA CAMBIAREEEEEEEEEEEEEEEEEEEEEEE!!!!!!
-											data: [32.22, 19.14, 17.61, 14.43, 4.26, 3.28, 2.37, 6.69],
+											data: [32.68, 18.76, 17.35, 14.00, 4.35, 3.39, 2.56, 6.91],
 											 },
 											   {
 											"label": "Risultati Camera Bologna",
-											data: [21.97, 28.15, 13.99, 9.75, 3.48, 9.56, 5.43, 7.67],
+											data: [21.90, 29.28, 13.59, 9.62, 3.58, 8.04, 6.23, 7.76],
 											      backgroundColor: "#545556"}
 											   ]
 										};
