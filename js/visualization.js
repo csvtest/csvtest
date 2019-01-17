@@ -394,7 +394,7 @@ $(document).ready(function(){
 														    fontSize: 12,
 														    fontStyle: 'bold',
 														    fontColor: '#000',
-														    overlap: false
+														    //overlap: false
 														  },
 														  {
 														    render: 'value',
@@ -424,7 +424,7 @@ $(document).ready(function(){
 														    fontSize: 12,
 														    fontStyle: 'bold',
 														    fontColor: '#000',
-														    overlap: false
+														    //overlap: false
 														  },
 														  {
 														    render: 'value',
@@ -454,7 +454,7 @@ $(document).ready(function(){
 														    fontSize: 12,
 														    fontStyle: 'bold',
 														    fontColor: '#000',
-														    overlap: false
+														    //overlap: false
 														  },
 														  {
 														    render: 'value',
@@ -470,7 +470,7 @@ $(document).ready(function(){
 
 									    		function grafisegn(datsegn, opt) {
 									    			var ctx = document.getElementById("CategorieChart").getContext("2d");
-												new Chart(ctx, {type: 'doughnut',data: datsegn, options: opt});
+												new Chart(ctx, {type: 'polarArea',data: datsegn, options: opt});
 											}
 									   		
 											 grafisegn(datitotsegn, optiongensegn);
