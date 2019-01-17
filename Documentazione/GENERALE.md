@@ -134,7 +134,7 @@ I requisiti necessari che abbiamo stabilito per controllare il livello di qualit
 | 4.0 | nomenclatura non armonizzata con [4.1] | True | [Tabella](#indici-di-completezza) | True | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 | 4.1 | nomenclatura incoerente; | True | [Tabella](#indici-di-completezza) | True | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 | **Segnalazioni** |  |  |  |  |  |
-| 5.0 | nomenclature non armonizzate con [5.1]; <br> sintassi di *TIPO_AREA_* | rischio di de-anonimizzazione | [Tabella](#indici-di-completezza) | True | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
+| 5.0 | nomenclature non armonizzate con [5.1]; <br> sintassi di *TIPO_AREA_* | True, rischio di de-anonimizzazione | [Tabella](#indici-di-completezza) | True | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 | 5.1 | semantica troppo generica di *Category* <br> semantica poco chiara in alcuni casi di *Subcategory_1*, *Subcategory_2*, *Subcategory_3* | mancano spiegazioni di *Category*; <br> mancano spiegazioni di *Subcategory_1*, *Subcategory_2*, *Subcategory_3*; <br>  | [Tabella](#indici-di-completezza) | presenza di segnalazioni de-anonimizzate; | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 
 I requisiti aggiuntivi che abbiamo stabilito per controllare il livello di qualità informativa sono:
