@@ -22,7 +22,7 @@ $(document).ready(function(){
 						function stylegeo(feature) {
 						    return {
 							fillColor: getColor(feature.properties.Censimento2017_zona),
-							fillOpacity: 5,
+							fillOpacity: 2,
 						    };
 						};
 	
