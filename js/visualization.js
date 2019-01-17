@@ -13,11 +13,11 @@ $(document).ready(function(){
 						map.setMaxBounds(limiti);
 					// Settaggio colore feature geojson
 						function getColor(d) {
-						return 	d > 36600 ? '#800026' :
-							d > 27200  ? '#BD0026' :
-							d > 20800  ? '#E31A1C' :
-							d > 14400  ? '#FC4E2A' :
-								     '#FD8D3C' ;
+						return 	d > 36600 ? '#194d33' :
+							d > 27200  ? '#2d8659' :
+							d > 20800  ? '#40bf80' :
+							d > 14400  ? '#79d2a6' :
+								     '#b3e6cc' ;
 						};
 						function stylegeo(feature) {
 						    return {
