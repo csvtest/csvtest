@@ -151,8 +151,8 @@ I requisiti necessari, stabiliti dalle **Linee guida nazionali per la valorizzaz
 | **Segnalazioni** |  |  |  |  |  |
 | 5.0 | nomenclature non armonizzate con [5.1]; <br> sintassi di *TIPO_AREA_* | True, rischio di de-anonimizzazione | True | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 | 5.1 | semantica troppo generica di *Category* <br> semantica poco chiara in alcuni casi di *Subcategory_1*, *Subcategory_2*, *Subcategory_3* | mancano spiegazioni di *Category*; <br> mancano spiegazioni di *Subcategory_1*, *Subcategory_2*, *Subcategory_3*; | presenza di segnalazioni de-anonimizzate; | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
-| 6.0 |  |  |  |  |
-| 7.0 |  |  |  |  |
+| 6.0 | differenza tra *Età* ed *Età grandi* poco chiara | True, rischio di de-anonimizzazione | True | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
+| 7.0 | *offset* delle coordinate: in media {0.00005 N, 0.00106 E}  | True | True | ["Scadenza regolare"](http://dati.comune.bologna.it/progetto) |
 
 I requisiti aggiuntivi che abbiamo stabilito per controllare il livello di qualità informativa sono:
 
@@ -190,8 +190,6 @@ Gli indici di completezza che abbiamo calcolato sono i seguenti:
 | 5.1 | 63485 | 6695 | 89.45% |
 | Censimento | - | - | - |
 | 6.0 | 91350 | 0 | 100% |
-| Zone | - | - | - |
-| 7.0 |  |  |
 
 Dalla tabella è possibile osservare come i dataset scelti siano tendenzialmente completi dal punto di vista dei valori non-nulli. Un'eccezione a questa tendenza è rappresentata dal Dataset Segnalazioni 5.1, con un indice di completezza pari a 89.45%. Il conteggio dei valori non-nulli totali, inoltre, ci ha permesso fin da subito di osservare altre peculiarità riguardanti le popolazioni dei vari dataset. E' interessante notare soprattutto osservare la tendenza sostanzialmente uniforme (92) all'interno della serie dei Redditi, ad eccezione di 3.2 (Redditi del 2011), con ben 3097 (!) valori non-nulli, e di 3.5 (Redditi del 2014), con due valori in più rispetto al normale (94).
 
