@@ -33,7 +33,7 @@ $(document).ready(function(){
 						legend.onAdd = function (map) {
 
 						    var div = L.DomUtil.create('div', 'info legend'),
-							grades = [80000,14400,20800,27200,33600,40000],
+							grades = [80000,14400,20800,27200,33600],
 							labels = [],
 							from, to;
 
