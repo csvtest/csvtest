@@ -1,10 +1,17 @@
-@prefix dcatapit <http://dati.gov.it/onto/dcatapit> . 
-@prefix dct <http://purl.org/dc/terms/> .
-@prefix dcat <http://www.w3.org/ns/dcat#> .
-@prefix foaf <http://xmlns.com/foaf/0.1/> .
-@prefix owl <http://www.w3.org/2002/07/owl#> .
-@prefix prov <http://www.w3.org/ns/prov#> .
-@prefix xsd <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit> . 
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix pav: <http://pav-ontology.github.io/pav/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix : <http://bolideopendata.github.io/bolideopendata/bolide-ns#> .
+
 
 #Catalog
 
@@ -84,6 +91,108 @@
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
 	
+# Misure
+:measure1 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv>;
+  dqv:isMeasurementOf :accuracyMetric;
+  dqv:value "true"^^xsd:boolean.
+
+:measure2 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv>;
+  dqv:isMeasurementOf :csvCompletenessMetric;
+  dqv:value "100"^^xsd:decimal.
+
+:measure3 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv>;
+  dqv:isMeasurementOf :coherenceMetric;
+  dqv:value "true"^^xsd:boolean.
+
+:measure4 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv>;
+  dqv:isMeasurementOf :coherenceMetric;
+  dqv:value "true"^^xsd:boolean.
+
+:measure5 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv>;
+  dqv:isMeasurementOf :availabilityMetric;
+  dqv:value "true"^^xsd:boolean.
+
+:measure6 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv>;
+  dqv:isMeasurementOf :processabilityMetric;
+  dqv:value "true"^^xsd:boolean.
+
+:measure7 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv>;
+  dqv:isMeasurementOf :credibilityMetric;
+  dqv:value "true"^^xsd:boolean.
+
+# Dimensioni
+:accuracy a dqv:Dimension;
+  skos:prefLabel "Accuratezza"@it;
+  skos:definition "Il grado in cui gli attributi rappresentano in maniera corretta il valore reale del dato in uno specifico contesto."@it;
+  dqv:inCategory :intrinsicDimensions.
+
+:completeness a dqv:Dimension;
+  skos:prefLabel "Completezza"@en;
+  skos:definition "Il grado per cui il dato associato a un’entità presenta valori per tutti gli attributi attesi e relative istanze in un certo contesto."@it;
+  dqv:inCategory :intrinsicDimensions.
+
+:coherence a dqv:Dimension;
+  skos:prefLabel "Coerenza"@it;
+  skos:definition "Il grado in cui gli attributi del dato non sono in contraddizione con altri dati in uno specifico contesto."@it;
+  dqv:inCategory :intrinsicDimensions.
+
+:timeliness a dqv:Dimension;
+  skos:prefLabel "Tempestività"@it;
+  skos:definition "Il grado in cui gli attributi del dato sono al «giusto tempo» rispetto al contesto di riferimento."@it;
+  dqv:inCategory :intrinsicDimensions.
+
+:availability a dqv:Dimension;
+  skos:prefLabel "Disponibilità"@it;
+  skos:definition "Il grado in cui il dataset risulta essere facilmente raggiungibile e scaricabile."@it;
+  dqv:inCategory :accessibility.
+
+:processability a dqv:Dimension;
+  skos:prefLabel "Processabilità"@it;
+  skos:definition "Il grado in cui il dataset risulta essere consultabile non solo da agenti umani ma anche da agenti automatici."@it;
+  dqv:inCategory :accessibility.
+
+:credibility a dqv:Dimension;
+  skos:prefLabel "Credibilità"@it;
+  skos:definition "Il grado in cui le informazioni contenute nel dataset risultano essere credibili e supportate da provenance"@it;
+  dqv:inCategory :accessibility.
+
+# Metriche
+:accuracyMetric a dqv:Metric;
+  skos:definition "Se il dataset presenta sintassi e semantica accurate == True"@it;
+  dqv:inDimension :accuracy.
+
+:csvCompletenessMetric a dqv:Metric;
+  skos:definition "Percentuale dei valori non-nulli all'interno del dataset."@it;
+  dqv:inDimension :completeness.
+
+:coherenceMetric a dqv:Metric;
+  skos:definition "Se il dataset non presenta contraddizioni interne == True"@it;
+  dqv:inDimension :coherence.
+
+:timelinessMetric a dqv:Metric;
+  skos:definition "Se la data di ultima modifica del dato rispetto al tempo di misurazione ricade nell'intervallo della frequenza di aggiornamento == True"@it;
+  dqv:inDimension :coherence.
+
+:availabilityMetric a dqv:Metric;
+  skos:definition "Se l'URI è persistente, non ambiguo e scaricabile == True"@en;
+  dqv:inDimension :availability.
+
+:processabilityMetric a dqv:Metric;
+  skos:definition "Se il dataset è pubblicato in formato .xml / .json / .rdf (e serializzazioni) == True"@en;
+  dqv:inDimension :processability.
+
+:credibilityMetric a dqv:Metric;
+  skos:definition "Se nei metadati che corredano il dataset è presente prov:wasDerivedFrom == True"@en;
+  dqv:inDimension :credibility.
+  
+	
 # Temporal dataset 1
 
 <https://bolideopendata.github.io/bolideopendata/PeriodoTemporale/periodTimebolideopendata>
@@ -145,6 +254,107 @@
 	dct:license <INSERISCI LICENZA> ;
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
+	
+# Misure
+:measure1 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:isMeasurementOf :accuracyMetric;
+  dqv:value "true"^^xsd:boolean.
+
+:measure2 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:isMeasurementOf :csvCompletenessMetric;
+  dqv:value "100"^^xsd:decimal.
+
+:measure3 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:isMeasurementOf :coherenceMetric;
+  dqv:value "true"^^xsd:boolean.
+
+:measure4 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:isMeasurementOf :coherenceMetric;
+  dqv:value "true"^^xsd:boolean.
+
+:measure5 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:isMeasurementOf :availabilityMetric;
+  dqv:value "true"^^xsd:boolean.
+
+:measure6 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:isMeasurementOf :processabilityMetric;
+  dqv:value "true"^^xsd:boolean.
+
+:measure7 a dqv:QualityMeasurement;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:isMeasurementOf :credibilityMetric;
+  dqv:value "true"^^xsd:boolean.
+
+# Dimensioni
+:accuracy a dqv:Dimension;
+  skos:prefLabel "Accuratezza"@it;
+  skos:definition "Il grado in cui gli attributi rappresentano in maniera corretta il valore reale del dato in uno specifico contesto."@it;
+  dqv:inCategory :intrinsicDimensions.
+
+:completeness a dqv:Dimension;
+  skos:prefLabel "Completezza"@en;
+  skos:definition "Il grado per cui il dato associato a un’entità presenta valori per tutti gli attributi attesi e relative istanze in un certo contesto."@it;
+  dqv:inCategory :intrinsicDimensions.
+
+:coherence a dqv:Dimension;
+  skos:prefLabel "Coerenza"@it;
+  skos:definition "Il grado in cui gli attributi del dato non sono in contraddizione con altri dati in uno specifico contesto."@it;
+  dqv:inCategory :intrinsicDimensions.
+
+:timeliness a dqv:Dimension;
+  skos:prefLabel "Tempestività"@it;
+  skos:definition "Il grado in cui gli attributi del dato sono al «giusto tempo» rispetto al contesto di riferimento."@it;
+  dqv:inCategory :intrinsicDimensions.
+
+:availability a dqv:Dimension;
+  skos:prefLabel "Disponibilità"@it;
+  skos:definition "Il grado in cui il dataset risulta essere facilmente raggiungibile e scaricabile."@it;
+  dqv:inCategory :accessibility.
+
+:processability a dqv:Dimension;
+  skos:prefLabel "Processabilità"@it;
+  skos:definition "Il grado in cui il dataset risulta essere consultabile non solo da agenti umani ma anche da agenti automatici."@it;
+  dqv:inCategory :accessibility.
+
+:credibility a dqv:Dimension;
+  skos:prefLabel "Credibilità"@it;
+  skos:definition "Il grado in cui le informazioni contenute nel dataset risultano essere credibili e supportate da provenance"@it;
+  dqv:inCategory :accessibility.
+
+# Metriche
+:accuracyMetric a dqv:Metric;
+  skos:definition "Se il dataset presenta sintassi e semantica accurate == True"@it;
+  dqv:inDimension :accuracy.
+
+:csvCompletenessMetric a dqv:Metric;
+  skos:definition "Percentuale dei valori non-nulli all'interno del dataset."@it;
+  dqv:inDimension :completeness.
+
+:coherenceMetric a dqv:Metric;
+  skos:definition "Se il dataset non presenta contraddizioni interne == True"@it;
+  dqv:inDimension :coherence.
+
+:timelinessMetric a dqv:Metric;
+  skos:definition "Se la data di ultima modifica del dato rispetto al tempo di misurazione ricade nell'intervallo della frequenza di aggiornamento == True"@it;
+  dqv:inDimension :coherence.
+
+:availabilityMetric a dqv:Metric;
+  skos:definition "Se l'URI è persistente, non ambiguo e scaricabile == True"@en;
+  dqv:inDimension :availability.
+
+:processabilityMetric a dqv:Metric;
+  skos:definition "Se il dataset è pubblicato in formato .xml / .json / .rdf (e serializzazioni) == True"@en;
+  dqv:inDimension :processability.
+
+:credibilityMetric a dqv:Metric;
+  skos:definition "Se nei metadati che corredano il dataset è presente prov:wasDerivedFrom == True"@en;
+  dqv:inDimension :credibility.
 	
 	
 # Temporal dataset 2
@@ -217,6 +427,8 @@
 	dct:license <INSERISCI LICENZA> ;
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
+	
+
 	
 	
 # Temporal dataset 3
