@@ -106,6 +106,7 @@ $(document).ready(function(){
 							    },
 							    'click': function (e) {
 								    select(e.target);
+							var firsttime = true;
 							$.ajax({
 							    dataType: "json",
 							    url: "geojson_folder/redditizone.json",
@@ -114,6 +115,12 @@ $(document).ready(function(){
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
 									$('.information').html('');
 									$('.information').html('<h2><span class="badge badge-primary">'+arrayItem["Zona"])+'</span></h2>';
+									
+									if (firsttime == true){
+										$('.playground').html('');
+										$('.playground').html('<div class="card"> <div class="card-header" id="headingOne"> <h5 class="mb-0"> <button id= "elezioniPUL" class="btn btn-link" data-toggle="collapse" data-target="#collELEZIONI" aria-expanded="true" aria-controls="collapseOne"> ELEZIONI 4 MARZO 2018 </button> </h5> </div> <div id="collELEZIONI" class="collapse" aria-labelledby="headingOne" data-parent="#accordion"> <div class="card-body"> <div id="pulsanteELE"></div> <div id="chartContainerEle"></div> </div> </div> </div> <div class="card"> <div class="card-header" id="headingTwo"> <h5 class="mb-0"> <button id= "redditiPUL" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collREDDITI" aria-expanded="false" aria-controls="collapseTwo"> REDDITI 2009-2016 </button> </h5> </div> <div id="collREDDITI" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion"> <div class="card-body"> <div id="chartContainer"> <div id="redditiButton">seleziona una zona di Bologna per visualizzarne i dati </div> <canvas id="redditiChart" width="400" height="400"></canvas> </div> <div id="pulsante"> </div> </div> </div> </div> <div class="card"> <div class="card-header" id="headingThree"> <h5 class="mb-0"> <button "segnalazioniPUL" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collSEGNA" aria-expanded="false" aria-controls="collapseThree"> SEGNALAZIONI 2017 </button> </h5> </div> <div id="collSEGNA" class="collapse" aria-labelledby="headingThree" data-parent="#accordion"> <div class="card-body"> <div id="chartContainerSegn"></div> <div id="pulsanteSEGN"></div> </div> </div> </div>');
+										firsttime = false;
+									}
 									var listRedditi = [];
 									listRedditi.push(arrayItem["Reddito medio pro-capite 2009"]);
 									listRedditi.push(arrayItem["Reddito medio pro-capite 2010"]);
