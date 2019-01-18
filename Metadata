@@ -12,21 +12,21 @@
 	a dcatapit:Catalog , dcat:Catalog ;
 	dct:title "Catalogo progetto Bolide Open Data"@it ;
 	dct:description "Il catalogo dei dati aperti del progetto Bolide Open Data"@it ;
-        dct:publisher <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
+        dct:publisher <http://bolideopendata.github.io/team/bolideopendatateam> ;
 	dct:modified "2018-01-19"^^xsd:date ;
         dct:issued "2018-01-19"^^xsd:date ;
         dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-	foaf:homepage <INSERIRE URI HOMEPAGE> ;
-        dcat:dataset <INSERIRE URI DATASET 1> ;
-	dcat:dataset <INSERIRE URI DATASET 2> ;
-	dcat:dataset <INSERIRE URI DATASET 3> ;
+	foaf:homepage <INSERIRE HOMEPAGE> ;
+        dcat:dataset <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv> ;
+	dcat:dataset <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv> ;
+	dcat:dataset <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna.geojson> ;
 	dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> .
 
 
 #Dataset 1
 
 
-<INSERISCI URI RISORSA>
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "bolideopendata:D.1" ;
 	dct:title "Analisi politiche 2018 Bologna"@it ;
@@ -96,7 +96,7 @@
 #Dataset 2
 
 
-<INSERISCI URI RISORSA>
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "bolideopendata:D.2" ;
 	dct:title "Segnalazioni Bologna 2017"@it ;
@@ -168,7 +168,7 @@
 #Dataset 3
 
 
-<INSERISCI URI RISORSA>
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna.geojson>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "bolideopendata:D.3" ;
 	dct:title "Segnalazioni Bologna 2017"@it ;
