@@ -29,7 +29,28 @@ $(document).ready(function(){
 					
 						var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 					
-	
+						var legend = L.control({position: 'bottomright'});
+						legend.onAdd = function (map) {
+
+						    var div = L.DomUtil.create('div', 'info legend'),
+							grades = [80000,14400,20800,27200,33600,40000],
+							labels = [],
+							from, to;
+
+						    for (var i = 0; i < grades.length; i++) {
+							from = grades[i];
+							to = grades[i + 1];
+
+							labels.push(
+							    '<i style="background:' + getColor(from + 1) + '"></i> ' +
+							    from + (to ? '&ndash;' + to : '+'));
+						    }
+
+						    div.innerHTML = labels.join('<br>');
+						    return div;
+						};
+
+						legend.addTo(map);
 						function highlight (layer) {
 						layer.setStyle({
 							weight: 5,
