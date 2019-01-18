@@ -23,7 +23,7 @@ $(document).ready(function(){
 						function stylegeo(feature) {
 						    return {
 							fillColor: getColor(feature.properties.Censimento2017_zona),
-							fillOpacity: 0.5,
+							fillOpacity: 0.7,
 						    };
 						};
 					
@@ -51,6 +51,7 @@ $(document).ready(function(){
 						  div.innerHTML = labels.join('<br>');
 						  return div;
 						};
+						$( ".info.legend" ).css( "background-color: white" );
 
 						// Do not forget to add your control to the map?
 						legend.addTo(map);
