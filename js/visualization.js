@@ -239,7 +239,7 @@ $(document).ready(function(){
 					//inizio Segnalazioni
 							$.ajax({
 							    dataType: "json",
-							    url: "geojson_folder/lejsonfait.json",
+							    url: "geojson_folder/jsonsegnalazioni.json",
 							    success: function(datisegn) {
 								datisegn.forEach(function(arrayItem) {
 								    if (arrayItem["Zona"] == feature.properties.Nome_zona) {
@@ -299,23 +299,23 @@ $(document).ready(function(){
 	
 									    		for (var i in arrayItem.Segnalazioni)
 											{
-										    	if( arrayItem.Segnalazioni[i].Categoria === "Microcriminalita"){ Labelcrim.push(arrayItem.Segnalazioni[i].Sottocategoria); Valcrim.push(arrayItem.Segnalazioni[i]["Numero Segnalazioni"])};
-											if( arrayItem.Segnalazioni[i].Categoria === "Degrado ambientale"){ Labelamb.push(arrayItem.Segnalazioni[i].Sottocategoria); Valamb.push(arrayItem.Segnalazioni[i]["Numero Segnalazioni"])};
-											if( arrayItem.Segnalazioni[i].Categoria === "Degrado sociale"){ Labelsoc.push(arrayItem.Segnalazioni[i].Sottocategoria); Valsoc.push(arrayItem.Segnalazioni[i]["Numero Segnalazioni"])};	
+										    	if( arrayItem.Segnalazioni[i]["Categoria Segnalazione"] === "Microcriminalita"){ Labelcrim.push(arrayItem.Segnalazioni[i]["Sottocategoria Segnalazione"]); Valcrim.push(arrayItem.Segnalazioni[i]["Numero Segnalazioni"])};
+											if( arrayItem.Segnalazioni[i]["Categoria Segnalazione"] === "Ambientale"){ Labelamb.push(arrayItem.Segnalazioni[i]["Sottocategoria Segnalazione"]); Valamb.push(arrayItem.Segnalazioni[i]["Numero Segnalazioni"])};
+											if( arrayItem.Segnalazioni[i]["Categoria Segnalazione"] === "Sociale"){ Labelsoc.push(arrayItem.Segnalazioni[i]["Sottocategoria Segnalazione"]); Valsoc.push(arrayItem.Segnalazioni[i]["Numero Segnalazioni"])};	
 											}
-											var TOTsegn = arrayItem["Totale Degrado Sociale"]+ arrayItem["Totale Degrado Ambientale"]+ arrayItem["Totale Microcriminalita"];
+											var TOTsegn = arrayItem["Totale Sociale"]+ arrayItem["Totale Ambientale"]+ arrayItem["Totale Microcriminalita"];
 											if (arrayItem["Zona"] != "Colli"){var TOTcrim = Valcrim.reduce((x, y) => x + y);};
 											var TOTamb = Valamb.reduce((x, y) => x + y);
 											var TOTsoc = Valsoc.reduce((x, y) => x + y);
 											//totale segnalazioni
 												var datitotsegn = {
 														labels: [
-														  "Degrado Sociale",
-														  "Degrado Ambientale",
+														  "Sociale",
+														  "Ambientale",
 														  "Microcriminalità"
 														],
 														datasets: [{
-															data: [arrayItem["Totale Degrado Sociale"], arrayItem["Totale Degrado Ambientale"], arrayItem["Totale Microcriminalita"]],
+															data: [arrayItem["Totale Sociale"], arrayItem["Totale Ambientale"], arrayItem["Totale Microcriminalita"]],
 															backgroundColor: [
 															  "#8a65b3",
 															  "#3da997",
@@ -397,7 +397,7 @@ $(document).ready(function(){
 													responsiveAnimationDuration : 1000,
 													layout: {
 														padding: {
-															top:10
+															top:30
 														}
 													},
 												        zoomOutPercentage: 60,
