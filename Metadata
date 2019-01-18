@@ -210,7 +210,7 @@
 #Dataset 2
 
 
-<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "bolideopendata:D.2" ;
 	dct:title "Segnalazioni Bologna 2017"@it ;
