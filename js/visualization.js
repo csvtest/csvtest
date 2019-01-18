@@ -22,6 +22,7 @@ $(document).ready(function(){
 						};
 						function stylegeo(feature) {
 						    return {
+							color: '#f5f5f0',
 							fillColor: getColor(feature.properties.Censimento2017_zona),
 							fillOpacity: 0.6,
 						    };
@@ -59,7 +60,8 @@ $(document).ready(function(){
 	
 						function highlight (layer) {
 						layer.setStyle({
-							weight: 5,
+							color: 'black',
+							weight: 6,
 							//dashArray: ''
 						});
 						}
