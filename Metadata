@@ -210,10 +210,10 @@
 #Dataset 2
 
 
-<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm>
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "bolideopendata:D.2" ;
-	dct:title "Segnalazioni Bologna 2017"@it ;
+	dct:title "segnalazioni_bologna_2017"@it ;
 	dct:description "Il dataset contiene i dati divisi per zona di Bologna delle segnalazioni sociali, ambientali e di microcriminalità rilevate nell'anno 2017"@it ;
 	dct:modified "2018-01-19"^^xsd:date ;
 	dct:issued "2018-01-19"^^xsd:date ;
@@ -243,8 +243,8 @@
 
 <URI DISTRIBUZIONE> 
 	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "Distribuzione RDF Segnalazioni Bologna 2017"@it ;
-	dct:description "Distribuzione RDF-Turtle del dataset Segnalazioni Bologna 2017"@it ;
+	dct:title "Distribuzione RDF segnalazioni_bologna_2017"@it ;
+	dct:description "Distribuzione RDF-Turtle del dataset segnalazioni_bologna_2017"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
 	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
@@ -252,8 +252,8 @@
 
 <URI DISTRIBUZIONE > 
 	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "Distribuzione CSV Segnalazioni Bologna 2017"@it ;
-	dct:description "Distribuzione CSV del dataset Segnalazioni Bologna 2017"@it ;
+	dct:title "Distribuzione CSV segnalazioni_bologna_2017"@it ;
+	dct:description "Distribuzione CSV del dataset segnalazioni_bologna_2017"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
 	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
