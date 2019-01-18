@@ -2,6 +2,7 @@ Visualizzazione
 
 La pagina html dedicata alla visualizzazione dei dati è stata creata attraverso l'utilizzo della libreria Bootstrap, un set di strumenti open source per mantenere la pagina pulita nel design e funzionale.
 Tutti i dati visualizzati sono caricati sul sito tramite  Ajax, strumento incluso in Jquery (una libreria Javascript), che permette di caricare informazioni in tempo reale dalla nostra repository al sito web finale.
+Dal momento che il formato json è open e nativamente supportato da javascript, per facilitare l'utilizzo dei dati nell'architettura della visualizzazione, i singoli dataset sono stati convertiti in json e sezionati: LISTA JSON FINALI
 
 1-MAPPA
 La quantità e la varietà di informazioni da visualizzare ha richiesto un'attenta organizzazione dello spazio della pagina html del progetto.
@@ -36,7 +37,8 @@ Il sistema bicamerale italiano comporta elezioni sia per la Camera dei Deputati 
 
  2.3
   Segnalazioni
-  
+  Nel realizzare la visualizzazione delle segnalazioni dei cittadini nella zona selezionata è stata tenuta in conto la peculiarità della tipologia di dato. Le segnalazioni per zona sono dati prettamente testuali (stringhe) con dati numerici relativi alla frequenza delle categorie e sottocategorie del dataset. Questo scenario rende effettivamente complessa una visualizzazione grafica tramite grafo, tuttavia si è giunti ad elaborare una rappresentazione mediante un grafico doughnut e 3 grafici pie.
+  Il grafico doughnut rappresenta per ogni zona la distribuzione delle 3 categorie di segnalazioni (Degrado ambientale, sociale e microcriminalità), mostrando il numero delle singole ed evidenziandone in maniera evidente il totale complessivo al centro (in modo da scongiurare eventuali ambiguità, il 50% di 2 segnalazioni è evidentemente diversa dal 50% di 200). In seguito, mediante un radio button è possibile selezionare la visualizzazione delle sottocategorie di una singola categoria tramite 3 grafi pie (uno per categoria). Qui, attraverso una gradazione di colore (lo stesso indicante la categoria nel grafo doughnut) vengono mostrate tutte le sottocategorie. In questa fase è stata di fondamentale importanza l'utilizzo dell'estensione "chartjs-plugin-piechart-outlabels" per poter visualizzare in maniera diretta (senza dover trascinare il mouse sul grafico) le etichette (labels) indicanti il nome della sottocategoria e il numero di segnalazioni ad essa correlate.
 
 
 
