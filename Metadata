@@ -36,7 +36,7 @@
 <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "bolideopendata:D.1" ;
-	dct:title "Analisi politiche 2018 Bologna"@it ;
+	dct:title "redditi_elezioni_politiche"@it ;
 	dct:description "Il dataset contiene i dati divisi per zona di Bologna di: redditi medi pro-capite dei contribuenti bolognesi dal 2009 al 2016, i risutati degli scrutini alle elezioni politiche per l'elezione al Senato della Repubblica e alla Camera dei Deputati del 4.3.2018, e il numero di residenti."@it ;
 	dct:modified "2018-01-19"^^xsd:date ;
 	dct:issued "2018-01-19"^^xsd:date ;
@@ -74,24 +74,24 @@
 
 <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-RDFTURTLE> 
 	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "Distribuzione RDF Analisi politiche 2018 Bologna"@it ;
-	dct:description "Distribuzione RDF-Turtle del dataset Analisi politiche 2018 Bologna"@it ;
+	dct:title "Distribuzione RDF-Turtle redditi_elezioni_residenti"@it ;
+	dct:description "Distribuzione RDF-Turtle del dataset redditi_elezioni_residenti"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
 	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:accessURL <https://github.com/bolideopendata/bolideopendata/blob/master/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv> .
 
 <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-CSV> 
 	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "Distribuzione CSV Analisi politiche 2018 Bologna"@it ;
-	dct:description "Distribuzione CSV del dataset Analisi politiche 2018 Bologna"@it ;
+	dct:title "Distribuzione CSV redditi_elezioni_residenti"@it ;
+	dct:description "Distribuzione CSV del dataset redditi_elezioni_residenti"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
 	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
 	
 <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-JSON> 
 	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "Distribuzione JSON Analisi politiche 2018 Bologna"@it ;
-	dct:description "Distribuzione JSON del dataset Analisi politiche 2018 Bologna"@it ;
+	dct:title "Distribuzione JSON redditi_elezioni_residenti"@it ;
+	dct:description "Distribuzione JSON del dataset redditi_elezioni_residenti"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
 	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
