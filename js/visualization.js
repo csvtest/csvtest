@@ -163,6 +163,7 @@ $(document).ready(function(){
 										]
 									    };
 									var opzionigenerali = {
+										responsiveAnimationDuration : 1000,
 										"tooltips": {
 												"enabled": true,
 												"mode": 'single',
