@@ -188,6 +188,7 @@ $(document).ready(function(){
 										}
 									    };
 									var opzionidettaglio = {
+										responsiveAnimationDuration : 1000,
 										"tooltips": {
 												"enabled": true,
 												"mode": 'single',
@@ -360,7 +361,7 @@ $(document).ready(function(){
 														}]
 													};
 											var optiongensegn = {
-													
+													responsiveAnimationDuration : 1000,
 													elements: {
 														center: {
 															text: TOTsegn,
@@ -393,9 +394,10 @@ $(document).ready(function(){
 													 }
 												};
 									    		var optionspec = {
+													responsiveAnimationDuration : 1000,
 													layout: {
 														padding: {
-															top:5
+															top:10
 														}
 													},
 												        zoomOutPercentage: 60,
@@ -577,6 +579,7 @@ $(document).ready(function(){
 										};
 									    
 									    var opzionibarsenato = {
+										    	responsiveAnimationDuration : 1000,
 											"tooltips": {"enabled": true,
 													"mode": 'single',
 													"callbacks": {
@@ -598,7 +601,9 @@ $(document).ready(function(){
 											}
 									    	};
 									    
-									     var opzioniradarsenato = {"tooltips": {
+									     var opzioniradarsenato = {
+										     responsiveAnimationDuration : 1000,
+										     "tooltips": {
 														"enabled": true,
 														"mode": 'single',
 														"callbacks": {
