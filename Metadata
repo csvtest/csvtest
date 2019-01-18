@@ -24,16 +24,16 @@
         dct:issued "2018-01-19"^^xsd:date ;
         dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
 	foaf:homepage <INSERIRE HOMEPAGE> ;
-        dcat:dataset <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv> ;
-	dcat:dataset <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv> ;
-	dcat:dataset <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna.geojson> ;
+        dcat:dataset <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti> ;
+	dcat:dataset <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm> ;
+	dcat:dataset <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna> ;
 	dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> .
 
 
 #Dataset 1
 
 
-<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv>
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "bolideopendata:D.1" ;
 	dct:title "Analisi politiche 2018 Bologna"@it ;
@@ -49,7 +49,7 @@
 	dcat:keyword "elezioni"@it , "bologna"@it, "redditi"@it ;
 	dct:spatial <https://www.geonames.org/3181928/> ;
 	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/OTHER> ; # other = ogni 5 anni
-	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
+	dcat:distribution <> ;
 	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
 	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
 	dcat:contactPoint <https://bolideopendata.github.io/bolideopendata/resource/PuntoContatto/contactPointbolideopendata> ;
