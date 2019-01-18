@@ -36,19 +36,20 @@ $(document).ready(function(){
 							grades = [80000,14400,20800,27200,33600],
 							labels = [],
 							from, to;
-
+							{
 							labels.push('<i style="background: #b3e6cc"><span style="opacity:0;">FM</span></i> ' + 80000 + '&ndash;' + 14400)
 							labels.push('<i style="background: #79d2a6"><span style="opacity:0;">FM</span></i> ' + 14400 + '&ndash;' + 20800)
 							labels.push('<i style="background: #40bf80"><span style="opacity:0;">FM</span></i> ' + 20800 + '&ndash;' + 27200)
 							labels.push('<i style="background: #2d8659"><span style="opacity:0;">FM</span></i> ' + 27200 + '&ndash;' + 33600)
-						    	labels.push('<i style="background: #194d33"><span style="opacity:0;">FM</span></i> ' +  33600 "+")
-								  
+						    	labels.push('<i style="background: #194d33"><span style="opacity:0;">FM</span></i> ' +  33600 "+");
+							}  
 
 						    div.innerHTML = labels.join('<br>');
 						    return div;
 						};
 
 						legend.addTo(map);
+	+
 						function highlight (layer) {
 						layer.setStyle({
 							weight: 5,
