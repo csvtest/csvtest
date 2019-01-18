@@ -554,19 +554,12 @@ La finalità dei dataset è quella di esporre in Open Data i nomi delle aree Sta
 
 I dataset sono stati scelti per essere usati come dataset di raccordo per permettere la conversione/accorpamento dalle aree statistiche a zone.
 
-|
-
-|
-
-|
 
 #### DATASET CENSIMENTO
+La finalità del dataset è quella di esporre in Open Data la Popolazione residente a Bologna per età, sesso, cittadinanza, quartiere, zona, area statistica e sezione di censimento per l'anno 2017.
 
-|
+Il dataset è stato scelto per estrapolare il numero di residenti per zona.
 
-|
-
-|
 
 #### DATASET ZONE
 La finalità del dataset è quella di evidenziare la divisione del Comune di Bologna in *18 zone*, ovvero i vecchi quartieri che nel 1985 sono stati accorpati negli attuali 9 quartieri. I quartieri sono composti da zone che sono composte da aree statistiche, dunque è possibile relazionare queste tre differenti modalità di suddivisione del territorio bolognese. 
