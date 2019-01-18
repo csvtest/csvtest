@@ -71,6 +71,9 @@ $(document).ready(function(){
 
 						function dehighlight (layer) {
 						  if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
+							  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+							  	layer.bringToBack();
+							  }
 							  geojson.resetStyle(layer);
 						  }
 						}
