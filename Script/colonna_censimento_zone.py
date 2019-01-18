@@ -30,7 +30,5 @@ def merge_zone_residenti(data):
 
     return new_list
 
-merge_zone_residenti(process_data('censimento_pulito.csv'))
-
 
 
