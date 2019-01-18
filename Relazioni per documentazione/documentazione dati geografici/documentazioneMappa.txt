@@ -40,6 +40,10 @@ PULIZIA e CREAZIONE
 		- merge delle aree statistiche per creare le zone tramite il programma QGIS (opensource) seguendo le informazioni contenute nel csv aree statistiche per zona (http://dati.comune.bologna.it/node/1030) ;)
 	
 	STEP 3
+		-Abbiamo utilizzato il dataset shapefile dei seggi elettorali (25.01.33_seggi_elettorali_bologna2018.zip) e lo abbiamo convertito in csv
+		- Una volta ottenuto il codice zona (letterale) dei seggi elettorali, li abbiamo confrontati con il rispettivo nei codici zona del csv aree statistiche per zona (http://dati.comune.bologna.it/node/1030) ottenendo il nome della zona correlato.
+		-infine abbiamo incrociato manualmente le sezioni elettorali (con il codice per zona numerico) con i rispettivi seggi (con il codice per zona letterale, già abbinato al nome della Zona) per decifrare il codice di zona numerico.
+		
 		
 		
 
