@@ -27,7 +27,6 @@ $(document).ready(function(){
 						    };
 						};
 					
-						var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 					
 						var legend = L.control({
 						  position: 'bottomleft'
@@ -51,12 +50,14 @@ $(document).ready(function(){
 						  div.innerHTML = labels.join('<br>');
 						  return div;
 						};
-						$( ".info.legend" ).css( "background-color: white" );
-
-						// Do not forget to add your control to the map?
+						
 						legend.addTo(map);
 	
-	+
+						$(".info.legend").css( "background-color: white" );
+						var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
+
+	
+	
 						function highlight (layer) {
 						layer.setStyle({
 							weight: 5,
