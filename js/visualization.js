@@ -125,12 +125,12 @@ $(document).ready(function(){
 									listRedditi.push(arrayItem["Reddito medio pro-capite 2016"]);
 									var listIndex = [];
 									listIndex.push(arrayItem["Reddito medio pro-capite 2009"]);
-									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.011));
-									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.038));
-									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.070));
-									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.082));
-									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.084));
-									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.083));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.016));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.043));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.074));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.087));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.089));
+									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.088));
 									listIndex.push(Math.round(arrayItem["Reddito medio pro-capite 2009"] * 1.087));
 									$('#redditiChart').remove();
 									$('#redditiButton').remove();
