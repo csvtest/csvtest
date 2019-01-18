@@ -57,7 +57,6 @@
 	dct:publisher <INSERIRE URI PUBLISHER> ;
 	dct:creator <INSERIRE URI CREATOR> ;
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-	dcat:landingPage <INSERIRE URL ACCESSO AL DATASET> ;
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1136> ; #redditi 2009
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1137> ; #redditi 2010
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1135> ; #redditi 2011
@@ -228,7 +227,6 @@
 	dct:publisher <INSERIRE URI PUBLISHER> ;
 	dct:creator <INSERIRE URI CREATOR> ;
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-	dcat:landingPage <INSERIRE URL ACCESSO AL DATASET> ;
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4490> ; #segnalazioni area
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4490> ; #segnalazioni tot-tipologia
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1275> . #aree statistiche in zone
@@ -400,7 +398,6 @@
 	dct:publisher <INSERIRE URI PUBLISHER> ;
 	dct:creator <INSERIRE URI CREATOR> ;
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-	dcat:landingPage <INSERIRE URL ACCESSO AL DATASET> ;
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4490> ; #segnalazioni area
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4490> ; #segnalazioni tot-tipologia
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1275> . #aree statistiche in zone
