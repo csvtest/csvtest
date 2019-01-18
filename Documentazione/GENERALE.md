@@ -113,10 +113,12 @@ I dataset che abbiamo utilizzato, ma ripuliti:
 ## Dataset intermedi
 I dataset che abbiamo generato nel corso del progetto integrando i dati selezionati all' interno dei dataset ripuliti:
 
-| Dataset Intermedio | Dataset 1 | Dataset 2 |
-| ---------- | --------- | --------- |
-|  |  |  |
-
+| Dataset Intermedio | D1 | D2 | D3 | D4 | D5 | D6 | D7 | D8 | D9 |
+| ---------- | --------- | --------- | ---------- |
+| POLITICHE SENATO | 26.01.04_risultati_politiche_2018_bologna_liste_senato.csv | aree_statistiche.csv | | | | | | | |
+| POLITICHE CAMERA | 26.01.06_risultati_politiche_2018_bologna_liste_camera_collegio6 | 26.01.08_risultati_politiche_2018_bologna_liste_camera_collegio7.csv | aree_statistiche.csv | | | | | | |
+| REDDITI | redditi_2009_per_area_statistica.csv | redditi_2010_per_area_statistica.csv | redditi_2011_per_area_statistica.csv | redditi2012_areastat.csv | redditi2013_areastat.csv | redditi2014_areastat.csv | redditi2015_areastat.csv | redditi2016_areastat.csv | aree_statistiche.csv |
+| SEGNALAZIONI | 38.00.03_segnalazioni_czrm2017_area_statistica.zip | 38.00.05_segnalazioni_czrm2017_tot_tipologia.csv |  aree_statistiche.csv | | | | | | |
 
 ## Dataset finali
 I nostri dataset finali, risultanti dall'integrazione dei dati contenuti all'interno dei dataset intermedi:
@@ -427,7 +429,7 @@ Abbiamo poi lavorato sullo *shapefile* delle Aree Statistiche (4.0): il sistema 
 #### DATASET FINALI
 
 | **Privacy** | Domande | ANALISI POLITICHE |  SEGNALAZIONI | ZONE | 
-| ----------- | --------| ------|--------|-------|
+| ----------- | --------| ------|--------|-------|---------|
 | | sono i dati liberi da ogni informazione                    personale che possa identificare in modo                       diretto l’individuo?|sì |sì| sì |
 | | sono i dati liberi da ogni informazione indiretta che      possa identificare l’individuo? In caso negativo, queste       informazioni sono autorizzate per legge?|sì |sì|sì |
 | | sono i dati liberi da ogni informazione sensibile che può essere ricondotta all’individuo? In caso negativo, queste informazioni sono autorizzate per legge? |sì |sì|sì |
@@ -554,12 +556,19 @@ La finalità dei dataset è quella di esporre in Open Data i nomi delle aree Sta
 
 I dataset sono stati scelti per essere usati come dataset di raccordo per permettere la conversione/accorpamento dalle aree statistiche a zone.
 
+|
+
+|
+
+|
 
 #### DATASET CENSIMENTO
-La finalità del dataset è quella di esporre in Open Data la Popolazione residente a Bologna per età, sesso, cittadinanza, quartiere, zona, area statistica e sezione di censimento per l'anno 2017.
 
-Il dataset è stato scelto per estrapolare il numero di residenti per zona.
+|
 
+|
+
+|
 
 #### DATASET ZONE
 La finalità del dataset è quella di evidenziare la divisione del Comune di Bologna in *18 zone*, ovvero i vecchi quartieri che nel 1985 sono stati accorpati negli attuali 9 quartieri. I quartieri sono composti da zone che sono composte da aree statistiche, dunque è possibile relazionare queste tre differenti modalità di suddivisione del territorio bolognese. 
