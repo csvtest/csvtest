@@ -79,8 +79,8 @@ I dataset che abbiamo utilizzato sono:
 | 4.1 | http://dati.comune.bologna.it/download/file/fid/4494 | Aree 03.00.03_areestat_quartiere | [Aree statistiche Bologna](http://dati.comune.bologna.it/node/161) |
 | 5.0 | http://dati.comune.bologna.it/download/file/fid/4490 | 38.00.03_segnalazioni_czrm2017_area_statistica | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
 | 5.1 | http://dati.comune.bologna.it/download/file/fid/4492 | 38.00.05_segnalazioni_czrm2017_tot_tipologia | [Citizen Relationship Manangement Bologna](http://dati.comune.bologna.it/node/2615) |
-| **_CENSIMENTO_** | | | |
-| 7.0 | http://dati.comune.bologna.it/download/file/fid/1737 | 03.00.34_zone.zip | [Zone Bologna](http://dati.comune.bologna.it/node/1184) |
+| 6.0 | http://dati.comune.bologna.it/download/file/fid/4321 | annuale_popolazione_residente_sezioni_aree_qze_sesso | [Popolazione residente per età, sesso, cittadinanza, quartiere e zona area statistica e sezione censimento](http://dati.comune.bologna.it/node/2952) |
+| 7.0 | http://dati.comune.bologna.it/download/file/fid/1737 | 03.00.34_zone | [Zone Bologna](http://dati.comune.bologna.it/node/1184) |
 
 Nella documentazione i dataset pubblicati nella tabella precedente vengono raccolti nei seguenti blocchi: 
 
@@ -187,7 +187,7 @@ Gli indici di completezza che abbiamo calcolato sono i seguenti:
 | 5.0 | 76170 | 0 | 100% |
 | 5.1 | 63485 | 6695 | 89.45% |
 | Censimento | - | - | - |
-| 6.0 |  |  |
+| 6.0 | 91350 | 0 | 100% |
 | Zone | - | - | - |
 | 7.0 |  |  |
 
@@ -386,24 +386,34 @@ Le operazioni di pulizia effettuate solo le seguenti:
 - uniformate le stringhe in modo tale da essere identiche nei due dataset politici (maiuscole e minuscole);
 - modificato i nomi dei partiti per corrispondere al nome vigente ufficiale del partito (precedentemente erano sigle o denominati in modo errato).
 
-|
+Per quanto riguarda il processo di **_merging_** di 2.0:
 
-|
+* considerando che il file raw contiene i dati delle elezioni politiche in relazione alle sezioni elettorali, ma il focus del nostro progetto è sulle zone, abbiamo utilizzato 'sez_elettorali_in_zone_Senato(data)' effettuare questa conversione;
 
-|
+* Utilizzando 'calcolo_percentuale(data)' abbiamo calcolato la percentuale dei voti di ogni partito rispetto al totale del voti ogni zona. La formula da noi utilizzata è: n_voti_partito_n * 100 / tot_voti;
 
-[MANCA MERGE]
+* Abbiamo utilizzato 'controllo_percentuale(data)' per verificare la correttezza delle nostre percentuali.
 
-|
+Il nostro dataset intermedio contiene quindi, per ogni zona il numero di voti di un partito, la sua percentuale ed infine il totale dei voti validi. 
 
-|
+Per quanto riguarda il processo di **_merging_** di 1.0 e 1.1:
 
-|
+* Considerando che in questo caso i dataset di input sono 2 (Collegio 6 e Collegio 7), abbiamo applicato 'merge(data)'.
+
+* avendo a questo punto un unico dataset, abbiamo riutilizzato gli stessi algoritmi usati per 2.0. L'algoritmo **sez_elettorali_in_zone_Senato(data)** è stato modificato ad hoc per via della presenza di una lista (quella dei Forconi) nel dataset 2.0 che non ha riscontro in 1.0 e 1.1.
 
 #### DATASET CENSIMENTO
 ##### Revisione preliminare: criticità
+Nel dataset abbiamo riscontrato alcuni problemi, tra cui:
+* il *tab-separated value*;
+* le problematiche già affrontate nei DATASET REDDITI e DATASET SEGNALAZIONI: i dati esposti sono molto specifici ed accurati; vi sono casi in cui questi dati sono rapportati ad aree molto ristrette, quindi facilmente suscettibili ad essere strumento di de-anonimizzazione. Infatti, incrociando questo dataset con altri, vi è la possibilità di risalire a dati sensibili. 
 
-##### Pulitura
+##### De-anonimizzaizone, pulitura e *merging*
+In fase di **_pulitura_** abbiamo trasformato il file in *comma-separated value*. 
+
+In fase di **_de-anonimizzaizone_** abbiamo mantenuto unicamente i dati riguardanti *Zona* e *Residenti*, dato che non contengono dati sensibili e sono utili al fine del nostro progetto.
+
+Il dataset è stato definitivamente pulito con **merge_zone_residenti(data)**. In questo modo abbiamo ottenuto il numero di residenti per zona. Il risultato è il dataset intermedio "*censimento_intermedio.csv*".
 
 #### DATASET ZONE 7.0 & DATASET AREE STATISTICHE 4.0
 ##### Revisione preliminare & pulitura
@@ -417,7 +427,7 @@ Abbiamo poi lavorato sullo *shapefile* delle Aree Statistiche (4.0): il sistema 
 #### DATASET FINALI
 
 | **Privacy** | Domande | ANALISI POLITICHE |  SEGNALAZIONI | ZONE | 
-| ----------- | --------| ------|--------|-------|
+| ----------- | --------| ------|--------|-------|---------|
 | | sono i dati liberi da ogni informazione                    personale che possa identificare in modo                       diretto l’individuo?|sì |sì| sì |
 | | sono i dati liberi da ogni informazione indiretta che      possa identificare l’individuo? In caso negativo, queste       informazioni sono autorizzate per legge?|sì |sì|sì |
 | | sono i dati liberi da ogni informazione sensibile che può essere ricondotta all’individuo? In caso negativo, queste informazioni sono autorizzate per legge? |sì |sì|sì |
@@ -461,7 +471,7 @@ L'informazione sul tipo di licenza è metadato indispensabile per determinare co
 I dataset pubblicati su OpenData Bologna rispettano queste condizioni.
 
 ### Dataset
-#### DATASET REDDITI, DATASET POLITICHE ![](cc.png) ![](zero.png)
+#### DATASET REDDITI, DATASET POLITICHE
 La licenza associata a questo gruppo di dataset è la [**CC0 1.0**](https://creativecommons.org/publicdomain/zero/1.0/deed.it) (Donazione al Pubblico Dominio). 
 
 | Creative Commons | Attribuzione Zero |
@@ -475,7 +485,7 @@ Il dichiarante “*apertamente, pienamente, permanentemente, irrevocabilmente e 
 In altre parole, il dataset è dedicato al pubblico dominio attraverso la rinuncia a tutti i diritti protetti dal diritto d'autore, nella misura consentita dalla legge: in questo modo è possibile copiare, modificare, distribuire ed eseguire il dataset, anche a fini commerciali, senza dover chiedere permessi. Ciò significa che tale licenza implica l'appartenenza del dato a *chiunque, senza distinzioni*: non vi è alcuna garanzia sul dataset stesso, e ogni responsabilità per qualsivoglia utilizzo del dataset nella misura consentita dalla legge è declinata.
 
 
-#### DATASET SEGNALAZIONI, DATASET AREE STATISTICHE ![](cc.png) ![](by.png)
+#### DATASET SEGNALAZIONI, DATASET AREE STATISTICHE
 La licenza associata a questo gruppo di dataset è la [**CC-BY 3.0 IT**](https://creativecommons.org/licenses/by/3.0/deed.it).
 
 | Creative Commons | Attribuzione |
@@ -487,12 +497,14 @@ Le licenze per l’open data con richiesta di attribuzione e condivisione allo s
 - distribuire eventuali lavori derivati con la stessa licenza che governa il lavoro originale, con divieto di restrizioni legali e/o tecnologiche aggiuntive. 
 
 
-#### Dataset finali ![](logo_iodl_esteso.png)
+#### Dataset finali
 
 Per pubblicare i nostri dataset abbiamo scelto la licenza [IODL 2.0](https://www.dati.gov.it/content/italian-open-data-license-v20). Essa:
 * consente di condividere, modificare, usare e riusare i dataset, i dati e le informazioni al loro interno, garantendo la stessa libertà per altri;
 * non implica trasferimenti di diritto di titolarità sulla banche di dati, sui dati e sulle informazioni pubbliche;
 * la versione 2.0, in particolare, permette di creare un lavoro derivato ed esercitare su di esso gli stessi diritti, per esempio attraverso la *mashup* con altre informazioni, utilizzando anche dati rilasciati con altre licenze *attribution* (che richiedono all’utente la sola indicazione della fonte,) come le licenze Creative Commons Attribution (CC-BY).
+
+![](logo_iodl_esteso.png)
 
 ### Librerie
 Le librerie che abbiamo utilizzato per compilare i codici Javascript, Python e HTML sono:
@@ -569,6 +581,9 @@ All'interno del primo dataset ritroviamo i dati divisi per zona di Bologna di: r
 
 #### Dataset 2:
 All'interno del secondo dataset ritroviamo i dati i dati divisi per zona di Bologna delle segnalazioni riguardanti il degrado ambientale, urbano, sociale e microcriminalità divisi per categoria, sottocategoria e numero di segnalazioni.
+
+#### Dataset 3:
+Dato che i dati forniti dal portale OpenData Bologna sono in formato .shp, è stato necessario fare il porting al formato .geojsn, supportato nativamente da Javascript (linguaggio usato per programmare in ambiente web), quindi senza avere più la necessità di conversioni ulteriori. Il file originale delle zone presenta dei gravi errori di *offset* in termini di latitudine e longitudine che creano squilibrio nella visualizzazione. La creazione di questo file è stata determinata dalla necessità di un file .geojson delle zone di Bologna per ottimizzare la visualizzazione.
 _______________________________________________________________
 
 # Analisi tecnica
