@@ -594,16 +594,12 @@ La pubblicazione di dataset in open Data richiede che i dati siano resi disponib
 * standardizzati;
 * neutri rispetto agli applicativi necessari per la fruizione dei dati stessi.
 
-Tutti i dataset che abbiamo utilizzato sono pubblicati in formato **CSV**. In termini di *Processabilità*, i dataset sono quindi *machine-readable* e in formato aperto ma non corredati da metadati che descrivono i dati.
-
-*È un formato di file testuale utilizzato per rappresentare informazioni con struttura tabellare. Esso è spesso usato per importare ed esportare il contenuto di tabelle di database relazionali e fogli elettronici. Le righe delle tabelle corrispondono a righe nel file di testo CSV e i valori delle celle sono divisi da un carattere separatore, che di solito, come indica il nome stesso, è la virgola. Il CSV non è uno standard vero e proprio ma la sua modalità d’uso è descritta nell’RFC 4180. Nel rilascio di dati secondo il formato CSV, per agevolare i riutilizzatoti, si raccomanda di dichiarare almeno 1) il separatore di campo utilizzato (e.g, virgola, punto e virgola); 2) se è stato usato un carattere per delimitare i campi di testo. Nel corso del 2015, un gruppo di lavoro del W3C «CSV on the web» ha rilasciato una serie di standard del Web tra cui alcuni relativi ai meccanismi necessari a trasformare CSV in vari formati quali JSON, XML e RDF. *
-
-I D. AREE STATISTICHE e D. SEGNALAZIONI sono corredati da un insieme di file in formato **.shp** (*shapefile*, uno standard per dati vettoriali spaziali), con file aggiuntivi con estensioni **.sph**, **.dbf**, **.shx** da sui dipendono interpretazione ed utilizzo.
-
-*È il formato standard de-facto per la rappresentazione dei dati dei sistemi informativi geografici (GIS). I dati sono di tipo vettoriale. Lo shapefile è stato creato dalla società privata ESRI che rende comunque pubbliche le sue specifiche. L’apertura delle specifiche ha consentito lo sviluppo di diversi strumenti in grado di gestire e creare tale formato. Seppur impropriamente ci si riferisca a uno shapefile, nella pratica si devono considerare almeno tre file: un .shp contenente le forme geometriche, un .dbf contenente il database degli attributi delle forme geometriche e un file .shx come indice delle forme geometriche. A questi tre si deve anche accompagnare un file .prj che contiene le impostazioni del sistema di riferimento. Si raccomanda comunque di specificare nei metadati la proiezione utilizzata. È importante notare che non risulta ancora chiaro se tale formato lo si possa considerare propriamente aperto (e quindi coerente con la definizione introdotta dall’art. 68 del CAD) di livello 3 secondo il modello per i dati proposto nel presente documento. Questo è dovuto al fatto che, per alcune comunità, esso è un formato proprietario e quindi di livello 2, mentre per altre i dati possono essere gestiti attraverso una serie di strumenti non necessariamente confinati a determinate tipologie software (grazie alle specifiche tecniche aperte e pubbliche rese disponibili da ESRI).*
+I dataset che abbiamo utilizzato sono pubblicati nei seguenti formati:
+* **CSV**: in termini di *Processabilità*, i dataset sono quindi *machine-readable* e in formato aperto ma non corredati da metadati;
+* i DATASET AREE STATISTICHE e DATASET SEGNALAZIONI sono corredati da un insieme di file in formato **.shp** (*shapefile*, uno standard per dati vettoriali spaziali), con file aggiuntivi (**.sph** per le forme geometriche, **.dbf** per gli attributi delle forme geometriche, **.shx** come indice delle forme geometriche, **.prj** per le impostazioni del sistema di riferimento) da sui dipendono interpretazione ed utilizzo. 
 
 ### Distribuzioni
-Abbiamo deciso di pubblicare i dataset finali in [TOT] distribuzioni: [1], [2], [...]. Si veda la pagina di pubblicazione del dataset, sotto la voce [Distribuzioni].
+Abbiamo deciso di pubblicare i dataset finali in [TOT] distribuzioni: [RDF(serializzazione Turtle)], [JSON], [CSV]. Si veda la pagina di pubblicazione del dataset, sotto la voce [Distribuzioni].
 
 ## Metadati
 La metadatazione ricopre un ruolo essenziale laddove i dati sono esposti a utenti terzi e a software. I metadati, infatti, consentono una maggiore comprensione e rappresentano la chiave attraverso cui abilitare più agevolmente la ricerca, la scoperta, l’accesso e quindi il riuso dei dati stessi. La classificazione qualitativa dei metadati si fonda su due fattori principali: legame tra dato-metadati e livello di dettaglio.
@@ -614,7 +610,7 @@ Il livello del modello per i metadati raggiunto dai dataset è il **Livello 2**:
 * Legame dato-metadato debole: i dati sono accompagnati da metadati esterni, inclusi nella pagina di download;
 * Livello di dettaglio generale: i metadati forniscono informazioni relativamente a un dataset, quindi sono informazioni condivise dall’insieme di dati interni a quel dataset.
 
-I dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it/) sono descritti dai seguenti metadati human-readable:
+I dataset pubblicati su [OpenData Bologna](http://dati.comune.bologna.it/) sono descritti dai seguenti metadati *human-readable*:
 
 | Metadato | Descrizione |
 | -------- | ----------- |
@@ -685,8 +681,10 @@ In via ipotetica, proponiamo un possibile perfezionamento degli URI dei dataset 
 | http://dati.comune.bologna.it/download/file/fid/4494 | http://dati.comune.bologna.it/dataset/aree-statistiche/aree-statistiche-per-quartiere |
 | http://dati.comune.bologna.it/download/file/fid/4490 | http://dati.comune.bologna.it/dataset/citizen-relationship-management/segnalazioni-2017-cartografico-per-area-statistica |
 | http://dati.comune.bologna.it/download/file/fid/4492 | http://dati.comune.bologna.it/dataset/citizen-relationship-management/segnalazioni-2017 |
-| **_CENSIMENTO_** |  |
-| http://dati.comune.bologna.it/download/file/fid/1737 | http://dati.comune.bologna.it/dataset/zone |
+| http://dati.comune.bologna.it/download/file/fid/4321 | http://dati.comune.bologna.it/dataset/popolazione/residenti- |
+| http://dati.comune.bologna.it/download/file/fid/1737 | http://dati.comune.bologna.it/dataset/zone/zone-18 |
+
+Popolazione residente per età, sesso, cittadinanza, quartiere e zona area statistica e sezione censimento
 
 ### URI dei dataset finali
 
