@@ -50,8 +50,9 @@
 	dct:spatial <https://www.geonames.org/3181928/> ;
 	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/OTHER> ; # other = ogni 5 anni
 	dcat:distribution <> ;
-	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
-	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
+	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-RDFTURTLE> ;
+	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-CSV> ;
+	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-JSON> ;
 	dcat:contactPoint <https://bolideopendata.github.io/bolideopendata/resource/PuntoContatto/contactPointbolideopendata> ;
 	dct:rightsHolder <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
 	dct:publisher <INSERIRE URI PUBLISHER> ;
@@ -72,7 +73,7 @@
 
 #Distribution dataset 1 
 
-<URI DISTRIBUZIONE> 
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-RDFTURTLE> 
 	a dcatapit:Distribution , dcat:Distribution ;
 	dct:title "Distribuzione RDF Analisi politiche 2018 Bologna"@it ;
 	dct:description "Distribuzione RDF-Turtle del dataset Analisi politiche 2018 Bologna"@it ;
@@ -81,11 +82,20 @@
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
 
-<URI DISTRIBUZIONE > 
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-CSV> 
 	a dcatapit:Distribution , dcat:Distribution ;
 	dct:title "Distribuzione CSV Analisi politiche 2018 Bologna"@it ;
 	dct:description "Distribuzione CSV del dataset Analisi politiche 2018 Bologna"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+	dct:license <INSERISCI LICENZA> ;
+	dcat:downloadURL <URL PER IL DOWNLOAD> ;
+	dcat:accessURL <URL PER L'ACCESSO> .
+	
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-JSON> 
+	a dcatapit:Distribution , dcat:Distribution ;
+	dct:title "Distribuzione JSON Analisi politiche 2018 Bologna"@it ;
+	dct:description "Distribuzione JSON del dataset Analisi politiche 2018 Bologna"@it ;
+	dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
 	dct:license <INSERISCI LICENZA> ;
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
