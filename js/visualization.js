@@ -64,6 +64,9 @@ $(document).ready(function(){
 							weight: 6,
 							//dashArray: ''
 						});
+						if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+							layer.bringToFront();
+						    }	
 						}
 
 						function dehighlight (layer) {
