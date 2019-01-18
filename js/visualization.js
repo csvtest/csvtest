@@ -23,7 +23,7 @@ $(document).ready(function(){
 						function stylegeo(feature) {
 						    return {
 							fillColor: getColor(feature.properties.Censimento2017_zona),
-							fillOpacity: 0.7,
+							fillOpacity: 0.6,
 						    };
 						};
 					
@@ -53,7 +53,6 @@ $(document).ready(function(){
 						
 						legend.addTo(map);
 	
-						$(".info.legend").css( "background-color: white" );
 						var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 
 	
