@@ -49,7 +49,6 @@
 	dcat:keyword "elezioni"@it , "bologna"@it, "redditi"@it ;
 	dct:spatial <https://www.geonames.org/3181928/> ;
 	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/OTHER> ; # other = ogni 5 anni
-	dcat:distribution <> ;
 	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-RDFTURTLE> ;
 	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-CSV> ;
 	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-JSON> ;
@@ -78,17 +77,15 @@
 	dct:title "Distribuzione RDF Analisi politiche 2018 Bologna"@it ;
 	dct:description "Distribuzione RDF-Turtle del dataset Analisi politiche 2018 Bologna"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
-	dct:license <INSERISCI LICENZA> ;
-	dcat:downloadURL <URL PER IL DOWNLOAD> ;
-	dcat:accessURL <URL PER L'ACCESSO> .
+	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
+	dcat:accessURL <https://github.com/bolideopendata/bolideopendata/blob/master/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.csv> .
 
 <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-CSV> 
 	a dcatapit:Distribution , dcat:Distribution ;
 	dct:title "Distribuzione CSV Analisi politiche 2018 Bologna"@it ;
 	dct:description "Distribuzione CSV del dataset Analisi politiche 2018 Bologna"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-	dct:license <INSERISCI LICENZA> ;
-	dcat:downloadURL <URL PER IL DOWNLOAD> ;
+	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
 	
 <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-JSON> 
@@ -96,8 +93,7 @@
 	dct:title "Distribuzione JSON Analisi politiche 2018 Bologna"@it ;
 	dct:description "Distribuzione JSON del dataset Analisi politiche 2018 Bologna"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
-	dct:license <INSERISCI LICENZA> ;
-	dcat:downloadURL <URL PER IL DOWNLOAD> ;
+	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
 	
 # Misure
@@ -250,7 +246,7 @@
 	dct:title "Distribuzione RDF Segnalazioni Bologna 2017"@it ;
 	dct:description "Distribuzione RDF-Turtle del dataset Segnalazioni Bologna 2017"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
-	dct:license <INSERISCI LICENZA> ;
+	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
 
@@ -259,7 +255,7 @@
 	dct:title "Distribuzione CSV Segnalazioni Bologna 2017"@it ;
 	dct:description "Distribuzione CSV del dataset Segnalazioni Bologna 2017"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-	dct:license <INSERISCI LICENZA> ;
+	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
 	
@@ -444,7 +440,13 @@
 	dcatapit:startDate "2017-01-01"^^xsd:date ;
 	dcatapit:endDate "2017-12-31"^^xsd:date .
 
+# Licenza
 
+<https://www.dati.gov.it/content/italian-open-data-license-v20>
+     a                dcatapit:LicenseDocument , dct:LicenseDocument ;
+     dct:type         <http://purl.org/adms/licencetype/Attribution> ;
+     foaf:name        "Italian Open Data License" ;
+     owl:versionInfo  "2.0" .
 
 # Contact Point 
 
