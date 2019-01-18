@@ -81,6 +81,9 @@ $(document).ready(function(){
 						  }
 							//map.fitBounds(layer.getBounds());
 							selected = layer;
+							if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+							layer.bringToFront();
+						    	}
 							if (previous) {
 							  dehighlight(previous);
 							}
