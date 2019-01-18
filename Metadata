@@ -52,7 +52,7 @@
 	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
 	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
 	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLE> ;
-	dcat:contactPoint <INSERIRE URI PUNTO DI CONTATTO> ;
+	dcat:contactPoint <https://bolideopendata.github.io/bolideopendata/resource/PuntoContatto/contactPointbolideopendata> ;
 	dct:rightsHolder <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
 	dct:publisher <INSERIRE URI PUBLISHER> ;
 	dct:creator <INSERIRE URI CREATOR> ;
@@ -368,10 +368,9 @@
 
 # Contact Point 
 
-<INSERIRE URI>
+<https://bolideopendata.github.io/bolideopendata/resource/PuntoContatto/contactPointbolideopendata>
 	a dcatapit:Agent
-	vcard:hasEmail <mailto:INSERIRE MAIL> ;
-	vcard:hasURL <INSERIRE URL> .
+	vcard:hasEmail <mailto:bolideopendata@gmail.com> .
 	
 	
 	
