@@ -359,6 +359,7 @@ $(document).ready(function(){
 														}]
 													};
 											var optiongensegn = {
+													
 													elements: {
 														center: {
 															text: TOTsegn,
@@ -391,6 +392,11 @@ $(document).ready(function(){
 													 }
 												};
 									    		var optionspec = {
+													layout: {
+														padding: {
+															top:5
+														}
+													},
 												        zoomOutPercentage: 60,
 													
 													 plugins:{
@@ -400,8 +406,8 @@ $(document).ready(function(){
 														    stretch: 45,
 														    font: {
 															//resizable: true,
-															minSize: 12,
-															maxSize: 12
+															minSize: 13,
+															maxSize: 13
 														    }
 														},
 													 },
