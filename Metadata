@@ -8,7 +8,7 @@
 
 #Catalog
 
-< INSERIRE URI NOSTRA RACCOLTA >
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali>
 	a dcatapit:Catalog , dcat:Catalog ;
 	dct:title "Catalogo progetto Bolide Open Data"@it ;
 	dct:description "Il catalogo dei dati aperti del progetto Bolide Open Data"@it ;
