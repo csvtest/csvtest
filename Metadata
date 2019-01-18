@@ -370,13 +370,6 @@
 
 
 
-# Contact Point 
-
-<https://bolideopendata.github.io/bolideopendata/resource/PuntoContatto/contactPointbolideopendata>
-	a dcatapit:Agent
-	vcard:hasEmail <mailto:bolideopendata@gmail.com> .
-	
-	
 	
 #Dataset 3
 
@@ -448,9 +441,11 @@
      foaf:name        "Italian Open Data License" ;
      owl:versionInfo  "2.0" .
 
+
 # Contact Point 
 
-<INSERIRE URI>
+<https://bolideopendata.github.io/bolideopendata/resource/PuntoContatto/contactPointbolideopendata>
 	a dcatapit:Agent
-	vcard:hasEmail <mailto:INSERIRE MAIL> ;
-	vcard:hasURL <INSERIRE URL> .
+	vcard:hasEmail <mailto:bolideopendata@gmail.com> .
+	
+	
