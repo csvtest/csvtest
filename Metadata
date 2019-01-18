@@ -34,7 +34,7 @@
 	dct:modified "2018-01-19"^^xsd:date ;
 	dct:issued "2018-01-19"^^xsd:date ;
 	owl:versionInfo "0.1.0" ; 
-        dct:temporal <INSERIRE URI> ;
+        dct:temporal <https://bolideopendata.github.io/bolideopendata/PeriodoTemporale/periodTimebolideopendata> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ; 
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
@@ -86,7 +86,7 @@
 	
 # Temporal dataset 1
 
-<INSERIRE URI>
+<https://bolideopendata.github.io/bolideopendata/PeriodoTemporale/periodTimebolideopendata>
 	a dct:PeriodOfTime ;
 	dcatapit:startDate "2009-01-01"^^xsd:date ;
 	dcatapit:endDate "2018-03-04"^^xsd:date .
