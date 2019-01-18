@@ -114,7 +114,7 @@ I dataset che abbiamo utilizzato, ma ripuliti:
 I dataset che abbiamo generato nel corso del progetto integrando i dati selezionati all' interno dei dataset ripuliti:
 
 | Dataset Intermedio | D1 | D2 | D3 | D4 | D5 | D6 | D7 | D8 | D9 |
-| ---------- | --------- | --------- | ---------- |
+| ---------- | --------- | --------- | ---------- | --- | --- | --- | --- | --- | --- |
 | POLITICHE SENATO | 26.01.04_risultati_politiche_2018_bologna_liste_senato.csv | aree_statistiche.csv | | | | | | | |
 | POLITICHE CAMERA | 26.01.06_risultati_politiche_2018_bologna_liste_camera_collegio6 | 26.01.08_risultati_politiche_2018_bologna_liste_camera_collegio7.csv | aree_statistiche.csv | | | | | | |
 | REDDITI | redditi_2009_per_area_statistica.csv | redditi_2010_per_area_statistica.csv | redditi_2011_per_area_statistica.csv | redditi2012_areastat.csv | redditi2013_areastat.csv | redditi2014_areastat.csv | redditi2015_areastat.csv | redditi2016_areastat.csv | aree_statistiche.csv |
