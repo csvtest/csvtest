@@ -2,6 +2,7 @@ Visualizzazione
 
 La pagina html dedicata alla visualizzazione dei dati è stata creata attraverso l'utilizzo della libreria Bootstrap, un set di strumenti open source per mantenere la pagina pulita nel design e funzionale.
 Tutti i dati visualizzati sono caricati sul sito tramite  Ajax, strumento incluso in Jquery (una libreria Javascript), che permette di caricare informazioni in tempo reale dalla nostra repository al sito web finale.
+
 1-MAPPA
 La quantità e la varietà di informazioni da visualizzare ha richiesto un'attenta organizzazione dello spazio della pagina html del progetto.
 Dal momento che abbiamo scelto come punto focale per la raccolta dei nostri dati le zone della città di Bologna, la mappa della città di Bologna divisa in zone risulta lo strumento ideale per iniziare la navigazione all'interno dei nostri dataset.
