@@ -353,7 +353,7 @@ L'ultimo step è stato quindi il calcolo del numero totale di ogni segnalazione 
 Il dataset è stato stampato in formato .csv tramite la libreria *pandas*. Infine abbiamo fatto un controllo manuale del dataset per verificarne la correttezza.
 
 ##### Revisione finale
-In fase di revisione finale abbiamo rilevato criticità  di carattere etico riguardante la categorizzazione "Degrado Sociale", sotto cui erano inserite tutte le segnalazioni che comprendevano, tra le altre cose, soggetti quali prostitute, anziani invalidi, tossicodipendenti etc. Abbiamo quindi deciso di cambiare il nome delle tipologie di segnalazioni, per evitare nomenclature collegabili ad un giudizio negativo legato a tali soggetti. Le categorie da: "Degrado Ambientale", "Degrado Sociale", e "Microcriminalità" sono state quindi modiicate in "Sociale", "Ambientale", "Microcriminalità".
+In fase di revisione finale abbiamo rilevato criticità  di carattere etico riguardante la categorizzazione "Degrado Sociale", sotto cui erano inserite tutte le segnalazioni che comprendevano, tra le altre cose, soggetti quali prostitute, anziani invalidi, tossicodipendenti etc. Abbiamo quindi deciso di cambiare il nome delle tipologie di segnalazioni, per evitare nomenclature collegabili ad un giudizio negativo legato a tali soggetti. Le categorie da: "Degrado Ambientale", "Degrado Sociale", e "Microcriminalità" sono state quindi modiicate in "Sociale", "Ambientale", "Microcriminalità". L'algoritmo che abbiamo utilizzato è stato: **pulizia_segnalazioni_2_(data_segnalazioni)**
 
 #### DATASET AREE STATISTICHE 4.1
 ##### Revisione preliminare: criticità
