@@ -55,7 +55,7 @@ $(document).ready(function(){
 	
 						var geojson = L.geoJson(zone_bologna, {style: stylegeo, onEachFeature: onEachFeature}).addTo(map);
 
-	
+						var firsttime = true;
 	
 						function highlight (layer) {
 						layer.setStyle({
@@ -106,7 +106,7 @@ $(document).ready(function(){
 							    },
 							    'click': function (e) {
 								    select(e.target);
-							var firsttime = true;
+							
 							$.ajax({
 							    dataType: "json",
 							    url: "geojson_folder/redditizone.json",
