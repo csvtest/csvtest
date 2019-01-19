@@ -225,10 +225,10 @@
 	dcat:keyword "sociale"@it , "bologna"@it, "ambiente"@it , "microcriminalità"@it ;
 	dct:spatial <https://www.geonames.org/3181928/> ;
 	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
-	dcat:distribution <INSERIRE URI/Distribuzione/INSERISCI> ;
-	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFINSERISCI> ;
-	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLEINSERISCI> ;
-	dcat:contactPoint <INSERIRE URI PUNTO DI CONTATTO> ;
+	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017/Distribuzione/bolideopendata-RDFTURTLE> ;
+	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017/Distribuzione/bolideopendata-CSV> ;
+	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017/Distribuzione/bolideopendata-JSON> ;
+	dcat:contactPoint <https://bolideopendata.github.io/bolideopendata/resource/PuntoContatto/contactPointbolideopendata> ;
 	dct:rightsHolder <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
 	dct:publisher <INSERIRE URI PUBLISHER> ;
 	dct:creator <INSERIRE URI CREATOR> ;
@@ -241,7 +241,7 @@
 
 #Distribution dataset 2 
 
-<URI DISTRIBUZIONE> 
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017/Distribuzione/bolideopendata-RDFTURTLE> 
 	a dcatapit:Distribution , dcat:Distribution ;
 	dct:title "Distribuzione RDF segnalazioni_bologna_2017"@it ;
 	dct:description "Distribuzione RDF-Turtle del dataset segnalazioni_bologna_2017"@it ;
@@ -250,7 +250,7 @@
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
 
-<URI DISTRIBUZIONE > 
+<ttps://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017/Distribuzione/bolideopendata-CSV> 
 	a dcatapit:Distribution , dcat:Distribution ;
 	dct:title "Distribuzione CSV segnalazioni_bologna_2017"@it ;
 	dct:description "Distribuzione CSV del dataset segnalazioni_bologna_2017"@it ;
@@ -258,6 +258,16 @@
 	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:downloadURL <URL PER IL DOWNLOAD> ;
 	dcat:accessURL <URL PER L'ACCESSO> .
+	
+https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017/Distribuzione/bolideopendata-JSON
+	a dcatapit:Distribution , dcat:Distribution ;
+	dct:title "Distribuzione JSON segnalazioni_bologna_2017"@it ;
+	dct:description "Distribuzione JSON del dataset segnalazioni_bologna_2017"@it ;
+	dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
+	dcat:downloadURL <URL PER IL DOWNLOAD> ;
+	dcat:accessURL <URL PER L'ACCESSO> .
+	
 	
 # Misure
 :measure1 a dqv:QualityMeasurement;
