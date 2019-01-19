@@ -375,15 +375,14 @@ https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/
 <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna.geojson>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "bolideopendata:D.3" ;
-	dct:title "Segnalazioni Bologna 2017"@it ;
-	dct:description "Il dataset contiene i dati divisi per zona di Bologna delle segnalazioni sociali, ambientali e di microcriminalità rilevate nell'anno 2017"@it ;
+	dct:title "zone_bologna"@it ;
+	dct:description "Il dataset contiene contiene le coordinate geografiche per tracciare i confini delle zone di Bologna"@it ;
 	dct:modified "2018-01-19"^^xsd:date ;
 	dct:issued "2018-01-19"^^xsd:date ;
 	owl:versionInfo "0.1.0" ; 
         dct:temporal <INSERIRE URI> ;
-	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
-	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ; 
-	dct:subject <http://eurovoc.europa.eu/4045> , <http://publications.europa.eu/resource/authority/pub-theme/L02> ; # sicurezza , degrado ambientale
+	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/REGI> ; #regioni e città
+	dct:subject <http://eurovoc.europa.eu/4045> ;
 	dcat:keyword "sociale"@it , "bologna"@it, "ambiente"@it , "microcriminalità"@it ;
 	dct:spatial <https://www.geonames.org/3181928/> ;
 	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
