@@ -185,5 +185,5 @@
 # Contact Point 
 
 <https://bolideopendata.github.io/bolideopendata/resource/PuntoContatto/contactPointbolideopendata>
-	a dcatapit:Agent
+	a dcatapit:Agent ;
 	vcard:hasEmail <mailto:bolideopendata@gmail.com> .
