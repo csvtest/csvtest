@@ -62,7 +62,7 @@
 	dct:description "Distribuzione RDF-XML del dataset redditi_elezioni_residenti"@it ;
 	dct:format <http://publications.europa.eu/resource/authority/file-type/XML> ;
 	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
-	dcat:accessURL <https://github.com/bolideopendata/bolideopendata/tree/master/dataset/set-finali/analisi-politiche.xml> .
+	dcat:accessURL <https://github.com/bolideopendata/bolideopendata/blob/master/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti.xml> .
 
 # Misure
 :measure1 a dqv:QualityMeasurement;
