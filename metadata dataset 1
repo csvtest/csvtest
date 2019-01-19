@@ -11,6 +11,7 @@
 @prefix pav: <http://pav-ontology.github.io/pav/> .
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
 @prefix : <http://bolideopendata.github.io/bolideopendata/bolide-ns#> .
+@prefix vcard: <https://www.w3.org/TR/vcard-rdf/> .
 
 
 
