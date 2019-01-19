@@ -271,37 +271,37 @@ https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/
 	
 # Misure
 :measure1 a dqv:QualityMeasurement;
-  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017.csv>;
   dqv:isMeasurementOf :accuracyMetric;
   dqv:value "true"^^xsd:boolean.
 
 :measure2 a dqv:QualityMeasurement;
-  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017.csv>;
   dqv:isMeasurementOf :csvCompletenessMetric;
   dqv:value "100"^^xsd:decimal.
 
 :measure3 a dqv:QualityMeasurement;
-  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017.csv>;
   dqv:isMeasurementOf :coherenceMetric;
   dqv:value "true"^^xsd:boolean.
 
 :measure4 a dqv:QualityMeasurement;
-  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017.csv>;
   dqv:isMeasurementOf :coherenceMetric;
   dqv:value "true"^^xsd:boolean.
 
 :measure5 a dqv:QualityMeasurement;
-  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017.csv>;
   dqv:isMeasurementOf :availabilityMetric;
   dqv:value "true"^^xsd:boolean.
 
 :measure6 a dqv:QualityMeasurement;
-  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017.csv>;
   dqv:isMeasurementOf :processabilityMetric;
   dqv:value "true"^^xsd:boolean.
 
 :measure7 a dqv:QualityMeasurement;
-  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_2017_czrm.csv>;
+  dqv:computedOn <https://bolideopendata.github.io/dataset/set-finali/segnalazioni/segnalazioni_bologna_2017.csv>;
   dqv:isMeasurementOf :credibilityMetric;
   dqv:value "true"^^xsd:boolean.
 
