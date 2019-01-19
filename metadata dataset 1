@@ -25,7 +25,7 @@
 	dct:modified "2018-01-19"^^xsd:date ;
 	dct:issued "2018-01-19"^^xsd:date ;
 	owl:versionInfo "0.1.0" ; 
-  dct:temporal <https://bolideopendata.github.io/bolideopendata/PeriodoTemporale/periodTimebolideopendata> ;
+        dct:temporal <https://bolideopendata.github.io/bolideopendata/PeriodoTemporale/periodTimebolideopendata> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ; 
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
