@@ -384,7 +384,7 @@ https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/
 	dct:subject <http://publications.europa.eu/resource/authority/atu-type/IRL_CTH > ; #city
 	dcat:keyword "zone"@it , "bologna"@it, "geografia"@it ;
 	dct:spatial <https://www.geonames.org/3181928/> ; 
-	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/OTHER> ; 
+	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ; 
 	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna/Distribuzione/bolideopendata-JSON> ;
 	dcat:contactPoint <https://bolideopendata.github.io/bolideopendata/resource/PuntoContatto/contactPointbolideopendata> ;
 	dct:rightsHolder <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
