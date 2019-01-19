@@ -361,15 +361,6 @@
   dqv:inDimension :credibility.
 	
 	
-# Temporal dataset 2
-
-<INSERIRE URI>
-	a dct:PeriodOfTime ;
-	dcatapit:startDate "2017-01-01"^^xsd:date ;
-	dcatapit:endDate "2017-12-31"^^xsd:date .
-
-
-
 	
 #Dataset 3
 
