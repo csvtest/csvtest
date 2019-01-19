@@ -56,11 +56,11 @@
 
 #Distribution dataset 1 
 
-<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-RDFTURTLE> 
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/analisi-politiche/redditi_elezioni_residenti/Distribuzione/bolideopendata-RDFXML> 
 	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "Distribuzione RDF-Turtle redditi_elezioni_residenti"@it ;
-	dct:description "Distribuzione RDF-Turtle del dataset redditi_elezioni_residenti"@it ;
-	dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
+	dct:title "Distribuzione RDF-XML redditi_elezioni_residenti"@it ;
+	dct:description "Distribuzione RDF-XML del dataset redditi_elezioni_residenti"@it ;
+	dct:format <http://publications.europa.eu/resource/authority/file-type/XML> ;
 	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
 	dcat:accessURL <https://github.com/bolideopendata/bolideopendata/tree/master/dataset/set-finali/analisi-politiche.xml> .
 
