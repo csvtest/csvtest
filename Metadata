@@ -372,7 +372,7 @@ https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/
 #Dataset 3
 
 
-<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna.geojson>
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna>
 	a dcatapit:Dataset , dcat:Dataset ;
 	dct:identifier "bolideopendata:D.3" ;
 	dct:title "zone_bologna"@it ;
@@ -380,16 +380,13 @@ https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/
 	dct:modified "2018-01-19"^^xsd:date ;
 	dct:issued "2018-01-19"^^xsd:date ;
 	owl:versionInfo "0.1.0" ; 
-        dct:temporal <INSERIRE URI> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/REGI> ; #regioni e città
-	dct:subject <http://eurovoc.europa.eu/4045> ;
-	dcat:keyword "sociale"@it , "bologna"@it, "ambiente"@it , "microcriminalità"@it ;
-	dct:spatial <https://www.geonames.org/3181928/> ;
-	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
-	dcat:distribution <INSERIRE URI/Distribuzione/INSERISCI> ;
-	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFINSERISCI> ;
-	dcat:distribution <INSERIRE URI/Distribuzione/BOLIDE-RDFTURTLEINSERISCI> ;
-	dcat:contactPoint <INSERIRE URI PUNTO DI CONTATTO> ;
+	dct:subject <http://publications.europa.eu/resource/authority/atu-type/IRL_CTH > ; #city
+	dcat:keyword "zone"@it , "bologna"@it, "geografia"@it ;
+	dct:spatial <https://www.geonames.org/3181928/> ; 
+	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/OTHER> ; 
+	dcat:distribution <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna/Distribuzione/bolideopendata-JSON> ;
+	dcat:contactPoint <https://bolideopendata.github.io/bolideopendata/resource/PuntoContatto/contactPointbolideopendata> ;
 	dct:rightsHolder <INSERIRE URI RISORSA CHE IDENTIFICA IL NOSTRO GRUPPO> ;
 	dct:publisher <INSERIRE URI PUBLISHER> ;
 	dct:creator <INSERIRE URI CREATOR> ;
@@ -398,37 +395,18 @@ https://bolideopendata.github.io/bolideopendata/dataset/set-finali/segnalazioni/
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/4490> ; #segnalazioni tot-tipologia
 	prov:wasDerivedFrom <http://dati.comune.bologna.it/download/file/fid/1275> . #aree statistiche in zone
 	
-
-
+	
 #Distribution dataset 3
 
-<URI DISTRIBUZIONE> 
+<https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna/Distribuzione/bolideopendata-JSON> 
 	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "Distribuzione RDF Segnalazioni Bologna 2017"@it ;
-	dct:description "Distribuzione RDF-Turtle del dataset Segnalazioni Bologna 2017"@it ;
-	dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
-	dct:license <INSERISCI LICENZA> ;
-	dcat:downloadURL <URL PER IL DOWNLOAD> ;
-	dcat:accessURL <URL PER L'ACCESSO> .
+	dct:title "Distribuzione JSON zone_bologna"@it ;
+	dct:description "Distribuzione JSON del dataset zone_bologna"@it ;
+	dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+	dct:license <https://www.dati.gov.it/content/italian-open-data-license-v20> ;
+	dcat:accessURL <https://bolideopendata.github.io/bolideopendata/dataset/set-finali/zone/zone_bologna.geojson> .
 
-<URI DISTRIBUZIONE > 
-	a dcatapit:Distribution , dcat:Distribution ;
-	dct:title "Distribuzione CSV Segnalazioni Bologna 2017"@it ;
-	dct:description "Distribuzione CSV del dataset Segnalazioni Bologna 2017"@it ;
-	dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-	dct:license <INSERISCI LICENZA> ;
-	dcat:downloadURL <URL PER IL DOWNLOAD> ;
-	dcat:accessURL <URL PER L'ACCESSO> .
-	
 
-	
-	
-# Temporal dataset 3
-
-<INSERIRE URI>
-	a dct:PeriodOfTime ;
-	dcatapit:startDate "2017-01-01"^^xsd:date ;
-	dcatapit:endDate "2017-12-31"^^xsd:date .
 
 # Licenza
 
